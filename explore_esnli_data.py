@@ -1,7 +1,8 @@
 import pandas as pd
 
-
-df = pd.read_csv("esnli_dev.csv")
+df = pd.read_csv("entailment_probs_2.csv")
+#df = pd.read_csv("processed_esnli_EA.csv")
+#df = pd.read_csv("esnli_dev.csv")
 #print(df)
 #print(df.iloc[0])
 #print("columns:")
@@ -10,6 +11,7 @@ df = pd.read_csv("esnli_dev.csv")
 #print(df["pairID"])
 
 def print_example(ID = None, rownum = None):
+    
     if ID is not None: 
         row = df.loc[df["pairID"] == ID]
         if row.empty:
@@ -19,14 +21,14 @@ def print_example(ID = None, rownum = None):
     if rownum is not None:
         row = df.iloc[rownum]
     for col in df.columns:
-        if "Highlighted" in col: 
-            continue
-        else: 
-            print(f"{col}:")
-            print(row[col])
-            print()
-        
-    
+        #if "Highlighted" in col: 
+            #continue
+        #else: 
+        print(f"{col}:")
+        print(row[col])
+        print()
+
+print(f"amount of rows:{df.shape[0]}")        
 for i in range(0,10):
     print(f"----------------EXAMPLE {i} ----------------\n")
     print_example(rownum=i)
