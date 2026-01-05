@@ -1,8 +1,13 @@
 import pandas as pd
 
+"""below you can change the df to whichever csv file you want to get insight into. 
+This script will print the first 10 rows of that dataset in a somewhat readable way. You could also choose to print certain given rownumbers instead."""
+
 df = pd.read_csv("entailment_probs_2.csv")
 #df = pd.read_csv("processed_esnli_EA.csv")
 #df = pd.read_csv("esnli_dev.csv")
+
+#These prints below are some alternative ways to access certain things in pandas dataframes. 
 #print(df)
 #print(df.iloc[0])
 #print("columns:")
@@ -32,6 +37,5 @@ print(f"amount of rows:{df.shape[0]}")
 for i in range(0,10):
     print(f"----------------EXAMPLE {i} ----------------\n")
     print_example(rownum=i)
+
 #print_example(None, 4)
-#print("now by ID:")
-#print_example("2407214681.jpg#0r1n", None)

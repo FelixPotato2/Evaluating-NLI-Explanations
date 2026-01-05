@@ -1,7 +1,11 @@
 import pandas as pd
+import re
+import string
+"""This is our preprosessing script"""
 
 def extract_ordered_highlighted_phrases(text):
         """
+        Borrowed (and adapted) from previous project: 
         Scans a 'marked' sentence (e.g., "This church *choir* *sings* …")
         for highlighted substrings in order.
         If two highlights have only whitespace in between, they form
@@ -59,6 +63,10 @@ def extract_ordered_highlighted_phrases(text):
 
 
 def process_original(in_name, out_name):
+    """
+    Drop all columns that contain "Highlighted" as the authors state those columns should be ignored and the "marked" columns should be used instead. 
+    For all three annotator sentences, create new columns containing the ordered highlights. 
+    """
     df = pd.read_csv(in_name)
     df = df.drop(
         columns=[col for col in df.columns if "Highlighted" in col]
@@ -85,9 +93,15 @@ def find_pattern(sentence, patterns):
             return True 
     return False
 
-
-
 def make_relevant_subset(in_name, out_name, labels, explanation_types = None, nr_matches =2 ):
+    """ 
+    From an already preprocessed dataset, get the relevant subset that we want to work with. 
+    Keeps only the problems with a label specified in labels 
+    Based on the classification type it keeps the problems for which some annotators (amount determined by nr_matches) use one of the specified keywords.
+    Currently only works for explanation_types = "classification" but can be expanded if needed.
+    A new column "explanation_type"  is added where the explanation type is stored. (currently only classification)
+    A new column "matching_explanations" is added  where the numbers of the annotators who's explanations matched one of the keywords are stored. 
+    """
     df = pd.read_csv(in_name)
     ex_patterns = {}
     if "classification" in explanation_types:
@@ -106,14 +120,11 @@ def make_relevant_subset(in_name, out_name, labels, explanation_types = None, nr
         # Count how many explanations match per row
         match_count = matches.sum(axis=1)
 
-        # Assign explanation_type if at least 2 explanations match
-        #df.loc[match_count >= nr_matches, "explanation_type"] = ex_type
-
-         # Assign explanation_type if at least `min_matches` explanations match
+        # Assign explanation_type if enough explanations match
         mask = match_count >= nr_matches
         df.loc[mask, "explanation_type"] = ex_type
 
-         # Create column listing which explanations matched
+        # Create column listing which explanations matched
         df.loc[mask, "matching_explanations"] = matches[mask].apply(
             lambda row: ",".join(str(i) for i, matched in enumerate(row, start=1) if matched),
             axis=1

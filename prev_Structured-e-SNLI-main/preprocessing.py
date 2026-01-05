@@ -2,6 +2,9 @@ import re
 import string
 import pandas as pd
 import spacy 
+"""This is the preprocessing of the previous project, I used it for inspiration"""
+
+
 
 class ESNLIPreprocessor:
     def __init__(self, data, csv_path=""):
