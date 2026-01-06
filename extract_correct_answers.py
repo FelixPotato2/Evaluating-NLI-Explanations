@@ -38,31 +38,81 @@ def get_LLM_problems(df, nr_problems, example = False):
     
     return pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
 
+def get_overlap(text, highlighted):
+    result = []
+    for word in text:
+        word = word.strip(" ,.")
+        if word.lower() in ["a", "an", "the"]:
+            continue
+        if word in highlighted:
+            result.append(word)
+    return result
+
 
 def get_correct_answers(df):
     answers_dict = {}
 
     for idx, row in df.iterrows():
-        matches = row["matching_explanations"].split(",")
+        ann_matches = row["matching_explanations"].split(",")
 
         answers = []
-        for i in matches:
-            i = i.strip()
-            answers.append({
-                "left": row[f"Sentence1_Highlighted_Ordered_{i}"],
-                "right": row[f"Sentence2_Highlighted_Ordered_{i}"],
-                "annotator_nr": i
-            })
+        #loop over the annotators who used keywords
+        for ann_i in ann_matches:
+            
+           
+            splitted_ex = re.split(r"(?:type of|form of| kind of)", row[f"Explanation_{ann_i}"])
+            
+            for j in range(0, len(splitted_ex)-1):
+                #This is a bit ugly if there are two (or even more) type of relations as the list element 1 contains both the right part of the first relation and the left part of the second, hard to split. 
+                left = splitted_ex[j]
+                right = splitted_ex[j + 1]
+                # overlap tussen Sentence1_Highlighted_Ordered_{i} en left en Sentence2_Highlighted_Ordered_{i}
+                left_overlap = get_overlap(left.split(), row[f"Sentence1_Highlighted_Ordered_{ann_i}"]) 
+                right_overlap = get_overlap(right.split(), row[f"Sentence2_Highlighted_Ordered_{ann_i}"])
+                if len(left_overlap)>0 and len(right_overlap)>0: 
+                    answers.append({
+                        "left": left_overlap,
+                        "right": right_overlap,
+                        "annotator_nr": ann_i
+                    })
+                #signal with an else here the possibility of no answer, or check below
 
         answers_dict[f"pairID_{idx}"] = answers
 
     return answers_dict
 
 
-def check_LLM(df, LLM_output):
-    answers = get_correct_answers(df)
+def check_LLM(answers, LLM_output):
+    result = {}
+    for pairID in answers:
+        #check if there is a useful annotator answer (maybe ugly place to do it, rather not give these examples to LLM at all)
+        #TODO prevent this case
+        if len(answers[pairID]) == 0: 
+            result[pairID] = "No annotator answer"
+        #check in case the LLM does not follow the instructions and misses an answer
+        elif pairID not in LLM_output:
+            result[pairID] = "Not answered"
+        else:
+            for LLM_answer in LLM_output[pairID]:
+                splitted_ans = LLM_answer.split("is a type of")
+                spl_str_ans = [word.strip(" ,.") for word in splitted_ans if word.strip(" ,.") not in ["a", "an", "the"]]
+                #exact match:
+                exact_match = 0
+                partial_match = 0
+                for answer in answers[pairID]:
+                    if answer["left"] == spl_str_ans[0] and answer["right"] ==spl_str_ans[1]:
+                        exact_match +=1 
+                    #checks for partial match, but not which one is part of which. Do I want to know??
+                    elif bool(set(answer["left"]) & set(spl_str_ans[0])) & bool(set(answer["right"]) & set(spl_str_ans[1])):
+                        partial_match +=1
+                #now a percentage of how many matches, but I would like to check how many of those answers are actually different and check those actaully different ones
+                #TODO actually different answers
+                result[pairID] = {"exact": exact_match/len(answers), "partial": partial_match/len(answers), "wrong": len(answers)-(partial_match+exact_match), "total:": len(answers)}
+                    
+                        
+                    
 
-    #check if lefthand side of LLM answer is in lefthand side of any? or all? of annotators highlights, same for right side
+    
 
 
 problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 5, True)

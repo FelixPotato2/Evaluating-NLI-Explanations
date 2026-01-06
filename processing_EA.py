@@ -3,7 +3,7 @@ import re
 import string
 """This is our preprosessing script"""
 
-def extract_ordered_highlighted_phrases(text):
+def extract_ordered_highlighted_phrases(text, ordered = False):
         """
         Borrowed (and adapted) from previous project: 
         Scans a 'marked' sentence (e.g., "This church *choir* *sings* …")
@@ -22,44 +22,49 @@ def extract_ordered_highlighted_phrases(text):
         # Use regex to find all segments enclosed in asterisks
         pattern = re.compile(r'\*(.*?)\*')
         matches = list(pattern.finditer(text))
-        if not matches:
-            return []
 
-        phrases = []
-        current_phrase = []
-        translator = str.maketrans('', '', string.punctuation)
+        if ordered == True: 
+            if not matches:
+                return []
 
-        for i, match in enumerate(matches):
-            # The highlighted substring, e.g. "cracks"
-            highlighted_text = match.group(1).strip()
-            # Remove punctuation from the highlighted portion
-            highlighted_text = highlighted_text.translate(translator).strip()
-            if not highlighted_text:
-                # If it's empty after stripping, skip
-                continue
+            phrases = []
+            current_phrase = []
+            translator = str.maketrans('', '', string.punctuation)
 
-            if i == 0:
-                # first highlight: start a new phrase
-                current_phrase.append(highlighted_text)
-            else:
-                # compare gap between previous match and current match
-                prev_end = matches[i-1].end()
-                curr_start = match.start()
-                in_between = text[prev_end:curr_start]
+            for i, match in enumerate(matches):
+                # The highlighted substring, e.g. "cracks"
+                highlighted_text = match.group(1).strip()
+                # Remove punctuation from the highlighted portion
+                highlighted_text = highlighted_text.translate(translator).strip()
+                if not highlighted_text:
+                    # If it's empty after stripping, skip
+                    continue
 
-                # If the gap is only whitespace, it's "consecutive highlights"
-                if in_between.strip() == '':
+                if i == 0:
+                    # first highlight: start a new phrase
                     current_phrase.append(highlighted_text)
                 else:
-                    # finish the old phrase, start a new one
-                    phrases.append(" ".join(current_phrase))
-                    current_phrase = [highlighted_text]
+                    # compare gap between previous match and current match
+                    prev_end = matches[i-1].end()
+                    curr_start = match.start()
+                    in_between = text[prev_end:curr_start]
 
-        # append the last phrase if any
-        if current_phrase:
-            phrases.append(" ".join(current_phrase))
+                    # If the gap is only whitespace, it's "consecutive highlights"
+                    if in_between.strip() == '':
+                        current_phrase.append(highlighted_text)
+                    else:
+                        # finish the old phrase, start a new one
+                        phrases.append(" ".join(current_phrase))
+                        current_phrase = [highlighted_text]
 
-        return phrases
+            # append the last phrase if any
+            if current_phrase:
+                phrases.append(" ".join(current_phrase))
+
+            return phrases
+        else: 
+            return [match.group(1).strip(", ") for match in matches]
+            #return [match.strip(", ") for match in matches]
 
 
 def process_original(in_name, out_name):
@@ -135,9 +140,11 @@ def make_relevant_subset(in_name, out_name, labels, explanation_types = None, nr
     df.to_csv(out_name)
 
 
-make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_2.csv", ["entailment"], ["classification"], 2)
+process_original("esnli_dev.csv", "processed_esnli_EA.csv")
+#make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_2.csv", ["entailment"], ["classification"], 2)
+make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_or.csv", ["entailment"], ["classification"], 1)
 #make_relevant_subset("processed_esnli_EA.csv", "entailment_probs.csv", ["entailment"], None)
-#process_original("esnli_dev.csv", "processed_esnli_EA.csv")
+
 
 
 

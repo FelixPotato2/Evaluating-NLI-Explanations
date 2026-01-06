@@ -3,7 +3,7 @@ import pandas as pd
 """below you can change the df to whichever csv file you want to get insight into. 
 This script will print the first 10 rows of that dataset in a somewhat readable way. You could also choose to print certain given rownumbers instead."""
 
-df = pd.read_csv("entailment_probs_2.csv")
+df = pd.read_csv("entailment_probs_or.csv")
 #df = pd.read_csv("processed_esnli_EA.csv")
 #df = pd.read_csv("esnli_dev.csv")
 
