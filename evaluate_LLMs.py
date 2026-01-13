@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 import string
-from sklearn.metrics import f1_score
+
 
 df = pd.read_csv("entailment_probs_2.csv")
 
