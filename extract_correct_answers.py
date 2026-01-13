@@ -86,8 +86,7 @@ def get_correct_answers(df):
 def check_LLM(answers, LLM_output):
     result = {}
     for pairID in answers:
-        #check if there is a useful annotator answer (maybe ugly place to do it, rather not give these examples to LLM at all)
-        #TODO prevent this case
+        #this is not a nice place to check this so improved in newer version
         if len(answers[pairID]) == 0: 
             result[pairID] = "No annotator answer"
         #check in case the LLM does not follow the instructions and misses an answer

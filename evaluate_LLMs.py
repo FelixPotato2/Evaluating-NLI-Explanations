@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import string
+from sklearn.metrics import f1_score
 
 df = pd.read_csv("entailment_probs_2.csv")
 
@@ -168,8 +169,52 @@ def get_overlap(text, highlighted):
 
     return result
 
-
-
+def check_LLM(answers, LLM_output):
+    result ={}
+    for pairID in answers:
+        if pairID not in LLM_output: 
+            result[pairID] = "Not answered"
+        else: 
+            exact_count = 0
+            partial_count = 0
+            for LLM_answer in LLM_output[pairID]:
+                splitted_ans = LLM_answer.split("is a type of")
+                spl_str_ans = [word.strip(" ,.") for word in splitted_ans if word.strip(" ,.") not in ["a", "an", "the"]]
+                for answer_group in answers[pairID]:
+                    exact_match = False
+                    partial_match = False
+                    for answer in answer_group:
+                        if answer["left"] == spl_str_ans[0] and answer["right"] ==spl_str_ans[1]:
+                            exact_match =True
+                            continue
+                        elif bool(set(answer["left"]) & set(spl_str_ans[0])) & bool(set(answer["right"]) & set(spl_str_ans[1])):
+                            partial_match = True
+                    if exact_match:
+                        exact_count+=1
+                    elif partial_match:
+                        partial_count +=1
+            result[pairID] = { 
+                "exact": exact_count,
+                "partial": partial_count,
+                "combined_correct": exact_count +partial_count,
+                "total_answers": len(answers[pairID]),
+                "total_LLM_answers": len(LLM_output[pairID])
+            }
+    scores_strict= calculate_scores(result, "exact")
+    scores_loose = calculate_scores(result, "combined_correct")
+                   
+def calculate_scores(result, key):
+    TP = result[key]
+    FP = result["total_LLM_answers"]-result[key] #right??
+    FN = result["total_answers"]-result[key]
+    precision = TP / (TP + FP)
+    recall = TP / (TP + FN)
+    #check this still 
+    f1 = (
+        2 * precision * recall / (precision + recall)
+        if (precision + recall) > 0
+        else 0.0
+    )
 
 
 problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 5, set(), True)
