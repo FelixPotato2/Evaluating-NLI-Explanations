@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import string
+from explore_esnli_data import print_example
 
 df = pd.read_csv("entailment_probs_2.csv")
 
@@ -13,7 +14,7 @@ def get_LLM_problems(df, nr_problems, example = False):
         ex_df = df.iloc[[0]]
         answer_dict_ex = get_correct_answers(ex_df)
         pair_dict_ex = {
-        f"pairID_{i}": {
+        row["pairID"]: {
         "premise": row["Sentence1"],
         "hypothesis": row["Sentence2"]
         }
@@ -28,7 +29,7 @@ def get_LLM_problems(df, nr_problems, example = False):
     sampled_df = df.sample(n=nr_problems, random_state=seed) 
 
     pair_dict = {
-    f"pairID_{i}": {
+        row["pairID"]: {
         "premise": row["Sentence1"],
         "hypothesis": row["Sentence2"]
     }
@@ -77,7 +78,7 @@ def get_correct_answers(df):
                     })
                 #signal with an else here the possibility of no answer, or check below
 
-        answers_dict[f"pairID_{idx}"] = answers
+        answers_dict[row["pairID"]] = answers
 
     return answers_dict
 
@@ -120,6 +121,8 @@ print(f"problems: {problems}\n")
 print(f"answers{answers}\n")
 print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
 
+for pairID in problems.keys():
+    print_example(df, ID = pairID)
 manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
 #Todo
 """write function that given a dict with problems and everything generates an LLM prompt with all the problems in that dict """
