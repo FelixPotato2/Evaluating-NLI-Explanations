@@ -1,6 +1,9 @@
 import pandas as pd
 import re
 import string
+from explore_esnli_data import print_example
+import json
+import ast
 
 
 df = pd.read_csv("entailment_probs_2.csv")
@@ -31,7 +34,7 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
     answer_dict_ex : dict or None
         Example answer dictionary (if example=True).
     """
-    available_df = df[~df["pairID"].isin(excluded_ids)]
+    
     # example extraction
     if example:
         ex_df = df.iloc[[0]]
@@ -49,6 +52,9 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
         pair_dict_ex = None
         answer_dict_ex = None
 
+    #make sure that previously sampled problems are not sampled again in recursive call
+    available_df = df[~df["pairID"].isin(excluded_ids)]
+
     # Sample problems
     sampled_df = available_df.sample(n=nr_problems, random_state=seed)
 
@@ -59,13 +65,15 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
         }
         for i, row in sampled_df.iterrows()
     }
+   
+    excluded_ids = excluded_ids.copy()
     excluded_ids.update(pair_dict.keys())
 
     answer_dict, missing_answers = get_correct_answers(sampled_df)
     #handle missing answers
     if missing_answers:
         sampled_df = sampled_df[~sampled_df["pairID"].isin(missing_answers)]
-        pair_dict2, answer_dict2, _, _ =get_LLM_problems(available_df,  len(missing_answers), excluded_ids, example= False, seed = seed+1)
+        pair_dict2, answer_dict2, _, _ =get_LLM_problems(df,  len(missing_answers), excluded_ids, example= False, seed = seed+1)
         pair_dict.update(pair_dict2)
         answer_dict.update(answer_dict2)
     return pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
@@ -82,14 +90,16 @@ def get_correct_answers(df):
     answers_dict : dict
         Dictionary with for each pairID a list of answers
         The list of answers contains dictionaries with left and right side of answer and annotator number
+    missing_answers: set
+        Set of IDs of problems that did not have elements in right or left part of answer 
     """
     answers_dict = {}
-    missing_answers =[]
+    missing_answers =set()
 
     for idx, row in df.iterrows():
         ann_matches = row["matching_explanations"].split(",")
         answers = []
-
+        pair_has_answer = False
         # Loop over annotators who used keywords
         for ann_i in ann_matches:
             splitted_ex = re.split(
@@ -103,7 +113,7 @@ def get_correct_answers(df):
                 # and the left part of the next.
                 #max length of 4 to avoid getting any unwanted highlights, 
                 # but not the best measure as this might cut off some longer explanations
-                left = splitted_ex[j].split()[-4:] 
+                left = splitted_ex[j].split()[-6:] 
                 right = splitted_ex[j + 1].split()[:4] 
 
                 left_overlap = get_overlap(
@@ -116,11 +126,12 @@ def get_correct_answers(df):
                 )
 
                 if left_overlap and right_overlap:
+                    pair_has_answer = True
                     grouped = False
                     #group answer with previous answers if they overlap
                     #the grouping makes it even worse if there are words in the left or right part of answer that shouldnt be there
                     for answer in answers:
-                        if bool(set(w for group in answer["left"] for w in group) & set(left_overlap)) or bool(set(w for group in answer["right"] for w in group)):
+                        if bool(set(w for group in answer["left"] for w in group) & set(left_overlap)) or bool(set(w for group in answer["right"] for w in group) & set(right_overlap)):
                             answer["left"].append(left_overlap)
                             answer["right"].append(right_overlap)
                             answer["annotator_nr"].append(ann_i)
@@ -134,10 +145,14 @@ def get_correct_answers(df):
                             }
                         )
                 #signal that a correct answer could not be extracted with the highlights
-                else: 
-                    missing_answers.append(row["pairID"])
-
-        answers_dict[row["pairID"]] = answers
+                #else: 
+                    #missing_answers.add(row["pairID"])
+        if not pair_has_answer:
+            missing_answers.add(row["pairID"])
+        else:
+            answers_dict[row["pairID"]] = answers #??
+        #if len(answers[pairID]) > 0:
+            #answers_dict[row["pairID"]] = answers
 
     return answers_dict, missing_answers
 
@@ -147,27 +162,31 @@ def get_overlap(text, highlighted):
     Gets from the text the parts that were highlighted
     
     Parameters: 
-    text: left or right side of explanation
-    highlighted: highlighted words from ESNLI explanation
+    text: list of left or right side of explanation
+    highlighted: string of a list of highlighted words from ESNLI explanation
     
     Returns:
     result: list of the words in the text that were also highlighted (excluding articles)
     """
     result = []
+    
+    highlighted_lower = [h.lower() for h in ast.literal_eval(highlighted) ]
 
     for word in text:
         cleaned_word = word.strip(" ,.").lower()
 
         if cleaned_word in {"a", "an", "the"}:
             continue
-
-        if cleaned_word in highlighted:
-            result.append(cleaned_word)
+        for h_string in highlighted_lower:
+            #if cleaned_word in h_string:
+            if cleaned_word in h_string.split():
+                result.append(cleaned_word)
     
     #if result > 1:
         #todo, check if they are next to eachother, otherwise delete the most far one 
-
-    return result
+    #TODO think about duplicates, are they issue? 
+    #remove duplicates, while keeping the correct order
+    return result #list(dict.fromkeys(result))
 
 def check_LLM(answers, LLM_output):
     result ={}
@@ -180,19 +199,28 @@ def check_LLM(answers, LLM_output):
             for LLM_answer in LLM_output[pairID]:
                 splitted_ans = LLM_answer.split("is a type of")
                 spl_str_ans = [word.strip(" ,.") for word in splitted_ans if word.strip(" ,.") not in ["a", "an", "the"]]
-                for answer_group in answers[pairID]:
-                    exact_match = False
-                    partial_match = False
-                    for answer in answer_group:
-                        if answer["left"] == spl_str_ans[0] and answer["right"] ==spl_str_ans[1]:
-                            exact_match =True
-                            continue
-                        elif bool(set(answer["left"]) & set(spl_str_ans[0])) & bool(set(answer["right"]) & set(spl_str_ans[1])):
-                            partial_match = True
-                    if exact_match:
-                        exact_count+=1
-                    elif partial_match:
+                for answer_group_dict in answers[pairID]:
+                    left_exact = False
+                    right_exact = False
+                    left_partial = False
+                    right_partial = False
+                    
+                    for left_answer in answer_group_dict["left"]: 
+                        if left_answer == spl_str_ans[0]:
+                            left_exact = True
+                        if bool(set(left_answer) & set(spl_str_ans[0].split())):
+                            left_partial = True
+                    for right_answer in answer_group_dict["right"]:
+                        if right_answer == spl_str_ans[1]:
+                            right_exact = True
+                        if bool(set(right_answer) & set(spl_str_ans[1].split())):
+                            right_partial = True
+                    if left_exact and right_exact:
+                        exact_count+= 1
+                        break #stop iterating over answer group because an exact match is found
+                    elif left_partial and right_partial:
                         partial_count +=1
+                    
             result[pairID] = { 
                 "exact": exact_count,
                 "partial": partial_count,
@@ -202,11 +230,16 @@ def check_LLM(answers, LLM_output):
             }
     scores_strict= calculate_scores(result, "exact")
     scores_loose = calculate_scores(result, "combined_correct")
+    return scores_strict, scores_loose
                    
 def calculate_scores(result, key):
-    TP = result[key]
-    FP = result["total_LLM_answers"]-result[key] #right??
-    FN = result["total_answers"]-result[key]
+    TP = sum(v[key] for v in result.values() if isinstance(v, dict))
+    FP = sum(v["total_LLM_answers"] - v[key] for v in result.values())
+    FN = sum(v["total_answers"] - v[key] for v in result.values())
+
+    # TP = result[key]
+    # FP = result["total_LLM_answers"]-result[key] #right??
+    # FN = result["total_answers"]-result[key]
     precision = TP / (TP + FP)
     recall = TP / (TP + FN)
     #check this still 
@@ -215,13 +248,33 @@ def calculate_scores(result, key):
         if (precision + recall) > 0
         else 0.0
     )
+    return {"precision": precision, "recall": recall, "f1": f1}
 
 
-problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 5, set(), True)
+
+problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 30, set(), True)
 print(f"problems: {problems}\n")
 print(f"answers{answers}\n")
 print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
 
+prompt_problems ={}
+for pairID in problems.keys():
+    newkey = pairID[:-1]
+    prompt_problems[newkey] = problems[pairID]
+
+print("here:")
+print(prompt_problems)
+
+
+# for pairID in problems.keys():
+#     print("ANSWER")
+#     print(answers[pairID])
+#     print_example(df, ID = pairID)
+
 manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
-#Todo
-"""write function that given a dict with problems and everything generates an LLM prompt with all the problems in that dict """
+
+
+#TODO
+#use this overlap function instead of the ugly bool things? 
+# def overlaps(existing_groups, new_group):
+#     return any(set(existing) & set(new_group) for existing in existing_groups)

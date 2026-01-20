@@ -36,9 +36,11 @@ def print_example(df, ID = None, rownum = None, ):
 df_glob = pd.read_csv("entailment_probs_or.csv")
 #df = pd.read_csv("processed_esnli_EA.csv")
 #df = pd.read_csv("esnli_dev.csv")
-print(f"amount of rows:{df_glob.shape[0]}")        
-for i in range(0,10):
-    print(f"----------------EXAMPLE {i} ----------------\n")
-    print_example(df_glob, rownum=i)
+
+
+# print(f"amount of rows:{df_glob.shape[0]}")        
+# for i in range(0,10):
+#     print(f"----------------EXAMPLE {i} ----------------\n")
+#     print_example(df_glob, rownum=i)
 
 #print_example(None, 4)
