@@ -13,8 +13,8 @@ This script will print the first 10 rows of that dataset in a somewhat readable 
 #print(df.columns[0])
 #print(df["pairID"])
 
-def print_example(df, ID = None, rownum = None, ):
-    
+def print_example(df, ID = None, rownum = None, ignore_highlights=False ):
+    print("----------------------------------------------------")
     if ID is not None: 
         row = df.loc[df["pairID"] == ID]
         if row.empty:
@@ -24,12 +24,15 @@ def print_example(df, ID = None, rownum = None, ):
     if rownum is not None:
         row = df.iloc[rownum]
     for col in df.columns:
-        #if "Highlighted" in col: 
-            #continue
+        if "Unnamed" in col: 
+            continue
+        if ignore_highlights:
+            if "Highlighted" in col or "marked" in col: 
+                continue
         #else: 
         print(f"{col}:")
         print(row[col])
-        print()
+        #print()
 
 
 

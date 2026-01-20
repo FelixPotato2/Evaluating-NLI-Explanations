@@ -6,7 +6,8 @@ import json
 import ast
 
 
-df = pd.read_csv("entailment_probs_2.csv")
+#df = pd.read_csv("entailment_probs_2.csv")
+df = pd.read_csv("entailment_probs_or.csv")
 
 def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
     """
@@ -20,9 +21,10 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
     excluded_ids: set
         set of IDs that have already been used and thus should be excluded 
         (specified when recursively calling the function to replace problems with missing answers)
-    example : bool, optional
+    example : bool
         If True, also extract the first row of df as an example
         for use in an LLM prompt.
+    seed: int
 
     Returns:
     pair_dict : dict
@@ -46,7 +48,7 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
             }
             for i, row in ex_df.iterrows()
         }
-
+        #remove the first row so that the example won't occur in the problems
         df = df.drop(0)
     else:
         pair_dict_ex = None
@@ -72,15 +74,23 @@ def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed 
     answer_dict, missing_answers = get_correct_answers(sampled_df)
     #handle missing answers
     if missing_answers:
+        #remove the problems that cannot be answered from the sampled dataset
+        for pid in missing_answers:
+            pair_dict.pop(pid, None)
+            answer_dict.pop(pid, None)
         sampled_df = sampled_df[~sampled_df["pairID"].isin(missing_answers)]
+        #sample new problems and add them 
         pair_dict2, answer_dict2, _, _ =get_LLM_problems(df,  len(missing_answers), excluded_ids, example= False, seed = seed+1)
         pair_dict.update(pair_dict2)
         answer_dict.update(answer_dict2)
+
     return pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
 
 def get_correct_answers(df):
     """
-    Randomly sample problems from a DataFrame.
+    extracts from the human annotators the left and right parts of their mentioned "type of" relation
+    If multiple annotators mention the same "type of" relation, but with slightly different wordings
+    these explanations are grouped, but both wordings are saved. 
 
     Parameters:
     df : pandas.DataFrame
@@ -88,8 +98,9 @@ def get_correct_answers(df):
 
     Returns:
     answers_dict : dict
-        Dictionary with for each pairID a list of answers
-        The list of answers contains dictionaries with left and right side of answer and annotator number
+        Dictionary with for each pairID a list of answer groups
+        Each answer group in the list is a dictionairy with structure: {"left": [], "right":[], "annotator_nr":[]} 
+        the lists within these dictionaries can contain one or multiple phrasings of the same "type of" relation
     missing_answers: set
         Set of IDs of problems that did not have elements in right or left part of answer 
     """
@@ -144,9 +155,7 @@ def get_correct_answers(df):
                                 "annotator_nr": [ann_i],
                             }
                         )
-                #signal that a correct answer could not be extracted with the highlights
-                #else: 
-                    #missing_answers.add(row["pairID"])
+        #These have to be passed so that new problems can be sampled instead
         if not pair_has_answer:
             missing_answers.add(row["pairID"])
         else:
@@ -162,11 +171,14 @@ def get_overlap(text, highlighted):
     Gets from the text the parts that were highlighted
     
     Parameters: 
-    text: list of left or right side of explanation
-    highlighted: string of a list of highlighted words from ESNLI explanation
+    text: list
+        list of left or right side of explanation
+    highlighted: string
+        string of a list of highlighted words from ESNLI explanation
     
     Returns:
-    result: list of the words in the text that were also highlighted (excluding articles)
+    result: list
+        list of the words in the text that were also highlighted (excluding articles)
     """
     result = []
     
@@ -175,7 +187,7 @@ def get_overlap(text, highlighted):
     for word in text:
         cleaned_word = word.strip(" ,.").lower()
 
-        if cleaned_word in {"a", "an", "the"}:
+        if cleaned_word in ["a", "an", "the"]:
             continue
         for h_string in highlighted_lower:
             #if cleaned_word in h_string:
@@ -183,12 +195,36 @@ def get_overlap(text, highlighted):
                 result.append(cleaned_word)
     
     #if result > 1:
-        #todo, check if they are next to eachother, otherwise delete the most far one 
-    #TODO think about duplicates, are they issue? 
-    #remove duplicates, while keeping the correct order
-    return result #list(dict.fromkeys(result))
+        #possible solution for incorrect highlight matches: check if they are next to eachother, otherwise delete the most far one 
+    
+    return result 
 
-def check_LLM(answers, LLM_output):
+def check_LLM_answer(answers, LLM_output):
+    """
+    Compares the LLM answers with answers extracted from human annotators and gives performance measures
+    Parameters:
+    answers: dict
+        Dictionary with for each pairID a list of answer groups
+        Each answer group in the list is a dictionairy with structure: {"left": [], "right":[], "annotator_nr":[]} 
+        the lists within these dictionaries can contain one or multiple phrasings of the same "type of" relation
+    LLM_output: dict
+        structured as follows:  
+        {'3021028400.jpg#1r1e': { ‘answer’: ‘entailment’, ‘explanation’: [‘man is a type of person’, ‘black suit is a type of suit’]}
+    
+
+    Returns:
+    result: dict
+        dictionary with keys pair ids and values dictionaries containing the correctness counts for that pairID
+    scores_strict: dict
+        dictionary with keys "precision" "recall" and "f1" containing those scores
+        considering only the answers that exactly match one of the phrasings of the annotators 
+
+    scores_loose: dict
+        dictionary with keys "precision" "recall" and "f1" containing those scores
+        considering all answers where there is some overlap in both the right and left side between the answer of the LLM and one of the annotators
+
+    """
+
     result ={}
     for pairID in answers:
         if pairID not in LLM_output: 
@@ -230,7 +266,7 @@ def check_LLM(answers, LLM_output):
             }
     scores_strict= calculate_scores(result, "exact")
     scores_loose = calculate_scores(result, "combined_correct")
-    return scores_strict, scores_loose
+    return result, scores_strict, scores_loose
                    
 def calculate_scores(result, key):
     TP = sum(v[key] for v in result.values() if isinstance(v, dict))
@@ -251,19 +287,55 @@ def calculate_scores(result, key):
     return {"precision": precision, "recall": recall, "f1": f1}
 
 
+#This is the call used for the gold label checking
 
-problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 30, set(), True)
-print(f"problems: {problems}\n")
-print(f"answers{answers}\n")
-print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
+def Get_manual_evaluation_problems():
+    problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 60, set(), False, seed = 8)
+    for problem in problems:
+        #print(f"{problem}\n")
+        print_example(df, ID = problem, rownum = None, ignore_highlights=True)
 
-prompt_problems ={}
-for pairID in problems.keys():
-    newkey = pairID[:-1]
-    prompt_problems[newkey] = problems[pairID]
+    print(len(problems))
+    #print(f"problems: {problems}\n")
+    print(f"answers{answers}\n")
+    #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
 
-print("here:")
-print(prompt_problems)
+def Get_prompts_for_LLM(amount = 10):
+    problems, answers, problems_ex, answers_ex = get_LLM_problems(df, amount, set(), True)
+    prompt_problems ={}
+    ID_restore ={}
+    for pairID in problems.keys():
+        newkey = pairID[:-1]
+        prompt_problems[newkey] = problems[pairID]
+        ID_restore[newkey]=pairID[-1]
+    print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
+    print(f"The problems are:\n{problems}\n The answers are:{answers}")
+    return ID_restore, answers
+
+
+def checK_LLM(data, restore, answers):
+    #todo read in whatever format the LLM outputted
+    restored_data = {}
+    for ID in data.keys():
+        res_ID = ID
+        restored_data[res_ID] = data[ID]
+    result, scores_strict, scores_loose= check_LLM_answer(answers, restored_data)
+
+
+
+Get_manual_evaluation_problems()
+Get_prompts_for_LLM()
+
+
+
+
+
+
+
+# prompt_problems ={}
+# for pairID in problems.keys():
+#     newkey = pairID[:-1]
+#     prompt_problems[newkey] = problems[pairID]
 
 
 # for pairID in problems.keys():
@@ -274,7 +346,4 @@ print(prompt_problems)
 manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
 
 
-#TODO
-#use this overlap function instead of the ugly bool things? 
-# def overlaps(existing_groups, new_group):
-#     return any(set(existing) & set(new_group) for existing in existing_groups)
+

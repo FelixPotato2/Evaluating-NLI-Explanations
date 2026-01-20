@@ -3,12 +3,13 @@ import re
 import string
 from explore_esnli_data import print_example
 
-df = pd.read_csv("entailment_probs_2.csv")
+#df = pd.read_csv("entailment_probs_2.csv")
+df = pd.read_csv("entailment_probs_or.csv")
 
 # correct answers: Sentence1_Highlighted_Ordered_{i}: is a type of Sentence2_Highlighted_Ordered_{i}:
 problem_dict ={}
 
-def get_LLM_problems(df, nr_problems, example = False):
+def get_LLM_problems(df, nr_problems, example = False, seed = 773):
     problems_dict = {}
     if example: 
         ex_df = df.iloc[[0]]
@@ -25,7 +26,7 @@ def get_LLM_problems(df, nr_problems, example = False):
     else:
         answer_dict_ex = None
         pair_dict_ex = None
-    seed = 773
+    
     sampled_df = df.sample(n=nr_problems, random_state=seed) 
 
     pair_dict = {
@@ -117,7 +118,7 @@ def check_LLM(answers, LLM_output):
 
 problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 5, True)
 print(f"problems: {problems}\n")
-print(f"answers{answers}\n")
+#print(f"answers{answers}\n")
 print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
 
 for pairID in problems.keys():

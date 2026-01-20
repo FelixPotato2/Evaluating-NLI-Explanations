@@ -73,6 +73,9 @@ def process_original(in_name, out_name):
     For all three annotator sentences, create new columns containing the ordered highlights. 
     """
     df = pd.read_csv(in_name)
+    #remove last character of each pairID
+    #df["pairID"] = df["pairID"].astype(str).str[:-1]
+
     df = df.drop(
         columns=[col for col in df.columns if "Highlighted" in col]
     )
