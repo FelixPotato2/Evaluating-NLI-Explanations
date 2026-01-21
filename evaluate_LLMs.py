@@ -299,6 +299,7 @@ def Get_manual_evaluation_problems():
     #print(f"problems: {problems}\n")
     print(f"answers{answers}\n")
     #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
+    return problems, answers
 
 def Get_prompts_for_LLM(amount = 10):
     problems, answers, problems_ex, answers_ex = get_LLM_problems(df, amount, set(), True)

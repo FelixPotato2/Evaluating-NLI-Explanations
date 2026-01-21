@@ -96,7 +96,7 @@
 import json
 
 # Read from file and parse JSON
-with open("manual.json", "r") as f:
+with open("gold.json", "r") as f:
     data = json.load(f)
 
 print(data)
