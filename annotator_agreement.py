@@ -94,24 +94,30 @@
 # print(data[0])
 
 import json
+from evaluate_LLMs import Get_manual_evaluation_problems
 
 # Read from file and parse JSON
 with open("gold.json", "r") as f:
     data = json.load(f)
 
-print(data)
-print(type(data))
+#print(data)
+#print(type(data))
 print(len(data))
+sript_pr, script_answers = Get_manual_evaluation_problems()
 
+for ID in script_answers:
+    print(ID)
+    print(script_answers[ID])
 for problem in data:
     for ID in problem.keys(): #its a bit dumb in how we structured it but this should be just one
+        script_ans = script_answers[ID]
         for answer_dict in problem[ID]:
-            left_list = []
-            right_list =[]
+            left_set = set()
+            right_set =set()
             for word in answer_dict["left"]:
-                if word not in {"a", "an", "the"}:
-                    left_list.append(word.lower())
+                if word not in ["a", "an", "the"]:
+                    left_set.add(word.lower())
             for word in answer_dict["right"]:
-                if word not in {"a", "an", "the"}:
-                    left_list.append(word.lower())
+                if word not in ["a", "an", "the"]:
+                    right_set.add(word.lower())
             

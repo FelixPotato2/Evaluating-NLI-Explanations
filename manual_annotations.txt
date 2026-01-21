@@ -156,7 +156,7 @@
  
  
 { 
-2325025735.jpg#3r1e : [{left: ["looking"], right: [“seeing”]}, [{left: ["large boulder"], right: [“rock formation”]}] 
+2325025735.jpg#3r1e : [{left: ["looking"], right: [“seeing”]}, {left: ["large boulder"], right: [“rock formation”]}] 
 } 
 { 
 3411579899.jpg#1r1e: [{left: [“Mountain biking”], right: [“bicycling”]}] 

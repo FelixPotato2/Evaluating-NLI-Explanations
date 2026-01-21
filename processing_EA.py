@@ -143,9 +143,11 @@ def make_relevant_subset(in_name, out_name, labels, explanation_types = None, nr
     df.to_csv(out_name)
 
 
-process_original("esnli_dev.csv", "processed_esnli_EA.csv")
+#process_original("esnli_dev.csv", "processed_esnli_EA.csv")
 #make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_2.csv", ["entailment"], ["classification"], 2)
-make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_or.csv", ["entailment"], ["classification"], 1)
+#make_relevant_subset("processed_esnli_EA.csv", "entailment_probs_or.csv", ["entailment"], ["classification"], 1)
+process_original("esnli_test.csv", "processed_esnli_test_EA.csv")
+make_relevant_subset("processed_esnli_test_EA.csv", "entailment_probs_test_or.csv", ["entailment"], ["classification"], 1)
 #make_relevant_subset("processed_esnli_EA.csv", "entailment_probs.csv", ["entailment"], None)
 
 
