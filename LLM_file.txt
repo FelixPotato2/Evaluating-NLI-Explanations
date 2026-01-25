@@ -1,0 +1,10 @@
+----------------------------------
+2819254573.jpg#0r1:{'premise': 'The blond boy is riding roller-coaster with his mouth wide open.', 'hypothesis': 'a boy riding a roller-coaster'}
+----------------------------------
+4902026887.jpg#2r1:{'premise': 'A young man with glasses and his companion are attempting to do laundry in a public place.', 'hypothesis': 'A person with glasses'}
+----------------------------------
+7638344872.jpg#0r1:{'premise': "Two men are in blue life jackets and sitting on innertubes with 'Crusher' written on them in the middle of a body of water.", 'hypothesis': 'Two men sit on innertubes in the middle of a body of water.'}
+----------------------------------
+4696874093.jpg#2r1:{'premise': 'A group of people are sight seeing and taking pictures.', 'hypothesis': 'there are a group of people'}
+----------------------------------
+5777129645.jpg#2r1:{'premise': 'The two farmers are working on a piece of John Deere equipment.', 'hypothesis': 'Men are working on John Deere equipment'}
