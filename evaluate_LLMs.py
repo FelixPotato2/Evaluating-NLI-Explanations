@@ -4,10 +4,12 @@ import string
 from explore_esnli_data import print_example
 import json
 import ast
+import math
 
 
 #df = pd.read_csv("entailment_probs_2.csv")
-df = pd.read_csv("entailment_probs_or.csv")
+#df = pd.read_csv("entailment_probs_or.csv")
+df = pd.read_csv("merged_entailment.csv")
 
 def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
     """
@@ -199,6 +201,7 @@ def get_overlap(text, highlighted):
     
     return result 
 
+
 def check_LLM_answer(answers, LLM_output):
     """
     Compares the LLM answers with answers extracted from human annotators and gives performance measures
@@ -228,12 +231,29 @@ def check_LLM_answer(answers, LLM_output):
     result ={}
     for pairID in answers:
         if pairID not in LLM_output: 
-            result[pairID] = "Not answered"
+            #result[pairID] = "Not answered"
+            # count as unanswered but still include totals so scoring can work
+            result[pairID] = {
+                "exact": 0,
+                "partial": 0,
+                "combined_correct": 0,
+                "total_answers": len(answers[pairID]),
+                "total_LLM_answers": 0
+            }
+            continue
+
         else: 
             exact_count = 0
             partial_count = 0
-            for LLM_answer in LLM_output[pairID]:
+
+            #Added LLM explanations since the LLM is read into a dict 
+            llm_explanations = LLM_output[pairID].get("explanation", [])
+
+            #for LLM_answer in LLM_output[pairID]:
+            for LLM_answer in llm_explanations:
                 splitted_ans = LLM_answer.split("is a type of")
+                if len(splitted_ans) < 2:
+                    continue
                 spl_str_ans = [word.strip(" ,.") for word in splitted_ans if word.strip(" ,.") not in ["a", "an", "the"]]
                 for answer_group_dict in answers[pairID]:
                     left_exact = False
@@ -242,15 +262,16 @@ def check_LLM_answer(answers, LLM_output):
                     right_partial = False
                     
                     for left_answer in answer_group_dict["left"]: 
-                        if left_answer == spl_str_ans[0]:
+                        if left_answer == spl_str_ans[0].split():
                             left_exact = True
                         if bool(set(left_answer) & set(spl_str_ans[0].split())):
                             left_partial = True
                     for right_answer in answer_group_dict["right"]:
-                        if right_answer == spl_str_ans[1]:
+                        if right_answer == spl_str_ans[1].split():
                             right_exact = True
                         if bool(set(right_answer) & set(spl_str_ans[1].split())):
                             right_partial = True
+
                     if left_exact and right_exact:
                         exact_count+= 1
                         break #stop iterating over answer group because an exact match is found
@@ -270,8 +291,8 @@ def check_LLM_answer(answers, LLM_output):
                    
 def calculate_scores(result, key):
     TP = sum(v[key] for v in result.values() if isinstance(v, dict))
-    FP = sum(v["total_LLM_answers"] - v[key] for v in result.values())
-    FN = sum(v["total_answers"] - v[key] for v in result.values())
+    FP = sum(v["total_LLM_answers"] - v[key] for v in result.values() if isinstance(v,dict))
+    FN = sum(v["total_answers"] - v[key] for v in result.values() if isinstance(v,dict))
 
     # TP = result[key]
     # FP = result["total_LLM_answers"]-result[key] #right??
@@ -303,34 +324,87 @@ def Get_manual_evaluation_problems():
 
 def Get_prompts_for_LLM(amount = 10):
     problems, answers, problems_ex, answers_ex = get_LLM_problems(df, amount, set(), True)
-    prompt_problems ={}
-    ID_restore ={}
+    prompt_problems = {}
+    ID_restore = {}
     for pairID in problems.keys():
         newkey = pairID[:-1]
         prompt_problems[newkey] = problems[pairID]
         ID_restore[newkey]=pairID[-1]
-    print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
-    print(f"The problems are:\n{problems}\n The answers are:{answers}")
-    return ID_restore, answers
+
+    step = max(1, math.ceil(amount / 10))  # every 10%
+
+    with open("LLM_file.txt", "w") as f:
+        keys = list(prompt_problems.keys())
+        for idx, k in enumerate(keys):
+            if idx % step == 0:
+                f.write("----------------------------------\n")w
+            f.write(f"{k}:{prompt_problems[k]}\n")
+
+        #print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
+        #print(f"The problems are:\n{prompt_problems}\n The answers are:{answers}")
+        return ID_restore, answers
 
 
-def checK_LLM(data, restore, answers):
-    #todo read in whatever format the LLM outputted
+def read_json(filename):
+    """
+    Function to read json files. 
+    param filename: Name of the json file
+    return data: json file in dict format
+    """
+    if not isinstance(filename, str):
+        raise TypeError("Filename must be a string")
+
+    if not filename.endswith(".json"):
+        raise ValueError("The file given is not in a supported format (.json)")
+
+    with open(filename, 'r') as json_file:
+        data = json.load(json_file)
+    return data
+
+
+
+def checK_LLM(data, answers):
+    if not isinstance(data, dict):
+        raise TypeError("data must be a dictionary")
+
+    # map short ids (no trailing label) to full ids (with trailing label)
+    short_to_full = {pid[:-1]: pid for pid in answers.keys()}
+
     restored_data = {}
-    for ID in data.keys():
-        res_ID = ID
-        restored_data[res_ID] = data[ID]
-    result, scores_strict, scores_loose= check_LLM_answer(answers, restored_data)
+    for short_id, value in data.items():
+        full_id = short_to_full.get(short_id)
+        if full_id is not None:
+            restored_data[full_id] = value
+        # else: ignore entries not in gold set
+    #Added count of misclassified types
+    e = 0
+    c = 0
+    for pairID, pred in restored_data.items():
+        label = pred.get("answer", "")
+        if label == "entailment":
+            e += 1
+        elif label == "contradiction":
+            c += 1
+    perc_entailment = (e / (e + c) * 100) if (e + c) > 0 else 0.0
+
+    result, scores_strict, scores_loose = check_LLM_answer(answers, restored_data)
+    return result, scores_strict, scores_loose, perc_entailment
 
 
 
-Get_manual_evaluation_problems()
-Get_prompts_for_LLM()
+#Get_manual_evaluation_problems()
+amount = 700
+ID_restore, answers = Get_prompts_for_LLM(amount)
 
 
-
-
-
+LLM_answers_file = "LLM_answers_v1.json"
+LLM_answers = read_json(LLM_answers_file)
+result, strict, loose, perc_entailment = checK_LLM(LLM_answers, answers=answers)
+#print(f"LLM RESULTS: {result}")
+print("-----------------------------------")
+print(f"Strict scores: ", strict)
+print(f"Loose scores: ", loose)
+print(f"Percentage entailment", perc_entailment)
 
 
 # prompt_problems ={}
