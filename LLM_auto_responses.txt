@@ -1,0 +1,57 @@
+```json
+{
+  "2819254573.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "blond boy is a type of boy"
+    ]
+  }
+}
+``````json
+{"4902026887.jpg#2r1": {"answer": "entailment", "explanation": ["man is a type of person"]}}
+``````json
+{
+  "463970752.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  }
+}
+``````json
+{
+"2326669450.jpg#2r1": {
+"answer": "entailment",
+"explanation": [
+"children is a type of people",
+"getting their picture taken is a type of taking a photo"
+]
+}
+}
+``````json
+{'2923891109.jpg#2r1': {'answer': 'entailment', 'explanation': ['white dog is a type of dog', 'tennis ball is a type of ball', 'field is a type of outside']}}
+``````json
+{'878758390.jpg#1r1': {'answer': 'entailment', 'explanation': ['white dog is a type of dog', 'rocky beach is a type of beach']}}
+``````json
+{'2245916742.jpg#2r1': {'answer': 'entailment', 'explanation': ['stands by two face structures is a type of on']}}
+``````json
+{
+  "504765160.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "The woman is a type of person wearing a blue shirt."
+    ]
+  }
+}
+``````json
+{"5790434381.jpg#1r1": {"answer": "entailment", "explanation": ["men are a type of people", "working on a structure is a type of working"]}}
+``````json
+{
+  "2252036322.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "road crew is a type of crew"
+    ]
+  }
+}
+```

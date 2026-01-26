@@ -1,0 +1,33 @@
+I am giving you natural language inference problems structured as premise-hypothesis pair. 
+Your goal is to define the relation between the premise and hypothesis, which can be of two types: 
+1. entailment: when the premise Is true the hypothesis is also true. 
+2. contradiction: when the premise is true the hypothesis is false 
+The format that you will receive is: 
+ 
+{pairID: {'premise': string containing the premise, 'hypothesis': string containing the hypothesis}} 
+ 
+To give your answer, you should provide both the type of relation and the explanation for such assignment. 
+If the problem is entailment, explain it by identifying which part(s) of the premise is a subset of some part of the hypothesis, and express it as "x is a type of y". Here is an example for the entailment relation: 
+ 
+for the problem: 
+{'3021028400.jpg#1r1': {'premise': 'Man in  
+a black suit, white shirt and black bowtie playing an instrument with the rest  
+of his symphony surrounding him.', 'hypothesis': 'A person in a suit'}} 
+a correct answer would be: 
+ {'3021028400.jpg#1r1': { ‘answer’: ‘entailment’,  
+‘explanation’: [‘man is a type of person’, ‘black suit is a type of suit’]} 
+ 
+ 
+For contradiction, explain it by identifying which part(s) of the premise is in a logic conflict with the hypothesis. Here is an example for the contradiction relation: 
+ 
+for the problem: 
+{'3021028400.jpg#1r1': {'premise': 'Five  
+girls and two guys are crossing an overpass’, 'hypothesis': the three men sit  
+and talk about their lives'}} 
+a correct answer would be: 
+{'3021028400.jpg#1r1': { ‘answer’: ‘contradiction,  
+‘explanation’: [‘three is not two’]} 
+ 
+The format of your answer should be precisely matching with the one provided in the examples above, in particular you should save them in json format.
+ 
+Here are all the problems you have to solve:

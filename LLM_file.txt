@@ -3,8 +3,18 @@
 ----------------------------------
 4902026887.jpg#2r1:{'premise': 'A young man with glasses and his companion are attempting to do laundry in a public place.', 'hypothesis': 'A person with glasses'}
 ----------------------------------
-7638344872.jpg#0r1:{'premise': "Two men are in blue life jackets and sitting on innertubes with 'Crusher' written on them in the middle of a body of water.", 'hypothesis': 'Two men sit on innertubes in the middle of a body of water.'}
+463970752.jpg#1r1:{'premise': 'Ample dark-skinned man looks back at camera from behind buffet.', 'hypothesis': 'A man looks from behind a buffet.'}
 ----------------------------------
-4696874093.jpg#2r1:{'premise': 'A group of people are sight seeing and taking pictures.', 'hypothesis': 'there are a group of people'}
+2326669450.jpg#2r1:{'premise': 'Seven children all jump as the photo is taken.', 'hypothesis': 'Children are getting their picture taken.'}
 ----------------------------------
-5777129645.jpg#2r1:{'premise': 'The two farmers are working on a piece of John Deere equipment.', 'hypothesis': 'Men are working on John Deere equipment'}
+2923891109.jpg#2r1:{'premise': 'A white dog holds a tennis ball in its mouth in a field.', 'hypothesis': 'There is a dog with a ball outside.'}
+----------------------------------
+878758390.jpg#1r1:{'premise': 'A white dog is running on a rocky beach.', 'hypothesis': 'A dog is on the beach.'}
+----------------------------------
+2245916742.jpg#2r1:{'premise': 'A man stands by two face structures on Easter Island.', 'hypothesis': 'A man on Easter Island.'}
+----------------------------------
+504765160.jpg#1r1:{'premise': 'A blond woman in a blue shirt looks on at an event.', 'hypothesis': 'The woman is wearing a blue shirt.'}
+----------------------------------
+5790434381.jpg#1r1:{'premise': 'Several men in fluorescent pinnies work on a structure shrouded in a green veil while a cherry picker truck hauls material.', 'hypothesis': 'the men are working'}
+----------------------------------
+2252036322.jpg#3r1:{'premise': 'A road crew is working on a road with equipment around them.', 'hypothesis': 'A crew is working.'}

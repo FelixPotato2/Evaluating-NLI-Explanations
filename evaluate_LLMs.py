@@ -332,6 +332,7 @@ def Get_prompts_for_LLM(amount = 10):
         ID_restore[newkey]=pairID[-1]
 
     step = max(1, math.ceil(amount / 10))  # every 10%
+    prob = []
 
     with open("LLM_file.txt", "w") as f:
         keys = list(prompt_problems.keys())
@@ -339,10 +340,11 @@ def Get_prompts_for_LLM(amount = 10):
             if idx % step == 0:
                 f.write("----------------------------------\n")
             f.write(f"{k}:{prompt_problems[k]}\n")
+            prob.append(f"{k}:{prompt_problems[k]}")
 
         #print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
         #print(f"The problems are:\n{prompt_problems}\n The answers are:{answers}")
-        return ID_restore, answers
+        return ID_restore, answers, prob
 
 
 def read_json(filename):
@@ -394,7 +396,7 @@ def checK_LLM(data, answers):
 
 #Get_manual_evaluation_problems()
 amount = 700
-ID_restore, answers = Get_prompts_for_LLM(amount)
+ID_restore, answers, prob = Get_prompts_for_LLM(amount)
 
 
 LLM_answers_file = "LLM_answers_v1.json"
