@@ -337,7 +337,7 @@ def Get_prompts_for_LLM(amount = 10):
         keys = list(prompt_problems.keys())
         for idx, k in enumerate(keys):
             if idx % step == 0:
-                f.write("----------------------------------\n")w
+                f.write("----------------------------------\n")
             f.write(f"{k}:{prompt_problems[k]}\n")
 
         #print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
