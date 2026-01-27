@@ -1,6 +1,7 @@
 import json
 from evaluate_LLMs import Get_manual_evaluation_problems
-from evaluate_LLMs import Get_prompts_for_LLM
+from evaluate_LLMs import get_LLM_problems
+import pandas as pd
 
 # Read from file and parse JSON
 with open("gold.json", "r") as f:
@@ -54,8 +55,10 @@ def print_len_info(left_len_list, right_len_list):
     print(f"average len left: {avg_len_left}")
     print(f"average len right: {avg_len_right}")
 
-
-_, answers_all, _= Get_prompts_for_LLM(amount = 771)
+df = pd.read_csv("merged_entailment.csv")
+#get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
+#pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
+_, answers_all, _, _= get_LLM_problems(df, 771)
 left_len_list_all_s, right_len_list_all_s = get_len_lists_script(answers_all)
 _, script_answers = Get_manual_evaluation_problems()
 left_len_list_s, right_len_lists_s = get_len_lists_script(script_answers)
