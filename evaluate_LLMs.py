@@ -394,33 +394,37 @@ def checK_LLM(data, answers):
 
 
 
-#Get_manual_evaluation_problems()
-amount = 700
-ID_restore, answers, prob = Get_prompts_for_LLM(amount)
+
+if __name__ == "__main__":
+    
+
+    #Get_manual_evaluation_problems()
+    amount = 700
+    ID_restore, answers, prob = Get_prompts_for_LLM(amount)
 
 
-LLM_answers_file = "LLM_answers_v1.json"
-LLM_answers = read_json(LLM_answers_file)
-result, strict, loose, perc_entailment = checK_LLM(LLM_answers, answers=answers)
-#print(f"LLM RESULTS: {result}")
-print("-----------------------------------")
-print(f"Strict scores: ", strict)
-print(f"Loose scores: ", loose)
-print(f"Percentage entailment", perc_entailment)
+    LLM_answers_file = "LLM_answers_v1.json"
+    LLM_answers = read_json(LLM_answers_file)
+    result, strict, loose, perc_entailment = checK_LLM(LLM_answers, answers=answers)
+    #print(f"LLM RESULTS: {result}")
+    print("-----------------------------------")
+    print(f"Strict scores: ", strict)
+    print(f"Loose scores: ", loose)
+    print(f"Percentage entailment", perc_entailment)
 
 
-# prompt_problems ={}
-# for pairID in problems.keys():
-#     newkey = pairID[:-1]
-#     prompt_problems[newkey] = problems[pairID]
+    # prompt_problems ={}
+    # for pairID in problems.keys():
+    #     newkey = pairID[:-1]
+    #     prompt_problems[newkey] = problems[pairID]
 
 
-# for pairID in problems.keys():
-#     print("ANSWER")
-#     print(answers[pairID])
-#     print_example(df, ID = pairID)
+    # for pairID in problems.keys():
+    #     print("ANSWER")
+    #     print(answers[pairID])
+    #     print_example(df, ID = pairID)
 
-manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
+    manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
 
 
 

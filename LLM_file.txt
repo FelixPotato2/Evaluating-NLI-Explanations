@@ -1,20 +1,701 @@
 ----------------------------------
 2819254573.jpg#0r1:{'premise': 'The blond boy is riding roller-coaster with his mouth wide open.', 'hypothesis': 'a boy riding a roller-coaster'}
-----------------------------------
 4902026887.jpg#2r1:{'premise': 'A young man with glasses and his companion are attempting to do laundry in a public place.', 'hypothesis': 'A person with glasses'}
-----------------------------------
 463970752.jpg#1r1:{'premise': 'Ample dark-skinned man looks back at camera from behind buffet.', 'hypothesis': 'A man looks from behind a buffet.'}
-----------------------------------
 2326669450.jpg#2r1:{'premise': 'Seven children all jump as the photo is taken.', 'hypothesis': 'Children are getting their picture taken.'}
-----------------------------------
 2923891109.jpg#2r1:{'premise': 'A white dog holds a tennis ball in its mouth in a field.', 'hypothesis': 'There is a dog with a ball outside.'}
-----------------------------------
 878758390.jpg#1r1:{'premise': 'A white dog is running on a rocky beach.', 'hypothesis': 'A dog is on the beach.'}
-----------------------------------
+4705854511.jpg#3r1:{'premise': 'A man is reading a newspaper in a car dealership.', 'hypothesis': 'A man is at a car dealership.'}
+3462454965.jpg#4r1:{'premise': 'Three dogs running through a field.', 'hypothesis': 'Three dogs are running'}
+3444684583.jpg#2r1:{'premise': 'A man on a small 4 wheeled vehicle is flying through the air.', 'hypothesis': 'The man is in the air.'}
+2393059551.jpg#0r1:{'premise': 'A man is standing inside a building under construction filled with bricks and various tools.', 'hypothesis': 'a man stands in a construction site'}
+761479953.jpg#2r1:{'premise': 'A young boy wearing safety swimming gear and goggles is in a pool.', 'hypothesis': 'A kid uses eye protection while in the water.'}
+3259757648.jpg#2r1:{'premise': 'A light colored dog leaps over a hurdle.', 'hypothesis': 'A dog jumps over a obstacel.'}
+5244225882.jpg#4r1:{'premise': 'Young man engraves Arabic writing into a stone.', 'hypothesis': 'Young man is engraving into a stone.'}
+4524006530.jpg#1r1:{'premise': 'There is a blue bowl and a fruit platter on the table which is covered with a white tablecloth.', 'hypothesis': 'Food is on a table.'}
+2609836649.jpg#1r1:{'premise': 'A brown and white dog swims in a backyard swimming pool.', 'hypothesis': 'A brown dog swims.'}
+4912348669.jpg#2r1:{'premise': 'A large man is sitting in front of a fountain statue while talking on a phone.', 'hypothesis': 'The man is talking to someone.'}
+2987328689.jpg#0r1:{'premise': 'A boy wearing jeans, standing on rocks in a river and throwing a stone.', 'hypothesis': 'A boy throwing a stone.'}
+3538527033.jpg#0r1:{'premise': 'Three women in festive dresses are dancing in a large city street while a large crowd is behind them holding up a banner.', 'hypothesis': 'Three women dance in front of a large crowd'}
+332045444.jpg#0r1:{'premise': 'A little white curly-haired dog runs across the pavement with a stick in its mouth.', 'hypothesis': 'A dog runs with a stick in his mouth.'}
+322628645.jpg#0r1:{'premise': 'An Asian woman in a purple shirt preparing a bowl of food for the younger Asian boy sitting near buy, while an Asian man eats a roll and prepares to take some food up with his chopsticks.', 'hypothesis': 'A woman is preparing food for a child.'}
+344205744.jpg#0r1:{'premise': 'A young couple sit on the couch, the woman wearing a blue work shirt, her eyes half closed, while the man sits with his arm around her, looking towards the camera, in a gray shirt.', 'hypothesis': 'A couple sit on the couch'}
+4821121646.jpg#2r1:{'premise': 'An Eastern vendor sits by his stall with a rooster nearby.', 'hypothesis': 'a rooster near a vendor'}
+2387494200.jpg#4r1:{'premise': 'A male and female, both wearing sandals, walking by a fence.', 'hypothesis': 'they are going for a walk'}
+3973858553.jpg#0r1:{'premise': 'A woman standing in front of a wall holding a can of Bud Light with her shirt tied into a semi-halter.', 'hypothesis': 'Something alcoholic is visible.'}
+4812310213.jpg#0r1:{'premise': 'A man in a striped shirt standing behind a large pile of fruits.', 'hypothesis': 'a man stands near some fruit'}
+3493399647.jpg#3r1:{'premise': 'Two adults hold either side of a boat at the edge of the water.', 'hypothesis': 'Two people are near water.'}
+356244046.jpg#3r1:{'premise': 'A young boy in green is practicing kicking.', 'hypothesis': 'the your boy is excercizing.'}
+136644885.jpg#1r1:{'premise': 'A woman wearing a white shirt and jeans crosses a rope bridge in a wooded area.', 'hypothesis': 'A woman wearing a white shirt crosses a bridge in a wooded area.'}
+158827073.jpg#2r1:{'premise': 'Young girl playing with chocolate milk powder.', 'hypothesis': 'There is a girl playing with food'}
+3284899112.jpg#0r1:{'premise': 'A man and woman stand in front of a white building and look at their hands.', 'hypothesis': 'A man and woman look at their hands in front of a building'}
+5196768578.jpg#1r1:{'premise': 'A very young child in a red plaid coat and pink winter hat makes a snowball in a large pile of snow.', 'hypothesis': 'A child in a red plaid coat and pink winter hat makes a snowball in a large pile of snow.'}
+2939116460.jpg#0r1:{'premise': "Blond-haired girl wearing a bicycle helmet, a black t-shirt that reads 'Twizzlers' and a printed dog tag necklace around her neck.", 'hypothesis': 'a girl with a helmet wears a dog tag'}
+1145781754.jpg#0r1:{'premise': 'Four men with baseball caps and logo t-shirts laughing together at a table.', 'hypothesis': 'Males are socializing with each other while wearing casual clothes.'}
+8162775105.jpg#3r1:{'premise': 'A pregnant lady singing on stage while holding a flag behind her.', 'hypothesis': 'A woman is making music.'}
+4686754959.jpg#3r1:{'premise': 'The man in the sailor suit is holding literature.', 'hypothesis': 'A man is holding literature.'}
+3523115345.jpg#4r1:{'premise': 'A female researcher videotaping a specimen.', 'hypothesis': 'A female is recording her research. `'}
+1362097957.jpg#0r1:{'premise': 'A woman sits in a chair under a tree and plays an acoustic guitar.', 'hypothesis': 'A woman plays an acoustic guitar under a tree.'}
+2341080150.jpg#0r2:{'premise': 'Beautiful red car among many at a car show full of excited car enthusiasts held on a tree lined street.', 'hypothesis': 'The cars and people are outdoors.'}
+610802443.jpg#0r1:{'premise': 'It is a march of people of different backgrounds all walking and one guy in a green shirt holds a flag.', 'hypothesis': 'A man holds a flag.'}
 2245916742.jpg#2r1:{'premise': 'A man stands by two face structures on Easter Island.', 'hypothesis': 'A man on Easter Island.'}
+4463883091.jpg#3r1:{'premise': 'A man is painting a city scene on a canvas in the street.', 'hypothesis': 'A man is painting outside.'}
+4824252063.jpg#1r1:{'premise': 'A man with a latex glove and black t-shit is standing in front of a Chevy van.', 'hypothesis': 'a man standing in front of a van'}
+2878041967.jpg#4r1:{'premise': 'Children are petting small turtles in the grass.', 'hypothesis': 'The children are playing with turtles.'}
+3613264553.jpg#4r1:{'premise': 'A white dog is walking on a rocky hillside.', 'hypothesis': 'A dog walks outside.'}
+4705913066.jpg#4r1:{'premise': 'A man in a suit speaking to a seated woman.', 'hypothesis': 'A dark headed man in a suit speaking to a seated woman.'}
+2402462857.jpg#1r1:{'premise': 'Brown and cream dog with tongue out in front of grassy forest', 'hypothesis': 'There is an animal standing outdoors.'}
+3150742439.jpg#3r1:{'premise': 'A man in a black hoodie watching a man in a red cap.', 'hypothesis': 'There is a man watching another man.'}
+4916500021.jpg#1r1:{'premise': 'A man with a beard skateboarding and a boy with a blue and black backpack riding a green bike in the background.', 'hypothesis': 'There is a man and a boy outside.'}
+164380865.jpg#3r1:{'premise': 'This is the image of two Asian men squatting near a mop-pad.', 'hypothesis': 'This picture is of two Asian men.'}
+2555622234.jpg#3r1:{'premise': 'a shepherd breed dog running on the beach', 'hypothesis': 'A dog is running around'}
+416960865.jpg#0r1:{'premise': "A woman wearing a red work man's hat and red jacket is hiking in the snow topped mountains.", 'hypothesis': 'A woman in outdoor clothes is hiking.'}
+5984974054.jpg#1r1:{'premise': 'The people driving the tiny white car were nearly hit by the train, but it had fortunately stopped just in time.', 'hypothesis': 'The car was nearly hit by a train.'}
+3929379436.jpg#2r1:{'premise': 'People protesting age discrimination in an organized street rally.', 'hypothesis': 'People are rallying.'}
+2483495637.jpg#0r1:{'premise': 'A dark-haired girl in a spotted shirt is pointing at a picture while sitting next to a boy in a purple shirt and jeans.', 'hypothesis': 'A girl is pointing at the picture.'}
+166507476.jpg#1r1:{'premise': 'Two oriental lizards are fighting for dominance in a small pond', 'hypothesis': 'Two lizards are fighting for dominance in a small pond'}
+32490830.jpg#1r1:{'premise': 'an elderly man in a tie die shirt playing a red according key bored for a boy in blue.', 'hypothesis': 'There is a man playing an instrument'}
+69902502.jpg#1r1:{'premise': 'The man is trying to make a pottery that he can market soon.', 'hypothesis': 'An old man is making pottery to sell.'}
+4703790336.jpg#2r1:{'premise': 'A woman in a yellow dress transporting picked food from the fields to wherever it may need to go.', 'hypothesis': 'A woman transports food from the fields'}
+3096006788.jpg#0r1:{'premise': 'A white-haired conductor is standing in front of an orchestra which is also standing, instruments in hand.', 'hypothesis': 'The conductor and orchestra are not sitting.'}
+4436813115.jpg#0r1:{'premise': 'A man wearing noise-canceling headphones and a breathing mask works on a white sculpture.', 'hypothesis': 'a man wearing headphones working on a sculpture'}
+109741554.jpg#2r1:{'premise': 'A man shoveling snow off the roof of a building.', 'hypothesis': 'A man working in the snow.'}
+109380144.jpg#3r1:{'premise': 'A girl playfully kicks a guy in the face while another person makes faces.', 'hypothesis': 'A girl is play fighting.'}
+4654662119.jpg#0r1:{'premise': 'Two boys are holding red kites with water in the background.', 'hypothesis': 'Persons are involved in outdoor recreation.'}
+374538975.jpg#4r1:{'premise': 'Coed choir singing at an event.', 'hypothesis': 'A choir is singing.'}
+4718205942.jpg#0r1:{'premise': 'An Asian woman is standing on a path with a basket on her head looking into a mirror she is holding in her hand.', 'hypothesis': 'A person standing'}
+3689975998.jpg#4r1:{'premise': 'A woman runs on the beach.', 'hypothesis': 'There is a person jogging by the shore.'}
+4452202808.jpg#4r1:{'premise': 'A man wearing a hat and carrying a bag', 'hypothesis': 'A man is carrying a bag.'}
+2509912399.jpg#1r1:{'premise': 'A smiling baby wearing a striped shirt, held by a woman with gray hair.', 'hypothesis': "There is a baby in a person's arms."}
+4729746211.jpg#1r1:{'premise': 'A man in a hat is working with golden colored flowers.', 'hypothesis': 'A man in a hat is working with flowers,'}
+11610969.jpg#2r1:{'premise': 'People are shopping outside surrounded by a metal fence.', 'hypothesis': 'The people are shopping'}
 ----------------------------------
-504765160.jpg#1r1:{'premise': 'A blond woman in a blue shirt looks on at an event.', 'hypothesis': 'The woman is wearing a blue shirt.'}
-----------------------------------
-5790434381.jpg#1r1:{'premise': 'Several men in fluorescent pinnies work on a structure shrouded in a green veil while a cherry picker truck hauls material.', 'hypothesis': 'the men are working'}
-----------------------------------
+4970631613.jpg#0r1:{'premise': 'A woman wearing an elaborate array of feathers in her hair, a bead necklace, a medallion, and an aqua, brown, and olive-green dress and looks off to her left, smiling slightly.', 'hypothesis': 'A woman looks to her left'}
+3538194939.jpg#0r1:{'premise': 'A man wearing a blue apron and long rubber boots is dragging a flotation device from a long row of flotation devices.', 'hypothesis': 'A man wearing work clothes and boots is working on a flotation device.'}
+2676764246.jpg#0r1:{'premise': 'The greyhounds are running quickly in this race.', 'hypothesis': 'The big greyhounds are running quickly in this race.'}
+405703782.jpg#0r1:{'premise': 'A ribbon dancer is leaping through the air with her head back during a competition, green ribbon behind her.', 'hypothesis': 'a dancer performs'}
+351765604.jpg#0r1:{'premise': 'A woman wearing a ball cap squats down to touch the cracked earth.', 'hypothesis': 'A squatting woman wearing a hat touching the ground.'}
+2147876139.jpg#4r1:{'premise': 'Three girls blow out the candles of a cake made of Peeps.', 'hypothesis': 'There are three girls and a cake'}
+3440104178.jpg#0r1:{'premise': 'A white dog with brown ears runs down a gravel path with a ball in its mouth.', 'hypothesis': 'A dog runs down a path.'}
+3453019315.jpg#0r1:{'premise': 'A helmeted male airborne on a bike on a dirt road.', 'hypothesis': 'A man ridding his bike.'}
+517102724.jpg#4r1:{'premise': 'A black dog in front of a waterfall.', 'hypothesis': 'A dog is in front of a waterfall.'}
+6141981912.jpg#0r1:{'premise': 'A soccer player wearing white shorts and an orange and green shirt holds the ball while being guarded by another soccer player in a blue uniform.', 'hypothesis': 'A soccer player holds the soccer ball.'}
+4485090958.jpg#2r1:{'premise': 'A woman in a black jacket and a black and white striped skirt is watching a woman talking to a little boy sitting on concrete steps.', 'hypothesis': 'A person is talking to a child while another person watches.'}
+98756067.jpg#1r1:{'premise': 'Two men practicing a form of martial arts in a wooden-floored studio.', 'hypothesis': 'Two men practicing martial arts'}
+4742826670.jpg#3r1:{'premise': 'A black man, wearing a cap, is sitting in a bus.', 'hypothesis': 'A man is traveling on public transportation.'}
+2688848759.jpg#1r1:{'premise': 'Several people talk and drink beer while sitting around a picnic table.', 'hypothesis': 'People talking and drinking while sitting at a table outside.'}
+244829722.jpg#2r1:{'premise': 'A young woman rides by herself on a swinging carnival ride.', 'hypothesis': 'A woman is enjoying herself.'}
+3385956569.jpg#0r1:{'premise': 'A person in a red and tan coat is snowboarding off a hill of snow.', 'hypothesis': 'A person rides a snowboard.'}
+3599568766.jpg#1r1:{'premise': 'A white dog with brown spots running on a dirt path', 'hypothesis': 'A white dog runs on a dirt path.'}
+81125088.jpg#4r1:{'premise': 'A little boy smiles while playing in the dirt.', 'hypothesis': 'A human smiling.'}
+6887014469.jpg#0r1:{'premise': "there's a woman in a pink and gray striped outfit standing with five children, three of which are making faces.", 'hypothesis': 'the woman is standing'}
+3421480658.jpg#1r1:{'premise': 'A girl reaches up to kiss a cat, which is sitting on the counter.', 'hypothesis': 'A girl is showing affection towards a cat.'}
+3117700421.jpg#0r1:{'premise': 'A man wearing a red shirt is quickly polishing a light wooden floor with a small green towel next to a yellow can of Wood Silk.', 'hypothesis': 'a man polishes a floor'}
+519061891.jpg#2r1:{'premise': 'A small boy wearing a blue shirt plays in the kiddie pool.', 'hypothesis': 'Boy in a pool'}
+463608562.jpg#4r1:{'premise': 'Man in red shirt about to have a barbecue', 'hypothesis': 'Person in red shirt about to have a barbecue'}
+7291465794.jpg#0r1:{'premise': 'A man wearing yellow sneakers and a black vest is on a water board and hangs onto a waterski line that appears to be towed by a boat.', 'hypothesis': 'A man is moving on the water.'}
+3958553026.jpg#1r1:{'premise': 'A boy walking away from two Camden tents with a group of people behind him.', 'hypothesis': 'A person walking away from a tent'}
+3969772063.jpg#1r1:{'premise': 'A man with a beard is playing an acoustic guitar on the street.', 'hypothesis': 'A man plays guitar outside.'}
+2986716822.jpg#2r1:{'premise': 'The brown German shepherd dog is playing with a stick.', 'hypothesis': 'The dog is playing.'}
+4287405602.jpg#1r1:{'premise': 'A woman cook in an apron is smiling at the camera with two other cooks in the background.', 'hypothesis': 'A woman looking at the camera.'}
+3707585013.jpg#4r1:{'premise': 'A singer is performing before a small crowd outside.', 'hypothesis': 'A performer has a small audience outdoors.'}
+7466310132.jpg#2r1:{'premise': "A man and woman look through CD's at a street vendor.", 'hypothesis': 'A man and women shopping'}
+448658518.jpg#0r1:{'premise': 'A large man dressed in black on a street corner by a red brick building.', 'hypothesis': 'A man is on the street corner.'}
+4615250594.jpg#4r1:{'premise': 'Two old women sitting on curb next to flowers', 'hypothesis': 'Elderly women are resting near flowers'}
+4470113445.jpg#0r1:{'premise': 'A man on stage wearing a red shirt is zipping up his pants.', 'hypothesis': 'A man on stage wearing a shirt is zipping up his pants.'}
+474652272.jpg#3r1:{'premise': 'A young man standing outside a laundromat.', 'hypothesis': 'A man is standing.'}
+245844116.jpg#0r1:{'premise': 'Young African children are playing in a dirt and gravel street dressed in shorts and t-shirts.', 'hypothesis': 'Children are playing in a dirt street.'}
+2579490116.jpg#4r1:{'premise': 'A moving truck with a ramp still attached.', 'hypothesis': 'A truck with a ramp attached.'}
+3562169000.jpg#0r1:{'premise': 'A blue race car slides off the racetrack and hits white median bumpers with its rear.', 'hypothesis': 'The automobile lost control and hit something.'}
+2536850983.jpg#3r1:{'premise': 'a group of construction workers busy refinishing a subway station.', 'hypothesis': 'A construction team working in a subway station.'}
+304039165.jpg#2r1:{'premise': 'Three people walking down a hallway at the train station.', 'hypothesis': 'A group of people are walking through an area of public transportation.'}
+2718024196.jpg#0r1:{'premise': 'A boy in a blue bathing suit jumps with his arms in the air in a backyard setting.', 'hypothesis': 'A boy jumps.'}
+2245918465.jpg#1r1:{'premise': "A man of the cloth puts a black substance on a man's forehead.", 'hypothesis': 'The man puts something on the other mans head.'}
+418207489.jpg#3r1:{'premise': 'A man and a woman are shopping at a large hardware warehouse store.', 'hypothesis': 'A man and woman are in a hardware store.'}
+2785263535.jpg#0r1:{'premise': 'A crowd of people at a county fair watch three men agitate a large bull.', 'hypothesis': 'Three men bother a bull as people watch.'}
+8034142456.jpg#4r1:{'premise': 'Golfer celebrates after a shot he has made.', 'hypothesis': 'An athlete has just made a shot with his golf club.'}
+5971287030.jpg#4r1:{'premise': 'A boy wearing a black shirt is playing a game at the arcade.', 'hypothesis': 'A boy is playing.'}
+3439390288.jpg#1r1:{'premise': 'A little blond girl is running near a little blond boy.', 'hypothesis': 'A sister and brother are playing in their yard.'}
+4968323199.jpg#1r1:{'premise': 'Man with dark shirt in work gloves and a helmet that has a yellow flashlight attached.', 'hypothesis': 'A man with gloves and a flashlight.'}
+4688301633.jpg#3r1:{'premise': 'A surgeon is performing an open surgery.', 'hypothesis': 'A doctor is doing some kind of medical operation.'}
+3584860179.jpg#1r1:{'premise': 'An old man is sitting in a chair outside a colorfully painted building.', 'hypothesis': 'A man is sitting on a chair'}
+3417231408.jpg#2r1:{'premise': 'The man wearing blue jean shorts is grilling.', 'hypothesis': 'A man is grilling.'}
+2100909581.jpg#3r1:{'premise': 'White dog playing in the snow.', 'hypothesis': 'The dog enjoys the snow.'}
+84291062.jpg#3r1:{'premise': 'A man in a black shirt is working out in a gym, while a woman behind him is on a treadmill.', 'hypothesis': 'Two people exercise indoors.'}
+2724379828.jpg#1r1:{'premise': 'A man providing entertainment on the sidewalk by playing the violin.', 'hypothesis': 'A man playing the violin entertains on the sidewalk.'}
+6175830478.jpg#4r1:{'premise': 'Volleyball player showing off her action post during the game.', 'hypothesis': 'The star volleyball player shows off'}
+3132903412.jpg#0r1:{'premise': 'A couple dressed in coats, hats, and scarves are standing in the snow.', 'hypothesis': 'The couple stood in the snow.'}
+4525101035.jpg#3r1:{'premise': 'A black man wearing a down jacket with his arms spread and holding a pink comb.', 'hypothesis': 'A man was wearing a jacket while holding a comb.'}
+4824883554.jpg#1r1:{'premise': 'An old man in a blue shirt and white pants glowers by a glass door.', 'hypothesis': 'A man wearing a blue shirt and white pants'}
+6526560433.jpg#1r1:{'premise': 'A football player in a black uniform appears ready to tackle an opponent in a white uniform who is in possession of the ball.', 'hypothesis': 'Two football players are playing on a football field.'}
+4868582683.jpg#4r1:{'premise': 'A young boy playing in a bubble playing in water.', 'hypothesis': 'A person is getting wet.'}
+700884207.jpg#0r1:{'premise': 'The baby in a blue jean hat and sunglasses looks at the camera while being held.', 'hypothesis': 'A baby looks at the camera.'}
+85306246.jpg#1r1:{'premise': 'A man is working on a Earthen structure with a pickaxe.', 'hypothesis': 'A man has tools.'}
+4740975956.jpg#4r1:{'premise': 'Tall man being stopped by an officer.', 'hypothesis': 'There is a tall man.'}
+6982756534.jpg#0r1:{'premise': 'A woman in a bright pink and green skirt carries a large wicker basket on her back up a stone-cobbled street.', 'hypothesis': 'The woman is carrying a basket down the street.'}
+3445428367.jpg#1r1:{'premise': 'A woman with long hair pointing her camera skyward as she stands on a brick wall.', 'hypothesis': 'A woman is pointing her camera upwards, while standing at a wall.'}
+3486059684.jpg#1r1:{'premise': 'The restaurant employee is preparing sandwiches in the highly decorated kitchen.', 'hypothesis': 'A service worker is making food in a nice kitchen.'}
 2252036322.jpg#3r1:{'premise': 'A road crew is working on a road with equipment around them.', 'hypothesis': 'A crew is working.'}
+6190299977.jpg#1r1:{'premise': 'A white-clad soccer player is attempting to intercept a soccer ball that is quickly approaching the goal box.', 'hypothesis': 'A soccer player gets the interception.'}
+4378559088.jpg#2r1:{'premise': 'A young girl standing in front of a row of yellow chairs.', 'hypothesis': 'A human standing.'}
+1327485320.jpg#4r1:{'premise': 'A woman in a white apron prepares various meats on a large grill.', 'hypothesis': 'A woman is beginning to cook.'}
+6332384430.jpg#0r1:{'premise': 'A black man wearing a red belt and a white man wearing a blue belt are pictured in the act of practicing martial arts inside a building with a woman looking on in the background.', 'hypothesis': 'A man is wearing a red belt.'}
+----------------------------------
+3548358879.jpg#4r1:{'premise': 'An Asian teen is playing a game.', 'hypothesis': 'The teen is Asian'}
+4247623205.jpg#3r1:{'premise': 'A young asian woman stands with her luggage.', 'hypothesis': 'A young woman with luggage.'}
+8849890.jpg#1r1:{'premise': 'Two young men play trumpet in traditional mariachi dress.', 'hypothesis': 'Two humans are playing instruments.'}
+132056499.jpg#3r1:{'premise': 'A maintenance worker walking past a statue.', 'hypothesis': 'worker walking by a statue'}
+3358682439.jpg#2r1:{'premise': 'Two women bend over to touch a small kangaroo.', 'hypothesis': 'Two women are petting a kangaroo'}
+699448056.jpg#0r1:{'premise': 'A man in a blue plaid shirt and blue jeans, wearing a black helmet, pauses to drink water next to a large blue steel corrugated tube.', 'hypothesis': 'A casually dressed man is drinking water.'}
+2536434720.jpg#0r1:{'premise': 'Rider in ceremonial garb rides white Arabian horse, also wearing ceremonial blankets and tassels.', 'hypothesis': 'Horse rider in traditional wear, ride horse with ceremonial wear and accessories'}
+4630881369.jpg#1r1:{'premise': 'Boy with white powder and blue writing on his face', 'hypothesis': 'A boy with a painted face.'}
+211402278.jpg#0r1:{'premise': 'Sheep farmers are crouching and preparing to feed their animals as the sheepdog watches closely by.', 'hypothesis': 'Farmers prepare to feed their animals in a large field.'}
+221973402.jpg#3r1:{'premise': 'a black dog chases a boy wearing red and blue.', 'hypothesis': 'a dog chases a boy'}
+3620565950.jpg#0r1:{'premise': 'The gentlemen with the red plaid shirt and black pants is speaking to a young lady holding a blue folder.', 'hypothesis': 'The gentleman is speaking to a young lady.'}
+23015660.jpg#0r1:{'premise': 'A young woman tennis player dressed in black carries many tennis balls on her racket.', 'hypothesis': 'A young woman tennis player have many tennis balls.'}
+501736361.jpg#3r1:{'premise': 'A little girl planting her first flower in the sand.', 'hypothesis': 'The little girl is planting her first flower.'}
+6797626960.jpg#4r1:{'premise': 'A boy taking a shot while his team watches anxiously.', 'hypothesis': 'A boy is playing a game.'}
+6006191679.jpg#0r1:{'premise': 'A person just about to stand up while water-skiing, while people in the background watch and take photos.', 'hypothesis': 'The crowd is admiring the person water-skiing.'}
+3264397357.jpg#2r1:{'premise': 'A dark-haired lady with a big smile is wearing a bright red scarf.', 'hypothesis': 'There is a happy lady with colorful clothing'}
+763577068.jpg#1r1:{'premise': 'The little dog walking on the grass has a red bow in its hair.', 'hypothesis': 'The dog is walking on the grass.'}
+4393321765.jpg#0r1:{'premise': 'A man in a gray shirt sorts through Hawaiian style shirts in a department store.', 'hypothesis': 'The man is shopping at the department store.'}
+7249180494.jpg#1r1:{'premise': 'The man in the black wetsuit is walking out of the water.', 'hypothesis': 'a person is walking out of water.'}
+2508024651.jpg#1r1:{'premise': 'Someone in a white and black polka dot outfit handing out small cartons of orange juice behind caution tape on a street.', 'hypothesis': 'A person in a polka dot outfit is handing out orange juice behind a caution area.'}
+2528076469.jpg#3r1:{'premise': 'A gentleman overlooking a neighborhood situation.', 'hypothesis': 'A man looks at something in a neighborhood.'}
+4753637884.jpg#1r1:{'premise': 'There is a large group of people standing together mostly wearing Canada symbols.', 'hypothesis': 'There is a large group.'}
+4360012431.jpg#0r1:{'premise': 'Two boys wearing colorful winter hats and dark coats are riding bikes and smiling at each other.', 'hypothesis': 'Two boys are riding bikes.'}
+4896079336.jpg#4r1:{'premise': 'A topless man straps surfboards on top of his blue car.', 'hypothesis': 'A man secures surfboards on his car.'}
+7680969218.jpg#4r1:{'premise': 'A couple of peace corp workers are helping a black kid dig.', 'hypothesis': 'There are people helping a child.'}
+3296500180.jpg#1r1:{'premise': 'Man jumping over a rusty fence on a blue bicycle.', 'hypothesis': 'Man doing a trick riding his bicycle.'}
+2366421102.jpg#3r1:{'premise': 'a girl wearing pink pulls weeds.', 'hypothesis': 'The girl is gardening.'}
+5008951909.jpg#0r1:{'premise': 'A man waving at the camera holding a stick with a pile of wood.', 'hypothesis': 'The man waved at the camera.'}
+3726215814.jpg#0r1:{'premise': 'A woman wearing a black t-shirt and green capri pants walks in front of a giant clock.', 'hypothesis': 'The clock is accurate at least two times a day.'}
+1496289999.jpg#4r1:{'premise': 'A rock climber climbs a steep mountain.', 'hypothesis': 'a climber climbs a mountain'}
+3411579899.jpg#1r1:{'premise': 'Mountain biking in a forest during the early fall.', 'hypothesis': 'Bicycling through the woods in the Autumn.'}
+5135010022.jpg#0r1:{'premise': 'A man wearing glasses and a ragged costume is playing a Jaguar electric guitar and singing with the accompaniment of a drummer.', 'hypothesis': 'A man with glasses and a disheveled outfit is playing a guitar and singing along with a drummer.'}
+2870426310.jpg#2r1:{'premise': 'Two little girls and one little boy are running on the grass.', 'hypothesis': 'Three kids are running.'}
+684255145.jpg#4r1:{'premise': 'A child does a handstand in a pool.', 'hypothesis': 'A child is playing in a pool.'}
+2394922193.jpg#0r1:{'premise': 'Woman wearing a red sweater, brown slacks and a white hat, rollerblading on the street in front of a yellow building.', 'hypothesis': 'A woman is moving across the pavement.'}
+129981966.jpg#3r1:{'premise': 'a man in pants dancing in a park.', 'hypothesis': 'A man is outside.'}
+3323498985.jpg#1r1:{'premise': "A man in swimming trunks plays in the ocean's waves.", 'hypothesis': 'A man is outdoors.'}
+4912348669.jpg#0r1:{'premise': 'An obese white male wearing a blue shirt and khaki shorts sits in front of fountain all while gabbing on phone.', 'hypothesis': 'A man is talking outside on his phone.'}
+6278649113.jpg#2r1:{'premise': 'A woman with a blue shirt and colorful hair has just thrown the bowling ball.', 'hypothesis': 'A woman is bowling.'}
+86120813.jpg#2r1:{'premise': 'A train conductor in coveralls is standing in the door of the trail.', 'hypothesis': 'A train conductor is standing in a door.'}
+2088052469.jpg#3r1:{'premise': 'Two men are dressed up as snowmen.', 'hypothesis': 'men are dressed up'}
+4968714648.jpg#4r2:{'premise': 'An old woman walking down the street.', 'hypothesis': 'A human in motion.'}
+7810644900.jpg#4r1:{'premise': 'Man with dreadlocks on a skateboard in the middle of the street.', 'hypothesis': 'The man is outside.'}
+5467111335.jpg#3r1:{'premise': 'Military woman using a microscope.', 'hypothesis': 'A woman using a microscope.'}
+3497069793.jpg#2r1:{'premise': 'A girl bounces in a bounce house.', 'hypothesis': 'A girl is bouncing around.'}
+7760172752.jpg#3r1:{'premise': 'A middle-aged man works under the engine of a train on rail tracks.', 'hypothesis': 'A guy is working on a train.'}
+2547273673.jpg#0r1:{'premise': 'A man with a black shirt, shorts and a black messenger bag, is listening to a man, sitting with black pants and a white t-shirt, playing the guitar.', 'hypothesis': 'There are some people in clothes and there is a musical instrument.'}
+558338473.jpg#4r1:{'premise': 'Two men dressed in black practicing martial arts on a gym floor.', 'hypothesis': 'Two men are doing martial arts.'}
+3366377833.jpg#4r1:{'premise': 'A baseball player sliding toward second base.', 'hypothesis': 'A player sliding toward second base.'}
+4923272200.jpg#0r1:{'premise': 'A man is playing the saxophone in the street and some people are sitting on the curb next to the street by him.', 'hypothesis': 'A man is playing an instrument on the street near other people.'}
+4938457809.jpg#0r1:{'premise': 'Middle-aged man in jeans and dark blue t-shirt carrying a black item and walking across a lawn.', 'hypothesis': 'Man in dark clothing walks across a lawn.'}
+197976461.jpg#4r1:{'premise': 'lady in black skirt is getting excited.', 'hypothesis': 'A lady is excited.'}
+3154813159.jpg#0r1:{'premise': 'A white and brown dog is standing on its back legs next to a woman and a table with a gingerbread house on it.', 'hypothesis': 'A dog is in the kitchen with an woman.'}
+405698513.jpg#2r1:{'premise': 'A young female gymnast, wearing a sequined royal blue and white outfit, is lifting her right leg straight up in the air.', 'hypothesis': 'a gymnast has her leg straight up in the air.'}
+2750741104.jpg#1r1:{'premise': 'A little girl offers a ball to an upset toddler on a grassy field while a man in bermuda shorts stands behind them.', 'hypothesis': 'A man watches two children on a grassy field.'}
+4796742329.jpg#4r1:{'premise': 'A man walking and carrying a notebook.', 'hypothesis': 'The man has something in his hand.'}
+5790434381.jpg#1r1:{'premise': 'Several men in fluorescent pinnies work on a structure shrouded in a green veil while a cherry picker truck hauls material.', 'hypothesis': 'the men are working'}
+3514194772.jpg#4r1:{'premise': 'A brown dog in running on grass.', 'hypothesis': 'A dog is moving around'}
+4271121531.jpg#2r1:{'premise': 'A butterfly costumed girl waves at the crowd.', 'hypothesis': 'A girl is waving at a crowd of people.'}
+3710176138.jpg#2r1:{'premise': 'Little boy getting soaked playing an outdoor water game.', 'hypothesis': 'A little boy is wet outside.'}
+5777129645.jpg#2r1:{'premise': 'The two farmers are working on a piece of John Deere equipment.', 'hypothesis': 'Men are working on John Deere equipment'}
+2118681098.jpg#0r1:{'premise': 'A man wearing a blue sweatshirt and a white hard hat is working on a construction project.', 'hypothesis': 'The man is a construction worker.'}
+2554562324.jpg#2r1:{'premise': 'A red-haired woman in a pink shirt attempts to descend a tree.', 'hypothesis': 'A woman climbing down a tree.'}
+2699733386.jpg#0r1:{'premise': 'A black and brown dog walks in the shallows of a large body of water.', 'hypothesis': 'The dog is in the water.'}
+174466741.jpg#1r1:{'premise': 'A young girl wearing a pink shirt and jeans is running through a flowered field.', 'hypothesis': 'A girl is in the field.'}
+367975972.jpg#1r1:{'premise': 'A young dark-haired woman crouches on the banks of a river while washing dishes.', 'hypothesis': 'A woman washes dishes.'}
+3361630301.jpg#4r1:{'premise': 'A shopper buys cat food at a Walmart', 'hypothesis': 'A person shops for their pet at a store.'}
+147236031.jpg#1r1:{'premise': 'An Asian woman is looking at the camera while trimming asparagus.', 'hypothesis': 'Woman cuts vegetables.'}
+4474806698.jpg#2r1:{'premise': 'A woman wearing a white baseball cap purple coat holding a poster.', 'hypothesis': 'A woman with a hat holding a poster.'}
+2914800692.jpg#4r1:{'premise': 'A man does a jump trick on a bike.', 'hypothesis': 'He just did a trick on his bike.'}
+----------------------------------
+7735272386.jpg#1r1:{'premise': 'A woman in a US military uniform is writing on a large piece of white paper with a black magic marker while others are sitting at tables around her.', 'hypothesis': 'A woman is writing on paper'}
+2853743795.jpg#1r1:{'premise': 'A black and white dog jumping over a red and white bar.', 'hypothesis': 'The dog is in the air.'}
+4914994391.jpg#0r1:{'premise': "There's a red bus making a left turn into a traffic circle that has a sprinkler system.", 'hypothesis': 'A red bus making a turn'}
+271637337.jpg#1r1:{'premise': 'A furry dog is jumping over a hurdle.', 'hypothesis': 'A dog is jumping.'}
+312644387.jpg#1r1:{'premise': 'An older white woman makes cupcakes in her kitchen.', 'hypothesis': 'An old woman is in a kitchen.'}
+8757787.jpg#2r1:{'premise': 'Street vendors preparing and serving grilled food.', 'hypothesis': 'Food is being prepared and served.'}
+6792342642.jpg#4r1:{'premise': 'little girl posing for a picture.', 'hypothesis': 'The child is posing for the photographer.'}
+8443156.jpg#0r1:{'premise': 'A child dressed in blue jeans with rolled cuffs and a pink hoodie waits outdoors at the foot of the stairs with an axe.', 'hypothesis': 'A child waits by some stairs.'}
+1313869424.jpg#1r1:{'premise': 'A shirtless man in shorts is fishing while standing on some rocks.', 'hypothesis': 'A man is fishing.'}
+6878167613.jpg#2r1:{'premise': 'A golfer is getting ready to putt on the green, with a crowd of people watching in the background.', 'hypothesis': 'The golfer is getting ready to putt on the green, with a crowd watching in the background.'}
+372243070.jpg#0r1:{'premise': 'A caucasian man wearing red plaid bottoms and a black vest with large buttons with a tattoo on one arm has an upside down unicycle balancing on his mouth.', 'hypothesis': 'A man is holding a unicycle in a curious manner.'}
+3214573346.jpg#3r1:{'premise': 'White dog high jumping over some pillows.', 'hypothesis': 'The dog is jumping over pillows.'}
+6716031215.jpg#0r1:{'premise': 'A female bowler dressed in blue, with another bowler in the background, prepares to throw a ball down the lane.', 'hypothesis': 'A woman is playing a game'}
+3958778014.jpg#0r1:{'premise': 'A woman in a white shirt inspects a black garment while sitting in a chair at a festival.', 'hypothesis': 'A woman inspects a garment.'}
+4793317845.jpg#2r1:{'premise': 'A demolition crane tearing down what is left of a building with a man standing on a platform spraying water.', 'hypothesis': 'The demolition vehicle is being operated.'}
+3991342877.jpg#4r1:{'premise': 'a woman holding a child in a purple shirt', 'hypothesis': 'a woman holds a child'}
+2385744837.jpg#0r1:{'premise': 'A boy in a red jacket and balck hat sliding on his knees down a snowy hill', 'hypothesis': 'A child is playing outside.'}
+3020785883.jpg#1r1:{'premise': 'A little baby is sitting on the ground with his hands in a cup.', 'hypothesis': 'The baby is sitting on the ground.'}
+2341080150.jpg#0r1:{'premise': 'Beautiful red car among many at a car show full of excited car enthusiasts held on a tree lined street.', 'hypothesis': 'There is a beautiful car displayed.'}
+3726935024.jpg#3r1:{'premise': 'The black woman is laying out literature.', 'hypothesis': 'A black woman is handling printed material.'}
+2232255534.jpg#0r1:{'premise': 'A young man in jogging slacks is checking information on his mobile devise while listening to something on a crowded commuter rail car.', 'hypothesis': 'a man in jogging pants checks his device'}
+6338544926.jpg#1r1:{'premise': 'Two people are playing American Football and one of them is trying to stop the other from throwing the ball.', 'hypothesis': 'A game of football is being played.'}
+2043520315.jpg#3r1:{'premise': 'A group of three people and one dog hike up a green mountainside.', 'hypothesis': 'Some people are exercising outside.'}
+6704385305.jpg#0r1:{'premise': 'An athlete on the Slough Jets hockey team is skating on an ice rink with a hockey stick equipped.', 'hypothesis': 'A person ice skating.'}
+3618525295.jpg#2r1:{'premise': 'a woman and her dog sitting at an outdoor cafe table', 'hypothesis': 'A woman and her pet sit outside at a restaurant.'}
+192618386.jpg#2r1:{'premise': 'Young children and parents splashing around a public fountain.', 'hypothesis': 'There are families playing in a fountain'}
+3036596725.jpg#1r1:{'premise': 'A white greyhound dog wearing a muzzle runs around a track.', 'hypothesis': 'The dog is racing other dogs.'}
+2201136364.jpg#1r1:{'premise': 'A bearded man wearing a blue shirt is playing an acoustic guitar.', 'hypothesis': 'The man is making music.'}
+3799845307.jpg#0r1:{'premise': 'A man in a black shirt painting a duplicate copy of another painting hanging in an art gallery.', 'hypothesis': 'The man is painting something.'}
+3036894037.jpg#1r1:{'premise': 'Two commandos with gun by a staircase and an old man holding a hat is sitting on the stairs.', 'hypothesis': 'Two soldiers carry weapons.'}
+212556127.jpg#0r1:{'premise': "A smiling young man is standing indoors with his left foot on a blue-wheeled child's scooter and his right foot on a yellow-wheeled child's scooter.", 'hypothesis': 'A young man is standing on two scooters.'}
+3603870481.jpg#3r1:{'premise': 'A black dog holding an orange object in the water.', 'hypothesis': 'A dog holds an object in the water.'}
+4836132337.jpg#0r1:{'premise': 'Man in white sweater looks from his press box onto the pitch.', 'hypothesis': 'A man watches the field'}
+5293641153.jpg#0r1:{'premise': 'A young man wearing khaki pants and a checked shirt is jumping over large rocks with green mountains and a lagoon in the background.', 'hypothesis': 'A man is jumping over some rocks near the mountains.'}
+4569102627.jpg#2r1:{'premise': 'Little girl with very curly hair drinking her cup of juice.', 'hypothesis': 'A girl is ingesting liquid.'}
+3752991046.jpg#0r1:{'premise': 'A girl with curly hair and wearing a patriotic shirt is looking at a monarch butterfly sitting on her left index finger.', 'hypothesis': 'A girl and a butterfly'}
+4441493820.jpg#4r1:{'premise': 'Man recording a video of a woman.', 'hypothesis': 'A woman is being recorded by a man.'}
+50713403.jpg#1r1:{'premise': 'Two men are fixing the side of an old brick building.', 'hypothesis': 'People fixing a building'}
+246120654.jpg#2r1:{'premise': 'Four young children appear in this image wearing pants and shirts while they lounge in the room.', 'hypothesis': 'Four clothed children relaxing in a room.'}
+3027421269.jpg#1r1:{'premise': 'A young african child in a dirty yellow shirt carrying a bag on his head.', 'hypothesis': 'A young African child carrying a bag.'}
+4125992235.jpg#1r1:{'premise': 'A person strolling through an orange tinted woods with a dog.', 'hypothesis': 'The person is outside.'}
+7340952802.jpg#0r1:{'premise': 'A well safety equipment biker racing on the trail in a wooded area with number 569 on his bike', 'hypothesis': 'A biker races on the trail'}
+5270960438.jpg#0r1:{'premise': 'a green and white trolley car with an advertisement of coffee on the side and front of it in a city.', 'hypothesis': "A trolley making it's way through a city."}
+7784556054.jpg#1r1:{'premise': 'two bicyclists in spandex and helmets in a race pedaling uphill.', 'hypothesis': 'A pair of humans are riding their bicycle with tight clothing, competing with each other.'}
+3262301835.jpg#3r1:{'premise': 'A man is holding a bus pole in front of a building.', 'hypothesis': 'The man is outside'}
+2736656254.jpg#0r1:{'premise': 'Here is a little girl drinking her soda at what looks like an aquarium while the dolphin swims in the background.', 'hypothesis': 'There is a girl with an animal'}
+3306464579.jpg#2r1:{'premise': 'a man with a tattoo on his arm cooking something in a frying pan.', 'hypothesis': 'A man cooks food.'}
+46601243.jpg#1r1:{'premise': 'While drinking a coupe of Red Stripe beers, a man with a gray t-shirt speaks to another man wearing a blue button up shirt.', 'hypothesis': 'A man is drinking beers'}
+3031722599.jpg#2r1:{'premise': 'A man in a green apron smiles behind a food stand.', 'hypothesis': 'A man smiles.'}
+4186516481.jpg#3r1:{'premise': 'A girl with a purple sweater and a green headband is doing classwork in a classroom.', 'hypothesis': 'A girl is doing work in a classroom.'}
+747093215.jpg#3r1:{'premise': 'A young boy is in an overgrown field with a toy lawn mower.', 'hypothesis': 'A young boy is in a field with a lawn mower.'}
+4587968317.jpg#3r1:{'premise': 'Two men are working together to empty the barrel of its contents.', 'hypothesis': 'Two men are emptying a barrel.'}
+3338217927.jpg#2r1:{'premise': 'A dog jumping for a Frisbee in the snow.', 'hypothesis': 'An animal is outside in the cold weather, playing with a plastic toy.'}
+504765160.jpg#1r1:{'premise': 'A blond woman in a blue shirt looks on at an event.', 'hypothesis': 'The woman is wearing a blue shirt.'}
+492358389.jpg#1r1:{'premise': 'Female in a military uniform with her hair tied back.', 'hypothesis': 'the female is wearing her hair up'}
+5676066044.jpg#0r1:{'premise': 'Colorfully dressed man dancing in the streets, while balancing something on his head.', 'hypothesis': 'There is a man outside.'}
+2060904593.jpg#0r1:{'premise': 'Three young men in blue jeans are gathered inside a wood-paneled room, one of them handling a crossbow.', 'hypothesis': 'three young men are gathered in a room made of wood panels while one holds a crossbow'}
+4621091937.jpg#3r1:{'premise': 'Men sitting on the side of a brick road.', 'hypothesis': 'me are sitting on the side of a road'}
+7090197245.jpg#2r1:{'premise': 'A boy riding on a carnival ride turns around for a photograph.', 'hypothesis': 'A human riding'}
+2591110592.jpg#0r1:{'premise': 'A child in a jeans jacket and shorts holding up a white dress as another darker-skinned child looks at it.', 'hypothesis': 'a child holds a dress'}
+2789350645.jpg#1r1:{'premise': 'A big black poodle running on the grass with a toy in its mouth.', 'hypothesis': 'A dog is playing outside.'}
+2737097126.jpg#2r1:{'premise': 'People working together to plant flowers.', 'hypothesis': 'People are planting flowers.'}
+3640104986.jpg#3r1:{'premise': 'The elaborate Jesus shrine is being carried in a parade.', 'hypothesis': 'A Jesus shrine is in the parade.'}
+2584412512.jpg#4r1:{'premise': 'Two dogs are playing together.', 'hypothesis': 'Two canines are having fun.'}
+3714870764.jpg#3r1:{'premise': 'a young girl in red lifting a girl in blue to the top of a wall and lighting.', 'hypothesis': 'The girl is lifting the other girl.'}
+8221794333.jpg#0r1:{'premise': 'A young boy in a Cookie Monster t-shirt sits on the ground on a fall day, holding a fallen leaf in his hand as an expression of joy lights up on his face.', 'hypothesis': 'A young boy is playing in a pile of leaves.'}
+3671612380.jpg#4r1:{'premise': 'little boy running in the street.', 'hypothesis': 'There is a street with a boy running'}
+218109620.jpg#0r1:{'premise': 'Young blond girl holding chopsticks looks with red eyes at camera while another girl in the background looks at food.', 'hypothesis': 'The girl is touching an object.'}
+4440438333.jpg#1r1:{'premise': 'The pitcher wearing black heaves the ball toward the catcher.', 'hypothesis': 'People are playing a game.'}
+2914022011.jpg#0r1:{'premise': "A man in a red shirt and blue jeans is standing in front of a wall with other people's shadows in front of him on the pavement.", 'hypothesis': 'A man stands by a wall outside.'}
+----------------------------------
+2871962580.jpg#1r1:{'premise': 'One football player holding the ball is chased by another football player from the opposing team', 'hypothesis': 'A player being chased by another player.'}
+3520050692.jpg#1r1:{'premise': 'A young, well-dressed black man seated behind a drum set and smiling.', 'hypothesis': 'a man is smiling'}
+2042114239.jpg#4r1:{'premise': 'Two boys laying tile in a bathroom.', 'hypothesis': 'Some boys repair a bathroom.'}
+4633771017.jpg#2r1:{'premise': 'A man dances with a woman in a white egyptian costume.', 'hypothesis': 'A man dances with a woman in costume'}
+4913169135.jpg#4r1:{'premise': 'Woman is looking something.', 'hypothesis': 'A woman is looking'}
+2973269132.jpg#4r1:{'premise': 'A lioness closes in on its prey.', 'hypothesis': 'a lioness preying'}
+6620547703.jpg#2r1:{'premise': 'Man and woman rowing on surfboards third rower in distance.', 'hypothesis': 'Couples rowing on surfboards.'}
+3426144752.jpg#0r1:{'premise': 'The blond-haired and blue eyed child holds the wooden airplane in his hands.', 'hypothesis': 'A child is playing with a toy airplane.'}
+3184108879.jpg#1r1:{'premise': 'A young boy runs across a road in front of a sky blue building with barred windows.', 'hypothesis': 'A boy is running infront of a building.'}
+4889307357.jpg#2r1:{'premise': 'An asian woman sitting outside an outdoor market stall.', 'hypothesis': 'A woman sits outdoors.'}
+221422499.jpg#0r1:{'premise': 'A young gymnast looks back at the audience, trying to catch a glimpse of her proud parents before starting her performance.', 'hypothesis': 'A gymnast scanning a crowd for familiar faces.'}
+6085363550.jpg#0r1:{'premise': 'Dozens of street performers in fuchsia, red, yellow and black outfits are dancing and singing along a city street.', 'hypothesis': 'Many performers in colorful costumes were entertaining in the streets.'}
+4890158457.jpg#0r1:{'premise': 'A small group of adults and children stand on a cobblestone street outside of an Irish pub.', 'hypothesis': 'The small group stands outside on a stone street'}
+4922045286.jpg#1r1:{'premise': 'A little boy is sitting on a giraffe bouncy while learning.', 'hypothesis': 'The boy is sitting.'}
+3662271861.jpg#3r1:{'premise': 'An adult ballerina shows you children how to dance.', 'hypothesis': 'A ballerina is teaching kids ballet.'}
+3046312861.jpg#3r1:{'premise': 'A female gymnast in black and red being coached on bar skills.', 'hypothesis': 'The female gymnast is training.'}
+2466420387.jpg#1r1:{'premise': 'A young woman in a bikini looking at something in a glass case.', 'hypothesis': 'A lady in a swimsuit checking things out.'}
+89202781.jpg#0r1:{'premise': 'A lady with blue jeans and a brown shirt is speaking on her cellphone on the second floor of the mall.', 'hypothesis': 'the lady is talking on her phne'}
+3040999637.jpg#4r1:{'premise': 'A man uses stereo equipment.', 'hypothesis': 'A man is using some audio equipment.'}
+4801146545.jpg#2r1:{'premise': 'A large number of people wearing only white and red are walking on a street.', 'hypothesis': 'A large number of people walking on a street.'}
+7731253976.jpg#4r1:{'premise': 'Clowning around in the bathroom, toothpaste makeup!', 'hypothesis': 'fooling around in the bathroom'}
+92497263.jpg#1r1:{'premise': 'A young boy in a black tee-shirt stands on the corner as two men parallel to him are engaged in some activity.', 'hypothesis': 'A boy is wearing a black shirt'}
+3631344685.jpg#0r1:{'premise': 'A batsman is about to swing for a baseball whilst the catcher and referee wait behind him.', 'hypothesis': 'People are playing a game'}
+86800579.jpg#1r1:{'premise': 'A man is sitting beside a bunch of material while sewing.', 'hypothesis': 'A man is sewing.'}
+6954663021.jpg#1r1:{'premise': "This young girl's eyes are filled with excitement as she swings in her bright yellow dress.", 'hypothesis': "The girl's eyes are open."}
+4620293662.jpg#2r1:{'premise': 'A curly-haired child is blowing away dandelion seeds while laying in a field of lush green grass.', 'hypothesis': 'A child is laying down outside.'}
+5532294954.jpg#1r1:{'premise': 'A fireman with a neon helmet and a pickaxe inspects some debris with a flashlight.', 'hypothesis': 'A fireman with an axe looks at some debris.'}
+4931368578.jpg#0r1:{'premise': 'A person on a brown horse wearing jeans, a plaid shirt, and a cowboy hat attempts to lasso a running calf.', 'hypothesis': 'A person is trying to catch a calf'}
+2215797676.jpg#4r1:{'premise': 'The man wearing jacket is looking at he bike.', 'hypothesis': 'A man is watching the bicycle.'}
+21214696.jpg#4r1:{'premise': 'Two boys in a canoe in front of a larger boat with a storm coming in.', 'hypothesis': 'Two boys in a boat'}
+2978040423.jpg#2r1:{'premise': 'A treat vendor is standing in the sun while others sit in the shade under umbrellas.', 'hypothesis': 'A vendor is outside with other people.'}
+2479652566.jpg#4r1:{'premise': 'A little girl plays with a faucet.', 'hypothesis': 'A girl plays with a faucet.'}
+241345811.jpg#1r1:{'premise': 'Coach talks with football player, other players and crowd in background.', 'hypothesis': 'A football coach talks with his player in front of the team and the crowd'}
+3160531982.jpg#0r1:{'premise': 'With the sun rising, a person is gliding with a huge parachute attached to them.', 'hypothesis': 'The person is falling to saftey with the parachute'}
+2276230068.jpg#3r1:{'premise': 'A boy wearing orange star glasses is sitting down holding a toy hammer.', 'hypothesis': 'A boy wearing glasses is sitting while holding a toy hammer.'}
+6935146937.jpg#0r1:{'premise': 'A basketball player with green shoes is dunking the ball in the net while the arena crowd looks on.', 'hypothesis': 'A crowd is watching someone play basketball.'}
+342872408.jpg#0r1:{'premise': 'A man in a blue shirt climbs a rock while people behind him in red shirts watch.', 'hypothesis': 'A man climbs rocks while other watch him.'}
+4623878314.jpg#0r1:{'premise': 'A man in glasses and a striped shirt walks down the street with one hand in his pocket.', 'hypothesis': 'A man is walking somewhere'}
+2710281519.jpg#1r1:{'premise': 'Here is a picture of a woman and her husband in their car smiling and waving.', 'hypothesis': "Here is a picture of a woman and her husband'"}
+2967123604.jpg#3r1:{'premise': 'A dad with his child and an apple pie.', 'hypothesis': 'A dad is with his child.'}
+7081260077.jpg#3r1:{'premise': 'Rugby player in blue dives to tackle the ball carrier in white.', 'hypothesis': 'A rugby player is playing in a match.'}
+3549997413.jpg#2r1:{'premise': 'A skier goes down a hill with a mountain as a backdrop.', 'hypothesis': 'A skier going down a hill.'}
+3404012438.jpg#4r1:{'premise': 'A dog chasing a duck in a pond.', 'hypothesis': 'A dog and a duck are outside.'}
+2325025735.jpg#3r1:{'premise': 'A little girl looking at a large boulder', 'hypothesis': 'A girl sees a rock formation.'}
+4000148666.jpg#0r1:{'premise': 'Young boys in green and blue jerseys kick around a soccer ball while other soccer games take place in the background.', 'hypothesis': 'Young boys kicking around a soccer ball.'}
+512026551.jpg#0r1:{'premise': 'A brown dog is pulling itself out of the water onto some rocks with a tennis ball in its mouth.', 'hypothesis': 'The animal is walking through rocks.'}
+662492649.jpg#4r1:{'premise': 'A sitting man is spraying a squirt bottle at a pedestrian while holding an umbrella over his head.', 'hypothesis': 'A man sits and makes mischief.'}
+2380464803.jpg#1r1:{'premise': 'Two men wearing black smile while a seated woman behind them looks tired.', 'hypothesis': 'The woman looks weary.'}
+4922450371.jpg#1r1:{'premise': 'A man in tribal dress is walking down the street while spectators are standing behind red and white barrier tape.', 'hypothesis': 'A man walks down the street with other people around'}
+4664359066.jpg#4r1:{'premise': 'Tourists enjoying mother nature.', 'hypothesis': 'People enjoying the outdoors.'}
+4334945607.jpg#3r1:{'premise': 'A musical group performs on stage with their instruments.', 'hypothesis': 'A group performs with instruments.'}
+4808328732.jpg#0r1:{'premise': 'A woman lying in the grass in the park is wearing a red top and black capri pants and is barefoot.', 'hypothesis': 'A woman is lying in the grass.'}
+5759427006.jpg#1r1:{'premise': 'A small child in a coat looks out over the lake of a park in the fall.', 'hypothesis': 'A child is looking at the lake.'}
+5090324042.jpg#4r1:{'premise': "A man is singing on stage with his fingers in a stuffed bear's nose.", 'hypothesis': 'A man is entertaining on stage by singing and putting his fingers in a stuffed animal.'}
+4640154368.jpg#0r1:{'premise': "A man in a gray shirt and blue shorts is standing outside of an old fashioned ice cream shop named Sara's Old Fashioned Ice Cream, holding his bike up, with a wood like table, chairs, benches in front of him.", 'hypothesis': 'A man is holding a bike up'}
+4705094483.jpg#0r1:{'premise': 'A man in a black shirt, in a commercial kitchen, holding up meat he took out of a bag.', 'hypothesis': 'A man in a shirt, in a commercial kitchen, holding up meat he took out of a bag.'}
+241346146.jpg#2r1:{'premise': 'The Sooner football player carrying the ball is trying to avoid being tackled.', 'hypothesis': 'A football player is holding a ball.'}
+4603494357.jpg#0r1:{'premise': 'The young Asian woman is using an umbrella, and is in front of a brightly colored patch of flowers in the back.', 'hypothesis': 'A woman is using a large umbrella.'}
+4873126466.jpg#3r1:{'premise': 'A man shows off his spider-web face paint.', 'hypothesis': 'A person shows some people his face painting.'}
+4663171720.jpg#1r1:{'premise': 'A young couple holding hands in the park.', 'hypothesis': 'A couple are at the park.'}
+3839004579.jpg#0r1:{'premise': 'An extreme mountain biker in mid-jump from underneath rider showing a blue sky.', 'hypothesis': 'An extreme biker in mid-jump from underneath rider showing a blue sky.'}
+3856149623.jpg#1r1:{'premise': 'A blond-haired doctor and her African american assistant looking threw new medical manuals.', 'hypothesis': 'A doctor is looking at a book'}
+4571034074.jpg#0r1:{'premise': 'A woman in a spaghetti strap tank wearing a flower in her hair is staring towards the right.', 'hypothesis': 'A woman is looking at something to her right.'}
+4771934780.jpg#1r1:{'premise': 'A young japanese couple holding an umbrella walking down a street.', 'hypothesis': 'The young Asian couple are walking together.'}
+6917567087.jpg#0r1:{'premise': 'A man standing at the front of the room is pointing up while several people who are seated look towards him.', 'hypothesis': 'A man standing in a room is pointing up.'}
+2914936417.jpg#4r1:{'premise': 'A group of brown-haired teenagers doing laundry.', 'hypothesis': 'Group of teens are doing laundry.'}
+2892413015.jpg#2r1:{'premise': 'The little blond-haired child is walking up the slope.', 'hypothesis': 'A child is walking.'}
+5650197379.jpg#2r1:{'premise': 'A man in his skateboard jumping over a grocery cart as his friends in the back watch.', 'hypothesis': 'The man has friends.'}
+2937011123.jpg#0r1:{'premise': 'Two women both dressed in white tops and dark-colored shorts are standing in front of some motorcycles on a city street', 'hypothesis': 'Two women wearing tops and shorts stand by some motorcycle in the street.'}
+4393476043.jpg#0r1:{'premise': 'Man in gray zippered jacket and red shirt pets a brown dog and holds a young girl in pink shirt, while a woman next to him holds an infant boy and a gray dog.', 'hypothesis': 'A man in a jacket holds a small child while petting his dog near a woman holding a small boy and her dog.'}
+----------------------------------
+1998457059.jpg#0r1:{'premise': 'a body boarder is being dumped on the beach by a wave whilst other surfers are standing around in the water.', 'hypothesis': 'There are surfers on a beach.'}
+4151523027.jpg#0r1:{'premise': 'A curly-haired redhead is wearing a blue checkered hat, a black long-sleeve shirt, and blue jeans while holding a red jacket as she speaks to her friends standing behind her.', 'hypothesis': 'A redhead is talking to her friends.'}
+2469351714.jpg#4r1:{'premise': 'A girl jumping high off of the sand.', 'hypothesis': 'There is a girl on the sand.'}
+2088705195.jpg#2r1:{'premise': 'Two silhouetted people paddle a canoe on the ocean during sunset.', 'hypothesis': 'two people paddle their boat on the ocean'}
+4115814951.jpg#4r1:{'premise': 'A group of young men are raking lives in front of a home.', 'hypothesis': 'Men are doing yard work'}
+3544654074.jpg#2r1:{'premise': 'A newlywed couple laughing and talking amongst themselves.', 'hypothesis': 'The couple is having fun.'}
+288406480.jpg#0r1:{'premise': 'A baby wearing yellow is pretending to be a doctor while inside a stroller.', 'hypothesis': 'A baby is role playing as a professional'}
+4734385389.jpg#0r1:{'premise': 'A little girl wearing a pink, yellow and white bathing suit, gets wet from a splash of water.', 'hypothesis': 'A girl gets wet from a splash of water.'}
+4735873109.jpg#2r1:{'premise': 'A man in a yellow and blue jeans is running through water.', 'hypothesis': 'A man in yellow and blue jeans is running through water.'}
+2218743570.jpg#4r1:{'premise': 'A husky and a black cat nuzzling.', 'hypothesis': 'A dog and cat are friendly.'}
+287641817.jpg#4r1:{'premise': 'An older man in an apron cleaning.', 'hypothesis': 'A man cleans.'}
+4931443661.jpg#3r1:{'premise': 'A fisherman using a cellphone on a boat.', 'hypothesis': 'A fisherman uses a cellphone.'}
+4484418942.jpg#0r1:{'premise': 'A young woman dressed up semi-formally is reading book and drinking in the sun, seated on a bench.', 'hypothesis': 'A young woman reads near the ocean.'}
+4789959232.jpg#3r1:{'premise': 'Man with plaid shirt staring off into the distance.', 'hypothesis': 'Man staring off into the distance.'}
+2424111022.jpg#4r1:{'premise': 'A boy in the woods.', 'hypothesis': 'There is a small boy in the woods.'}
+3155601377.jpg#3r1:{'premise': 'A sleeping toddler has toppled out of his crib.', 'hypothesis': 'A baby'}
+2568173994.jpg#1r1:{'premise': 'A woman wearing a yellow and white outfit is exiting the vehicle while using city transportation.', 'hypothesis': 'A woman in a brightly colored outfit exits the public transportation vehicle.'}
+2724772157.jpg#0r1:{'premise': 'A young Asian girl is wearing a pink dress and holding an umbrella even though it is not raining.', 'hypothesis': 'The girl in pink holding an umbrella.'}
+62964059.jpg#3r1:{'premise': 'A young redheaded woman laughs at something.', 'hypothesis': 'A redheaded woman laughs at something.'}
+4463424891.jpg#4r1:{'premise': 'A small child playing in a dusty square.', 'hypothesis': 'A child is playing.'}
+481887827.jpg#3r1:{'premise': 'A group of people sit before a campfire.', 'hypothesis': 'People are around a fire'}
+2878041967.jpg#1r1:{'premise': 'Children, including one with a painted face, pet tiny turtles that are crawling in the green grass.', 'hypothesis': 'Turtles are crawling in the white grass.'}
+2741802133.jpg#0r1:{'premise': 'Three men; one pedaling while playing drums, one playing piano and one both pedaling and steering, move a type of mobile band down a street.', 'hypothesis': 'Three men are playing outside'}
+4794461173.jpg#2r1:{'premise': 'Two girls are on a street sidewalk and one is sitting.', 'hypothesis': 'girls are on the sidewalk'}
+7832183018.jpg#3r1:{'premise': 'The team swiftly moves their traditional boat down the river.', 'hypothesis': 'The people are in a boat'}
+4169121436.jpg#4r1:{'premise': 'asian women selling fruits from baskets at an outdoor market', 'hypothesis': 'women selling fruits'}
+4636445159.jpg#3r1:{'premise': 'Woman wearing an orange scarf holding a cellphone.', 'hypothesis': 'A woman is holding a cellphone.'}
+3010404509.jpg#0r1:{'premise': 'A white man in the shower has fashioned his hair into a mohawk hairstyle using soap suds.', 'hypothesis': 'A Caucasian man plays with his hair in the shower.'}
+3102521400.jpg#1r1:{'premise': "A man smokes while leaning against a pillar, which has a 'missing person' flier posted on it.", 'hypothesis': 'a guy smoking against a wall with a flier on it'}
+3530502404.jpg#2r1:{'premise': 'Man in skeleton-printed leather outfit sitting astride a red motorcycle.', 'hypothesis': 'A man sits on a motorcycle.'}
+2709695869.jpg#0r1:{'premise': 'A man in a green shirt is getting his feet wet in front of a wall showing a closeup picture of a face.', 'hypothesis': 'The man is outside.'}
+4696903210.jpg#1r1:{'premise': 'A well built black man stands in the subway, listening to headphones.', 'hypothesis': 'A man listens to music while waiting for the train.'}
+1401961581.jpg#1r1:{'premise': 'The small girl is sitting in a harness, strapped to a tether, while others watch.', 'hypothesis': 'There is a girl in a harness.'}
+7558179624.jpg#3r1:{'premise': 'A child is reaching up to the counter using a step stool.', 'hypothesis': 'The child is using a step stool.'}
+4470861434.jpg#3r1:{'premise': 'Two men in punk-style clothing stand in front of a wall.', 'hypothesis': 'Two men standing outdoors.'}
+3021028400.jpg#1r1:{'premise': 'Man in a black suit, white shirt and black bowtie playing an instrument with the rest of his symphony surrounding him.', 'hypothesis': 'A person in a suit'}
+2412152032.jpg#1r1:{'premise': 'Children in yellow sports uniforms climbing a tower.', 'hypothesis': 'Children in uniforms climb a tower.'}
+6854823446.jpg#0r1:{'premise': 'A person wearing a helmet and riding suit is riding a four wheeler on a dusty plot of land.', 'hypothesis': 'A person is riding a four wheeler on a plot of land.'}
+2533414541.jpg#3r1:{'premise': 'A white and blue car is on the street.', 'hypothesis': 'A vehicle is on the street.'}
+1764955991.jpg#0r1:{'premise': 'A dog with a ball in his mouth running down a road covered in leaves.', 'hypothesis': 'A dog running down a road'}
+3244632670.jpg#1r1:{'premise': 'A chef speaks into a microphone about a mixed salad contained in a bowl with a decorative lid.', 'hypothesis': 'a chef speaks into a microphone near a bowl'}
+2890120770.jpg#0r1:{'premise': 'A man with a striped shirt looks at a load of green and yellow vegetables on the back of a truck.', 'hypothesis': 'A man looks at a pile of colored vegetables on a car outside.'}
+3308612894.jpg#0r1:{'premise': 'A worried blond-haired baby is sitting inside a large, shiny metal cooking pot that is on top of an electric stove.', 'hypothesis': 'A baby in a pot on the stove.'}
+5221111799.jpg#1r1:{'premise': 'A carpenter is working on a roof at a house being built.', 'hypothesis': 'A workman is helping put a roof on a house.'}
+1392272228.jpg#0r1:{'premise': 'A black dog is coming out of the ocean water on the beach with something in its mouth.', 'hypothesis': 'The dog is coming out of the ocean with something it its mouth.'}
+4986907081.jpg#0r1:{'premise': "A person with dark hair in a white shirt is sitting in a chair in water with a 'swim at your own risk' sign on the wall.", 'hypothesis': 'a person sits in a chair in water'}
+3783803365.jpg#2r1:{'premise': 'Three girls are standing and talking to each other.', 'hypothesis': 'Three girls are talking'}
+570520724.jpg#1r1:{'premise': 'A man in bright shirt carrying a fallen branch.', 'hypothesis': 'There is one man in this picture, and he is outside.'}
+5924713518.jpg#3r1:{'premise': 'A boy scout with a red cap is looking through a telescope', 'hypothesis': 'There is a boy and a telescope.'}
+3842225496.jpg#1r1:{'premise': 'A man wearing black clothing is standing at an empty table that has water glasses and papers strewn about.', 'hypothesis': 'A man is standing around.'}
+2081679622.jpg#3r1:{'premise': 'The boy in pajama pants jumps off the sofa.', 'hypothesis': 'The boy is jumping up'}
+3960632488.jpg#0r1:{'premise': 'A man and a woman sit on a deck under a blue sky that is about to be overtaken by tumultuous clouds.', 'hypothesis': 'There are many clouds in the blue sky.'}
+6865517328.jpg#0r1:{'premise': 'A man in a green shirt and a red kilt is juggling three clubs.', 'hypothesis': 'A man in a shirt juggles.'}
+4650367147.jpg#1r1:{'premise': 'Two young girls with long brunette hair, standing in front of a stone wall playing a game.', 'hypothesis': 'Two girls playing a game.'}
+3410902181.jpg#0r1:{'premise': 'A girl in a blue leotard hula hoops on a stage with balloon shapes in the background.', 'hypothesis': 'A girl is entertaining on stage'}
+2314377503.jpg#3r1:{'premise': 'Old man with gray blanket on squatting against a wall', 'hypothesis': 'Old man squats against a wall.'}
+4656148446.jpg#0r1:{'premise': 'A young man wearing a blue shirt with white words, black jeans, and inline skates is sitting on a concrete seat looking forward while a group are people are in the background.', 'hypothesis': 'A young man in inline skates sits on a concrete seat.'}
+4554343250.jpg#3r1:{'premise': 'A woman is walking down the street with a brown bookbag on her back.', 'hypothesis': 'she is walking with a bag'}
+3925836925.jpg#1r1:{'premise': 'His back facing us, a young man photographs a lovely mountain lake scene under a hazy sky.', 'hypothesis': 'A young man photographs a mountain lake scene.'}
+4519902281.jpg#1r1:{'premise': 'A child in a red jacket, waist deep in a pit on the beach.', 'hypothesis': 'A child on the beach'}
+4979030668.jpg#0r1:{'premise': 'A woman wearing a martial arts uniform holds her sneakered foot with both hands over her head.', 'hypothesis': 'A person in a uniform'}
+3549673305.jpg#0r1:{'premise': 'A man in a leather jacket with the collar popped kisses the neck of a woman in a gray coat wearing a white scarf.', 'hypothesis': 'a guy with a jacket kisses a woman with a scarf'}
+4741726894.jpg#1r1:{'premise': 'A woman in a green blouse and black skirt sitting on a bench in front of an elephant model.', 'hypothesis': 'A woman is wearing a blouse.'}
+6113672400.jpg#1r1:{'premise': 'A man is wearing a blue and yellow racing uniform while holding a bottle', 'hypothesis': 'this guy is wearing a racing uniform while holding a bottle'}
+4729191874.jpg#0r1:{'premise': 'A woman in a brown shirt and a man in a hat cross the street.', 'hypothesis': 'A man and woman are walking in the street.'}
+4557545329.jpg#0r1:{'premise': 'A man in a light brownish jacket, orange undershirt, blue jeans, and a black satchel, who has many sticks of cotton candy.', 'hypothesis': 'A man is holding fluffy sweets.'}
+2058472558.jpg#1r1:{'premise': 'A girl in a flower dress is running on sand.', 'hypothesis': 'The girl is running.'}
+4854810336.jpg#4r1:{'premise': 'A man and woman showing a small child how to use a gun.', 'hypothesis': 'A couple teaching a kid on firearm use'}
+3405942945.jpg#4r1:{'premise': 'Boy in red and black shirt walks through grass.', 'hypothesis': 'The boy is walking.'}
+3612484827.jpg#1r1:{'premise': 'The guys in white shirts horse around near a park.', 'hypothesis': 'Guys wearing white shirts play around by the park.'}
+----------------------------------
+3303628168.jpg#2r1:{'premise': "A goalie braces himself for the ball that's coming his way.", 'hypothesis': 'A soccer player.'}
+3760799822.jpg#2r1:{'premise': 'Two women behind a net check their cellphones, while two men sitting on a curb chat to each other.', 'hypothesis': 'The two women are checking their celluar devices.'}
+3775526174.jpg#0r1:{'premise': 'Two boys running down a outer hallway of an apartment building, with one running into frame with the other running ahead down the hall.', 'hypothesis': 'Two boys are moving at high speed.'}
+3843254402.jpg#0r1:{'premise': 'A man in a white striped shirt and blue jeans using a water hose to spray water on the ground of concrete ruins.Fo.', 'hypothesis': 'A man is spraying water on concrete.'}
+2308256827.jpg#2r1:{'premise': 'The little boy is smiling as he crosses a rope on an assault course.', 'hypothesis': 'Kid are allowed to attempt the assault course.'}
+3496411891.jpg#1r1:{'premise': 'During this vacation children enjoying their games at the park.', 'hypothesis': 'Kids are playing in a park'}
+4570151256.jpg#1r1:{'premise': 'A blond girl with a graphic t-shirt wheeling a wheelbarrow across a lawn.', 'hypothesis': 'The female is wearing a t-shirt.'}
+2673209105.jpg#1r1:{'premise': 'A young barefoot girl in a pink dress is jumping outside.', 'hypothesis': 'A child is playing.'}
+2299859649.jpg#2r1:{'premise': 'A young boy wearing a red coat eats a chocolate bar.', 'hypothesis': 'The boy is wearing clothing and eating.'}
+4691275752.jpg#0r1:{'premise': 'A man in a dark floral shirt and black jeans walks buy a brightly colored wall painted with a woman with bright green eyes.', 'hypothesis': 'There is a wall with a green eyed woman painted on it and a man walking past it.'}
+4958466857.jpg#2r1:{'premise': 'Two homeless men dressed in gray sit against a wall with a sleeping dog on a purple leash.', 'hypothesis': 'Two homeless men lean against a wall with a dog.'}
+4484802872.jpg#0r1:{'premise': 'Under the glaring light of a fluorescent bulb, men in dark clothing and hats approach fare card machines; one older man in a blue scarf glances up as he puts on his gloves.', 'hypothesis': 'The man are covering themselves in clothing.'}
+3751894413.jpg#1r1:{'premise': 'An older woman wearing blue and a rag on her head holding a young child.', 'hypothesis': 'The older woman is holding something.'}
+4787058215.jpg#3r1:{'premise': 'The guitarist performs a rocking solo.', 'hypothesis': 'the musician is performing'}
+2759596272.jpg#2r1:{'premise': 'a girl wearing pink shoes jumps off a swing in a park', 'hypothesis': 'The girl is at the park.'}
+4545817148.jpg#1r1:{'premise': 'People dressed in traditional Japanese garb walk in a procession through a courtyard paved with paving stones.', 'hypothesis': 'People dressed in Japanese clothing walk through a courtyard.'}
+2504764590.jpg#2r1:{'premise': 'A man is throwing a big stick into the water so his two dogs and go fetch it.', 'hypothesis': 'Two large dogs are fetching for their master.'}
+3827183336.jpg#2r1:{'premise': 'A Latin American weaving fabric.', 'hypothesis': 'The person is making fabic'}
+3019776218.jpg#0r1:{'premise': "A young boy is looking into a silver cellphone while resting his light brown-haired head on top of a resting blond dog's head.", 'hypothesis': 'A person looking'}
+7475756284.jpg#2r1:{'premise': 'A female acrobat wearing a red and white striped shirt and blue pants performs on a pole.', 'hypothesis': 'A female acrobat performs on a pole.'}
+110637863.jpg#4r1:{'premise': 'Rugby player lifted to attempt a score against a red team defending.', 'hypothesis': 'sports team attempts to score'}
+3732035651.jpg#4r1:{'premise': 'A child looks at a cactus garden.', 'hypothesis': 'A human is looking at plants.'}
+4399206310.jpg#0r1:{'premise': 'A man is holding a cigarette outdoors in front of a blue wall with a sink on it.', 'hypothesis': 'A man holding a cigarette.'}
+300594071.jpg#0r1:{'premise': 'A person is sitting in front of three blue and white port-o-potties with a mop propped against them.', 'hypothesis': 'A person is sitting near portable toilets.'}
+3626325621.jpg#0r1:{'premise': 'A man with a plaid shirt stands with his hand on hip at an opening of a large tree.', 'hypothesis': 'a man at the opening of a large tree'}
+458183774.jpg#0r1:{'premise': 'A large tan dog is rolling around on its back in a yard of grass.', 'hypothesis': 'A dog is rolling in the grass.'}
+4591344824.jpg#0r1:{'premise': 'A man wears a brightly colored ceremonial robe while holding a similarly colored cone shaped hat with a star on top.', 'hypothesis': 'He holds robe and hat'}
+2496399593.jpg#3r1:{'premise': 'Young brunette woman smiling in front of bushes.', 'hypothesis': 'The woman is outside.'}
+518230621.jpg#3r1:{'premise': 'Indian men selling food items on the sidewalk', 'hypothesis': 'Men are selling food on the sidewalk.'}
+2505988632.jpg#2r1:{'premise': 'A little girl is jumping over a yellow rope.', 'hypothesis': 'A girl jumps rope.'}
+3126773489.jpg#0r1:{'premise': 'The player in the white dribbles the ball, while the player in the orange tries to stop him.', 'hypothesis': 'Two people are playing ball.'}
+4380236648.jpg#1r1:{'premise': 'A young woman wearing a yellow sweater and black pants is ice skating outdoors.', 'hypothesis': 'a woman is active'}
+2834752476.jpg#2r1:{'premise': 'The young man is sitting on a couch smoking a cigarette.', 'hypothesis': 'A young man smoking a cigarette'}
+5806030158.jpg#3r1:{'premise': 'Children are playing a game outside.', 'hypothesis': 'Children are playing a game'}
+5436966915.jpg#4r1:{'premise': 'A man in red pants skiing down a slope.', 'hypothesis': 'A man outside.'}
+23770160.jpg#1r1:{'premise': 'A long dark-haired man sitting on the grass with a guitar in his lap in front of a blue sky.', 'hypothesis': 'A man is sitting outdoors.'}
+3003936696.jpg#2r1:{'premise': 'An elderly woman wearing sunglasses stands and looks at something.', 'hypothesis': 'Elderly woman peers at an object.'}
+8008888211.jpg#3r1:{'premise': 'A cheerleader in a tight red and white uniform is passing out white t-shirts at a sporting event.', 'hypothesis': 'A cheerleader passes out shirts'}
+4715846690.jpg#1r1:{'premise': 'A little girl wearing a tan sundress with a bow in the back holds a bouquet of flowers on the sidewalk.', 'hypothesis': 'A girl wearing a dress holds flowers on the sidewalk'}
+399054696.jpg#2r1:{'premise': '3 people on plain boats smiling towards the camera.', 'hypothesis': '3 smiling people on a boat'}
+3527926597.jpg#3r1:{'premise': 'A boy on a skateboard ramp.', 'hypothesis': 'There is a boy on a ramp'}
+3550459890.jpg#2r1:{'premise': 'A person throws a red toy for a dog to run for.', 'hypothesis': 'A person throws a toy for a dog.'}
+2195316844.jpg#0r1:{'premise': 'A person in a striped gray and white shirt moves his bicycle past another man in a yellow shirt and blue pants.', 'hypothesis': 'The person is riding around on his bicycle.'}
+7610925230.jpg#0r1:{'premise': 'Three middle-age women are on a stage, one singing and the other two cheerleading in blue uniforms.', 'hypothesis': 'Three women are on stage.'}
+141755290.jpg#2r1:{'premise': 'A woman in an red tracksuit squeezing lemons in a press.', 'hypothesis': 'A woman squeezing lemons.'}
+370713359.jpg#1r1:{'premise': 'People are sitting in a cheery Mexican restaurant.', 'hypothesis': 'People are in an ethnic establishment'}
+2201050079.jpg#1r1:{'premise': 'A worker dressed in hazard orange, face-down in an open street work.', 'hypothesis': 'A person is wearing orange.'}
+303103123.jpg#1r1:{'premise': 'Three girls are sitting at desks and appear to be working intently.', 'hypothesis': 'Three young people are seated.'}
+2936881937.jpg#0r1:{'premise': "A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.", 'hypothesis': 'A man repairs bicycles.'}
+4474429098.jpg#2r1:{'premise': 'A girl is using an apple laptop with her headphones in her ears.', 'hypothesis': 'with headphones on the girl used a computer'}
+3609999845.jpg#0r1:{'premise': 'A boy hits a ball, with a bat, outside, while others in the background watch him.', 'hypothesis': 'The kid is playing in a baseball game.'}
+3160699.jpg#1r1:{'premise': 'Man in red jacket is opening the door while holding his car keys.', 'hypothesis': 'Man in red jacket is opening the door while holding his car keys'}
+3360178782.jpg#3r1:{'premise': 'A group of people look at fresh lettuce in at the local street market.', 'hypothesis': 'People viewing produce at a market.'}
+3504662140.jpg#0r1:{'premise': 'A woman in a white hat and red dress holding hands with a man in a black jacket with a flower in his upper pocket.', 'hypothesis': 'A woman is touching the man.'}
+3560513546.jpg#4r1:{'premise': 'A woman smiling while on a bicycle.', 'hypothesis': 'A woman is smiling.'}
+2856564292.jpg#0r1:{'premise': 'A man in a blue shirt was arguing with a man in a green jacket and started to raise his fist in anger.', 'hypothesis': 'a man argues with another who is raising his fist'}
+514031930.jpg#0r1:{'premise': 'A bald man in a white t-shirt is standing at a bar next to a white leashed dog.', 'hypothesis': 'a man in a white shirt'}
+38803368.jpg#0r1:{'premise': 'Two young men are on a vast, level expanse of grass, and the man in the red shirt is catching the white Frisbee.', 'hypothesis': 'The men are playing frisbee.'}
+4637947642.jpg#4r1:{'premise': 'A man in a gray wife beater grilling.', 'hypothesis': 'The man is cooking.'}
+4971580944.jpg#2r1:{'premise': 'A woman is leaning down while talking to her phone.', 'hypothesis': 'A woman is using a phone'}
+2864575495.jpg#1r1:{'premise': 'A man cooks chicken on the grill, while others enjoy food in the background.', 'hypothesis': 'A human cooks food while others consume food in the background.'}
+1544836085.jpg#3r1:{'premise': 'Two men inside a tent are examining the floor.', 'hypothesis': 'men looking at the floor'}
+294443417.jpg#1r1:{'premise': 'A young boy, wearing a jesters hat is enjoying himself sledding.', 'hypothesis': 'A boy wearing a goofy hat is sledding by himself.'}
+4812138503.jpg#1r1:{'premise': 'A man in a green and black coat is leaning on trashcan.', 'hypothesis': 'A man in a coat is leaning on a trashcan.'}
+3192311620.jpg#0r1:{'premise': 'A brown dog opens his mouth to catch a piece of food.', 'hypothesis': 'A dog catches food.'}
+222141960.jpg#0r1:{'premise': 'A boy with a concerned look it holding up two newspapers featuring a headline about murder.', 'hypothesis': 'A boy is holding paper.'}
+2862931640.jpg#1r1:{'premise': 'People cheer as a bicyclist rides his bike off a ramp', 'hypothesis': 'People celebrate while an athlete performs tricks.'}
+9035232.jpg#1r1:{'premise': 'a man in a tan shirt is standing at the kitchen counter looking at food.', 'hypothesis': 'A man standing at a kitchen counter looking at food.'}
+540873795.jpg#0r1:{'premise': 'an middle eastern man in a white robe is sitting on a wooden bench with his shoes off.', 'hypothesis': 'a guy relaxing outdoors'}
+495340319.jpg#0r1:{'premise': 'One kid is running across a field carrying a football while another is close behind grabbing for his flags.', 'hypothesis': 'Two children play outdoors.'}
+----------------------------------
+306839655.jpg#2r1:{'premise': 'A group of people plays a game on the floor of a living room while a TV plays in the background.', 'hypothesis': 'A group of people plays a fun game on the floor of a living room.'}
+3449718979.jpg#4r1:{'premise': 'A dog is walking down steps.', 'hypothesis': 'An animal is walking.'}
+3473742715.jpg#2r1:{'premise': 'What appears to be a taller bald white man sitting next to a shorter black man in a reception area.', 'hypothesis': 'The taller bald white man is standing by the short black man.'}
+2700147489.jpg#3r1:{'premise': 'Man with beard doing skateboarding stunt', 'hypothesis': 'A man skateboards.'}
+2601612082.jpg#4r1:{'premise': 'Some kids are wrestling on an inflatable raft', 'hypothesis': 'Some kids playing with a raft.'}
+3465473743.jpg#0r1:{'premise': 'Two little girls ride an inflatable dinghy down a purple water slide.', 'hypothesis': 'Two girls on a water slide.'}
+4587968317.jpg#2r1:{'premise': 'A group of young men are dumping soil onto the ground of their backyard.', 'hypothesis': 'The young men are working outside.'}
+2334045755.jpg#1r1:{'premise': 'The man in the blue pants is doing a trick with his skateboard.', 'hypothesis': 'A man rides a skateboard.'}
+3089862485.jpg#0r1:{'premise': 'A man on stage holds a hello kitty guitar and looks to the right of the picture.', 'hypothesis': 'The man is holding an instrument in his hands.'}
+90168112.jpg#4r1:{'premise': 'A little girl plays in the ocean on the beach.', 'hypothesis': 'The girl plays on the shore.'}
+6082535291.jpg#1r1:{'premise': 'A group of rollerskaters skate on a patch of cement with palm trees in the background.', 'hypothesis': 'A group of people are rollerskating.'}
+4525101035.jpg#0r1:{'premise': 'A young man in a heavy brown winter coat stands in front of a blue railing with his arms spread.', 'hypothesis': 'The man spreads his arms while standing in front of a railing.'}
+2881441125.jpg#3r1:{'premise': 'Two small children are gathering water from a large container.', 'hypothesis': 'Two kids are getting water.'}
+2697058141.jpg#4r1:{'premise': 'A young boy using a spatula to handle meat on a grill.', 'hypothesis': 'A young boy is using a utensil to handle meat on a grill.'}
+2662890367.jpg#1r1:{'premise': 'A man is laying down on grass near trees and a hose.', 'hypothesis': 'A man is laying outside.'}
+4430891850.jpg#0r1:{'premise': 'A man in a red headband an shirt is standing in front of a display case.', 'hypothesis': 'man standing in front of case'}
+4940921321.jpg#2r1:{'premise': 'An overweight man riding a bicycle to work', 'hypothesis': 'The man is riding a bicycle.'}
+2537596840.jpg#3r1:{'premise': 'A town worker working on electrical equipment.', 'hypothesis': 'The worker is working.'}
+3306212559.jpg#1r1:{'premise': 'Four human figures are backlit by a sunset.', 'hypothesis': "A beautiful sunset shows the shapes of four figures silhouetted against it's backdrop"}
+3356748019.jpg#3r1:{'premise': 'Three men on mountain bikes go over a sand hill.', 'hypothesis': 'Men on bikes go over a sand hill.'}
+6596861005.jpg#0r1:{'premise': 'A woman in a red shirt looks at a map while with a view of a river and several boats in the background.', 'hypothesis': 'A woman looks at a map outdoors, a river and boats are behind her.'}
+3692593096.jpg#1r1:{'premise': 'Small red airplane flies over mountaintop dropping red substance over fire.', 'hypothesis': 'the airplane is flying.'}
+2319087586.jpg#0r1:{'premise': 'A man sits on a couch beside a colorful cushion with a pencil in his hand.', 'hypothesis': 'The man is holding a pencil.'}
+4438149916.jpg#1r1:{'premise': 'A man in a gray coat is walking on a fallen tree trunk in a forest.', 'hypothesis': 'A young man wearing a gray winter jacket walks on a fallen oak tree.'}
+42397423.jpg#2r1:{'premise': 'A young boy walks on a pipe that stretches over water.', 'hypothesis': 'A boy is walking outside.'}
+2231551206.jpg#0r1:{'premise': 'A young man wearing a hoodie, pants, and athletic shoes is sitting on a red lounge chair and watching hi-def tv.', 'hypothesis': 'Man sitting in a red chair flipping through tv channels.'}
+4696331217.jpg#4r1:{'premise': 'An indian man walks past a temple on his way to pray.', 'hypothesis': 'A man is heading to his house of worship.'}
+3003936696.jpg#0r1:{'premise': 'An old woman in a green and blue plaid shirt is standing on a crowded sidewalk smiling.', 'hypothesis': 'A woman in a plaid shirt smiling on a crowded sidewalk'}
+6110024306.jpg#0r1:{'premise': 'Woman wearing jeans and white shirt watches as her bowling ball rolls down the lane to the pins.', 'hypothesis': 'A woman bowls.'}
+7228557720.jpg#0r1:{'premise': 'A man drawing pictures of individuals sits under an umbrella with previous works such as justin beiber around him.', 'hypothesis': 'a man is drawing'}
+3880770726.jpg#0r1:{'premise': 'A man who wears glasses, a blue shirt and a Chicago White Sox cap holds a young boy who also wears a blue shirt.', 'hypothesis': 'A man is wearing glasses and a baseball cap.'}
+2925162156.jpg#1r1:{'premise': 'A man and a woman are competing in a road rice.', 'hypothesis': 'A  man and women competing'}
+5897297135.jpg#2r1:{'premise': 'A man wearing a light blue robe-style jacket is sitting on a street corner playing a musical instrument.', 'hypothesis': 'The man in the jacket sat on the street playing an instrument.'}
+2667126590.jpg#1r1:{'premise': 'A blond woman wearing a blue and pink floral tie-front bikini on a beach, readying to put a flagpole in the sand.', 'hypothesis': 'A person in a bikini'}
+264141937.jpg#0r1:{'premise': "A woman wearing dollar sign glasses, holding a dollar bill, stands with a suitcase that says 'Lucky' that is overflowing with cash.", 'hypothesis': 'The elaborately dressed woman stands around with her riches'}
+246231741.jpg#3r1:{'premise': 'Two German sheperds snarling at each other.', 'hypothesis': 'Two animals are threatening each other.'}
+3498157589.jpg#0r1:{'premise': 'A hispanic fruit market with many different fruits and vegetables in view on a city street with a man passing the store dressed in dark pants and a hoodie.', 'hypothesis': 'A fruit market is selling vegetables'}
+3914456610.jpg#0r1:{'premise': 'A young boy, wearing a helmet, in shorts and a t-shirt and a pair of binoculars around his neck is playing outside.', 'hypothesis': 'A boy is outside.'}
+3205754736.jpg#0r1:{'premise': 'A man in a red hat and blue jacket in a protest is holding up a tablet that talks about God and judgement.', 'hypothesis': 'The man is holding something up.'}
+5181216751.jpg#1r1:{'premise': 'A girl in a black skirt and blue dress is watering flowers.', 'hypothesis': 'The girl is giving the flowers some water.'}
+3535304540.jpg#1r1:{'premise': 'A red bi-plane leaves a white trail in a blue sky.', 'hypothesis': 'The airplane is flying in the sky.'}
+2561212119.jpg#2r1:{'premise': 'A wet black lab with a red collar is standing in the water.', 'hypothesis': 'A wet dog is outside.'}
+3495490064.jpg#2r1:{'premise': 'the man in jeans is sitting by the river with large fish.', 'hypothesis': 'A person is outside sitting by a body of water.'}
+2226343167.jpg#0r1:{'premise': 'A woman in skirt, torn stockings and combat boots and a man in aviators and batman tank top walk down a city street.', 'hypothesis': 'A man and woman walk down a city street.'}
+2171154778.jpg#1r1:{'premise': 'A boy in dark blue clothes is kneeling while holding a toy.', 'hypothesis': 'A boy is playing with his toy.'}
+4220683018.jpg#1r1:{'premise': "A woman is sitting in a man's lap in a brown armchair.", 'hypothesis': 'The woman and man are resting together in an armchair.'}
+5519356488.jpg#4r1:{'premise': 'This is a clown at an elementary school.', 'hypothesis': "The clown is at a children's school."}
+3439982121.jpg#4r1:{'premise': 'A woman huge a fluffy white dog.', 'hypothesis': 'The dog is embraced by the woman'}
+8404753.jpg#1r1:{'premise': 'A man is putting on a yellow necktie while another man stands to his right side watching him.', 'hypothesis': 'a man puts on a tie'}
+6063730184.jpg#3r1:{'premise': 'A young boy and his dog play at the edge of a public beach.', 'hypothesis': 'the kid plays with his dog at the beach'}
+3306464579.jpg#0r1:{'premise': 'A man with a tattoo on his left arm flips his food into the air with his frying pan.', 'hypothesis': 'a man using a frying pan'}
+4631131293.jpg#3r1:{'premise': 'A group of girls in black and white spotted skirts cross a street.', 'hypothesis': 'A group of girls are outside.'}
+4858173106.jpg#4r1:{'premise': 'A woman holding a newborn baby.', 'hypothesis': 'woman holds baby'}
+2882483779.jpg#4r1:{'premise': 'The pets play in the apartment.', 'hypothesis': 'The animals are playing.'}
+2581058635.jpg#3r1:{'premise': 'A man squatting in a park looking at something in the distance.', 'hypothesis': 'A man sees something while in a park.'}
+2483666380.jpg#2r1:{'premise': 'A woman is weaving with a comb in her hand.', 'hypothesis': 'A woman is doing something with her hands.'}
+4970845641.jpg#0r1:{'premise': 'An African American wearing a red backpack looks the photographer as he walks past a concrete wall covered in graffiti.', 'hypothesis': 'a person wears a backpack'}
+2310231104.jpg#2r1:{'premise': 'A four piece band plays a song on a medium-size stage.', 'hypothesis': 'A band is playing music on a stage.'}
+217108448.jpg#0r1:{'premise': 'A young blond child wearing a black shirt and white shorts looks at the sky with a bridge and water in the background.', 'hypothesis': 'A child looks at the sky outside.'}
+2527163162.jpg#1r1:{'premise': 'A boy dressed in a plaid kilt with a brown hat wields a long pole.', 'hypothesis': 'A boy has and object in his hands.'}
+3963683506.jpg#0r1:{'premise': 'Six males, four with shirts and two without, have taken a break from their construction work on a building.', 'hypothesis': 'A group of construction workers is taking a break.'}
+539751252.jpg#0r1:{'premise': 'A young boy wearing blue shorts is splashing is a blue kiddie pool.', 'hypothesis': 'The young boy is wet.'}
+779266595.jpg#1r1:{'premise': 'Two men with graying beards share a laugh while enjoying the nice weather.', 'hypothesis': 'Men are laughing together on a nice day.'}
+7171239994.jpg#0r1:{'premise': 'There is a Victorian style building in the background, and in the foreground is a lake where a tiny paddle boat sits with three people in it.', 'hypothesis': 'Three people sit in a paddle boat.'}
+3287383259.jpg#3r1:{'premise': 'A woman with red-hair staples some papers', 'hypothesis': 'The woman is working on papers.'}
+2970827076.jpg#2r1:{'premise': 'A clerk at a store is idling a waiting for next customer.', 'hypothesis': 'Clerk waits in checkout line.'}
+3226796100.jpg#1r1:{'premise': 'A young girl wearing a pink coat plays with a yellow toy golf club.', 'hypothesis': 'A girl is playing.'}
+4553696388.jpg#4r1:{'premise': 'Man in leather jacket reading a book.', 'hypothesis': 'A man is reading'}
+7012109893.jpg#0r1:{'premise': 'A man dressed in blue places mop inside a green bucket as he stands on a roof that overlooks a city.', 'hypothesis': 'A man is holding a mop on a roof.'}
+4930656908.jpg#0r1:{'premise': "Several people are sitting down playing volleyball with a sign that reads 'WheelPower' in the background.", 'hypothesis': 'many people sit playing a game'}
+----------------------------------
+3019609769.jpg#2r1:{'premise': 'A poor family is leaving their home with only a few belongings.', 'hypothesis': 'A family leaves their home.'}
+268948449.jpg#2r1:{'premise': 'A man sitting at a desk, repairing antique typewriters.', 'hypothesis': 'a repair man works'}
+360723732.jpg#1r1:{'premise': 'A dog with a red object in its mouth is hurrying down a smooth path near grass and another dog.', 'hypothesis': 'A dog with a red object in its mouth is hurrying down a path near another dog.'}
+5606758706.jpg#1r1:{'premise': 'A woman in a poky dot jacket jumping in the snow with shopping bags on both of her wrists a city.', 'hypothesis': 'A lady in a polka dot jacket jumping in the snow with shopping bags on both of her wrists a city.'}
+467420499.jpg#1r1:{'premise': 'Three men in orange suits are doing street repairs at night.', 'hypothesis': 'The men are repairing the streets.'}
+2548027495.jpg#0r1:{'premise': 'A man in a black business suit stands upright next to a man wearing blue and leaning against a railing.', 'hypothesis': 'A man in a black suit is standing next to a man in a blue outfit.'}
+488089932.jpg#0r1:{'premise': 'Young boy with tongue out hula hooping with two hula hoops in a crowded area, man in blue shirt stands behind him.', 'hypothesis': 'A boy is hula hooping while a man is behind him.'}
+7610186624.jpg#1r1:{'premise': 'A woman is sitting outside at a table, using a knife to cut into a sandwich.', 'hypothesis': 'A woman is sitting outside.'}
+221597303.jpg#0r1:{'premise': 'A young boy walking in the park dressed in dark clothes and dark cap.', 'hypothesis': 'A young boy wandering in the park dressed in dark clothes and dark cap.'}
+3375549004.jpg#0r1:{'premise': 'People in orange robes line up behind a man wearing sunglasses.', 'hypothesis': 'People line up behind a one other person.'}
+2931759630.jpg#4r1:{'premise': 'A man in a boom lift bucket welds.', 'hypothesis': 'A man is working.'}
+2761599088.jpg#1r1:{'premise': 'A large tan dog is running with a green item in its mouth', 'hypothesis': 'A large dog has something green.'}
+4036819980.jpg#0r1:{'premise': 'A young redheaded girl, wearing a yellow shirt, black pants, and sneakers, jumping in a grassy field with blue skies and wispy clouds in the background.', 'hypothesis': 'A girl jumps in her newly cut lawn'}
+3263395801.jpg#0r1:{'premise': 'A person rides a motorbike on a dirt path surrounded by trees.', 'hypothesis': 'The person is outdoors.'}
+453807108.jpg#0r1:{'premise': 'A man wearing chuck taylor shoes and a tan shirt attempts to break free from a straitjacket in front of a crowd', 'hypothesis': 'a man in a straight jacket'}
+2943399558.jpg#1r1:{'premise': 'A person is climbing a wooden ladder on a very steep, jagged, rock cliff.', 'hypothesis': 'A person is climbing a steep cliff.'}
+2366020313.jpg#0r1:{'premise': 'A young boy in an orange shirt and khaki pants points his toy at the camera while he stands in front of the fence.', 'hypothesis': 'A boy with a toy'}
+793558.jpg#0r1:{'premise': 'A young girl with a white long-sleeved shirt on helps a young boy brown long-sleeved shirt on with tying his shoelaces.', 'hypothesis': 'A girl helps a boy tie his shoes'}
+3182517887.jpg#1r1:{'premise': 'A man with a tattoo is wearing sunglasses while holding a small boy.', 'hypothesis': 'There is a man with body art who is holding a young person.'}
+3255486615.jpg#0r1:{'premise': 'Middle-aged man cleaning the fallen snow on the roof of his car with a broom.', 'hypothesis': 'The man is cleaning off his car.'}
+413231421.jpg#2r2:{'premise': 'A black dog is digging in the snow.', 'hypothesis': 'A dog outside digging.'}
+6979052552.jpg#0r1:{'premise': 'A person wearing jeans, a blue shirt and a helmet is riding a four-wheeler in a sandy area.', 'hypothesis': 'A person is riding outside.'}
+39494353.jpg#0r1:{'premise': 'A man wearing a plaid shirt and brown apron is standing in front of an open fire.', 'hypothesis': 'The fire is burning near the man.'}
+2635509973.jpg#4r1:{'premise': 'A young boy is playing in the sandy water.', 'hypothesis': 'There is a boy in the water.'}
+3623650392.jpg#2r1:{'premise': 'a brown dog standing in the middle of a huge field.', 'hypothesis': 'There is a dog outside.'}
+7096517911.jpg#3r1:{'premise': 'A man trying to block another man from shooting the ball in.', 'hypothesis': 'The man is is near the ball.'}
+5532294954.jpg#2r1:{'premise': 'A rescue worker searches with a flashlight under a slab in a ruined building.', 'hypothesis': 'A worker searches a ruined building.'}
+4201813513.jpg#0r1:{'premise': 'A man in a black and blue jacket and a white helmet skiing down a hill swiftly.', 'hypothesis': 'A man skiing down a hill.'}
+3344861882.jpg#0r1:{'premise': 'A woman in a red jacket and sunglasses smiles at the camera while another woman unloads skis from a vehicle.', 'hypothesis': 'A woman in a red jacket and sunglasses smiles at the camera'}
+3753827435.jpg#1r1:{'premise': 'A woman in a green shirt and jeans throws a spear toward a target in the background painted with a carrot across a parking lot', 'hypothesis': 'A woman throwing a spear towards a target.'}
+242397237.jpg#4r1:{'premise': 'Two older males sitting together on a river boat tour.', 'hypothesis': 'Two males are riding a boat'}
+4950889937.jpg#1r1:{'premise': 'There are people walking down a busy nighttime street with signs lighting the way.', 'hypothesis': 'People are walking down a busy street.'}
+3205887140.jpg#0r1:{'premise': 'A woman with red-hair and a leather jacket holds a harp in front of a snowy forest.', 'hypothesis': 'The woman is holding an instrument.'}
+4752074992.jpg#1r1:{'premise': 'A young women carrying some wooden cases, walking down the street and passing a street performer.', 'hypothesis': 'A person carrying cases'}
+3397433780.jpg#1r1:{'premise': 'A man, with a blue wrapping around his foot, is about to kick another man, with a red cloth hanging from his belt, in the head.', 'hypothesis': 'a man is going to kick another man'}
+4652284040.jpg#1r1:{'premise': 'A man in a red shirt and a blue hat is sitting on a sidewalk and touching drinking glasses.', 'hypothesis': 'a guy with a hat sits with a glass'}
+3309230607.jpg#3r1:{'premise': 'A skater performs a stunt off a cement wall covered in graffiti.', 'hypothesis': 'A skateboarder displaying their skills.'}
+226065257.jpg#1r1:{'premise': 'A woman with a bag is sitting amongst three people who are reading books.', 'hypothesis': 'The woman is sitting.'}
+4803943201.jpg#2r1:{'premise': 'A Man in a blue shirt and jeans is walking across the street.', 'hypothesis': 'There is a man outside.'}
+5369771639.jpg#1r1:{'premise': 'Two men on opposing teams are playing soccer in a field.', 'hypothesis': 'Two men playing soccer.'}
+35505698.jpg#0r1:{'premise': 'A man with glasses and a Hawaiian shirt is standing next to a dog while another man with a blue hat looks at them from the back.', 'hypothesis': 'A man stares at another man.'}
+3661659196.jpg#3r1:{'premise': 'Two teenage girls conversing next to lockers.', 'hypothesis': 'People talking next to lockers.'}
+3726980861.jpg#4r1:{'premise': 'A blond man playing a guitar.', 'hypothesis': 'A man is playing a guitar.'}
+1957701886.jpg#4r1:{'premise': 'A woman is walking her dog and using her cellphone.', 'hypothesis': 'The woman is using her cellphone.'}
+4935241932.jpg#3r1:{'premise': 'A green bike is parked next to a door.', 'hypothesis': 'The bike is outside.'}
+3396817186.jpg#1r1:{'premise': 'a brown dog with a yellow toy in his mouth is jumping off the grassy ground', 'hypothesis': 'A dog is playing in the grass.'}
+4093896865.jpg#0r1:{'premise': 'A man wearing a stocking hat and has a beard is looking at the camera with two women sitting on the couch next to him.', 'hypothesis': 'a man is taking pictures'}
+5426416610.jpg#4r1:{'premise': 'A person in a ken-do outfit is standing there waiting.', 'hypothesis': 'A human standing.'}
+3143159297.jpg#2r1:{'premise': 'A smiling man and a baby girl posing for photo.', 'hypothesis': 'A photo is being taken of a man and a baby girl.'}
+8179518136.jpg#1r1:{'premise': 'Players from two opposing teams wearing colorful cleats struggle to gain control over a ball on an AstroTurf field.', 'hypothesis': 'The players are playing a sport.'}
+4958466857.jpg#1r1:{'premise': "Two street people and a dog sitting on the ground and one is holding an 'out of luck' sign.", 'hypothesis': 'people with a dog'}
+3213517626.jpg#1r1:{'premise': 'A roofer in a gray sweatshirt and orange hat walks on a unfinished roof at a lake-side home.', 'hypothesis': 'The roofer is outside working.'}
+1066252238.jpg#4r1:{'premise': 'Some young boys ride bikes in the street.', 'hypothesis': 'These people are together'}
+3441132495.jpg#0r1:{'premise': 'A woman in blue pants and a light-blue top looks down at her hand while standing near a dirty gray truck and surrounded by muddy ground.', 'hypothesis': "The truck that the woman in blue is standing next to could really use a good cleaning, as it's surrounded in mud."}
+4740287371.jpg#2r1:{'premise': 'a pizza employee waiting for his next drive up customer', 'hypothesis': 'An employee is waiting to help a customer.'}
+4110261078.jpg#3r1:{'premise': 'A person wearing a suit is walking through an airport.', 'hypothesis': 'A person is in the airport.'}
+181970350.jpg#4r1:{'premise': 'A man in purple tie is singing.', 'hypothesis': 'A man is singing.'}
+4337180031.jpg#1r1:{'premise': 'A child in a red coat waves a hand in the air while lying in snow beside a red plastic sled.', 'hypothesis': 'A child is playing in the snow.'}
+1257692349.jpg#2r1:{'premise': 'A group of onlookers glance at a person doing a strange trick on her head.', 'hypothesis': 'People watch another person do a trick.'}
+241347611.jpg#3r1:{'premise': 'A football coach is walking on a football field.', 'hypothesis': 'a football coach walks on the field'}
+3741664817.jpg#0r1:{'premise': 'Two women stand on a beach and perform stretches or yoga together, facing towards the water and away from the camera.', 'hypothesis': 'Two people are exercising outside.'}
+2477900423.jpg#0r1:{'premise': 'A girl wearing a teal shirt smiles while holding a piece of paper, with the other side held by someone standing off-camera.', 'hypothesis': 'A girl holds a piece of paper.'}
+2959699416.jpg#2r1:{'premise': 'Three women are sitting on a wharf and kicking their feet in the water.', 'hypothesis': 'More than one person is touching a liquid.'}
+3411335115.jpg#2r1:{'premise': 'Group of children listening to security guard.', 'hypothesis': 'The children are listening to the guard'}
+3258993719.jpg#2r1:{'premise': 'A person in a green robe sits on a couch with a blanket.', 'hypothesis': 'A person in a robe sits on a couch'}
+2369452202.jpg#4r1:{'premise': 'A red hot air balloon lands in a field among a crowd.', 'hypothesis': 'A hot air balloon is making a landing.'}
+562242613.jpg#4r1:{'premise': 'A farmer gives a tour of his farm to local families', 'hypothesis': 'people are outside'}
+366978558.jpg#2r1:{'premise': 'A woman is looking into a mirror, brushing her hair.', 'hypothesis': 'A woman is brushing her hair.'}
+1737441377.jpg#1r1:{'premise': 'A boy in an orange shirt sells fruit from a street cart.', 'hypothesis': 'A boy is a street vendor.'}
+2414384480.jpg#0r1:{'premise': 'A group of people are standing on a platform and waiting for the subway train.', 'hypothesis': 'People waiting for a train'}
+----------------------------------
+4804607632.jpg#1r1:{'premise': 'A man with glasses sitting at a restaurant staring at something that is not shown.', 'hypothesis': 'a man at a restaurant'}
+523991446.jpg#0r1:{'premise': 'A zaftig woman in a tube top and jeans dancing outdoors, with a guitarist behind her.', 'hypothesis': 'A woman is dancing.'}
+489773343.jpg#2r1:{'premise': 'The little girl in the sand is handing a ball to one of the two black dogs.', 'hypothesis': 'a little girl is handing a ball to dog'}
+3183195653.jpg#0r1:{'premise': 'The brightly dressed middle eastern women are conversing in the market.', 'hypothesis': 'The women are brightly dressed'}
+708860480.jpg#2r1:{'premise': 'A boy is being splashed in a swimming pool.', 'hypothesis': 'A boy is playing in the swimming pool.'}
+4869254994.jpg#2r1:{'premise': 'Person walking down lighted tunnel with green handrail.', 'hypothesis': 'a person walking in a tunnel'}
+4546395944.jpg#3r1:{'premise': 'A man in renaissance clothing is sitting on a brick wall.', 'hypothesis': 'The man is in costume'}
+2217244400.jpg#3r1:{'premise': 'Person with umbrella observes flooded streets with cars in the water.', 'hypothesis': 'A person is outside.'}
+4855663504.jpg#2r1:{'premise': 'A man with an afro and bandanna playing electric guitar.', 'hypothesis': 'the guy with the afro is playing on the guitar'}
+5669382831.jpg#3r1:{'premise': 'A female figure skater in costume is executing a routine.', 'hypothesis': 'A skater is on the ice.'}
+3188319076.jpg#1r1:{'premise': 'A black and white dog jumps up and down in the snow.', 'hypothesis': 'A dog plays in the winter.'}
+1030041880.jpg#3r1:{'premise': 'A woman in a green skirt and white tank top singing into a microphone.', 'hypothesis': 'A woman sings.'}
+4967627255.jpg#0r1:{'premise': 'A woman with a beautiful dress and matching umbrella is walking down the street carrying a purse on her arm.', 'hypothesis': 'The woman is walking down the street.'}
+3643971203.jpg#4r1:{'premise': 'Two businessmen going to work.', 'hypothesis': 'Two men go to work.'}
+3552206648.jpg#3r1:{'premise': 'A swan landing in a lake.', 'hypothesis': 'A bird is on a lake.'}
+40302299.jpg#2r1:{'premise': 'Excited children pass their parents on their way from the parking lot.', 'hypothesis': 'Children go past their parents.'}
+4951686898.jpg#0r1:{'premise': "A woman with tattoos and a black t-shirt smiles and talks to a man with a partially shaved head wearing shirt with the words' hippie killer' in white letters on it.", 'hypothesis': 'A female and a male are talking to each other.'}
+7690660482.jpg#3r1:{'premise': 'Passengers in a rusty yellow car driving down the street.', 'hypothesis': 'A car drives on a street.'}
+4714935635.jpg#0r1:{'premise': 'A male in a black hat, brown jacket and black and white sports pants reading a newspaper next to an aged stone building with a bike out front.', 'hypothesis': 'a male in a hat'}
+4343682191.jpg#1r1:{'premise': 'A woman in black framed glasses peruses a photo album while sitting in a red wicker chair.', 'hypothesis': 'There is a lady with a book.'}
+2744856447.jpg#3r1:{'premise': 'An Asian young man is drinking out of a metal cup.', 'hypothesis': 'The young man is drinking a liquid.'}
+7735272386.jpg#0r1:{'premise': "A woman in an American military uniform sits at a table and writes the words 'sad,' 'depressed,' and 'hatred' on a large sheet of white paper.", 'hypothesis': 'A woman in an American military uniform.'}
+4709236483.jpg#0r1:{'premise': 'A group of people walk down a pedestrian only street in Asia near large green trees and older brown buildings.', 'hypothesis': 'A group of people walks past some trees and brown buildings.'}
+4631832689.jpg#1r1:{'premise': 'A man sits in a chair on the sidewalk in front of a huge display of brightly colored artwork.', 'hypothesis': 'A man sits in a chair on the sidewalk in front of a huge display of brightly colored artwork'}
+3603116579.jpg#3r1:{'premise': 'The baseball player is running after the ball.', 'hypothesis': 'The person is playing a game.'}
+4463229405.jpg#4r1:{'premise': 'A man is riding a bicycle in the street.', 'hypothesis': 'a bicycle is being ridden'}
+6034227204.jpg#2r1:{'premise': 'Man sitting down in a asian custom and styled room.', 'hypothesis': 'A man sitting down indoors in a room.'}
+3411893215.jpg#1r1:{'premise': 'A girl in a purple top, baggy pants and sneakers is blowing a kiss, while another girl in black watches.', 'hypothesis': 'A girl blows a kiss as another girl sees it.'}
+278002800.jpg#1r1:{'premise': 'A man in a black coat eats a doughnut while other men look out of frame.', 'hypothesis': 'A man in a black coat eats a doughnut.'}
+4486280757.jpg#0r1:{'premise': 'A man in a black wetsuit with white shorts is windsurfing on a blue body of water with mountains in the background.', 'hypothesis': 'The man is near the water.'}
+3937269663.jpg#3r1:{'premise': 'A man in a yellow excavator on a construction site.', 'hypothesis': 'the guy is on the excavator'}
+5158576367.jpg#3r1:{'premise': 'A man and a young girl swimming.', 'hypothesis': 'a man and girl swim'}
+4502489690.jpg#4r1:{'premise': 'A view down the train tracks in a large city.', 'hypothesis': 'A view outdoors.'}
+4637466845.jpg#0r1:{'premise': 'A shirtless man with a white hat and no shoes sitting crisscross with his back against the wall holding up a white plastic cup.', 'hypothesis': 'A man is sitting crisscross'}
+8182074427.jpg#3r1:{'premise': 'A female basketball player dribbling down court.', 'hypothesis': 'A female basketball player is going on the court.'}
+2412281172.jpg#0r1:{'premise': 'Young people and a kid are walking in the forest in a sunny day.', 'hypothesis': 'Young people and a kid are walking on a sunny day.'}
+7883041362.jpg#0r1:{'premise': 'A young woman wearing jeans, a white t-shirt and a hat, performs a high flying trick on a bicycle at an outdoor bike park.', 'hypothesis': 'Young woman performing bike tricks at a bike park.'}
+3138018309.jpg#3r1:{'premise': 'A boy in sports themed pajamas is in front of a Christmas tree.', 'hypothesis': 'the kid is in front of the tree'}
+3409506817.jpg#0r1:{'premise': 'A black limousine in front of a marble building with a crowd of people on the buildings steps.', 'hypothesis': 'A black limousine is in front of a marble building.'}
+2315335328.jpg#4r1:{'premise': 'A woman in a green flowered dress is holding a container of yarn animals.', 'hypothesis': 'A lady in a dress has a container of yarn toys.'}
+4726652809.jpg#0r1:{'premise': 'A woman in a purple dress talks on her cellphone and a man reads a book as a two-story bus passes by outside their window.', 'hypothesis': 'a woman talks on her phone'}
+2604462733.jpg#0r1:{'premise': 'A young ladies squatting at hillside sipping on a drink the other one with the white purse is talking pictures.', 'hypothesis': 'Young women are outdoors.'}
+402978771.jpg#0r1:{'premise': 'A woman wearing a vertical striped top, sitting on a bench beside a telephone booth in a train station.', 'hypothesis': 'A woman is at a train station on a bench.'}
+3730260112.jpg#4r1:{'premise': '3 people walking through a small field.', 'hypothesis': 'A group of friends walking outside.'}
+2546667441.jpg#0r1:{'premise': 'Black dog with tan markings wearing a blue collar standing on green grass.', 'hypothesis': 'There is a dog standing outside.'}
+4672131242.jpg#4r1:{'premise': 'A man in a black shirt is standing behind a blue SUV.', 'hypothesis': 'A person is next to a car'}
+2148680620.jpg#0r2:{'premise': 'A guy in glasses is biting into a pink marshmallow chick while somebody else is puckering their lips out wanting a bite.', 'hypothesis': 'A man is eating a marshmallow.'}
+3538719941.jpg#1r1:{'premise': 'A woman wearing a large bandanna around her neck is sitting at a table putting poker chips into a plastic bag.', 'hypothesis': 'a woman is wearing fashion accessories while sitting at a table.'}
+1229756013.jpg#0r1:{'premise': 'A dog leaps into the air in a grassy field surrounded by trees.', 'hypothesis': 'A dog is in a grassy field filled with trees.'}
+506738508.jpg#4r1:{'premise': 'Two men in white suits cheer', 'hypothesis': 'The two men is white suits are acting excited.'}
+333216446.jpg#4r1:{'premise': 'A man with a gray beard and an apron smiles.', 'hypothesis': 'A man smiling.'}
+3030954073.jpg#0r1:{'premise': 'A festival displays two men dressed in red makeup and costume, while an older man has cream on his face.', 'hypothesis': 'Two men are dressed in makeup'}
+7638344872.jpg#0r1:{'premise': "Two men are in blue life jackets and sitting on innertubes with 'Crusher' written on them in the middle of a body of water.", 'hypothesis': 'Two men sit on innertubes in the middle of a body of water.'}
+8042217958.jpg#0r1:{'premise': 'A woman watching six televisions, while sitting on a hardwood floor in a beautiful room made of bricks with large windows, while a dark-haired man leaning on a windowsill is watching her.', 'hypothesis': 'The woman is inside.'}
+74736854.jpg#0r1:{'premise': 'A couple bows their head as a man in a decorative robe reads from a scroll in Asia with a black late model station wagon in the background.', 'hypothesis': 'A light black late model station wagon is in the background.'}
+2416964653.jpg#3r1:{'premise': 'Two young girls looking very concerned.', 'hypothesis': 'Their faces convey their feelings.'}
+4438149916.jpg#0r1:{'premise': 'A man in a jacket wearing black boots walking on the truck of a fallen tree over a ravine.', 'hypothesis': 'A man walks outdoors.'}
+3675685612.jpg#2r1:{'premise': 'Child squirting paint onto a piece of spin-art.', 'hypothesis': 'The child is working on an art project.'}
+2230482572.jpg#4r1:{'premise': 'A boy and a girl stand in a median amongst Mike Huckabee signs.', 'hypothesis': 'Two people stand on a median with advertising signs.'}
+2979998405.jpg#0r1:{'premise': 'A group of children in costumes are on a stage with red curtains.', 'hypothesis': 'A group of children are on stage'}
+7990171495.jpg#3r1:{'premise': 'A small girl in a green shirt plays on a swing.', 'hypothesis': 'girl plays swing'}
