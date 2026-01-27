@@ -2,6 +2,8 @@ import json
 from evaluate_LLMs import Get_manual_evaluation_problems
 from evaluate_LLMs import get_LLM_problems
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Read from file and parse JSON
 with open("gold.json", "r") as f:
@@ -55,6 +57,79 @@ def print_len_info(left_len_list, right_len_list):
     print(f"average len left: {avg_len_left}")
     print(f"average len right: {avg_len_right}")
 
+
+def make_len_plot(d1, d2, d3, d4, d5, d6):
+    #lengths plot
+    d = [d1, d2, d3, d4, d5, d6]
+
+    fig, ax = plt.subplots(figsize=(10, 7))
+    ax.set_ylabel("Word count")
+    colors = ['#80b3ff', '#0052cc', 
+          '#ccb3ff', '#7733ff', "#ffe066", "#cca300"]
+    bp = ax.boxplot(d, labels = ["all script left", "all script right", "left script subset", "right script subset", "left gold subset", "right gold subset"], patch_artist=True)
+
+    for box, color in zip(bp['boxes'], colors):
+        box.set_facecolor(color)
+    for median in bp['medians']:
+        median.set_linewidth(2)
+        median.set_color("black")
+
+    plt.show()
+
+   
+def make_perfection_plot():
+     #perfect non perfect plot
+    N = 2
+
+    useable = (25, 28)
+    unuseable = (0, 7)
+    #boyStd = (2, 3, 4, 1, 2)
+    #girlStd = (3, 5, 2, 3, 3)
+    ind = np.arange(N) * 0.6  
+    width = 0.35  
+
+    fig = plt.subplots(figsize =(10, 7))
+    p1 = plt.bar(ind, useable, width, color = '#80b3ff' )
+    p2 = plt.bar(ind, unuseable, width, bottom = useable, color = '#0052cc')
+
+    plt.ylabel('Amount of answer templates')
+    #plt.title('Contribution by the teams')
+    plt.xticks(ind, ('Perfect match', 'Non perfect match'))
+    #plt.yticks(np.arange(0, 81, 10))
+    plt.legend((p1[0], p2[0]), ('usable', 'unusable'))
+
+    plt.show()
+
+
+def make_boring_plot():
+     #perfect non perfect plot
+    N = 2
+
+    noun = np.array((36, 10))
+    verb = np.array((3, 3))
+    mix  = np.array((1, 2))
+    amb = np.array((2, 2))
+    sen = np.array((2, 0))
+    
+    ind = np.arange(N) * 0.6  
+    width = 0.35  
+
+    fig = plt.subplots(figsize =(10, 7))
+    p1 = plt.bar(ind, noun, width, color = '#80b3ff' )
+    p2 = plt.bar(ind, verb, width, bottom = noun, color = '#ccb3ff')
+    p3 = plt.bar(ind, mix, width, bottom = noun+verb, color = '#ff99bb')
+    p4 = plt.bar(ind, amb, width, bottom = noun+verb+mix, color = '#ffcc99')
+    p5 = plt.bar(ind, sen, width, bottom = noun+verb+mix+amb, color = "#ffe066")
+
+    plt.ylabel('Amount of answer templates')
+    #plt.title('Contribution by the teams')
+    plt.xticks(ind, ('Boring', 'Interesting'))
+    #plt.yticks(np.arange(0, 81, 10))
+    plt.legend((p1[0], p2[0], p3[0], p4[0], p5[0]), ('noun', 'verb', 'mix', 'ambiguous', 'sentence'))
+
+    plt.show()
+    
+    
 df = pd.read_csv("merged_entailment.csv")
 #get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
 #pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
@@ -69,6 +144,12 @@ print("script set -----------------")
 print_len_info(left_len_list_s, right_len_lists_s)
 print("all script -------")
 print_len_info(left_len_list_all_s, right_len_list_all_s)
+
+
+print(right_len_lists_g)
+#make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
+#make_perfection_plot()
+make_boring_plot()
 
 
 
