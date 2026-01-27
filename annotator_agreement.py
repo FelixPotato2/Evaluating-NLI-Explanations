@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Read from file and parse JSON
+
 with open("gold.json", "r") as f:
     gold_answers = json.load(f)
 
@@ -13,38 +13,25 @@ def get_len_lists(file):
     left_len_list =[]
     right_len_list =[]
     for dict in gold_answers:
-        for answers in dict.values(): #this is only one...
-            #print("answers")
-            #print(answers)
+        for answers in dict.values(): #this is only one
             for answer_group in answers:
-                #print("group")
-                #print(answer_group)
                 for answer in answer_group["left"]:
-                    #print(answer.split())
                     left_len_list.append(len(answer.split()))
                 for answer in answer_group["right"]:
                     right_len_list.append(len(answer.split()))
-                #left_len_list.append(len(answer_group["left"]))
-            # right_len_list.append(len(answer_group["right"]))
+                
     return left_len_list, right_len_list
 
 def get_len_lists_script(script_answers):
     
     left_len_list =[]
     right_len_list =[]
-    for answers in script_answers.values(): #this is only one...
-            #print("answers")
-            #print(answers)
+    for answers in script_answers.values(): #this is only one
         for answer_group in answers:
-                #print("group")
-                #print(answer_group)
             for answer in answer_group["left"]:
-                    #print(answer.split())
                 left_len_list.append(len(answer))
             for answer in answer_group["right"]:
                 right_len_list.append(len(answer))
-                #left_len_list.append(len(answer_group["left"]))
-            # right_len_list.append(len(answer_group["right"]))
     return left_len_list, right_len_list
 
     
@@ -59,7 +46,7 @@ def print_len_info(left_len_list, right_len_list):
 
 
 def make_len_plot(d1, d2, d3, d4, d5, d6):
-    #lengths plot
+
     d = [d1, d2, d3, d4, d5, d6]
 
     fig, ax = plt.subplots(figsize=(10, 7))
@@ -78,13 +65,10 @@ def make_len_plot(d1, d2, d3, d4, d5, d6):
 
    
 def make_perfection_plot():
-     #perfect non perfect plot
-    N = 2
 
+    N = 2
     useable = (25, 28)
     unuseable = (0, 7)
-    #boyStd = (2, 3, 4, 1, 2)
-    #girlStd = (3, 5, 2, 3, 3)
     ind = np.arange(N) * 0.6  
     width = 0.35  
 
@@ -131,14 +115,12 @@ def make_boring_plot():
     
     
 df = pd.read_csv("merged_entailment.csv")
-#get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
-#pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
 _, answers_all, _, _= get_LLM_problems(df, 771)
 left_len_list_all_s, right_len_list_all_s = get_len_lists_script(answers_all)
 _, script_answers = Get_manual_evaluation_problems(print_results = False)
 left_len_list_s, right_len_lists_s = get_len_lists_script(script_answers)
 left_len_list_g, right_len_lists_g = get_len_lists(gold_answers)
-"""
+
 print("gold set----------------")
 print_len_info(left_len_list_g, right_len_lists_g)
 print("script set -----------------")
@@ -147,38 +129,14 @@ print("all script -------")
 print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 
-print(right_len_lists_g)
-"""
-
+#uncomment these to create various plots
 #make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
 #make_perfection_plot()
-make_boring_plot()
+#make_boring_plot()'
 
 
 
-
-#print(data)
-#print(type(data))
-
-
-#print(len(data))
+Get_manual_evaluation_problems(True)
 
 
 
-
-# for ID in script_answers:
-#     print(ID)
-#     print(script_answers[ID])
-# for problem in data:
-#     for ID in problem.keys(): #its a bit dumb in how we structured it but this should be just one
-#         script_ans = script_answers[ID]
-#         for answer_dict in problem[ID]:
-#             left_set = set()
-#             right_set =set()
-#             for word in answer_dict["left"]:
-#                 if word not in ["a", "an", "the"]:
-#                     left_set.add(word.lower())
-#             for word in answer_dict["right"]:
-#                 if word not in ["a", "an", "the"]:
-#                     right_set.add(word.lower())
-            
