@@ -1,0 +1,445 @@
+{
+  "2819254573.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of person"
+    ]
+  },
+  "4902026887.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  },
+  "463970752.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  },
+  "2326669450.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "children is a type of people"
+    ]
+  },
+  "2923891109.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal"
+    ]
+  },
+  "878758390.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal"
+    ]
+  },
+  "4705854511.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "car dealership is a type of place"
+    ]
+  },
+  "3462454965.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": []
+  },
+  "3444684583.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": []
+  },
+  "2393059551.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "building under construction filled with bricks and various tools is a type of construction site"
+    ]
+  },
+  "344205744.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "couple is a type of couple",
+      "couch is a type of couch"
+    ]
+  },
+  "4821121646.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "rooster is a type of rooster",
+      "vendor is a type of vendor"
+    ]
+  },
+  "2387494200.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "walking is a type of going for a walk"
+    ]
+  },
+  "3973858553.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "Bud Light is a type of something alcoholic"
+    ]
+  },
+  "4812310213.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of man",
+      "fruits are a type of fruit"
+    ]
+  },
+  "3493399647.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "adults are a type of people",
+      "water is a type of water"
+    ]
+  },
+  "356244046.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "practicing kicking is a type of excercising"
+    ]
+  },
+  "136644885.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of woman",
+      "bridge is a type of bridge",
+      "wooded area is a type of wooded area",
+      "white shirt is a type of white shirt"
+    ]
+  },
+  "158827073.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "girl is a type of girl",
+      "chocolate milk powder is a type of food"
+    ]
+  },
+  "3284899112.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man and woman are a type of man and woman",
+      "building is a type of building"
+    ]
+  },
+  "5196768578.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "young child is a type of child"
+    ]
+  },
+  "2939116460.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "girl is a type of person",
+      "bicycle helmet is a type of helmet",
+      "dog tag necklace is a type of dog tag"
+    ]
+  },
+  "1145781754.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "men are types of males",
+      "laughing together at a table is a type of socializing with each other",
+      "baseball caps and logo t-shirts are types of casual clothes"
+    ]
+  },
+  "8162775105.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "lady is a type of woman",
+      "singing is a type of making music"
+    ]
+  },
+  "4686754959.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  },
+  "3523115345.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "female is a type of female",
+      "videotaping is a type of recording",
+      "specimen is a type of research"
+    ]
+  },
+  "1362097957.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": []
+  },
+  "2341080150.jpg#0r2": {
+    "answer": "entailment",
+    "explanation": []
+  },
+  "610802443.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "guy is a type of man"
+    ]
+  },
+  "2245916742.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": []
+  },
+  "416960865.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "outdoor clothes is a type of clothes"
+    ]
+  },
+  "5984974054.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "the car is a type of car"
+    ]
+  },
+  "3929379436.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "rally in a street is a type of standing in a street"
+    ]
+  },
+  "2483495637.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "girl is a type of person"
+    ]
+  },
+  "166507476.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "Two oriental lizards are a type of two lizards"
+    ]
+  },
+  "32490830.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "playing according is a type of playing an instrument"
+    ]
+  },
+  "69902502.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "making pottery is a type of making pottery"
+    ]
+  },
+  "4703790336.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person"
+    ]
+  },
+  "3096006788.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "standing is not sitting"
+    ]
+  },
+  "4436813115.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  },
+  "109741554.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "shoveling snow is a type of working",
+      "roof is a type of building, off the roof of a building is a type of in the snow"
+    ]
+  },
+  "109380144.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "playfully kicking is a type of play fighting"
+    ]
+  },
+  "4654662119.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "boys are a type of persons",
+      "holding kites with water is a type of outdoor recreation"
+    ]
+  },
+  "374538975.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "Coed choir is a type of choir"
+    ]
+  },
+  "4718205942.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person"
+    ]
+  },
+  "3689975998.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "running on the beach is a type of jogging by the shore"
+    ]
+  },
+  "4452202808.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of man"
+    ]
+  },
+  "2509912399.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "baby is a type of baby",
+      "woman is a type of person"
+    ]
+  },
+  "4729746211.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "golden colored flowers is a type of flowers"
+    ]
+  },
+  "11610969.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "people is a type of people"
+    ]
+  },
+  "241347611.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "is walking is a type of walks"
+    ]
+  },
+  "4696008531.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of man",
+      "black t-shirt is a type of black shirt"
+    ]
+  },
+  "4393476043.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of man",
+      "jacket is a type of jacket",
+      "small child is a type of child",
+      "dog is a type of dog",
+      "woman is a type of woman",
+      "small boy is a type of boy",
+      "dog is a type of dog"
+    ]
+  },
+  "2195316844.jpg#0r1": {
+    "answer": "contradiction",
+    "explanation": [
+      "moves his bicycle past is not riding around on his bicycle"
+    ]
+  },
+  "3783803365.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "talking to each other is a type of talking"
+    ]
+  },
+  "3527926597.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of boy",
+      "skateboard ramp is a type of ramp"
+    ]
+  },
+  "3751894413.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "child is a type of something"
+    ]
+  },
+  "366978558.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "brushing her hair is a type of brushing her hair"
+    ]
+  },
+  "3707585013.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "singer is a type of performer",
+      "small crowd is a type of small audience",
+      "outside is a type of outdoors"
+    ]
+  },
+  "4740975956.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "tall man is a type of tall man"
+    ]
+  },
+  "2201050079.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "worker is a type of person"
+    ]
+  },
+  "4937201390.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "standing on steps in front of a building is a type of standing in front of a building"
+    ]
+  },
+  "418207489.jpg#3r1": {
+    "answer": "entailment",
+    "explanation": [
+      "warehouse store is a type of store"
+    ]
+  },
+  "3031722599.jpg#2r1": {
+    "answer": "entailment",
+    "explanation": [
+      "A man smiles behind a food stand is a type of a man smiles"
+    ]
+  },
+  "3226796100.jpg#1r1": {
+    "answer": "entailment",
+    "explanation": [
+      "A young girl is a type of girl"
+    ]
+  },
+  "3375549004.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "a man is a type of one other person"
+    ]
+  },
+  "3473742715.jpg#2r1": {
+    "answer": "contradiction",
+    "explanation": [
+      "sitting is not standing"
+    ]
+  },
+  "1998457059.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "body boarder is a type of surfer"
+    ]
+  },
+  "3671612380.jpg#4r1": {
+    "answer": "entailment",
+    "explanation": [
+      "running in the street entails there is a street with a boy running"
+    ]
+  },
+  "523991446.jpg#0r1": {
+    "answer": "entailment",
+    "explanation": [
+      "zaftig woman is a type of woman"
+    ]
+  }
+}
