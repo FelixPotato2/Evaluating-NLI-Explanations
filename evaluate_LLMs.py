@@ -310,15 +310,15 @@ def calculate_scores(result, key):
 
 #This is the call used for the gold label checking
 
-def Get_manual_evaluation_problems():
+def Get_manual_evaluation_problems(print_results = False):
     problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 60, set(), False, seed = 8)
     for problem in problems:
         #print(f"{problem}\n")
         print_example(df, ID = problem, rownum = None, ignore_highlights=True)
-
-    print(len(problems))
+    if print_results: 
+        print(len(problems))
     #print(f"problems: {problems}\n")
-    print(f"answers{answers}\n")
+        print(f"answers{answers}\n")
     #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
     return problems, answers
 
@@ -398,7 +398,7 @@ def checK_LLM(data, answers):
 if __name__ == "__main__":
     
 
-    #Get_manual_evaluation_problems()
+    #Get_manual_evaluation_problems(True)
     amount = 700
     ID_restore, answers, prob = Get_prompts_for_LLM(amount)
 
