@@ -135,9 +135,10 @@ df = pd.read_csv("merged_entailment.csv")
 #pair_dict, answer_dict, pair_dict_ex, answer_dict_ex
 _, answers_all, _, _= get_LLM_problems(df, 771)
 left_len_list_all_s, right_len_list_all_s = get_len_lists_script(answers_all)
-_, script_answers = Get_manual_evaluation_problems()
+_, script_answers = Get_manual_evaluation_problems(print_results = False)
 left_len_list_s, right_len_lists_s = get_len_lists_script(script_answers)
 left_len_list_g, right_len_lists_g = get_len_lists(gold_answers)
+"""
 print("gold set----------------")
 print_len_info(left_len_list_g, right_len_lists_g)
 print("script set -----------------")
@@ -147,6 +148,8 @@ print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 
 print(right_len_lists_g)
+"""
+
 #make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
 #make_perfection_plot()
 make_boring_plot()
