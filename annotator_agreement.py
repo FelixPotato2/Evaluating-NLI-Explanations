@@ -53,7 +53,7 @@ def make_len_plot(d1, d2, d3, d4, d5, d6):
     ax.set_ylabel("Word count")
     colors = ['#80b3ff', '#0052cc', 
           '#ccb3ff', '#7733ff', "#ffe066", "#cca300"]
-    bp = ax.boxplot(d, labels = ["all script left", "all script right", "left script subset", "right script subset", "left gold subset", "right gold subset"], patch_artist=True)
+    bp = ax.boxplot(d, labels = ["Complete left", "Complete  right", "Auto templates left", "Auto templates right", "Gold templates left", "Gold templates right"], patch_artist=True)
 
     for box, color in zip(bp['boxes'], colors):
         box.set_facecolor(color)
@@ -76,11 +76,11 @@ def make_perfection_plot():
     p1 = plt.bar(ind, useable, width, color = '#80b3ff' )
     p2 = plt.bar(ind, unuseable, width, bottom = useable, color = '#0052cc')
 
-    plt.ylabel('Amount of answer templates')
+    plt.ylabel('Number of answer templates')
     #plt.title('Contribution by the teams')
     plt.xticks(ind, ('Perfect match', 'Non perfect match'))
     #plt.yticks(np.arange(0, 81, 10))
-    plt.legend((p1[0], p2[0]), ('usable', 'unusable'))
+    plt.legend((p1[0], p2[0]), ('Minor differences', 'Problematic differences'))
 
     plt.show()
 
@@ -105,9 +105,9 @@ def make_boring_plot():
     p4 = plt.bar(ind, amb, width, bottom = noun+verb+mix, color = '#ffcc99')
     p5 = plt.bar(ind, sen, width, bottom = noun+verb+mix+amb, color = "#ffe066")
 
-    plt.ylabel('Amount of answer templates')
+    plt.ylabel('Number of answer templates')
     #plt.title('Contribution by the teams')
-    plt.xticks(ind, ('Boring', 'Interesting'))
+    plt.xticks(ind, ('Simple', 'Complex'))
     #plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0], p3[0], p4[0], p5[0]), ('noun', 'verb', 'mix', 'ambiguous', 'sentence'))
 
@@ -130,9 +130,9 @@ print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 
 #uncomment these to create various plots
-#make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
+make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
 #make_perfection_plot()
-#make_boring_plot()'
+#make_boring_plot()
 
 
 
