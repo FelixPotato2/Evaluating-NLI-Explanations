@@ -7,7 +7,7 @@ import ast
 import math
 
 #df = pd.read_csv("entailment_probs_2.csv")
-#df = pd.read_csv("entailment_probs_or.csv")
+dev_df = pd.read_csv("entailment_probs_or.csv")
 df = pd.read_csv("merged_entailment.csv")
 
 def get_LLM_problems(df, nr_problems, excluded_ids = set(), example=False, seed = 773):
@@ -499,16 +499,16 @@ def calculate_scores(result, key):
 
 #This is the call used for the gold label checking
 
-def Get_manual_evaluation_problems(print_results = False):
-    problems, answers, problems_ex, answers_ex = get_LLM_problems(df, 60, set(), False, seed = 8)
-    for problem in problems:
-        #print(f"{problem}\n")
-        print_example(df, ID = problem, rownum = None, ignore_highlights=True)
+def Get_manual_evaluation_problems(print_results = True):
+    problems, answers, problems_ex, answers_ex = get_LLM_problems(dev_df, 60, set(), False, seed = 8)
     if print_results: 
+        for problem in problems:
+            #print(f"{problem}\n")
+            print_example(df, ID = problem, rownum = None, ignore_highlights=True)
         print(len(problems))
-    #print(f"problems: {problems}\n")
+        #print(f"problems: {problems}\n")
         print(f"answers{answers}\n")
-    #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
+        #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
     return problems, answers
 
 def Get_prompts_for_LLM(amount=10):
