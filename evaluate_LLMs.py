@@ -6,7 +6,6 @@ import json
 import ast
 import math
 
-
 #df = pd.read_csv("entailment_probs_2.csv")
 dev_df = pd.read_csv("entailment_probs_or.csv")
 df = pd.read_csv("merged_entailment.csv")
@@ -202,7 +201,65 @@ def get_overlap(text, highlighted):
     return result 
 
 
-def check_LLM_answer(answers, LLM_output):
+def _relation_word_count_from_llm(explanations):
+    """
+    Count words in LLM relations by extracting left/right of 'is a type of'.
+    Articles a/an/the are ignored (consistent with your matching).
+    """
+    if not isinstance(explanations, list):
+        explanations = [str(explanations)] if explanations else []
+
+    total = 0
+    for s in explanations:
+        parts = str(s).split("is a type of")
+        if len(parts) < 2:
+            continue
+        left = [w.strip(" ,.") for w in parts[0].split() if w.strip(" ,.").lower() not in ("a", "an", "the")]
+        right = [w.strip(" ,.") for w in parts[1].split() if w.strip(" ,.").lower() not in ("a", "an", "the")]
+        total += len(left) + len(right)
+    return total
+
+
+def _relation_word_count_from_annotators(answer_groups):
+    """
+    Count words in annotator relations using the extracted token lists already in `answers`.
+    Counts left+right tokens for every relation occurrence.
+    """
+    total = 0
+    for group in answer_groups:
+        lefts = group.get("left", [])
+        rights = group.get("right", [])
+        # count all combinations, consistent with how you previously built ann_strings
+        for left_tokens in lefts:
+            for right_tokens in rights:
+                total += len(left_tokens) + len(right_tokens)
+    return total
+
+def _gold_relation_count(answer_groups):
+    """
+    Count how many gold relations exist for this pair.
+    A group can contain multiple left phrasings and multiple right phrasings.
+    We count all combinations (consistent with how annotator relations are represented).
+    """
+    total = 0
+    for g in answer_groups:
+        lefts = g.get("left", [])
+        rights = g.get("right", [])
+        total += max(len(lefts), 1) * max(len(rights), 1)
+    return total
+
+def calculate_pair_scores(result, hit_key):
+    # predicted pairs = pairs where model produced at least one explanation
+    predicted_pairs = sum(1 for v in result.values() if isinstance(v, dict) and v.get("total_LLM_answers", 0) > 0)
+    gold_pairs = sum(1 for v in result.values() if isinstance(v, dict) and v.get("total_answers", 0) > 0)
+    hit_pairs = sum(v.get(hit_key, 0) for v in result.values() if isinstance(v, dict))
+
+    precision = hit_pairs / predicted_pairs if predicted_pairs > 0 else 0.0
+    recall = hit_pairs / gold_pairs if gold_pairs > 0 else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+    return {"precision": precision, "recall": recall, "f1": f1}
+
+def check_LLM_answer(answers, LLM_output, max_extra_words=2):
     """
     Compares the LLM answers with answers extracted from human annotators and gives performance measures
     Parameters:
@@ -214,7 +271,6 @@ def check_LLM_answer(answers, LLM_output):
         structured as follows:  
         {'3021028400.jpg#1r1e': { ‘answer’: ‘entailment’, ‘explanation’: [‘man is a type of person’, ‘black suit is a type of suit’]}
     
-
     Returns:
     result: dict
         dictionary with keys pair ids and values dictionaries containing the correctness counts for that pairID
@@ -228,17 +284,32 @@ def check_LLM_answer(answers, LLM_output):
 
     """
 
-    result ={}
+    n_all = 0
+    n_len_ok = 0
+    sum_excess = 0
+    sum_shortfall = 0
+    n_excess = 0
+    n_short = 0
+    ratio_errors = []
+
+    result = {}
+
     for pairID in answers:
+        n_all += 1
         if pairID not in LLM_output: 
-            #result[pairID] = "Not answered"
-            # count as unanswered but still include totals so scoring can work
             result[pairID] = {
                 "exact": 0,
                 "partial": 0,
                 "combined_correct": 0,
-                "total_answers": len(answers[pairID]),
-                "total_LLM_answers": 0
+                #"total_answers": len(answers[pairID]),
+                "pair_hit_strict": 0,
+                "pair_hit_loose": 0,
+                "total_answers": _gold_relation_count(answers[pairID]),
+                "total_LLM_answers": 0,
+                "len_ann_words": None,
+                "len_llm_words": 0,
+                "len_ratio": None,
+                "len_ok": False
             }
             continue
 
@@ -246,67 +317,185 @@ def check_LLM_answer(answers, LLM_output):
             exact_count = 0
             partial_count = 0
 
-            #Added LLM explanations since the LLM is read into a dict 
             llm_explanations = LLM_output[pairID].get("explanation", [])
 
-            #for LLM_answer in LLM_output[pairID]:
-            for LLM_answer in llm_explanations:
-                splitted_ans = LLM_answer.split("is a type of")
-                if len(splitted_ans) < 2:
-                    continue
-                spl_str_ans = [word.strip(" ,.") for word in splitted_ans if word.strip(" ,.") not in ["a", "an", "the"]]
-                for answer_group_dict in answers[pairID]:
-                    left_exact = False
-                    right_exact = False
-                    left_partial = False
-                    right_partial = False
-                    
-                    for left_answer in answer_group_dict["left"]: 
-                        if left_answer == spl_str_ans[0].split():
-                            left_exact = True
-                        if bool(set(left_answer) & set(spl_str_ans[0].split())):
-                            left_partial = True
-                    for right_answer in answer_group_dict["right"]:
-                        if right_answer == spl_str_ans[1].split():
-                            right_exact = True
-                        if bool(set(right_answer) & set(spl_str_ans[1].split())):
-                            right_partial = True
+            #check length of annotator and llm responses
+            ann_len = _relation_word_count_from_annotators(answers[pairID])
+            llm_len = _relation_word_count_from_llm(llm_explanations)
 
-                    if left_exact and right_exact:
-                        exact_count+= 1
-                        break #stop iterating over answer group because an exact match is found
-                    elif left_partial and right_partial:
-                        partial_count +=1
+            diff = llm_len - ann_len
+            ok = (diff <= max_extra_words)
+
+            if diff > 0:
+                sum_excess += diff
+                n_excess += 1
+            elif diff < 0:
+                sum_shortfall += -diff
+                n_short += 1
+
+            if ok:
+                n_len_ok += 1
+
+            ratio_errors.append(abs(diff))
+
+        for LLM_answer in llm_explanations:
+            parts = re.split(r"\bis a (?:type|kind|form) of\b", str(LLM_answer).lower())
+            if len(parts) < 2:
+                continue
+
+            left_tokens = [
+                w.strip(" ,.;:!?()[]{}\"'").lower()
+                for w in parts[0].split()
+                if w.strip(" ,.;:!?()[]{}\"'").lower() not in ("a", "an", "the")
+            ]
+            right_tokens = [
+                w.strip(" ,.;:!?()[]{}\"'").lower()
+                for w in parts[1].split()
+                if w.strip(" ,.;:!?()[]{}\"'").lower() not in ("a", "an", "the")
+            ]
+
+            # try to match this ONE LLM relation against gold; at most 1 credit per LLM relation
+            for answer_group_dict in answers[pairID]:
+                left_exact = False
+                right_exact = False
+                left_partial = False
+                right_partial = False
+
+                for left_answer in answer_group_dict["left"]:
+                    if left_answer == left_tokens or set(left_answer).issubset(set(left_tokens)):
+                        left_exact = True
+                    if set(left_answer) & set(left_tokens):
+                        left_partial = True
+
+                for right_answer in answer_group_dict["right"]:
+                    if right_answer == right_tokens or set(right_answer).issubset(set(right_tokens)):
+                        right_exact = True
+                    if set(right_answer) & set(right_tokens):
+                        right_partial = True
+
+                if left_exact and right_exact:
+                    exact_count += 1
+                    break  # stop searching gold groups for this LLM relation
+
+                if left_partial and right_partial:
+                    partial_count += 1
+                    break  # stop searching gold groups for this LLM relation
+
+            # for LLM_answer in llm_explanations:
+            #     # splitted_ans = LLM_answer.split("is a type of")
+            #     # if len(splitted_ans) < 2:
+            #     #     continue
+
+            #     # spl_str_ans = [word.strip(" ,.") 
+            #     #                 for word in splitted_ans 
+            #     #                 if word.strip(" ,.") not in ["a", "an", "the"]]
+            #     parts = LLM_answer.split("is a type of")
+            #     if len(parts) < 2:
+            #         continue
+
+            #     left_tokens = [w.strip(" ,.;:!?").lower() for w in parts[0].split()
+            #                 if w.strip(" ,.;:!?").lower() not in ("a", "an", "the")]
+            #     right_tokens = [w.strip(" ,.;:!?").lower() for w in parts[1].split()
+            #                     if w.strip(" ,.;:!?").lower() not in ("a", "an", "the")]
+
+                # for answer_group_dict in answers[pairID]:
+                #     left_exact = False
+                #     right_exact = False
+                #     left_partial = False
+                #     right_partial = False
                     
-            result[pairID] = { 
+                #     for left_answer in answer_group_dict["left"]: 
+                #         # if left_answer == spl_str_ans[0].split():
+                #         if left_answer == left_tokens:
+                #             left_exact = True
+                #         #if bool(set(left_answer) & set(spl_str_ans[0].split())):
+                #         if bool(set(left_answer) & set(left_tokens)):
+                #             left_partial = True
+                #     for right_answer in answer_group_dict["right"]:
+                #         #if right_answer == spl_str_ans[1].split():
+                #         if right_answer == right_tokens:
+                #             right_exact = True
+                #         #if bool(set(right_answer) & set(spl_str_ans[1].split())):
+                #         if bool(set(right_answer) & set(right_tokens)):
+                #             right_partial = True
+
+                #     if left_exact and right_exact:
+                #         exact_count+= 1
+                #         break
+
+                #     elif left_partial and right_partial:
+                #         partial_count +=1
+            pair_hit_strict = 1 if exact_count > 0 else 0
+            pair_hit_loose = 1 if (exact_count + partial_count) > 0 else 0
+                
+            result[pairID] = {
                 "exact": exact_count,
                 "partial": partial_count,
-                "combined_correct": exact_count +partial_count,
-                "total_answers": len(answers[pairID]),
-                "total_LLM_answers": len(LLM_output[pairID])
+                "combined_correct": exact_count + partial_count,
+                #"total_answers": len(answers[pairID]),
+                "pair_hit_strict": pair_hit_strict,
+                "pair_hit_loose": pair_hit_loose,
+                "total_answers": _gold_relation_count(answers[pairID]),
+                "total_LLM_answers": len(llm_explanations),
+                "len_ann_words": ann_len,
+                "len_llm_words": llm_len,
+                "len_diff": diff,
+                "len_ok": ok,
             }
-    scores_strict= calculate_scores(result, "exact")
+
+    scores_strict = calculate_scores(result, "exact")
     scores_loose = calculate_scores(result, "combined_correct")
-    return result, scores_strict, scores_loose
-                   
+    len_metrics = {
+        "max_extra_words": max_extra_words,
+        "n": n_all,
+        "accuracy": (n_len_ok / n_all) if n_all else 0.0,
+        "mae_abs_word_diff": (sum(ratio_errors) / n_all) if n_all else 0.0,
+        "mean_excess_words": (sum_excess / n_excess) if n_excess else 0.0,
+        "mean_shortfall_words": (sum_shortfall / n_short) if n_short else 0.0,
+        "pct_too_long": (n_excess / n_all) if n_all else 0.0,
+        "pct_too_short": (n_short / n_all) if n_all else 0.0,
+    }
+
+    return result, scores_strict, scores_loose, len_metrics
+
+# def calculate_scores(result, key):
+#     TP = sum(v[key] for v in result.values() if isinstance(v, dict))
+#     FP = sum(v["total_LLM_answers"] - v[key] for v in result.values() if isinstance(v, dict))
+#     FN = sum(v["total_answers"] - v[key] for v in result.values() if isinstance(v, dict))
+
+#     denom_p = TP + FP
+#     denom_r = TP + FN
+
+#     precision = TP / denom_p if denom_p > 0 else 0.0
+#     recall = TP / denom_r if denom_r > 0 else 0.0
+
+#     f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+#     return {"precision": precision, "recall": recall, "f1": f1}
+
 def calculate_scores(result, key):
-    TP = sum(v[key] for v in result.values() if isinstance(v, dict))
-    FP = sum(v["total_LLM_answers"] - v[key] for v in result.values() if isinstance(v,dict))
-    FN = sum(v["total_answers"] - v[key] for v in result.values() if isinstance(v,dict))
+    TP = sum(v.get(key, 0) for v in result.values() if isinstance(v, dict))
 
-    # TP = result[key]
-    # FP = result["total_LLM_answers"]-result[key] #right??
-    # FN = result["total_answers"]-result[key]
-    precision = TP / (TP + FP)
-    recall = TP / (TP + FN)
-    #check this still 
-    f1 = (
-        2 * precision * recall / (precision + recall)
-        if (precision + recall) > 0
-        else 0.0
+    # clamp to avoid negative FP when key accidentally > total_LLM_answers
+    FP = sum(
+        max(v.get("total_LLM_answers", 0) - v.get(key, 0), 0)
+        for v in result.values()
+        if isinstance(v, dict)
     )
-    return {"precision": precision, "recall": recall, "f1": f1}
 
+    FN = sum(
+        max(v.get("total_answers", 0) - v.get(key, 0), 0)
+        for v in result.values()
+        if isinstance(v, dict)
+    )
+
+    denom_p = TP + FP
+    denom_r = TP + FN
+
+    precision = TP / denom_p if denom_p > 0 else 0.0
+    recall = TP / denom_r if denom_r > 0 else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+
+    return {"precision": precision, "recall": recall, "f1": f1}
 
 #This is the call used for the gold label checking
 
@@ -322,16 +511,22 @@ def Get_manual_evaluation_problems(print_results = True):
         #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
     return problems, answers
 
-def Get_prompts_for_LLM(amount = 10):
+def Get_prompts_for_LLM(amount=10):
     problems, answers, problems_ex, answers_ex = get_LLM_problems(df, amount, set(), True)
-    prompt_problems = {}
-    ID_restore = {}
-    for pairID in problems.keys():
-        newkey = pairID[:-1]
-        prompt_problems[newkey] = problems[pairID]
-        ID_restore[newkey]=pairID[-1]
+    with open("annotators_answers.json", "w", encoding="utf-8") as aa:
+        json.dump(answers, aa, ensure_ascii=False, indent=2)
 
-    step = max(1, math.ceil(amount / 10))  # every 10%
+    id_map = {}
+    prompt_problems = {}
+
+    full_ids = list(problems.keys())
+
+    for idx, full_id in enumerate(full_ids, start=1):
+        sid = f"q{idx:04d}"   
+        id_map[sid] = full_id
+        prompt_problems[sid] = problems[full_id]
+
+    step = max(1, math.ceil(amount / 10))
     prob = []
 
     with open("LLM_file.txt", "w") as f:
@@ -342,10 +537,10 @@ def Get_prompts_for_LLM(amount = 10):
             f.write(f"{k}:{prompt_problems[k]}\n")
             prob.append(f"{k}:{prompt_problems[k]}")
 
-        #print(f"The example you can use is:\n{problems_ex}\n The answer:\n{answers_ex}")
-        #print(f"The problems are:\n{prompt_problems}\n The answers are:{answers}")
-        return ID_restore, answers, prob
+    with open("id_map.json", "w", encoding="utf-8") as f:
+        json.dump(id_map, f, ensure_ascii=False, indent=2)
 
+    return id_map, answers, prob
 
 def read_json(filename):
     """
@@ -363,22 +558,18 @@ def read_json(filename):
         data = json.load(json_file)
     return data
 
-
-
-def checK_LLM(data, answers):
+def checK_LLM(data, answers, id_map):
     if not isinstance(data, dict):
         raise TypeError("data must be a dictionary")
 
-    # map short ids (no trailing label) to full ids (with trailing label)
-    short_to_full = {pid[:-1]: pid for pid in answers.keys()}
-
     restored_data = {}
-    for short_id, value in data.items():
-        full_id = short_to_full.get(short_id)
+    for sid, value in data.items():
+        full_id = id_map.get(sid)
         if full_id is not None:
             restored_data[full_id] = value
-        # else: ignore entries not in gold set
-    #Added count of misclassified types
+        # else ignore entries not in the gold set
+
+    # Count predicted labels
     e = 0
     c = 0
     for pairID, pred in restored_data.items():
@@ -389,42 +580,67 @@ def checK_LLM(data, answers):
             c += 1
     perc_entailment = (e / (e + c) * 100) if (e + c) > 0 else 0.0
 
-    result, scores_strict, scores_loose = check_LLM_answer(answers, restored_data)
-    return result, scores_strict, scores_loose, perc_entailment
+    result, scores_strict, scores_loose, len_metrics = check_LLM_answer(answers, restored_data)
 
+    pair_scores_strict = calculate_pair_scores(result, "pair_hit_strict")
+    pair_scores_loose = calculate_pair_scores(result, "pair_hit_loose")
 
+    return result, scores_strict, scores_loose, pair_scores_strict, pair_scores_loose, perc_entailment, len_metrics
 
+def compare_models(file1, file2):
+    if not isinstance(file1, str) or not isinstance(file2, str):
+        print("Please insert valid file names")
+        return
+
+    # Load model outputs
+    try:
+        m1 = read_json(file1)
+        m2 = read_json(file2)
+    except (FileNotFoundError, PermissionError, json.JSONDecodeError, TypeError, ValueError) as e:
+        print(f"Couldn't read input model files: {e}")
+        return
+
+    try:
+        id_map = read_json("id_map.json")
+        answers = read_json("annotators_answers.json")
+    except (FileNotFoundError, PermissionError, json.JSONDecodeError, TypeError, ValueError) as e:
+        print(f"Couldn't read gold files (id_map.json / annotators_answers.json): {e}")
+        return
+
+    # Evaluate both models
+    res1, scores_strict1, scores_loose1, pair_scores_strict1, pair_scores_loose1, perc_ent1, len_metrics1 = checK_LLM(m1, answers, id_map)
+    res2, scores_strict2, scores_loose2, pair_scores_strict2, pair_scores_loose2, perc_ent2, len_metrics2 = checK_LLM(m2, answers, id_map)
+
+    print(f"\nModel {file1[:-5]}\n\nLoose Score: {scores_loose1}\nLength Metrics: {len_metrics1}\nPercentage entailment: {perc_ent1}\nPair Loose: {pair_scores_loose1}")
+    print(f"\nModel {file2[:-5]}\n\nLoose Score: {scores_loose2}\nLength Metrics: {len_metrics2}\nPercentage entailment: {perc_ent2}\nPair Loose: {pair_scores_loose2}")
+
+    return res1, res2
 
 if __name__ == "__main__":
-    
+    # amount = 700
 
-    #Get_manual_evaluation_problems(True)
-    amount = 700
-    ID_restore, answers, prob = Get_prompts_for_LLM(amount)
+    # id_map, answers, prob = Get_prompts_for_LLM(amount)
 
+    # with open("annotators_answers.json", "w", encoding="utf-8") as aa:
+    #     json.dump(answers, aa, ensure_ascii=False, indent=2)
 
-    LLM_answers_file = "LLM_answers_v1.json"
-    LLM_answers = read_json(LLM_answers_file)
-    result, strict, loose, perc_entailment = checK_LLM(LLM_answers, answers=answers)
-    #print(f"LLM RESULTS: {result}")
-    print("-----------------------------------")
-    print(f"Strict scores: ", strict)
-    print(f"Loose scores: ", loose)
-    print(f"Percentage entailment", perc_entailment)
+    # LLM_answers_file = "LLM_answers_v1.json"
+    # LLM_answers = read_json(LLM_answers_file)
 
+    # result, strict, loose, perc_entailment, len_metrics = checK_LLM(
+    #     LLM_answers,
+    #     answers=answers,
+    #     id_map=id_map
+    # )
 
-    # prompt_problems ={}
-    # for pairID in problems.keys():
-    #     newkey = pairID[:-1]
-    #     prompt_problems[newkey] = problems[pairID]
+    # print("-----------------------------------")
+    # print("Strict scores:", strict)
+    # print("Loose scores:", loose)
+    # print("Percentage entailment", perc_entailment)
+    # print("Length metrics:", len_metrics)
 
+    file1 = "GeminiFast.json"
+    file2 = "GeminiReason.json"
 
-    # for pairID in problems.keys():
-    #     print("ANSWER")
-    #     print(answers[pairID])
-    #     print_example(df, ID = pairID)
-
-    manual_LLM_answer_ex = {'pairID_0': ["man is a type of person", "black suit is a type of suit"]}
-
-
-
+            
+    compare_models(file1, file2)
