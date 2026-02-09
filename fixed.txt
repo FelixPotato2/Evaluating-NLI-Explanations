@@ -10,36 +10,23 @@ To give your answer, you should provide both the type of relation and the explan
 If the problem is entailment, explain it by identifying which part(s) of the premise is a subset of some part of the hypothesis, and express it as "x is a type of y". Here is an example for the entailment relation: 
  
 for the problem: 
-{"3021028400.jpg#1r1": {"premise": "Man in  
+{"q000x": {"premise": "Man in  
 a black suit, white shirt and black bowtie playing an instrument with the rest  
 of his symphony surrounding him.", "hypothesis": "A person in a suit"}} 
 a correct answer would be: 
- {"3021028400.jpg#1r1": { "answer": "entailment",  
+ {"q000x": { "answer": "entailment",  
 "explanation": ["man is a type of person", "black suit is a type of suit"]} 
- 
  
 For contradiction, explain it by identifying which part(s) of the premise is in a logic conflict with the hypothesis. Here is an example for the contradiction relation: 
  
 for the problem: 
-{"3021028400.jpg#1r1": {"premise": "Five  
+{"q000x": {"premise": "Five  
 girls and two guys are crossing an overpass", "hypothesis": the three men sit  
 and talk about their lives"}} 
 a correct answer would be: 
-{"3021028400.jpg#1r1": { "answer": "contradiction",  
+{"q000x": { "answer": "contradiction",  
 "explanation": ["three is not two"]} 
- 
-The format of your answer should be precisely matching with the one provided in the examples above, in particular you should output them in this format:
 
-{
-answer1,
-answer2,
-answer3,
-...,
-answerN 
-}
+In your response, write only the answer to each pairID in the required format.
 
-where N is the total number of examples provided and where each answer is a format like this:
-
-"3021028400.jpg#1r1": { "answer": "entailment",  "explanation": ["man is a type of person", "black suit is a type of suit"]}
- 
 Here are all the problems you have to solve:
