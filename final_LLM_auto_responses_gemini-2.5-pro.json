@@ -1,0 +1,5655 @@
+{
+  "q0694": {
+    "answer": "entailment",
+    "explanation": [
+      "girls is a type of young people",
+      "sitting is a type of seated"
+    ]
+  },
+  "q0695": {
+    "answer": "entailment",
+    "explanation": [
+      "black dress shirt, and black and gray striped tie is a type of darkly dressed",
+      "plays the drums is a type of bangs on the drums"
+    ]
+  },
+  "q0696": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "in a yellow excavator is a type of on the excavator"
+    ]
+  },
+  "q0697": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "playing electric guitar is a type of playing on the guitar"
+    ]
+  },
+  "q0698": {
+    "answer": "entailment",
+    "explanation": [
+      "green and black coat is a type of coat"
+    ]
+  },
+  "q0699": {
+    "answer": "entailment",
+    "explanation": [
+      "A black limousine in front of a marble building with a crowd of people on the buildings steps is a type of A black limousine is in front of a marble building."
+    ]
+  },
+  "q0700": {
+    "answer": "entailment",
+    "explanation": [
+      "young ladies is a type of Young women",
+      "at hillside is a type of outdoors"
+    ]
+  },
+  "q0701": {
+    "answer": "entailment",
+    "explanation": [
+      "tablet is a type of something"
+    ]
+  },
+  "q0702": {
+    "answer": "entailment",
+    "explanation": [
+      "with a pencil in his hand is a type of holding a pencil"
+    ]
+  },
+  "q0703": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting in a man's lap is a type of together",
+      "sitting is a type of resting"
+    ]
+  },
+  "q0704": {
+    "answer": "entailment",
+    "explanation": [
+      "gesturing is a type of was gesturing"
+    ]
+  },
+  "q0705": {
+    "answer": "entailment",
+    "explanation": [
+      "A group of children in costumes are on a stage with red curtains is a type of A group of children are on stage"
+    ]
+  },
+  "q0706": {
+    "answer": "entailment",
+    "explanation": [
+      "tattoo is a type of body art",
+      "small boy is a type of young person"
+    ]
+  },
+  "q0707": {
+    "answer": "entailment",
+    "explanation": [
+      "being splashed in a swimming pool is a type of playing in the swimming pool"
+    ]
+  },
+  "q0708": {
+    "answer": "entailment",
+    "explanation": [
+      "throwing a football is a type of playing with a football"
+    ]
+  },
+  "q0709": {
+    "answer": "entailment",
+    "explanation": [
+      "black business suit is a type of black suit",
+      "wearing blue is a type of in a blue outfit"
+    ]
+  },
+  "q0710": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of kid",
+      "hits a ball, with a bat, outside, while others in the background watch him is a type of playing in a baseball game"
+    ]
+  },
+  "q0711": {
+    "answer": "entailment",
+    "explanation": [
+      "windsurfing on a blue body of water is a type of near the water"
+    ]
+  },
+  "q0712": {
+    "answer": "entailment",
+    "explanation": [
+      "laughs is a type of cheerful"
+    ]
+  },
+  "q0713": {
+    "answer": "entailment",
+    "explanation": [
+      "open fire is a type of burning fire",
+      "standing in front of is a type of near"
+    ]
+  },
+  "q0714": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal",
+      "in snow is a type of outdoors"
+    ]
+  },
+  "q0715": {
+    "answer": "entailment",
+    "explanation": [
+      "staples some papers is a type of working on papers"
+    ]
+  },
+  "q0716": {
+    "answer": "entailment",
+    "explanation": [
+      "working outside is a type of outside"
+    ]
+  },
+  "q0717": {
+    "answer": "entailment",
+    "explanation": [
+      "elementary school is a type of children's school"
+    ]
+  },
+  "q0718": {
+    "answer": "entailment",
+    "explanation": [
+      "African American is a type of person",
+      "wearing a red backpack is a type of wears a backpack"
+    ]
+  },
+  "q0719": {
+    "answer": "entailment",
+    "explanation": [
+      "performs a high flying trick on a bicycle is a type of performing bike tricks"
+    ]
+  },
+  "q0720": {
+    "answer": "entailment",
+    "explanation": [
+      "is sitting amongst three people is a type of is sitting"
+    ]
+  },
+  "q0721": {
+    "answer": "entailment",
+    "explanation": [
+      "in an organized street rally is a type of rallying"
+    ]
+  },
+  "q0722": {
+    "answer": "contradiction",
+    "explanation": [
+      "young boy is not young man"
+    ]
+  },
+  "q0723": {
+    "answer": "entailment",
+    "explanation": [
+      "with a bridge and water in the background is a type of outside"
+    ]
+  },
+  "q0724": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "river is a type of body of water",
+      "by the river is a type of outside"
+    ]
+  },
+  "q0725": {
+    "answer": "entailment",
+    "explanation": [
+      "watering flowers is a type of giving the flowers some water"
+    ]
+  },
+  "q0726": {
+    "answer": "entailment",
+    "explanation": [
+      "display case is a type of case"
+    ]
+  },
+  "q0727": {
+    "answer": "entailment",
+    "explanation": [
+      "hello kitty guitar is a type of instrument",
+      "holds is a type of holding in his hands"
+    ]
+  },
+  "q0728": {
+    "answer": "entailment",
+    "explanation": [
+      "Two men on opposing teams are playing soccer in a field is a type of Two men playing soccer"
+    ]
+  },
+  "q0729": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman is sitting outside at a table, using a knife to cut into a sandwich is a type of A woman is sitting outside"
+    ]
+  },
+  "q0730": {
+    "answer": "entailment",
+    "explanation": [
+      "one of the two black dogs is a type of dog"
+    ]
+  },
+  "q0731": {
+    "answer": "entailment",
+    "explanation": [
+      "catching the white Frisbee is a type of playing frisbee"
+    ]
+  },
+  "q0732": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman is looking into a mirror, brushing her hair is a type of A woman is brushing her hair"
+    ]
+  },
+  "q0733": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman smiling while on a bicycle is a type of A woman is smiling"
+    ]
+  },
+  "q0734": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "blue hat is a type of hat",
+      "drinking glasses is a type of glass"
+    ]
+  },
+  "q0735": {
+    "answer": "entailment",
+    "explanation": [
+      "woman with an umbrella is a type of outdoors"
+    ]
+  },
+  "q0736": {
+    "answer": "entailment",
+    "explanation": [
+      "cellphone is a type of phone"
+    ]
+  },
+  "q0737": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping into the air is a type of jumping"
+    ]
+  },
+  "q0738": {
+    "answer": "entailment",
+    "explanation": [
+      "parked next to a door is a type of outside"
+    ]
+  },
+  "q0739": {
+    "answer": "entailment",
+    "explanation": [
+      "reading a book is a type of reading"
+    ]
+  },
+  "q0740": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "standing behind is a type of next to",
+      "SUV is a type of car"
+    ]
+  },
+  "q0741": {
+    "answer": "entailment",
+    "explanation": [
+      "A man in a black and blue jacket and a white helmet skiing down a hill swiftly is a type of A man skiing down a hill"
+    ]
+  },
+  "q0742": {
+    "answer": "contradiction",
+    "explanation": [
+      "A clerk is waiting for a customer at the checkout counter, not in the checkout line"
+    ]
+  },
+  "q0743": {
+    "answer": "entailment",
+    "explanation": [
+      "black lab is a type of dog",
+      "standing in the water is a type of outside"
+    ]
+  },
+  "q0744": {
+    "answer": "entailment",
+    "explanation": [
+      "3 people is a type of group of friends",
+      "walking through a small field is a type of walking outside"
+    ]
+  },
+  "q0745": {
+    "answer": "entailment",
+    "explanation": [
+      "newborn baby is a type of baby"
+    ]
+  },
+  "q0746": {
+    "answer": "entailment",
+    "explanation": [
+      "green item is a type of something green",
+      "in its mouth is a type of has"
+    ]
+  },
+  "q0747": {
+    "answer": "entailment",
+    "explanation": [
+      "is about to kick is a type of is going to kick"
+    ]
+  },
+  "q0748": {
+    "answer": "entailment",
+    "explanation": [
+      "four piece band is a type of band",
+      "plays a song is a type of playing music"
+    ]
+  },
+  "q0749": {
+    "answer": "entailment",
+    "explanation": [
+      "looking very concerned is a type of faces convey their feelings"
+    ]
+  },
+  "q0750": {
+    "answer": "entailment",
+    "explanation": [
+      "jesters hat is a type of goofy hat",
+      "enjoying himself sledding is a type of sledding by himself"
+    ]
+  },
+  "q0751": {
+    "answer": "entailment",
+    "explanation": [
+      "dumping soil is a type of working",
+      "backyard is a type of outside"
+    ]
+  },
+  "q0752": {
+    "answer": "entailment",
+    "explanation": [
+      "A roofer... walks on a unfinished roof is a type of The roofer is outside working"
+    ]
+  },
+  "q0753": {
+    "answer": "entailment",
+    "explanation": [
+      "weaving with a comb in her hand is a type of doing something with her hands"
+    ]
+  },
+  "q0754": {
+    "answer": "entailment",
+    "explanation": [
+      "ocean on the beach is a type of shore"
+    ]
+  },
+  "q0755": {
+    "answer": "entailment",
+    "explanation": [
+      "throwing a ball down a bowling alley is a type of bowling"
+    ]
+  },
+  "q0756": {
+    "answer": "entailment",
+    "explanation": [
+      "riding a bicycle to work is a type of riding a bicycle"
+    ]
+  },
+  "q0757": {
+    "answer": "entailment",
+    "explanation": [
+      "Women is a type of person",
+      "red hat is a type of hat"
+    ]
+  },
+  "q0758": {
+    "answer": "entailment",
+    "explanation": [
+      "pets is a type of animals"
+    ]
+  },
+  "q0759": {
+    "answer": "entailment",
+    "explanation": [
+      "The brightly dressed middle eastern women is a type of The women are brightly dressed"
+    ]
+  },
+  "q0760": {
+    "answer": "contradiction",
+    "explanation": [
+      "watching hi-def tv is not flipping through tv channels"
+    ]
+  },
+  "q0761": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman in an American military uniform sits at a table and writes... is a type of A woman in an American military uniform"
+    ]
+  },
+  "q0762": {
+    "answer": "entailment",
+    "explanation": [
+      "game is a type of fun game"
+    ]
+  },
+  "q0763": {
+    "answer": "entailment",
+    "explanation": [
+      "security guard is a type of guard"
+    ]
+  },
+  "q0764": {
+    "answer": "entailment",
+    "explanation": [
+      "lands is a type of making a landing"
+    ]
+  },
+  "q0765": {
+    "answer": "entailment",
+    "explanation": [
+      "squirting paint onto a piece of spin-art is a type of working on an art project"
+    ]
+  },
+  "q0766": {
+    "answer": "entailment",
+    "explanation": [
+      "cheer is a type of acting excited"
+    ]
+  },
+  "q0767": {
+    "answer": "entailment",
+    "explanation": [
+      "Six males...from their construction work is a type of group of construction workers"
+    ]
+  },
+  "q0768": {
+    "answer": "entailment",
+    "explanation": [
+      "Chicago White Sox cap is a type of baseball cap"
+    ]
+  },
+  "q0769": {
+    "answer": "entailment",
+    "explanation": [
+      "renaissance clothing is a type of costume"
+    ]
+  },
+  "q0770": {
+    "answer": "entailment",
+    "explanation": [
+      "walking on the truck of a fallen tree over a ravine is a type of walks outdoors"
+    ]
+  },
+  "q0179": {
+    "answer": "entailment",
+    "explanation": [
+      "throwing the bowling ball is a type of bowling"
+    ]
+  },
+  "q0180": {
+    "answer": "entailment",
+    "explanation": [
+      "the door of the trail is a type of door"
+    ]
+  },
+  "q0181": {
+    "answer": "entailment",
+    "explanation": [
+      "Two men are dressed up as snowmen is a type of men are dressed up"
+    ]
+  },
+  "q0182": {
+    "answer": "entailment",
+    "explanation": [
+      "old woman is a type of human",
+      "walking is a type of in motion"
+    ]
+  },
+  "q0183": {
+    "answer": "entailment",
+    "explanation": [
+      "in the middle of the street is a type of outside"
+    ]
+  },
+  "q0184": {
+    "answer": "entailment",
+    "explanation": [
+      "Military woman is a type of woman"
+    ]
+  },
+  "q0185": {
+    "answer": "entailment",
+    "explanation": [
+      "bounces in a bounce house is a type of bouncing around"
+    ]
+  },
+  "q0186": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "works under the engine of a train is a type of working on a train"
+    ]
+  },
+  "q0187": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of people",
+      "guitar is a type of musical instrument"
+    ]
+  },
+  "q0188": {
+    "answer": "entailment",
+    "explanation": [
+      "practicing martial arts is a type of doing martial arts"
+    ]
+  },
+  "q0189": {
+    "answer": "entailment",
+    "explanation": [
+      "baseball player is a type of player"
+    ]
+  },
+  "q0190": {
+    "answer": "entailment",
+    "explanation": [
+      "saxophone is a type of instrument"
+    ]
+  },
+  "q0191": {
+    "answer": "entailment",
+    "explanation": [
+      "dark blue t-shirt is a type of dark clothing"
+    ]
+  },
+  "q0192": {
+    "answer": "entailment",
+    "explanation": [
+      "getting excited is a type of is excited"
+    ]
+  },
+  "q0193": {
+    "answer": "contradiction",
+    "explanation": [
+      "the premise does not state the location is a kitchen"
+    ]
+  },
+  "q0194": {
+    "answer": "entailment",
+    "explanation": [
+      "A young female gymnast is a type of a gymnast",
+      "lifting her right leg straight up in the air is a type of has her leg straight up in the air"
+    ]
+  },
+  "q0195": {
+    "answer": "entailment",
+    "explanation": [
+      "little girl and toddler is a type of two children",
+      "stands behind them is a type of watches"
+    ]
+  },
+  "q0196": {
+    "answer": "entailment",
+    "explanation": [
+      "carrying a notebook is a type of has something in his hand"
+    ]
+  },
+  "q0197": {
+    "answer": "entailment",
+    "explanation": [
+      "work on a structure is a type of working"
+    ]
+  },
+  "q0198": {
+    "answer": "entailment",
+    "explanation": [
+      "running is a type of moving around"
+    ]
+  },
+  "q0199": {
+    "answer": "entailment",
+    "explanation": [
+      "crowd is a type of crowd of people"
+    ]
+  },
+  "q0200": {
+    "answer": "entailment",
+    "explanation": [
+      "getting soaked is a type of is wet",
+      "playing an outdoor water game is a type of outside"
+    ]
+  },
+  "q0201": {
+    "answer": "entailment",
+    "explanation": [
+      "farmers is a type of men"
+    ]
+  },
+  "q0202": {
+    "answer": "entailment",
+    "explanation": [
+      "A man wearing a white hard hat is working on a construction project is a type of construction worker"
+    ]
+  },
+  "q0299": {
+    "answer": "entailment",
+    "explanation": [
+      "young woman is a type of lady",
+      "bikini is a type of swimsuit",
+      "looking at something is a type of checking things out"
+    ]
+  },
+  "q0300": {
+    "answer": "entailment",
+    "explanation": [
+      "speaking on her cellphone is a type of talking on her phone"
+    ]
+  },
+  "q0301": {
+    "answer": "entailment",
+    "explanation": [
+      "stereo equipment is a type of audio equipment"
+    ]
+  },
+  "q0302": {
+    "answer": "entailment",
+    "explanation": [
+      "people wearing only white and red is a type of people"
+    ]
+  },
+  "q0303": {
+    "answer": "entailment",
+    "explanation": [
+      "clowning around is a type of fooling around"
+    ]
+  },
+  "q0304": {
+    "answer": "entailment",
+    "explanation": [
+      "tee-shirt is a type of shirt"
+    ]
+  },
+  "q0305": {
+    "answer": "entailment",
+    "explanation": [
+      "playing baseball is a type of playing a game"
+    ]
+  },
+  "q0306": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting beside a bunch of material while sewing is a type of sewing"
+    ]
+  },
+  "q0307": {
+    "answer": "entailment",
+    "explanation": [
+      "having eyes filled with excitement is a type of having eyes open"
+    ]
+  },
+  "q0308": {
+    "answer": "entailment",
+    "explanation": [
+      "laying in a field of lush green grass is a type of laying down outside"
+    ]
+  },
+  "q0309": {
+    "answer": "contradiction",
+    "explanation": [
+      "a pickaxe is not an axe"
+    ]
+  },
+  "q0310": {
+    "answer": "entailment",
+    "explanation": [
+      "to lasso a running calf is a type of trying to catch a calf"
+    ]
+  },
+  "q0311": {
+    "answer": "entailment",
+    "explanation": [
+      "looking at is a type of watching",
+      "bike is a type of bicycle"
+    ]
+  },
+  "q0312": {
+    "answer": "entailment",
+    "explanation": [
+      "canoe is a type of boat"
+    ]
+  },
+  "q0313": {
+    "answer": "entailment",
+    "explanation": [
+      "standing in the sun is a type of being outside"
+    ]
+  },
+  "q0314": {
+    "answer": "entailment",
+    "explanation": [
+      "little girl is a type of girl"
+    ]
+  },
+  "q0315": {
+    "answer": "entailment",
+    "explanation": [
+      "a coach in a football context is a type of football coach",
+      "other players is a type of the team"
+    ]
+  },
+  "q0316": {
+    "answer": "contradiction",
+    "explanation": [
+      "gliding is not falling"
+    ]
+  },
+  "q0317": {
+    "answer": "entailment",
+    "explanation": [
+      "orange star glasses is a type of glasses"
+    ]
+  },
+  "q0318": {
+    "answer": "entailment",
+    "explanation": [
+      "dunking the ball in the net is a type of playing basketball"
+    ]
+  },
+  "q0319": {
+    "answer": "entailment",
+    "explanation": [
+      "climbing a rock is a type of climbing rocks"
+    ]
+  },
+  "q0320": {
+    "answer": "entailment",
+    "explanation": [
+      "walking down the street is a type of walking somewhere"
+    ]
+  },
+  "q0321": {
+    "answer": "entailment",
+    "explanation": [
+      "a picture of a woman and her husband in their car smiling and waving is a type of a picture of a woman and her husband"
+    ]
+  },
+  "q0322": {
+    "answer": "entailment",
+    "explanation": [
+      "a dad with his child and an apple pie is a type of a dad is with his child"
+    ]
+  },
+  "answer": [
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "contradiction",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment",
+    "entailment"
+  ],
+  "explanation": [
+    "blond boy is a type of boy",
+    [
+      "young man is a type of person"
+    ],
+    [
+      "Ample dark-skinned man is a type of man"
+    ],
+    [
+      "photo is taken is a type of getting their picture taken"
+    ],
+    [
+      "tennis ball is a type of ball",
+      "a field is a type of outside"
+    ],
+    [
+      "rocky beach is a type of beach"
+    ],
+    [
+      "in a car dealership is a type of at a car dealership"
+    ],
+    [
+      "running through a field is a type of running"
+    ],
+    [
+      "flying through the air is a type of in the air"
+    ],
+    [
+      "building under construction is a type of construction site"
+    ],
+    [
+      "young boy is a type of kid",
+      "goggles is a type of eye protection",
+      "pool is a type of in the water"
+    ],
+    [
+      "leaps is a type of jumps",
+      "hurdle is a type of obstacel"
+    ],
+    [
+      "engraves Arabic writing into a stone is a type of engraving into a stone"
+    ],
+    [
+      "fruit platter is a type of food"
+    ],
+    [
+      "brown and white dog is a type of brown dog"
+    ],
+    [
+      "talking on a phone is a type of talking to someone"
+    ],
+    [
+      "A boy wearing jeans, standing on rocks in a river and throwing a stone is a type of a boy throwing a stone"
+    ],
+    [
+      "a large crowd is behind them is a type of in front of a large crowd"
+    ],
+    [
+      "little white curly-haired dog is a type of dog"
+    ],
+    [
+      "Asian woman is a type of woman",
+      "younger Asian boy is a type of child"
+    ],
+    [
+      "young couple is a type of couple"
+    ],
+    [
+      "Eastern vendor is a type of vendor"
+    ],
+    [
+      "walking by a fence is a type of going for a walk"
+    ],
+    [
+      "Bud Light is a type of something alcoholic"
+    ],
+    [
+      "standing behind a large pile of fruits is a type of stands near some fruit"
+    ],
+    [
+      "adults is a type of people",
+      "at the edge of the water is a type of near water"
+    ],
+    [
+      "practicing kicking is a type of excercizing"
+    ],
+    [
+      "rope bridge is a type of bridge"
+    ],
+    [
+      "chocolate milk powder is a type of food"
+    ],
+    [
+      "white building is a type of building"
+    ],
+    [
+      "very young child is a type of child"
+    ],
+    [
+      "bicycle helmet is a type of helmet",
+      "dog tag necklace is a type of dog tag"
+    ],
+    [
+      "men is a type of males",
+      "laughing together is a type of socializing",
+      "baseball caps and logo t-shirts is a type of casual clothes"
+    ],
+    [
+      "lady is a type of woman",
+      "singing is a type of making music"
+    ],
+    [
+      "man in the sailor suit is a type of man"
+    ],
+    [
+      "videotaping a specimen is a type of recording her research"
+    ],
+    [
+      "sits in a chair under a tree and plays an acoustic guitar is a type of plays an acoustic guitar under a tree"
+    ],
+    [
+      "on a tree lined street is a type of outdoors"
+    ],
+    [
+      "guy is a type of man"
+    ],
+    [
+      "stands by two face structures on Easter Island is a type of on Easter Island"
+    ],
+    [
+      "in the street is a type of outside"
+    ],
+    [
+      "Chevy van is a type of van"
+    ],
+    [
+      "petting is a type of playing with"
+    ],
+    [
+      "on a rocky hillside is a type of outside"
+    ],
+    [
+      "The premise does not specify the man's hair color, so he is not necessarily dark headed"
+    ],
+    [
+      "dog is a type of animal",
+      "in front of grassy forest is a type of outdoors"
+    ],
+    [
+      "A man in a black hoodie watching a man in a red cap is a type of a man watching another man"
+    ],
+    [
+      "skateboarding and riding a bike implies being outside"
+    ],
+    [
+      "image is a type of picture"
+    ],
+    [
+      "shepherd breed dog is a type of dog",
+      "running on the beach is a type of running around"
+    ],
+    [
+      "red work man's hat and red jacket is a type of outdoor clothes"
+    ],
+    [
+      "people driving the ... car were nearly hit is a type of car was nearly hit"
+    ],
+    [
+      "street rally is a type of in a street"
+    ],
+    [
+      "dark-haired girl is a type of girl"
+    ],
+    [
+      "oriental lizards is a type of lizards"
+    ],
+    [
+      "elderly man is a type of man",
+      "according key bored is a type of instrument"
+    ],
+    [
+      "trying to make is not making",
+      "the premise does not state the man is old"
+    ],
+    [
+      "picked food is a type of food"
+    ],
+    [
+      "standing is a type of not sitting"
+    ],
+    [
+      "noise-canceling headphones is a type of headphones"
+    ],
+    [
+      "shoveling snow is a type of working in the snow"
+    ],
+    [
+      "playfully kicks is a type of play fighting"
+    ],
+    [
+      "boys is a type of persons",
+      "holding red kites with water in the background is a type of outdoor recreation"
+    ],
+    [
+      "Coed choir is a type of choir"
+    ],
+    [
+      "Asian woman is a type of person"
+    ],
+    [
+      "woman is a type of person",
+      "runs is a type of jogging",
+      "beach is a type of shore"
+    ],
+    [
+      "A man wearing a hat and carrying a bag is a type of a man carrying a bag"
+    ],
+    [
+      "woman is a type of person",
+      "held by a woman is a type of in a person's arms"
+    ],
+    [
+      "golden colored flowers is a type of flowers"
+    ],
+    [
+      "People are shopping outside surrounded by a metal fence is a type of people are shopping"
+    ],
+    [
+      "looks off to her left is a type of looks to her left"
+    ],
+    [
+      "blue apron and long rubber boots is a type of work clothes and boots",
+      "dragging a flotation device is a type of working on a flotation device"
+    ],
+    [
+      "greyhounds is a type of dogs"
+    ],
+    [
+      "ribbon dancer is a type of dancer",
+      "leaping through the air... during a competition is a type of performs"
+    ],
+    [
+      "ball cap is a type of hat",
+      "cracked earth is a type of ground"
+    ],
+    [
+      "cake made of Peeps is a type of cake"
+    ],
+    [
+      "white dog with brown ears is a type of dog",
+      "gravel path is a type of path"
+    ],
+    [
+      "watching and taking photos is not necessarily admiring"
+    ],
+    [
+      "lady with a big smile is a type of happy lady",
+      "bright red scarf is a type of colorful clothing"
+    ],
+    [
+      "The little dog walking on the grass is a type of The dog is walking on the grass"
+    ],
+    [
+      "sorts through Hawaiian style shirts in a department store is a type of shopping at the department store"
+    ],
+    [
+      "man is a type of person"
+    ],
+    [
+      "Someone is a type of person",
+      "caution tape on a street is a type of caution area"
+    ],
+    [
+      "gentleman is a type of man",
+      "overlooking a neighborhood situation is a type of looks at something in a neighborhood"
+    ],
+    [
+      "large group of people is a type of large group"
+    ],
+    [
+      "Two boys wearing colorful winter hats and dark coats are riding bikes is a type of Two boys are riding bikes"
+    ],
+    [
+      "straps is a type of secures"
+    ],
+    [
+      "A couple of peace corp workers is a type of people",
+      "kid is a type of child"
+    ],
+    [
+      "jumping over a rusty fence on a blue bicycle is a type of doing a trick riding his bicycle"
+    ],
+    [
+      "pulls weeds is a type of gardening"
+    ],
+    [
+      "waving at the camera is a type of waved at the camera"
+    ],
+    [
+      "a giant clock is a type of clock which is accurate at least two times a day"
+    ],
+    [
+      "rock climber is a type of climber"
+    ],
+    [
+      "Mountain biking is a type of Bicycling",
+      "forest is a type of woods",
+      "early fall is a type of Autumn"
+    ],
+    [
+      "ragged costume is a type of disheveled outfit",
+      "Jaguar electric guitar is a type of guitar"
+    ],
+    [
+      "Two little girls and one little boy is a type of Three kids"
+    ],
+    [
+      "does a handstand in a pool is a type of playing in a pool"
+    ],
+    [
+      "rollerblading on the street is a type of moving across the pavement"
+    ],
+    [
+      "in a park is a type of outside"
+    ],
+    [
+      "in the ocean's waves is a type of outdoors"
+    ],
+    [
+      "obese white male is a type of man",
+      "in front of fountain is a type of outside",
+      "gabbing on phone is a type of talking on his phone"
+    ],
+    [
+      "has just thrown the bowling ball is a type of bowling"
+    ],
+    [
+      "A train conductor is standing in the door is a type of A train conductor is standing in a door"
+    ],
+    [
+      "Two men are dressed up is a type of men are dressed up"
+    ],
+    [
+      "old woman is a type of human",
+      "walking is a type of in motion"
+    ],
+    [
+      "in the middle of the street is a type of outside"
+    ],
+    [
+      "Military woman is a type of woman"
+    ],
+    [
+      "bounces in a bounce house is a type of bouncing around"
+    ],
+    [
+      "middle-aged man is a type of guy",
+      "works under the engine of a train is a type of working on a train"
+    ],
+    [
+      "man... and a man is a type of some people",
+      "shirt, shorts, pants, t-shirt is a type of clothes",
+      "guitar is a type of musical instrument"
+    ],
+    [
+      "practicing martial arts is a type of doing martial arts"
+    ],
+    [
+      "baseball player is a type of player"
+    ],
+    [
+      "saxophone is a type of instrument",
+      "people are sitting on the curb next to the street by him is a type of near other people"
+    ],
+    [
+      "jeans and dark blue t-shirt is a type of dark clothing"
+    ],
+    [
+      "is getting excited is a type of is excited"
+    ],
+    [
+      "being next to a table with a gingerbread house on it is not necessarily in the kitchen"
+    ],
+    [
+      "young female gymnast... is lifting her right leg straight up in the air is a type of a gymnast has her leg straight up in the air"
+    ],
+    [
+      "A little girl... to an upset toddler is a type of two children",
+      "a man... stands behind them is a type of A man watches"
+    ],
+    [
+      "carrying a notebook is a type of has something in his hand"
+    ],
+    [
+      "men... work on a structure is a type of the men are working"
+    ],
+    [
+      "running is a type of moving around"
+    ],
+    [
+      "crowd is a type of crowd of people"
+    ],
+    [
+      "getting soaked is a type of is wet",
+      "playing an outdoor water game is a type of outside"
+    ],
+    [
+      "farmers is a type of Men"
+    ],
+    [
+      "man wearing a white hard hat is working on a construction project is a type of construction worker"
+    ],
+    [
+      "descend a tree is a type of climbing down a tree"
+    ],
+    [
+      "walks in the shallows is a type of is in the water"
+    ],
+    [
+      "running through a flowered field is a type of is in the field"
+    ],
+    [
+      "woman... washing dishes is a type of woman washes dishes"
+    ],
+    [
+      "shopper is a type of person",
+      "buys cat food is a type of shops for their pet",
+      "Walmart is a type of store"
+    ],
+    [
+      "trimming is a type of cuts",
+      "asparagus is a type of vegetables"
+    ],
+    [
+      "white baseball cap is a type of hat"
+    ],
+    [
+      "does a jump trick is a type of did a trick"
+    ],
+    [
+      "writing on a large piece of white paper is a type of writing on paper"
+    ],
+    [
+      "jumping over a bar is a type of being in the air"
+    ],
+    [
+      "making a left turn is a type of making a turn"
+    ],
+    [
+      "jumping over a hurdle is a type of jumping"
+    ],
+    [
+      "makes cupcakes in her kitchen is a type of is in a kitchen"
+    ],
+    [
+      "preparing and serving grilled food is a type of Food is being prepared and served"
+    ],
+    [
+      "little girl is a type of child",
+      "posing for a picture is a type of posing for the photographer"
+    ],
+    [
+      "waits outdoors at the foot of the stairs is a type of waits by some stairs"
+    ],
+    [
+      "A shirtless man... is fishing is a type of A man is fishing"
+    ],
+    [
+      "crowd of people is a type of crowd"
+    ],
+    [
+      "has an upside down unicycle balancing on his mouth is a type of holding a unicycle in a curious manner"
+    ],
+    [
+      "high jumping is a type of jumping"
+    ],
+    [
+      "female bowler... prepares to throw a ball is a type of woman is playing a game"
+    ],
+    [
+      "A woman... inspects a black garment is a type of A woman inspects a garment"
+    ],
+    [
+      "demolition crane is a type of demolition vehicle",
+      "tearing down is a type of being operated"
+    ],
+    [
+      "holding a child is a type of holds a child"
+    ],
+    [
+      "boy is a type of child",
+      "sliding on his knees down a snowy hill is a type of playing outside"
+    ],
+    [
+      "A little baby is sitting on the ground is a type of The baby is sitting on the ground"
+    ],
+    [
+      "at a car show is a type of displayed"
+    ],
+    [
+      "laying out is a type of handling",
+      "literature is a type of printed material"
+    ],
+    [
+      "jogging slacks is a type of jogging pants",
+      "mobile devise is a type of device",
+      "checking information on is a type of checks"
+    ],
+    [
+      "white t-shirts is a type of shirts"
+    ],
+    [
+      "little girl is a type of girl",
+      "tan sundress is a type of dress",
+      "bouquet of flowers is a type of flowers"
+    ],
+    [
+      "boats is not a boat"
+    ],
+    [
+      "skateboard ramp is a type of ramp"
+    ],
+    [
+      "red toy is a type of toy"
+    ],
+    [
+      "moves his bicycle is not riding around on his bicycle"
+    ],
+    [
+      "middle-age women is a type of women"
+    ],
+    [
+      "woman in an red tracksuit squeezing lemons in a press is a type of woman squeezing lemons"
+    ],
+    [
+      "woman is a type of lady",
+      "photo album is a type of book"
+    ],
+    [
+      "dollar sign glasses, a dollar bill, and a suitcase overflowing with cash is a type of riches",
+      "woman wearing dollar sign glasses is a type of elaborately dressed woman"
+    ],
+    [
+      "dribbling down court is not going on the court"
+    ],
+    [
+      "splashing in a pool is a type of activity that makes one wet"
+    ],
+    [
+      "light blue robe-style jacket is a type of jacket",
+      "street corner is a type of street"
+    ],
+    [
+      "trying to block another man from shooting the ball is a type of being near the ball"
+    ],
+    [
+      "doing a trick with his skateboard is a type of rides a skateboard"
+    ],
+    [
+      "A man with a black hat, a pair of glasses, and a long white beard is a type of man"
+    ],
+    [
+      "welds is a type of working"
+    ],
+    [
+      "aqua-colored cake is a type of cake"
+    ],
+    [
+      "walking in the forest is a type of walking"
+    ],
+    [
+      "working on electrical equipment is a type of working"
+    ],
+    [
+      "construction worker is a type of worker",
+      "the word 'hot' is a type of writing"
+    ],
+    [
+      "A poor family is leaving their home with only a few belongings is a type of a family leaves their home"
+    ],
+    [
+      "black is not light black"
+    ],
+    [
+      "older man is a type of man"
+    ],
+    [
+      "young boy is a type of boy",
+      "blue pajamas is a type of pajamas",
+      "leaping into the air is a type of jumping"
+    ],
+    [
+      "blond woman is a type of person",
+      "blue and pink floral tie-front bikini is a type of bikini"
+    ],
+    [
+      "saxophone is a type of woodwind instrument"
+    ],
+    [
+      "another girl sits is not standing"
+    ],
+    [
+      "narrow alley is a type of alley"
+    ],
+    [
+      "walking on a pipe that stretches over water is a type of walking outside"
+    ],
+    [
+      "harp is a type of instrument"
+    ],
+    [
+      "grilling is a type of cooking"
+    ],
+    [
+      "looking at something is a type of sees something"
+    ],
+    [
+      "male in a black hat is a type of male in a hat"
+    ],
+    [
+      "rusty yellow car driving down the street is a type of car drives on a street"
+    ],
+    [
+      "apple laptop is a type of computer"
+    ],
+    [
+      "a woman is not women"
+    ],
+    [
+      "wandering is a type of walking"
+    ],
+    [
+      "Three women is a type of More than one person",
+      "water is a type of liquid",
+      "kicking their feet in the water is a type of touching a liquid"
+    ],
+    [
+      "A single man in a blue t-shirt, jeans, and a baseball cap works on a roof of a house laying shingles is a type of A single man in a blue t-shirt, jeans and a baseball cap wors on a roof of a house laying shingles"
+    ],
+    [
+      "flips his food into the air with his frying pan is a type of using a frying pan"
+    ],
+    [
+      "newspapers is a type of paper"
+    ],
+    [
+      "lowering ballast on a boat is a type of adjusting the boat"
+    ],
+    [
+      "Players from two opposing teams wearing colorful cleats struggle to gain control over a ball on an AstroTurf field is a type of playing a sport"
+    ],
+    [
+      "grassy field is not her newly cut lawn"
+    ],
+    [
+      "returning a hit with her tennis racket is a type of playing sports"
+    ],
+    [
+      "jumping with a toy in his mouth is a type of playing"
+    ],
+    [
+      "Riot police is a type of police"
+    ],
+    [
+      "A white race dog runs is a type of A dog is running"
+    ],
+    [
+      "skater is a type of skateboarder",
+      "performs a stunt is a type of displaying their skills"
+    ],
+    [
+      "boulder is a type of rock"
+    ],
+    [
+      "cleaning the fallen snow on the roof of his car is a type of cleaning off his car"
+    ],
+    [
+      "Person with umbrella observes flooded streets is a type of person is outside"
+    ],
+    [
+      "standing on green grass is a type of standing outside"
+    ],
+    [
+      "holds onto a rope above the water is a type of being above some water"
+    ],
+    [
+      "nighttime street is a type of street"
+    ],
+    [
+      "cheer is a type of celebrate",
+      "bicyclist is a type of athlete",
+      "rides his bike off a ramp is a type of performs tricks"
+    ],
+    [
+      "A girl wearing a teal shirt smiles while holding a piece of paper is a type of A girl holds a piece of paper"
+    ],
+    [
+      "looking over a bicycle's rear wheel in the maintenance garage is a type of repairs bicycles"
+    ],
+    [
+      "dog is a type of animal"
+    ],
+    [
+      "red makeup is a type of makeup"
+    ],
+    [
+      "subway train is a type of train"
+    ],
+    [
+      "woman is a type of female",
+      "man is a type of male",
+      "talks to is a type of talking to each other"
+    ],
+    [
+      "walking across the street is a type of being outside"
+    ],
+    [
+      "A lady in the kitchen cleaning her feet on a chopping board with a red towel, or red apron, with her husband standing there is a type of A lady in the kitchen cleans her feet"
+    ],
+    [
+      "dirt racetrack is a type of dirt track"
+    ],
+    [
+      "smiles is a type of smiling"
+    ],
+    [
+      "black t-shirt is a type of black shirt"
+    ],
+    [
+      "rollerskaters is a type of people",
+      "skate is a type of rollerskating"
+    ],
+    [
+      "hugs is a type of embraced"
+    ],
+    [
+      "yellow necktie is a type of tie"
+    ],
+    [
+      "Three men is a type of Men",
+      "mountain bikes is a type of bikes"
+    ],
+    [
+      "lying in snow beside a red plastic sled is a type of playing in the snow"
+    ],
+    [
+      "playing in the sandy water is a type of being in the water"
+    ],
+    [
+      "A man in a black coat eats a doughnut while other men look out of frame is a type of A man in a black coat eats a doughnut"
+    ],
+    [
+      "hoodie, pants, and athletic shoes is a type of relaxed clothing",
+      "sitting on a red lounge chair is a type of lounging in a chair",
+      "hi-def tv is a type of tv"
+    ],
+    [
+      "little girls is a type of girls",
+      "ride an inflatable dinghy down a purple water slide is a type of being on a water slide"
+    ],
+    [
+      "diving to tackle the ball carrier in a rugby context is a type of playing in a match"
+    ],
+    [
+      "A skier goes down a hill with a mountain as a backdrop is a type of A skier going down a hill"
+    ],
+    [
+      "a pond is a type of outside"
+    ],
+    [
+      "little girl is a type of girl",
+      "large boulder is a type of rock formation"
+    ],
+    [
+      "Young boys in green and blue jerseys kicking around a soccer ball is a type of Young boys kicking around a soccer ball"
+    ],
+    [
+      "pulling itself out of the water onto some rocks is not walking through rocks"
+    ],
+    [
+      "spraying a squirt bottle at a pedestrian is a type of making mischief"
+    ],
+    [
+      "tired is a type of weary"
+    ],
+    [
+      "spectators are standing behind barrier tape is a type of other people around"
+    ],
+    [
+      "Tourists is a type of People",
+      "mother nature is a type of the outdoors"
+    ],
+    [
+      "musical group is a type of group"
+    ],
+    [
+      "A woman lying in the grass in the park wearing a red top and black capri pants and is barefoot is a type of a woman lying in the grass"
+    ],
+    [
+      "small child is a type of child",
+      "looks out over the lake is a type of looking at the lake"
+    ],
+    [
+      "singing on stage is a type of entertaining on stage",
+      "stuffed bear is a type of stuffed animal"
+    ],
+    [
+      "A man... holding his bike up is a type of a man is holding a bike up"
+    ],
+    [
+      "black shirt is a type of shirt"
+    ],
+    [
+      "carrying the ball is a type of holding a ball"
+    ],
+    [
+      "an umbrella is not necessarily a large umbrella"
+    ],
+    [
+      "man is a type of person",
+      "spider-web face paint is a type of face painting"
+    ],
+    [
+      "young couple is a type of couple",
+      "in the park is a type of at the park"
+    ],
+    [
+      "extreme mountain biker is a type of extreme biker"
+    ],
+    [
+      "medical manuals is a type of book"
+    ],
+    [
+      "staring towards the right is a type of looking at something to her right"
+    ],
+    [
+      "japanese is a type of Asian"
+    ]
+  ],
+  "q0078": {
+    "answer": "entailment",
+    "explanation": [
+      "male is a type of man",
+      "being airborne on a bike is a type of ridding a bike"
+    ]
+  },
+  "q0079": {
+    "answer": "entailment",
+    "explanation": [
+      "black dog is a type of dog"
+    ]
+  },
+  "q0080": {
+    "answer": "entailment",
+    "explanation": [
+      "the ball held by a soccer player is a type of soccer ball"
+    ]
+  },
+  "q0081": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "little boy is a type of child"
+    ]
+  },
+  "q0082": {
+    "answer": "entailment",
+    "explanation": [
+      "practicing a form of martial arts is a type of practicing martial arts"
+    ]
+  },
+  "q0083": {
+    "answer": "entailment",
+    "explanation": [
+      "bus is a type of public transportation"
+    ]
+  },
+  "q0084": {
+    "answer": "entailment",
+    "explanation": [
+      "picnic table is a type of table outside"
+    ]
+  },
+  "q0085": {
+    "answer": "entailment",
+    "explanation": [
+      "rides on a swinging carnival ride is a type of enjoying herself"
+    ]
+  },
+  "q0086": {
+    "answer": "entailment",
+    "explanation": [
+      "snowboarding is a type of rides a snowboard"
+    ]
+  },
+  "q0087": {
+    "answer": "entailment",
+    "explanation": [
+      "white dog with brown spots is a type of white dog"
+    ]
+  },
+  "q0088": {
+    "answer": "entailment",
+    "explanation": [
+      "little boy is a type of human"
+    ]
+  },
+  "q0089": {
+    "answer": "entailment",
+    "explanation": [
+      "woman standing with five children is a type of woman is standing"
+    ]
+  },
+  "q0090": {
+    "answer": "entailment",
+    "explanation": [
+      "to kiss a cat is a type of showing affection towards a cat"
+    ]
+  },
+  "q0091": {
+    "answer": "entailment",
+    "explanation": [
+      "polishing a light wooden floor is a type of polishes a floor",
+      "yellow can of Wood Silk is a type of can"
+    ]
+  },
+  "q0092": {
+    "answer": "entailment",
+    "explanation": [
+      "kiddie pool is a type of pool"
+    ]
+  },
+  "q0093": {
+    "answer": "entailment",
+    "explanation": [
+      "Man is a type of Person"
+    ]
+  },
+  "q0094": {
+    "answer": "entailment",
+    "explanation": [
+      "being on a water board towed by a boat is a type of moving on the water"
+    ]
+  },
+  "q0095": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of person",
+      "two Camden tents is a type of a tent"
+    ]
+  },
+  "q0096": {
+    "answer": "entailment",
+    "explanation": [
+      "on the street is a type of outside",
+      "acoustic guitar is a type of guitar"
+    ]
+  },
+  "q0097": {
+    "answer": "entailment",
+    "explanation": [
+      "playing with a stick is a type of playing"
+    ]
+  },
+  "q0098": {
+    "answer": "entailment",
+    "explanation": [
+      "smiling at the camera is a type of looking at the camera"
+    ]
+  },
+  "q0099": {
+    "answer": "entailment",
+    "explanation": [
+      "singer is a type of performer",
+      "small crowd is a type of small audience",
+      "outside is a type of outdoors"
+    ]
+  },
+  "q0100": {
+    "answer": "entailment",
+    "explanation": [
+      "look through CD's at a street vendor is a type of shopping"
+    ]
+  },
+  "q0101": {
+    "answer": "entailment",
+    "explanation": [
+      "A large man dressed in black on a street corner is a type of a man is on the street corner"
+    ]
+  },
+  "q0102": {
+    "answer": "entailment",
+    "explanation": [
+      "old women is a type of Elderly women",
+      "sitting on curb is a type of resting"
+    ]
+  },
+  "q0103": {
+    "answer": "entailment",
+    "explanation": [
+      "red shirt is a type of shirt"
+    ]
+  },
+  "q0104": {
+    "answer": "entailment",
+    "explanation": [
+      "young man is a type of man"
+    ]
+  },
+  "q0105": {
+    "answer": "entailment",
+    "explanation": [
+      "Young African children is a type of Children",
+      "dirt and gravel street is a type of dirt street"
+    ]
+  },
+  "q0106": {
+    "answer": "entailment",
+    "explanation": [
+      "moving truck is a type of truck"
+    ]
+  },
+  "q0107": {
+    "answer": "entailment",
+    "explanation": [
+      "blue race car is a type of automobile",
+      "slides off the racetrack is a type of lost control",
+      "hits white median bumpers is a type of hit something"
+    ]
+  },
+  "q0108": {
+    "answer": "entailment",
+    "explanation": [
+      "group of construction workers is a type of construction team",
+      "refinishing is a type of working"
+    ]
+  },
+  "q0109": {
+    "answer": "entailment",
+    "explanation": [
+      "train station is a type of area of public transportation",
+      "Three people is a type of a group of people"
+    ]
+  },
+  "q0110": {
+    "answer": "entailment",
+    "explanation": [
+      "A boy in a blue bathing suit jumps is a type of a boy jumps"
+    ]
+  },
+  "q0111": {
+    "answer": "entailment",
+    "explanation": [
+      "black substance is a type of something",
+      "forehead is a type of head"
+    ]
+  },
+  "q0112": {
+    "answer": "entailment",
+    "explanation": [
+      "large hardware warehouse store is a type of hardware store"
+    ]
+  },
+  "q0113": {
+    "answer": "entailment",
+    "explanation": [
+      "agitate is a type of bother",
+      "crowd of people is a type of people"
+    ]
+  },
+  "q0114": {
+    "answer": "entailment",
+    "explanation": [
+      "Golfer is a type of athlete",
+      "a shot in golf is a type of a shot with his golf club"
+    ]
+  },
+  "q0115": {
+    "answer": "entailment",
+    "explanation": [
+      "playing a game at the arcade is a type of playing"
+    ]
+  },
+  "q0116": {
+    "answer": "contradiction",
+    "explanation": [
+      "A girl and a boy are not necessarily a sister and brother",
+      "The premise does not state they are in their yard"
+    ]
+  },
+  "q0117": {
+    "answer": "entailment",
+    "explanation": [
+      "work gloves is a type of gloves",
+      "a helmet that has a yellow flashlight attached means the man has a flashlight"
+    ]
+  },
+  "q0118": {
+    "answer": "entailment",
+    "explanation": [
+      "surgeon is a type of doctor",
+      "performing an open surgery is a type of doing surgery"
+    ]
+  },
+  "q0119": {
+    "answer": "entailment",
+    "explanation": [
+      "old man is a type of man",
+      "sitting in a chair is a type of sitting on a chair"
+    ]
+  },
+  "q0120": {
+    "answer": "entailment",
+    "explanation": [
+      "man wearing blue jean shorts is a type of man"
+    ]
+  },
+  "q0121": {
+    "answer": "entailment",
+    "explanation": [
+      "playing is a type of enjoys"
+    ]
+  },
+  "q0122": {
+    "answer": "entailment",
+    "explanation": [
+      "a man and a woman is a type of two people",
+      "working out and being on a treadmill is a type of exercise",
+      "in a gym is a type of indoors"
+    ]
+  },
+  "q0123": {
+    "answer": "entailment",
+    "explanation": [
+      "providing entertainment by playing the violin is a type of playing the violin entertains"
+    ]
+  },
+  "q0124": {
+    "answer": "contradiction",
+    "explanation": [
+      "The volleyball player is not necessarily a star"
+    ]
+  },
+  "q0125": {
+    "answer": "entailment",
+    "explanation": [
+      "are standing is a type of stood"
+    ]
+  },
+  "q0126": {
+    "answer": "entailment",
+    "explanation": [
+      "down jacket is a type of jacket",
+      "pink comb is a type of comb"
+    ]
+  },
+  "q0127": {
+    "answer": "entailment",
+    "explanation": [
+      "An old man in a blue shirt and white pants is a type of a man wearing a blue shirt and white pants"
+    ]
+  },
+  "q0128": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise does not state they are on a football field"
+    ]
+  },
+  "q0129": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of person",
+      "playing in water is a type of getting wet"
+    ]
+  },
+  "q0130": {
+    "answer": "entailment",
+    "explanation": [
+      "The baby in a blue jean hat and sunglasses is a type of A baby"
+    ]
+  },
+  "q0131": {
+    "answer": "entailment",
+    "explanation": [
+      "pickaxe is a type of tools"
+    ]
+  },
+  "q0132": {
+    "answer": "entailment",
+    "explanation": [
+      "A tall man being stopped is a type of there is a tall man"
+    ]
+  },
+  "q0133": {
+    "answer": "contradiction",
+    "explanation": [
+      "up is not down"
+    ]
+  },
+  "q0134": {
+    "answer": "entailment",
+    "explanation": [
+      "skyward is a type of upwards",
+      "stands on a brick wall is a type of standing at a wall"
+    ]
+  },
+  "q0135": {
+    "answer": "entailment",
+    "explanation": [
+      "restaurant employee is a type of service worker",
+      "preparing sandwiches is a type of making food",
+      "highly decorated kitchen is a type of nice kitchen"
+    ]
+  },
+  "q0136": {
+    "answer": "entailment",
+    "explanation": [
+      "road crew is a type of crew"
+    ]
+  },
+  "q0137": {
+    "answer": "contradiction",
+    "explanation": [
+      "attempting to intercept is not gets the interception"
+    ]
+  },
+  "q0138": {
+    "answer": "entailment",
+    "explanation": [
+      "young girl is a type of human"
+    ]
+  },
+  "q0139": {
+    "answer": "entailment",
+    "explanation": [
+      "prepares various meats on a large grill is a type of beginning to cook"
+    ]
+  },
+  "q0140": {
+    "answer": "entailment",
+    "explanation": [
+      "A black man wearing a red belt is a type of a man is wearing a red belt"
+    ]
+  },
+  "q0141": {
+    "answer": "entailment",
+    "explanation": [
+      "An Asian teen is a type of The teen is Asian"
+    ]
+  },
+  "q0142": {
+    "answer": "entailment",
+    "explanation": [
+      "A young asian woman stands with her luggage is a type of a young woman with luggage"
+    ]
+  },
+  "q0143": {
+    "answer": "entailment",
+    "explanation": [
+      "men is a type of humans",
+      "trumpet is a type of instruments"
+    ]
+  },
+  "q0144": {
+    "answer": "entailment",
+    "explanation": [
+      "maintenance worker is a type of worker",
+      "walking past is a type of walking by"
+    ]
+  },
+  "q0145": {
+    "answer": "entailment",
+    "explanation": [
+      "bend over to touch is a type of petting"
+    ]
+  },
+  "q0146": {
+    "answer": "entailment",
+    "explanation": [
+      "man in a blue plaid shirt and blue jeans is a type of casually dressed man",
+      "pauses to drink water is a type of drinking water"
+    ]
+  },
+  "q0147": {
+    "answer": "entailment",
+    "explanation": [
+      "ceremonial garb is a type of traditional wear",
+      "ceremonial blankets and tassels is a type of ceremonial wear and accessories"
+    ]
+  },
+  "q0148": {
+    "answer": "entailment",
+    "explanation": [
+      "white powder and blue writing on his face is a type of painted face"
+    ]
+  },
+  "q0149": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise does not state they are in a large field"
+    ]
+  },
+  "q0150": {
+    "answer": "entailment",
+    "explanation": [
+      "black dog is a type of dog"
+    ]
+  },
+  "q0151": {
+    "answer": "entailment",
+    "explanation": [
+      "The gentlemen with the red plaid shirt and black pants is a type of The gentleman"
+    ]
+  },
+  "q0152": {
+    "answer": "entailment",
+    "explanation": [
+      "carries many tennis balls is a type of have many tennis balls"
+    ]
+  },
+  "q0153": {
+    "answer": "entailment",
+    "explanation": [
+      "A little girl planting her first flower in the sand is a type of The little girl is planting her first flower"
+    ]
+  },
+  "q0154": {
+    "answer": "entailment",
+    "explanation": [
+      "taking a shot while his team watches is a type of playing a game"
+    ]
+  },
+  "q0386": {
+    "answer": "entailment",
+    "explanation": [
+      "small girl is a type of girl"
+    ]
+  },
+  "q0387": {
+    "answer": "entailment",
+    "explanation": [
+      "reaching up to the counter using a step stool is a type of using a step stool"
+    ]
+  },
+  "q0388": {
+    "answer": "entailment",
+    "explanation": [
+      "standing in front of a wall is a type of standing outdoors"
+    ]
+  },
+  "q0389": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "black suit is a type of suit"
+    ]
+  },
+  "q0390": {
+    "answer": "entailment",
+    "explanation": [
+      "yellow sports uniforms is a type of uniforms"
+    ]
+  },
+  "q0391": {
+    "answer": "entailment",
+    "explanation": [
+      "dusty plot of land is a type of plot of land"
+    ]
+  },
+  "q0392": {
+    "answer": "entailment",
+    "explanation": [
+      "car is a type of vehicle"
+    ]
+  },
+  "q0393": {
+    "answer": "entailment",
+    "explanation": [
+      "road covered in leaves is a type of road"
+    ]
+  },
+  "q0394": {
+    "answer": "entailment",
+    "explanation": [
+      "speaks into a microphone is a type of speaks"
+    ]
+  },
+  "q0395": {
+    "answer": "entailment",
+    "explanation": [
+      "load is a type of pile",
+      "green and yellow vegetables is a type of colored vegetables",
+      "truck is a type of car"
+    ]
+  },
+  "q0396": {
+    "answer": "entailment",
+    "explanation": [
+      "blond-haired baby is a type of baby",
+      "large, shiny metal cooking pot is a type of pot",
+      "electric stove is a type of stove"
+    ]
+  },
+  "q0397": {
+    "answer": "entailment",
+    "explanation": [
+      "carpenter is a type of workman",
+      "working on a roof is a type of helping put a roof on a house"
+    ]
+  },
+  "q0398": {
+    "answer": "entailment",
+    "explanation": [
+      "black dog is a type of dog"
+    ]
+  },
+  "q0399": {
+    "answer": "entailment",
+    "explanation": [
+      "person with dark hair in a white shirt is a type of person"
+    ]
+  },
+  "q0400": {
+    "answer": "entailment",
+    "explanation": [
+      "standing and talking is a type of talking"
+    ]
+  },
+  "q0401": {
+    "answer": "entailment",
+    "explanation": [
+      "carrying a fallen branch is a type of being outside"
+    ]
+  },
+  "q0402": {
+    "answer": "entailment",
+    "explanation": [
+      "boy scout is a type of boy"
+    ]
+  },
+  "q0403": {
+    "answer": "entailment",
+    "explanation": [
+      "standing at an empty table is a type of standing around"
+    ]
+  },
+  "q0404": {
+    "answer": "contradiction",
+    "explanation": [
+      "jumps off is not jumps up"
+    ]
+  },
+  "q0405": {
+    "answer": "contradiction",
+    "explanation": [
+      "about to be overtaken by clouds is not are many clouds"
+    ]
+  },
+  "q0406": {
+    "answer": "entailment",
+    "explanation": [
+      "green shirt is a type of shirt",
+      "juggling three clubs is a type of juggles"
+    ]
+  },
+  "q0407": {
+    "answer": "entailment",
+    "explanation": [
+      "Two young girls with long brunette hair is a type of Two girls"
+    ]
+  },
+  "q0408": {
+    "answer": "entailment",
+    "explanation": [
+      "hula hoops on a stage is a type of entertaining on stage"
+    ]
+  },
+  "q0409": {
+    "answer": "entailment",
+    "explanation": [
+      "Old man with gray blanket on is a type of Old man"
+    ]
+  },
+  "q0410": {
+    "answer": "entailment",
+    "explanation": [
+      "A young man wearing a blue shirt with white words, black jeans, and inline skates is sitting on a concrete seat is a type of A young man in inline skates sits on a concrete seat"
+    ]
+  },
+  "q0411": {
+    "answer": "entailment",
+    "explanation": [
+      "brown bookbag is a type of bag"
+    ]
+  },
+  "q0412": {
+    "answer": "entailment",
+    "explanation": [
+      "lovely mountain lake scene is a type of mountain lake scene"
+    ]
+  },
+  "q0413": {
+    "answer": "entailment",
+    "explanation": [
+      "in a pit on the beach is a type of on the beach"
+    ]
+  },
+  "q0414": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "martial arts uniform is a type of uniform"
+    ]
+  },
+  "q0415": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "leather jacket is a type of jacket"
+    ]
+  },
+  "q0416": {
+    "answer": "entailment",
+    "explanation": [
+      "in a green blouse is a type of wearing a blouse"
+    ]
+  },
+  "q0417": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "blue and yellow racing uniform is a type of racing uniform"
+    ]
+  },
+  "q0418": {
+    "answer": "entailment",
+    "explanation": [
+      "cross the street is a type of walking in the street"
+    ]
+  },
+  "q0419": {
+    "answer": "entailment",
+    "explanation": [
+      "cotton candy is a type of fluffy sweets"
+    ]
+  },
+  "q0420": {
+    "answer": "entailment",
+    "explanation": [
+      "running on sand is a type of running"
+    ]
+  },
+  "q0421": {
+    "answer": "entailment",
+    "explanation": [
+      "man and woman is a type of couple",
+      "small child is a type of kid",
+      "showing how to use is a type of teaching",
+      "gun is a type of firearm"
+    ]
+  },
+  "q0422": {
+    "answer": "entailment",
+    "explanation": [
+      "walks through grass is a type of walking"
+    ]
+  },
+  "q0423": {
+    "answer": "entailment",
+    "explanation": [
+      "horse around is a type of play around"
+    ]
+  },
+  "q0424": {
+    "answer": "entailment",
+    "explanation": [
+      "goalie is a type of soccer player"
+    ]
+  },
+  "q0425": {
+    "answer": "entailment",
+    "explanation": [
+      "cellphones is a type of celluar devices"
+    ]
+  },
+  "q0426": {
+    "answer": "entailment",
+    "explanation": [
+      "running is a type of moving at high speed"
+    ]
+  },
+  "q0427": {
+    "answer": "entailment",
+    "explanation": [
+      "ground of concrete ruins is a type of concrete"
+    ]
+  },
+  "q0428": {
+    "answer": "entailment",
+    "explanation": [
+      "little boy is a type of kid"
+    ]
+  },
+  "q0429": {
+    "answer": "entailment",
+    "explanation": [
+      "children is a type of kids",
+      "enjoying their games is a type of playing"
+    ]
+  },
+  "q0430": {
+    "answer": "entailment",
+    "explanation": [
+      "surgeon is a type of doctor",
+      "open surgery is a type of medical operation"
+    ]
+  },
+  "q0431": {
+    "answer": "entailment",
+    "explanation": [
+      "girl is a type of female",
+      "graphic t-shirt is a type of t-shirt"
+    ]
+  },
+  "q0432": {
+    "answer": "entailment",
+    "explanation": [
+      "girl is a type of child",
+      "jumping is a type of playing"
+    ]
+  },
+  "q0433": {
+    "answer": "entailment",
+    "explanation": [
+      "red coat is a type of clothing",
+      "eats a chocolate bar is a type of eating"
+    ]
+  },
+  "q0434": {
+    "answer": "entailment",
+    "explanation": [
+      "walks buy is a type of walking past"
+    ]
+  },
+  "q0435": {
+    "answer": "entailment",
+    "explanation": [
+      "sit against is a type of lean against"
+    ]
+  },
+  "q0436": {
+    "answer": "entailment",
+    "explanation": [
+      "dark clothing, hats, a blue scarf, and gloves is a type of clothing"
+    ]
+  },
+  "q0437": {
+    "answer": "entailment",
+    "explanation": [
+      "young child is a type of something"
+    ]
+  },
+  "q0438": {
+    "answer": "entailment",
+    "explanation": [
+      "guitarist is a type of musician",
+      "performs a rocking solo is a type of performing"
+    ]
+  },
+  "q0439": {
+    "answer": "entailment",
+    "explanation": [
+      "in a park is a type of at the park"
+    ]
+  },
+  "q0440": {
+    "answer": "entailment",
+    "explanation": [
+      "traditional Japanese garb is a type of Japanese clothing"
+    ]
+  },
+  "q0441": {
+    "answer": "contradiction",
+    "explanation": [
+      "go fetch is not are fetching"
+    ]
+  },
+  "q0442": {
+    "answer": "entailment",
+    "explanation": [
+      "Latin American is a type of person",
+      "weaving fabric is a type of making fabic"
+    ]
+  },
+  "q0443": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of person",
+      "looking into a silver cellphone is a type of looking"
+    ]
+  },
+  "q0444": {
+    "answer": "entailment",
+    "explanation": [
+      "A female acrobat wearing a red and white striped shirt and blue pants is a type of A female acrobat"
+    ]
+  },
+  "q0445": {
+    "answer": "entailment",
+    "explanation": [
+      "Rugby player is a type of sports team"
+    ]
+  },
+  "q0446": {
+    "answer": "entailment",
+    "explanation": [
+      "child is a type of human",
+      "cactus garden is a type of plants"
+    ]
+  },
+  "q0447": {
+    "answer": "entailment",
+    "explanation": [
+      "holding a cigarette outdoors is a type of holding a cigarette"
+    ]
+  },
+  "q0448": {
+    "answer": "entailment",
+    "explanation": [
+      "port-o-potties is a type of portable toilets"
+    ]
+  },
+  "q0449": {
+    "answer": "entailment",
+    "explanation": [
+      "A man with a plaid shirt stands with his hand on hip is a type of a man"
+    ]
+  },
+  "q0450": {
+    "answer": "entailment",
+    "explanation": [
+      "large tan dog is a type of dog",
+      "yard of grass is a type of grass"
+    ]
+  },
+  "q0451": {
+    "answer": "contradiction",
+    "explanation": [
+      "wears a... robe is not holds robe"
+    ]
+  },
+  "q0452": {
+    "answer": "entailment",
+    "explanation": [
+      "husky is a type of dog",
+      "nuzzling is a type of friendly"
+    ]
+  },
+  "q0453": {
+    "answer": "entailment",
+    "explanation": [
+      "in front of bushes is a type of outside"
+    ]
+  },
+  "q0454": {
+    "answer": "entailment",
+    "explanation": [
+      "Indian men is a type of men"
+    ]
+  },
+  "q0455": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping over a yellow rope is a type of jumps rope"
+    ]
+  },
+  "q0456": {
+    "answer": "entailment",
+    "explanation": [
+      "dribbles the ball, while the player... tries to stop him is a type of playing ball"
+    ]
+  },
+  "q0457": {
+    "answer": "entailment",
+    "explanation": [
+      "ice skating is a type of active"
+    ]
+  },
+  "q0458": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting on a couch smoking a cigarette is a type of smoking a cigarette"
+    ]
+  },
+  "q0459": {
+    "answer": "entailment",
+    "explanation": [
+      "playing a game outside is a type of playing a game"
+    ]
+  },
+  "q0460": {
+    "answer": "entailment",
+    "explanation": [
+      "skiing down a slope is a type of outside"
+    ]
+  },
+  "q0461": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting on the grass in front of a blue sky is a type of sitting outdoors"
+    ]
+  },
+  "q0462": {
+    "answer": "entailment",
+    "explanation": [
+      "looks at is a type of peers at",
+      "something is a type of object"
+    ]
+  },
+  "q0540": {
+    "answer": "entailment",
+    "explanation": [
+      "kid is a type of children",
+      "running across a field is a type of outdoors"
+    ]
+  },
+  "q0541": {
+    "answer": "entailment",
+    "explanation": [
+      "onlookers is a type of people",
+      "glance at is a type of watch"
+    ]
+  },
+  "q0542": {
+    "answer": "entailment",
+    "explanation": [
+      "A blond woman wearing a red shirt and white pants who holds a camera is a type of a blond woman"
+    ]
+  },
+  "q0543": {
+    "answer": "contradiction",
+    "explanation": [
+      "The man who raised his fist was the man in the blue shirt, not the man he was arguing with"
+    ]
+  },
+  "q0544": {
+    "answer": "entailment",
+    "explanation": [
+      "drawing pictures of individuals is a type of drawing"
+    ]
+  },
+  "q0545": {
+    "answer": "contradiction",
+    "explanation": [
+      "looking at the camera is not taking pictures"
+    ]
+  },
+  "q0546": {
+    "answer": "entailment",
+    "explanation": [
+      "young man is a type of man"
+    ]
+  },
+  "q0547": {
+    "answer": "entailment",
+    "explanation": [
+      "terracotta roof tiles is a type of roof tiles"
+    ]
+  },
+  "q0548": {
+    "answer": "entailment",
+    "explanation": [
+      "talking to her phone is a type of using a phone"
+    ]
+  },
+  "q0549": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of boy"
+    ]
+  },
+  "q0550": {
+    "answer": "entailment",
+    "explanation": [
+      "watches as her bowling ball rolls down the lane to the pins is a type of bowls"
+    ]
+  },
+  "q0551": {
+    "answer": "entailment",
+    "explanation": [
+      "young women is a type of person"
+    ]
+  },
+  "q0552": {
+    "answer": "entailment",
+    "explanation": [
+      "rowboat is a type of small boat",
+      "river is a type of water"
+    ]
+  },
+  "q0553": {
+    "answer": "entailment",
+    "explanation": [
+      "blond man is a type of man"
+    ]
+  },
+  "q0554": {
+    "answer": "entailment",
+    "explanation": [
+      "young girl is a type of girl",
+      "plays with a yellow toy golf club is a type of playing"
+    ]
+  },
+  "q0555": {
+    "answer": "entailment",
+    "explanation": [
+      "gather at a piano bar is a type of going out"
+    ]
+  },
+  "q0556": {
+    "answer": "entailment",
+    "explanation": [
+      "throwing a spear toward a target in the background painted with a carrot is a type of throwing a spear towards a target"
+    ]
+  },
+  "q0557": {
+    "answer": "entailment",
+    "explanation": [
+      "women is a type of people",
+      "stretches or yoga is a type of exercising",
+      "on a beach is a type of outside"
+    ]
+  },
+  "q0558": {
+    "answer": "entailment",
+    "explanation": [
+      "businessmen is a type of men"
+    ]
+  },
+  "q0559": {
+    "answer": "entailment",
+    "explanation": [
+      "a room is a type of indoors"
+    ]
+  },
+  "q0560": {
+    "answer": "entailment",
+    "explanation": [
+      "A man with white tennis shoes and an orange jacket is a type of a man"
+    ]
+  },
+  "q0561": {
+    "answer": "entailment",
+    "explanation": [
+      "on a bed is a type of in bed"
+    ]
+  },
+  "q0562": {
+    "answer": "entailment",
+    "explanation": [
+      "jumps up and down is a type of plays",
+      "in the snow is a type of in the winter"
+    ]
+  },
+  "q0563": {
+    "answer": "entailment",
+    "explanation": [
+      "makes a snowball in a large pile of snow is a type of makes a snowball"
+    ]
+  },
+  "q0564": {
+    "answer": "entailment",
+    "explanation": [
+      "dry dessert setting is a type of dessert"
+    ]
+  },
+  "q0565": {
+    "answer": "entailment",
+    "explanation": [
+      "posing for a photo is a type of a photo being taken"
+    ]
+  },
+  "q0566": {
+    "answer": "entailment",
+    "explanation": [
+      "A zaftig woman in a tube top and jeans dancing outdoors is a type of a woman dancing"
+    ]
+  },
+  "q0567": {
+    "answer": "entailment",
+    "explanation": [
+      "watches is a type of sees it"
+    ]
+  },
+  "q0568": {
+    "answer": "entailment",
+    "explanation": [
+      "street people is a type of people"
+    ]
+  },
+  "q0569": {
+    "answer": "entailment",
+    "explanation": [
+      "bandanna is a type of fashion accessories"
+    ]
+  },
+  "q0570": {
+    "answer": "contradiction",
+    "explanation": [
+      "glass jar is not a glass"
+    ]
+  },
+  "q0571": {
+    "answer": "entailment",
+    "explanation": [
+      "A group of people are sight seeing and taking pictures is a type of a group of people"
+    ]
+  },
+  "q0572": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal"
+    ]
+  },
+  "q0573": {
+    "answer": "contradiction",
+    "explanation": [
+      "sitting is not standing"
+    ]
+  },
+  "q0574": {
+    "answer": "entailment",
+    "explanation": [
+      "in a beautiful room is a type of inside"
+    ]
+  },
+  "q0575": {
+    "answer": "entailment",
+    "explanation": [
+      "take a photo of a man is a type of man getting his picture taken"
+    ]
+  },
+  "q0576": {
+    "answer": "entailment",
+    "explanation": [
+      "guy is a type of man",
+      "biting into a pink marshmallow chick is a type of eating a marshmallow"
+    ]
+  },
+  "q0577": {
+    "answer": "entailment",
+    "explanation": [
+      "Mexican restaurant is a type of ethnic establishment"
+    ]
+  },
+  "q0578": {
+    "answer": "entailment",
+    "explanation": [
+      "cheers is a type of making noise"
+    ]
+  },
+  "q0579": {
+    "answer": "entailment",
+    "explanation": [
+      "figure skater is a type of skater",
+      "executing a routine on ice is a type of being on the ice"
+    ]
+  },
+  "q0580": {
+    "answer": "entailment",
+    "explanation": [
+      "singing into a microphone is a type of sings"
+    ]
+  },
+  "q0581": {
+    "answer": "entailment",
+    "explanation": [
+      "A man in purple tie is a type of a man"
+    ]
+  },
+  "q0582": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman...smiles at the camera while another woman unloads skis is a type of a woman...smiles at the camera"
+    ]
+  },
+  "q0583": {
+    "answer": "entailment",
+    "explanation": [
+      "Man in red jacket is opening the door is a type of Man in red jacket is opening the door"
+    ]
+  },
+  "q0584": {
+    "answer": "entailment",
+    "explanation": [
+      "long pole is a type of object",
+      "wields is a type of has in his hands"
+    ]
+  },
+  "q0585": {
+    "answer": "entailment",
+    "explanation": [
+      "climbing a wooden ladder on a very steep, jagged, rock cliff is a type of climbing a steep cliff"
+    ]
+  },
+  "q0586": {
+    "answer": "entailment",
+    "explanation": [
+      "race car is a type of car"
+    ]
+  },
+  "q0587": {
+    "answer": "entailment",
+    "explanation": [
+      "old man is a type of person",
+      "cowboy hat is a type of hat"
+    ]
+  },
+  "q0588": {
+    "answer": "entailment",
+    "explanation": [
+      "young girl is a type of girl",
+      "young boy is a type of boy",
+      "helps with tying his shoelaces is a type of helps tie his shoes"
+    ]
+  },
+  "q0589": {
+    "answer": "entailment",
+    "explanation": [
+      "places mop inside a green bucket is a type of holding a mop"
+    ]
+  },
+  "q0590": {
+    "answer": "entailment",
+    "explanation": [
+      "riding a four-wheeler is a type of riding",
+      "sandy area is a type of outside"
+    ]
+  },
+  "q0591": {
+    "answer": "entailment",
+    "explanation": [
+      "kneeling while holding a toy is a type of playing with his toy"
+    ]
+  },
+  "q0592": {
+    "answer": "entailment",
+    "explanation": [
+      "pass is a type of go past"
+    ]
+  },
+  "q0593": {
+    "answer": "entailment",
+    "explanation": [
+      "laying floor tiles is a type of hard labor"
+    ]
+  },
+  "q0594": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting on innertubes with 'Crusher' written on them is a type of sit on innertubes"
+    ]
+  },
+  "q0595": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman in skirt... and a man in aviators... is a type of A man and woman"
+    ]
+  },
+  "q0596": {
+    "answer": "entailment",
+    "explanation": [
+      "playing drums on old cans is a type of making music"
+    ]
+  },
+  "q0597": {
+    "answer": "entailment",
+    "explanation": [
+      "Seahawks sweatshirt is a type of football sweatshirt"
+    ]
+  },
+  "q0598": {
+    "answer": "entailment",
+    "explanation": [
+      "examining is a type of looking at"
+    ]
+  },
+  "q0599": {
+    "answer": "entailment",
+    "explanation": [
+      "scissors is a type of cutting utensils"
+    ]
+  },
+  "q0600": {
+    "answer": "entailment",
+    "explanation": [
+      "man in a white t-shirt is a type of man in a white shirt"
+    ]
+  },
+  "q0601": {
+    "answer": "entailment",
+    "explanation": [
+      "teenage girls is a type of People",
+      "conversing is a type of talking"
+    ]
+  },
+  "q0602": {
+    "answer": "entailment",
+    "explanation": [
+      "Buddhist priest is a type of priest"
+    ]
+  },
+  "q0603": {
+    "answer": "entailment",
+    "explanation": [
+      "A boy and a girl is a type of Two people",
+      "Mike Huckabee signs is a type of advertising signs"
+    ]
+  },
+  "q0604": {
+    "answer": "entailment",
+    "explanation": [
+      "drinking out of a metal cup is a type of drinking a liquid"
+    ]
+  },
+  "q0605": {
+    "answer": "entailment",
+    "explanation": [
+      "about a mixed salad contained in a bowl is a type of near a bowl"
+    ]
+  },
+  "q0606": {
+    "answer": "entailment",
+    "explanation": [
+      "on a farm is a type of outside"
+    ]
+  },
+  "q0607": {
+    "answer": "entailment",
+    "explanation": [
+      "looking up to his loving owner is a type of looking up"
+    ]
+  },
+  "q0608": {
+    "answer": "entailment",
+    "explanation": [
+      "balancing a large platter on her head is a type of carrying things on her head"
+    ]
+  },
+  "q0609": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman walking her dog and using her cellphone is a type of a woman using her cellphone"
+    ]
+  },
+  "q0610": {
+    "answer": "entailment",
+    "explanation": [
+      "German sheperds is a type of animals",
+      "snarling is a type of threatening"
+    ]
+  },
+  "q0611": {
+    "answer": "entailment",
+    "explanation": [
+      "horses is a type of animals",
+      "pulling a man is a type of being with a man"
+    ]
+  },
+  "q0612": {
+    "answer": "entailment",
+    "explanation": [
+      "on a dirt path surrounded by trees is a type of outdoors"
+    ]
+  },
+  "q0613": {
+    "answer": "entailment",
+    "explanation": [
+      "opens his mouth to catch a piece of food is a type of catches food"
+    ]
+  },
+  "q0614": {
+    "answer": "entailment",
+    "explanation": [
+      "A shirtless man...sitting crisscross...holding up a...cup is a type of A man...sitting crisscross"
+    ]
+  },
+  "q0615": {
+    "answer": "contradiction",
+    "explanation": [
+      "ski-jumping is not preparing a trick"
+    ]
+  },
+  "q0616": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting on a river boat tour is a type of riding a boat"
+    ]
+  },
+  "q0617": {
+    "answer": "entailment",
+    "explanation": [
+      "boys is a type of people",
+      "riding bikes in the street is a type of being together"
+    ]
+  },
+  "q0618": {
+    "answer": "entailment",
+    "explanation": [
+      "walking down a street near large green trees and older brown buildings is a type of walking past some trees and brown buildings"
+    ]
+  },
+  "q0619": {
+    "answer": "entailment",
+    "explanation": [
+      "pizza employee is a type of employee",
+      "waiting for his next drive up customer is a type of waiting to help a customer"
+    ]
+  },
+  "q0620": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of lady",
+      "poky dot is a type of polka dot"
+    ]
+  },
+  "q0621": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of guy",
+      "sitting on a wooden bench with shoes off is a type of relaxing outdoors"
+    ]
+  },
+  "q0622": {
+    "answer": "entailment",
+    "explanation": [
+      "crossing a street is a type of being outside"
+    ]
+  },
+  "q0623": {
+    "answer": "entailment",
+    "explanation": [
+      "football field is a type of field"
+    ]
+  },
+  "q0624": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting on a bench in a train station is a type of being at a train station on a bench"
+    ]
+  },
+  "q0625": {
+    "answer": "entailment",
+    "explanation": [
+      "worker is a type of person",
+      "dressed in hazard orange is a type of wearing orange"
+    ]
+  },
+  "q0626": {
+    "answer": "entailment",
+    "explanation": [
+      "doing skateboarding stunt is a type of skateboards"
+    ]
+  },
+  "q0627": {
+    "answer": "entailment",
+    "explanation": [
+      "a man riding a bicycle is a type of a bicycle being ridden"
+    ]
+  },
+  "q0628": {
+    "answer": "entailment",
+    "explanation": [
+      "on a brown horse is a type of riding on a brown horse",
+      "in a prairie in front of tall mountains is a type of in the midst of a prairie shadowed by mountains"
+    ]
+  },
+  "q0629": {
+    "answer": "entailment",
+    "explanation": [
+      "a dirty gray truck surrounded by muddy ground is a type of a truck that could really use a good cleaning"
+    ]
+  },
+  "q0630": {
+    "answer": "entailment",
+    "explanation": [
+      "an enthusiastic boy pushes a shopping cart is a type of a boy is pushing a shopping cart"
+    ]
+  },
+  "q0631": {
+    "answer": "entailment",
+    "explanation": [
+      "young girl is a type of girl",
+      "swimming is a type of swim"
+    ]
+  },
+  "q0632": {
+    "answer": "entailment",
+    "explanation": [
+      "children is a type of kids",
+      "gathering water is a type of getting water"
+    ]
+  },
+  "q0633": {
+    "answer": "entailment",
+    "explanation": [
+      "baseball player is a type of person",
+      "running after the ball in a baseball context is a type of playing a game"
+    ]
+  },
+  "q0634": {
+    "answer": "contradiction",
+    "explanation": [
+      "rock climbing with other people is not the same as other people watching"
+    ]
+  },
+  "q0635": {
+    "answer": "entailment",
+    "explanation": [
+      "selling fruit from a street cart is a type of being a street vendor"
+    ]
+  },
+  "q0636": {
+    "answer": "entailment",
+    "explanation": [
+      "is sitting is a type of is sitting down"
+    ]
+  },
+  "q0637": {
+    "answer": "entailment",
+    "explanation": [
+      "baby is a type of young child",
+      "in a room is a type of indoors"
+    ]
+  },
+  "q0638": {
+    "answer": "entailment",
+    "explanation": [
+      "person is a type of human"
+    ]
+  },
+  "q0639": {
+    "answer": "entailment",
+    "explanation": [
+      "a man sitting at a restaurant is a type of a man at a restaurant"
+    ]
+  },
+  "q0640": {
+    "answer": "entailment",
+    "explanation": [
+      "walking down a lighted tunnel is a type of walking in a tunnel"
+    ]
+  },
+  "q0641": {
+    "answer": "entailment",
+    "explanation": [
+      "digging in the snow is a type of digging outside"
+    ]
+  },
+  "q0642": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of kid",
+      "Christmas tree is a type of tree"
+    ]
+  },
+  "q0643": {
+    "answer": "entailment",
+    "explanation": [
+      "share a laugh is a type of laughing together",
+      "enjoying the nice weather is a type of being on a nice day"
+    ]
+  },
+  "q0644": {
+    "answer": "entailment",
+    "explanation": [
+      "a man repairing antique typewriters is a type of a repair man",
+      "repairing is a type of works"
+    ]
+  },
+  "q0645": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman walking down the street is a type of The woman is walking down the street"
+    ]
+  },
+  "q0646": {
+    "answer": "entailment",
+    "explanation": [
+      "swan is a type of bird",
+      "landing in a lake is a type of being on a lake"
+    ]
+  },
+  "q0647": {
+    "answer": "entailment",
+    "explanation": [
+      "standing on steps in front of a building is a type of standing in front of a building"
+    ]
+  },
+  "q0648": {
+    "answer": "entailment",
+    "explanation": [
+      "holding hands is a type of touching"
+    ]
+  },
+  "q0649": {
+    "answer": "entailment",
+    "explanation": [
+      "A person in a green robe sits on a couch with a blanket is a type of A person in a robe sits on a couch"
+    ]
+  },
+  "q0650": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of boy"
+    ]
+  },
+  "q0651": {
+    "answer": "entailment",
+    "explanation": [
+      "guitar is a type of instrument"
+    ]
+  },
+  "q0652": {
+    "answer": "entailment",
+    "explanation": [
+      "doing street repairs is a type of repairing the streets"
+    ]
+  },
+  "q0653": {
+    "answer": "entailment",
+    "explanation": [
+      "walking her dog in a snowy forest is a type of walking outdoors"
+    ]
+  },
+  "q0654": {
+    "answer": "entailment",
+    "explanation": [
+      "sliding into home in baseball is a type of hoping to score a run"
+    ]
+  },
+  "q0655": {
+    "answer": "entailment",
+    "explanation": [
+      "temple is a type of house of worship"
+    ]
+  },
+  "q0656": {
+    "answer": "entailment",
+    "explanation": [
+      "old woman is a type of woman",
+      "green and blue plaid shirt is a type of plaid shirt"
+    ]
+  },
+  "q0657": {
+    "answer": "entailment",
+    "explanation": [
+      "protesting against unlawful sex is a type of protesting"
+    ]
+  },
+  "q0658": {
+    "answer": "entailment",
+    "explanation": [
+      "wrestling is a type of playing"
+    ]
+  },
+  "q0659": {
+    "answer": "entailment",
+    "explanation": [
+      "conversing is a type of talking"
+    ]
+  },
+  "q0660": {
+    "answer": "entailment",
+    "explanation": [
+      "rescue worker is a type of worker"
+    ]
+  },
+  "q0661": {
+    "answer": "entailment",
+    "explanation": [
+      "laying down on grass near trees is a type of laying outside"
+    ]
+  },
+  "q0662": {
+    "answer": "entailment",
+    "explanation": [
+      "A man pointing into the ear wearing a striped shirt is a type of a man pointing into the ear and wearing a striped shirt"
+    ]
+  },
+  "q0663": {
+    "answer": "entailment",
+    "explanation": [
+      "a fruit market with vegetables in view is a type of a fruit market selling vegetables"
+    ]
+  },
+  "q0664": {
+    "answer": "entailment",
+    "explanation": [
+      "having a view of a river and several boats is a type of being outdoors"
+    ]
+  },
+  "q0665": {
+    "answer": "contradiction",
+    "explanation": [
+      "a man is not necessarily a young man",
+      "a coat is not necessarily a winter jacket",
+      "a tree trunk is not necessarily an oak tree"
+    ]
+  },
+  "q0666": {
+    "answer": "entailment",
+    "explanation": [
+      "bi-plane is a type of airplane",
+      "leaves a trail in the sky is a type of flying"
+    ]
+  },
+  "q0667": {
+    "answer": "entailment",
+    "explanation": [
+      "a man is a type of one other person"
+    ]
+  },
+  "q0668": {
+    "answer": "entailment",
+    "explanation": [
+      "several people is a type of many people",
+      "volleyball is a type of game"
+    ]
+  },
+  "q0669": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of human",
+      "chicken is a type of food",
+      "enjoy food is a type of consume food"
+    ]
+  },
+  "q0670": {
+    "answer": "entailment",
+    "explanation": [
+      "The hypothesis is a verbatim copy of the premise."
+    ]
+  },
+  "q0671": {
+    "answer": "entailment",
+    "explanation": [
+      "train tracks in a large city is a type of outdoors"
+    ]
+  },
+  "q0672": {
+    "answer": "entailment",
+    "explanation": [
+      "small girl is a type of girl"
+    ]
+  },
+  "q0673": {
+    "answer": "entailment",
+    "explanation": [
+      "racing down a track is a type of being on the track"
+    ]
+  },
+  "q0674": {
+    "answer": "entailment",
+    "explanation": [
+      "holding hands is a type of physically touching"
+    ]
+  },
+  "q0675": {
+    "answer": "entailment",
+    "explanation": [
+      "spatula is a type of utensil"
+    ]
+  },
+  "q0676": {
+    "answer": "entailment",
+    "explanation": [
+      "a smooth path is a type of a path"
+    ]
+  },
+  "q0677": {
+    "answer": "entailment",
+    "explanation": [
+      "an airplane that flies is a type of an airplane that is flying"
+    ]
+  },
+  "q0678": {
+    "answer": "entailment",
+    "explanation": [
+      "attempting to break free from a straitjacket is a type of being in a straight jacket"
+    ]
+  },
+  "q0679": {
+    "answer": "entailment",
+    "explanation": [
+      "taking pictures is a type of take pictures"
+    ]
+  },
+  "q0680": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of kid",
+      "at the edge of a public beach is a type of at the beach"
+    ]
+  },
+  "q0681": {
+    "answer": "entailment",
+    "explanation": [
+      "standing in a huge field is a type of being outside"
+    ]
+  },
+  "q0682": {
+    "answer": "entailment",
+    "explanation": [
+      "canoe is a type of boat"
+    ]
+  },
+  "q0683": {
+    "answer": "entailment",
+    "explanation": [
+      "a paddle boat with three people in it is a type of three people sit in a paddle boat"
+    ]
+  },
+  "q0684": {
+    "answer": "entailment",
+    "explanation": [
+      "a girl blows soap bubbles is a type of soap bubbles being blown"
+    ]
+  },
+  "q0685": {
+    "answer": "entailment",
+    "explanation": [
+      "is standing is a type of standing"
+    ]
+  },
+  "q0686": {
+    "answer": "entailment",
+    "explanation": [
+      "lettuce is a type of produce",
+      "local street market is a type of market",
+      "look at is a type of viewing"
+    ]
+  },
+  "q0687": {
+    "answer": "entailment",
+    "explanation": [
+      "Young boy is a type of boy",
+      "man stands behind him is a type of man is behind him"
+    ]
+  },
+  "q0688": {
+    "answer": "contradiction",
+    "explanation": [
+      "looks at is not stares at"
+    ]
+  },
+  "q0689": {
+    "answer": "entailment",
+    "explanation": [
+      "a grassy field surrounded by trees is a type of a grassy field filled with trees"
+    ]
+  },
+  "q0690": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of boy",
+      "playing outside is a type of being outside"
+    ]
+  },
+  "q0691": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of lady",
+      "yarn animals is a type of yarn toys",
+      "holding is a type of has"
+    ]
+  },
+  "q0692": {
+    "answer": "entailment",
+    "explanation": [
+      "backlit by a sunset is a type of silhouetted against a sunset's backdrop"
+    ]
+  },
+  "q0693": {
+    "answer": "entailment",
+    "explanation": [
+      "walking through an airport is a type of being in the airport"
+    ]
+  },
+  "q0155": {
+    "answer": "contradiction",
+    "explanation": [
+      "The person is 'just about to stand up', which is not the same as actively 'water-skiing'"
+    ]
+  },
+  "q0156": {
+    "answer": "entailment",
+    "explanation": [
+      "a lady with a big smile is a type of happy lady",
+      "a bright red scarf is a type of colorful clothing"
+    ]
+  },
+  "q0157": {
+    "answer": "entailment",
+    "explanation": [
+      "The little dog walking on the grass has a red bow in its hair is a type of The dog is walking on the grass"
+    ]
+  },
+  "q0158": {
+    "answer": "entailment",
+    "explanation": [
+      "sorts through Hawaiian style shirts in a department store is a type of shopping at the department store"
+    ]
+  },
+  "q0159": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person"
+    ]
+  },
+  "q0160": {
+    "answer": "entailment",
+    "explanation": [
+      "Someone is a type of person",
+      "caution tape on a street is a type of caution area"
+    ]
+  },
+  "q0161": {
+    "answer": "entailment",
+    "explanation": [
+      "gentleman is a type of man",
+      "overlooking is a type of looks at"
+    ]
+  },
+  "q0162": {
+    "answer": "entailment",
+    "explanation": [
+      "a large group of people is a type of large group"
+    ]
+  },
+  "q0163": {
+    "answer": "entailment",
+    "explanation": [
+      "Two boys wearing colorful winter hats and dark coats are riding bikes is a type of Two boys are riding bikes"
+    ]
+  },
+  "q0164": {
+    "answer": "entailment",
+    "explanation": [
+      "straps is a type of secures"
+    ]
+  },
+  "q0165": {
+    "answer": "entailment",
+    "explanation": [
+      "peace corp workers is a type of people",
+      "kid is a type of child"
+    ]
+  },
+  "q0166": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping over a rusty fence on a blue bicycle is a type of doing a trick riding his bicycle"
+    ]
+  },
+  "q0167": {
+    "answer": "entailment",
+    "explanation": [
+      "pulls weeds is a type of gardening"
+    ]
+  },
+  "q0168": {
+    "answer": "entailment",
+    "explanation": [
+      "waving at the camera is a type of waved at the camera"
+    ]
+  },
+  "q0169": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise describes a normal scene, which implies a functioning clock, which contradicts the hypothesis that implies a broken clock (a clock that is only accurate twice a day)"
+    ]
+  },
+  "q0170": {
+    "answer": "entailment",
+    "explanation": [
+      "rock climber is a type of climber"
+    ]
+  },
+  "q0171": {
+    "answer": "entailment",
+    "explanation": [
+      "Mountain biking is a type of Bicycling",
+      "forest is a type of woods",
+      "early fall is a type of Autumn"
+    ]
+  },
+  "q0172": {
+    "answer": "entailment",
+    "explanation": [
+      "ragged costume is a type of disheveled outfit",
+      "Jaguar electric guitar is a type of guitar"
+    ]
+  },
+  "q0173": {
+    "answer": "entailment",
+    "explanation": [
+      "Two little girls and one little boy is a type of Three kids"
+    ]
+  },
+  "q0174": {
+    "answer": "entailment",
+    "explanation": [
+      "does a handstand in a pool is a type of playing in a pool"
+    ]
+  },
+  "q0175": {
+    "answer": "entailment",
+    "explanation": [
+      "rollerblading on the street is a type of moving across the pavement"
+    ]
+  },
+  "q0176": {
+    "answer": "entailment",
+    "explanation": [
+      "dancing in a park is a type of being outside"
+    ]
+  },
+  "q0177": {
+    "answer": "entailment",
+    "explanation": [
+      "plays in the ocean's waves is a type of being outdoors"
+    ]
+  },
+  "q0178": {
+    "answer": "entailment",
+    "explanation": [
+      "obese white male is a type of man",
+      "gabbing on phone is a type of talking on his phone",
+      "sits in front of fountain is a type of being outside"
+    ]
+  },
+  "q0251": {
+    "answer": "entailment",
+    "explanation": [
+      "carrying a bag on his head is a type of carrying a bag"
+    ]
+  },
+  "q0252": {
+    "answer": "entailment",
+    "explanation": [
+      "woods is a type of outside"
+    ]
+  },
+  "q0253": {
+    "answer": "entailment",
+    "explanation": [
+      "A well safety equipment biker racing on the trail is a type of A biker races on the trail"
+    ]
+  },
+  "q0254": {
+    "answer": "entailment",
+    "explanation": [
+      "trolley car in a city is a type of trolley making it's way through a city"
+    ]
+  },
+  "q0255": {
+    "answer": "entailment",
+    "explanation": [
+      "bicyclists is a type of humans",
+      "spandex is a type of tight clothing",
+      "in a race is a type of competing with each other"
+    ]
+  },
+  "q0256": {
+    "answer": "entailment",
+    "explanation": [
+      "in front of a building is a type of outside"
+    ]
+  },
+  "q0257": {
+    "answer": "entailment",
+    "explanation": [
+      "dolphin is a type of animal"
+    ]
+  },
+  "q0258": {
+    "answer": "entailment",
+    "explanation": [
+      "cooking something in a frying pan is a type of cooks food"
+    ]
+  },
+  "q0259": {
+    "answer": "entailment",
+    "explanation": [
+      "drinking a coupe of Red Stripe beers is a type of drinking beers"
+    ]
+  },
+  "q0260": {
+    "answer": "entailment",
+    "explanation": [
+      "A man in a green apron smiles behind a food stand is a type of A man smiles"
+    ]
+  },
+  "q0261": {
+    "answer": "entailment",
+    "explanation": [
+      "classwork is a type of work"
+    ]
+  },
+  "q0262": {
+    "answer": "contradiction",
+    "explanation": [
+      "toy lawn mower is not lawn mower"
+    ]
+  },
+  "q0263": {
+    "answer": "entailment",
+    "explanation": [
+      "working together to empty the barrel of its contents is a type of emptying a barrel"
+    ]
+  },
+  "q0264": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal",
+      "in the snow is a type of outside in the cold weather",
+      "Frisbee is a type of plastic toy"
+    ]
+  },
+  "q0265": {
+    "answer": "entailment",
+    "explanation": [
+      "in a blue shirt is a type of wearing a blue shirt"
+    ]
+  },
+  "q0266": {
+    "answer": "entailment",
+    "explanation": [
+      "hair tied back is a type of wearing her hair up"
+    ]
+  },
+  "q0267": {
+    "answer": "entailment",
+    "explanation": [
+      "in the streets is a type of outside"
+    ]
+  },
+  "q0268": {
+    "answer": "entailment",
+    "explanation": [
+      "wood-paneled room is a type of room made of wood panels",
+      "handling a crossbow is a type of holds a crossbow"
+    ]
+  },
+  "q0269": {
+    "answer": "entailment",
+    "explanation": [
+      "brick road is a type of road"
+    ]
+  },
+  "q0270": {
+    "answer": "entailment",
+    "explanation": [
+      "boy is a type of human",
+      "riding on a carnival ride is a type of riding"
+    ]
+  },
+  "q0271": {
+    "answer": "entailment",
+    "explanation": [
+      "holding up a white dress is a type of holds a dress"
+    ]
+  },
+  "q0272": {
+    "answer": "entailment",
+    "explanation": [
+      "poodle is a type of dog",
+      "running on the grass with a toy in its mouth is a type of playing outside"
+    ]
+  },
+  "q0273": {
+    "answer": "entailment",
+    "explanation": [
+      "working together to plant flowers is a type of planting flowers"
+    ]
+  },
+  "q0274": {
+    "answer": "entailment",
+    "explanation": [
+      "being carried in a parade is a type of in the parade"
+    ]
+  },
+  "q0275": {
+    "answer": "entailment",
+    "explanation": [
+      "dogs is a type of canines",
+      "playing together is a type of having fun"
+    ]
+  },
+  "q0276": {
+    "answer": "entailment",
+    "explanation": [
+      "lifting a girl in blue to the top of a wall is a type of lifting the other girl"
+    ]
+  },
+  "q0277": {
+    "answer": "contradiction",
+    "explanation": [
+      "a fallen leaf is not a pile of leaves"
+    ]
+  },
+  "q0278": {
+    "answer": "entailment",
+    "explanation": [
+      "little boy is a type of boy"
+    ]
+  },
+  "q0279": {
+    "answer": "entailment",
+    "explanation": [
+      "chopsticks is a type of object",
+      "holding is a type of touching"
+    ]
+  },
+  "q0280": {
+    "answer": "entailment",
+    "explanation": [
+      "a pitcher heaving a ball toward a catcher is a type of playing a game"
+    ]
+  },
+  "q0281": {
+    "answer": "entailment",
+    "explanation": [
+      "standing in front of a wall on the pavement is a type of stands by a wall outside"
+    ]
+  },
+  "q0282": {
+    "answer": "entailment",
+    "explanation": [
+      "football player is a type of player"
+    ]
+  },
+  "q0283": {
+    "answer": "entailment",
+    "explanation": [
+      "A young, well-dressed black man seated behind a drum set and smiling is a type of a man is smiling"
+    ]
+  },
+  "q0284": {
+    "answer": "entailment",
+    "explanation": [
+      "laying tile is a type of repair",
+      "two boys is a type of some boys"
+    ]
+  },
+  "q0285": {
+    "answer": "entailment",
+    "explanation": [
+      "white egyptian costume is a type of costume"
+    ]
+  },
+  "q0286": {
+    "answer": "entailment",
+    "explanation": [
+      "looking something is a type of looking"
+    ]
+  },
+  "q0287": {
+    "answer": "entailment",
+    "explanation": [
+      "closes in on its prey is a type of preying"
+    ]
+  },
+  "q0288": {
+    "answer": "contradiction",
+    "explanation": [
+      "couples (plural) is not a man and woman (one couple) plus a third person"
+    ]
+  },
+  "q0289": {
+    "answer": "entailment",
+    "explanation": [
+      "wooden airplane is a type of toy airplane",
+      "holds is a type of playing with"
+    ]
+  },
+  "q0290": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of boy",
+      "sky blue building is a type of building"
+    ]
+  },
+  "q0291": {
+    "answer": "entailment",
+    "explanation": [
+      "asian woman is a type of woman",
+      "sitting outside an outdoor market stall is a type of sits outdoors"
+    ]
+  },
+  "q0292": {
+    "answer": "entailment",
+    "explanation": [
+      "audience is a type of crowd",
+      "trying to catch a glimpse of her proud parents is a type of scanning for familiar faces"
+    ]
+  },
+  "q0293": {
+    "answer": "entailment",
+    "explanation": [
+      "dozens is a type of many",
+      "street performers is a type of performers",
+      "outfits is a type of costumes",
+      "dancing and singing is a type of entertaining"
+    ]
+  },
+  "q0294": {
+    "answer": "entailment",
+    "explanation": [
+      "cobblestone street is a type of stone street"
+    ]
+  },
+  "q0295": {
+    "answer": "entailment",
+    "explanation": [
+      "A little boy is sitting on a giraffe bouncy is a type of The boy is sitting"
+    ]
+  },
+  "q0296": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise does not state the greyhounds are big"
+    ]
+  },
+  "q0297": {
+    "answer": "entailment",
+    "explanation": [
+      "shows you children how to dance is a type of teaching kids ballet",
+      "children is a type of kids"
+    ]
+  },
+  "q0298": {
+    "answer": "entailment",
+    "explanation": [
+      "being coached on bar skills is a type of training"
+    ]
+  },
+  "q0371": {
+    "answer": "entailment",
+    "explanation": [
+      "young redheaded woman is a type of redheaded woman"
+    ]
+  },
+  "q0372": {
+    "answer": "entailment",
+    "explanation": [
+      "small child is a type of child"
+    ]
+  },
+  "q0373": {
+    "answer": "entailment",
+    "explanation": [
+      "campfire is a type of fire"
+    ]
+  },
+  "q0374": {
+    "answer": "contradiction",
+    "explanation": [
+      "green is not white"
+    ]
+  },
+  "q0375": {
+    "answer": "entailment",
+    "explanation": [
+      "down a street is a type of outside"
+    ]
+  },
+  "q0376": {
+    "answer": "entailment",
+    "explanation": [
+      "Two girls is a type of girls"
+    ]
+  },
+  "q0377": {
+    "answer": "entailment",
+    "explanation": [
+      "team is a type of people"
+    ]
+  },
+  "q0378": {
+    "answer": "entailment",
+    "explanation": [
+      "asian women is a type of women"
+    ]
+  },
+  "q0379": {
+    "answer": "entailment",
+    "explanation": [
+      "Woman wearing an orange scarf holding a cellphone is a type of woman holding a cellphone"
+    ]
+  },
+  "q0380": {
+    "answer": "entailment",
+    "explanation": [
+      "young girl is a type of small child",
+      "infant boy is a type of small boy"
+    ]
+  },
+  "q0381": {
+    "answer": "entailment",
+    "explanation": [
+      "white man is a type of Caucasian man",
+      "fashioned his hair into a mohawk hairstyle using soap suds is a type of plays with his hair"
+    ]
+  },
+  "q0382": {
+    "answer": "contradiction",
+    "explanation": [
+      "pillar is not wall"
+    ]
+  },
+  "q0383": {
+    "answer": "entailment",
+    "explanation": [
+      "sitting astride is a type of sits on",
+      "red motorcycle is a type of motorcycle"
+    ]
+  },
+  "q0384": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise can describe an indoor scene, which contradicts being outside."
+    ]
+  },
+  "q0385": {
+    "answer": "entailment",
+    "explanation": [
+      "listening to headphones is a type of listens to music",
+      "stands in the subway is a type of waiting for the train"
+    ]
+  },
+  "q0001": {
+    "answer": "entailment",
+    "explanation": [
+      "blond boy is a type of boy"
+    ]
+  },
+  "q0002": {
+    "answer": "entailment",
+    "explanation": [
+      "young man is a type of person"
+    ]
+  },
+  "q0003": {
+    "answer": "entailment",
+    "explanation": [
+      "Ample dark-skinned man is a type of man"
+    ]
+  },
+  "q0004": {
+    "answer": "entailment",
+    "explanation": [
+      "photo is taken is a type of getting their picture taken"
+    ]
+  },
+  "q0005": {
+    "answer": "entailment",
+    "explanation": [
+      "tennis ball is a type of ball",
+      "a field is a type of outside"
+    ]
+  },
+  "q0006": {
+    "answer": "entailment",
+    "explanation": [
+      "rocky beach is a type of beach"
+    ]
+  },
+  "q0007": {
+    "answer": "entailment",
+    "explanation": [
+      "in a car dealership is a type of at a car dealership"
+    ]
+  },
+  "q0008": {
+    "answer": "entailment",
+    "explanation": [
+      "running through a field is a type of running"
+    ]
+  },
+  "q0009": {
+    "answer": "entailment",
+    "explanation": [
+      "flying through the air is a type of in the air"
+    ]
+  },
+  "q0010": {
+    "answer": "entailment",
+    "explanation": [
+      "building under construction is a type of construction site"
+    ]
+  },
+  "q0011": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of kid",
+      "goggles is a type of eye protection",
+      "pool is a type of in the water"
+    ]
+  },
+  "q0012": {
+    "answer": "entailment",
+    "explanation": [
+      "leaps is a type of jumps",
+      "hurdle is a type of obstacel"
+    ]
+  },
+  "q0013": {
+    "answer": "entailment",
+    "explanation": [
+      "engraves Arabic writing into a stone is a type of engraving into a stone"
+    ]
+  },
+  "q0014": {
+    "answer": "entailment",
+    "explanation": [
+      "fruit platter is a type of food"
+    ]
+  },
+  "q0015": {
+    "answer": "entailment",
+    "explanation": [
+      "brown and white dog is a type of brown dog"
+    ]
+  },
+  "q0016": {
+    "answer": "entailment",
+    "explanation": [
+      "talking on a phone is a type of talking to someone"
+    ]
+  },
+  "q0017": {
+    "answer": "entailment",
+    "explanation": [
+      "A boy wearing jeans, standing on rocks in a river and throwing a stone is a type of a boy throwing a stone"
+    ]
+  },
+  "q0018": {
+    "answer": "entailment",
+    "explanation": [
+      "a large crowd is behind them is a type of in front of a large crowd"
+    ]
+  },
+  "q0019": {
+    "answer": "entailment",
+    "explanation": [
+      "little white curly-haired dog is a type of dog"
+    ]
+  },
+  "q0020": {
+    "answer": "entailment",
+    "explanation": [
+      "Asian woman is a type of woman",
+      "younger Asian boy is a type of child"
+    ]
+  },
+  "q0021": {
+    "answer": "entailment",
+    "explanation": [
+      "young couple is a type of couple"
+    ]
+  },
+  "q0022": {
+    "answer": "entailment",
+    "explanation": [
+      "Eastern vendor is a type of vendor"
+    ]
+  },
+  "q0023": {
+    "answer": "entailment",
+    "explanation": [
+      "walking by a fence is a type of going for a walk"
+    ]
+  },
+  "q0024": {
+    "answer": "entailment",
+    "explanation": [
+      "Bud Light is a type of something alcoholic"
+    ]
+  },
+  "q0025": {
+    "answer": "entailment",
+    "explanation": [
+      "standing behind a large pile of fruits is a type of stands near some fruit"
+    ]
+  },
+  "q0026": {
+    "answer": "entailment",
+    "explanation": [
+      "adults is a type of people",
+      "at the edge of the water is a type of near water"
+    ]
+  },
+  "q0027": {
+    "answer": "entailment",
+    "explanation": [
+      "practicing kicking is a type of excercizing"
+    ]
+  },
+  "q0028": {
+    "answer": "entailment",
+    "explanation": [
+      "rope bridge is a type of bridge"
+    ]
+  },
+  "q0029": {
+    "answer": "entailment",
+    "explanation": [
+      "chocolate milk powder is a type of food"
+    ]
+  },
+  "q0030": {
+    "answer": "entailment",
+    "explanation": [
+      "white building is a type of building"
+    ]
+  },
+  "q0031": {
+    "answer": "entailment",
+    "explanation": [
+      "very young child is a type of child"
+    ]
+  },
+  "q0032": {
+    "answer": "entailment",
+    "explanation": [
+      "bicycle helmet is a type of helmet",
+      "dog tag necklace is a type of dog tag"
+    ]
+  },
+  "q0033": {
+    "answer": "entailment",
+    "explanation": [
+      "men is a type of males",
+      "laughing together is a type of socializing",
+      "baseball caps and logo t-shirts is a type of casual clothes"
+    ]
+  },
+  "q0034": {
+    "answer": "entailment",
+    "explanation": [
+      "lady is a type of woman",
+      "singing is a type of making music"
+    ]
+  },
+  "q0035": {
+    "answer": "entailment",
+    "explanation": [
+      "man in the sailor suit is a type of man"
+    ]
+  },
+  "q0036": {
+    "answer": "entailment",
+    "explanation": [
+      "videotaping a specimen is a type of recording her research"
+    ]
+  },
+  "q0037": {
+    "answer": "entailment",
+    "explanation": [
+      "sits in a chair under a tree and plays an acoustic guitar is a type of plays an acoustic guitar under a tree"
+    ]
+  },
+  "q0038": {
+    "answer": "entailment",
+    "explanation": [
+      "on a tree lined street is a type of outdoors"
+    ]
+  },
+  "q0039": {
+    "answer": "entailment",
+    "explanation": [
+      "guy is a type of man"
+    ]
+  },
+  "q0040": {
+    "answer": "entailment",
+    "explanation": [
+      "stands by two face structures on Easter Island is a type of on Easter Island"
+    ]
+  },
+  "q0041": {
+    "answer": "entailment",
+    "explanation": [
+      "in the street is a type of outside"
+    ]
+  },
+  "q0042": {
+    "answer": "entailment",
+    "explanation": [
+      "Chevy van is a type of van"
+    ]
+  },
+  "q0043": {
+    "answer": "entailment",
+    "explanation": [
+      "petting is a type of playing with"
+    ]
+  },
+  "q0044": {
+    "answer": "entailment",
+    "explanation": [
+      "on a rocky hillside is a type of outside"
+    ]
+  },
+  "q0045": {
+    "answer": "contradiction",
+    "explanation": [
+      "The premise does not specify the man's hair color, so he is not necessarily dark headed"
+    ]
+  },
+  "q0046": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal",
+      "in front of grassy forest is a type of outdoors"
+    ]
+  },
+  "q0047": {
+    "answer": "entailment",
+    "explanation": [
+      "A man in a black hoodie watching a man in a red cap is a type of a man watching another man"
+    ]
+  },
+  "q0048": {
+    "answer": "entailment",
+    "explanation": [
+      "skateboarding and riding a bike implies being outside"
+    ]
+  },
+  "q0049": {
+    "answer": "entailment",
+    "explanation": [
+      "image is a type of picture"
+    ]
+  },
+  "q0050": {
+    "answer": "entailment",
+    "explanation": [
+      "shepherd breed dog is a type of dog",
+      "running on the beach is a type of running around"
+    ]
+  },
+  "q0051": {
+    "answer": "entailment",
+    "explanation": [
+      "red work man's hat and red jacket is a type of outdoor clothes"
+    ]
+  },
+  "q0052": {
+    "answer": "entailment",
+    "explanation": [
+      "people driving the ... car were nearly hit is a type of car was nearly hit"
+    ]
+  },
+  "q0053": {
+    "answer": "entailment",
+    "explanation": [
+      "street rally is a type of in a street"
+    ]
+  },
+  "q0054": {
+    "answer": "entailment",
+    "explanation": [
+      "dark-haired girl is a type of girl"
+    ]
+  },
+  "q0055": {
+    "answer": "entailment",
+    "explanation": [
+      "oriental lizards is a type of lizards"
+    ]
+  },
+  "q0056": {
+    "answer": "entailment",
+    "explanation": [
+      "elderly man is a type of man",
+      "according key bored is a type of instrument"
+    ]
+  },
+  "q0057": {
+    "answer": "contradiction",
+    "explanation": [
+      "trying to make is not making",
+      "the premise does not state the man is old"
+    ]
+  },
+  "q0058": {
+    "answer": "entailment",
+    "explanation": [
+      "picked food is a type of food"
+    ]
+  },
+  "q0059": {
+    "answer": "entailment",
+    "explanation": [
+      "standing is a type of not sitting"
+    ]
+  },
+  "q0060": {
+    "answer": "entailment",
+    "explanation": [
+      "noise-canceling headphones is a type of headphones"
+    ]
+  },
+  "q0061": {
+    "answer": "entailment",
+    "explanation": [
+      "shoveling snow is a type of working in the snow"
+    ]
+  },
+  "q0062": {
+    "answer": "entailment",
+    "explanation": [
+      "playfully kicks is a type of play fighting"
+    ]
+  },
+  "q0063": {
+    "answer": "entailment",
+    "explanation": [
+      "boys is a type of persons",
+      "holding red kites with water in the background is a type of outdoor recreation"
+    ]
+  },
+  "q0064": {
+    "answer": "entailment",
+    "explanation": [
+      "Coed choir is a type of choir"
+    ]
+  },
+  "q0065": {
+    "answer": "entailment",
+    "explanation": [
+      "Asian woman is a type of person"
+    ]
+  },
+  "q0066": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "runs is a type of jogging",
+      "beach is a type of shore"
+    ]
+  },
+  "q0067": {
+    "answer": "entailment",
+    "explanation": [
+      "A man wearing a hat and carrying a bag is a type of a man carrying a bag"
+    ]
+  },
+  "q0068": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of person",
+      "held by a woman is a type of in a person's arms"
+    ]
+  },
+  "q0069": {
+    "answer": "entailment",
+    "explanation": [
+      "golden colored flowers is a type of flowers"
+    ]
+  },
+  "q0070": {
+    "answer": "entailment",
+    "explanation": [
+      "People are shopping outside surrounded by a metal fence is a type of people are shopping"
+    ]
+  },
+  "q0071": {
+    "answer": "entailment",
+    "explanation": [
+      "looks off to her left is a type of looks to her left"
+    ]
+  },
+  "q0072": {
+    "answer": "entailment",
+    "explanation": [
+      "blue apron and long rubber boots is a type of work clothes and boots",
+      "dragging a flotation device is a type of working on a flotation device"
+    ]
+  },
+  "q0073": {
+    "answer": "entailment",
+    "explanation": [
+      "greyhounds is a type of dogs"
+    ]
+  },
+  "q0074": {
+    "answer": "entailment",
+    "explanation": [
+      "ribbon dancer is a type of dancer",
+      "leaping through the air... during a competition is a type of performs"
+    ]
+  },
+  "q0075": {
+    "answer": "entailment",
+    "explanation": [
+      "ball cap is a type of hat",
+      "cracked earth is a type of ground"
+    ]
+  },
+  "q0076": {
+    "answer": "entailment",
+    "explanation": [
+      "cake made of Peeps is a type of cake"
+    ]
+  },
+  "q0077": {
+    "answer": "entailment",
+    "explanation": [
+      "white dog with brown ears is a type of dog",
+      "gravel path is a type of path"
+    ]
+  },
+  "q0463": {
+    "answer": "entailment",
+    "explanation": [
+      "white t-shirts is a type of shirts"
+    ]
+  },
+  "q0464": {
+    "answer": "entailment",
+    "explanation": [
+      "little girl is a type of girl",
+      "tan sundress is a type of dress",
+      "bouquet of flowers is a type of flowers"
+    ]
+  },
+  "q0465": {
+    "answer": "contradiction",
+    "explanation": [
+      "boats is not a boat"
+    ]
+  },
+  "q0466": {
+    "answer": "entailment",
+    "explanation": [
+      "skateboard ramp is a type of ramp"
+    ]
+  },
+  "q0467": {
+    "answer": "entailment",
+    "explanation": [
+      "red toy is a type of toy"
+    ]
+  },
+  "q0468": {
+    "answer": "contradiction",
+    "explanation": [
+      "moves his bicycle is not riding around on his bicycle"
+    ]
+  },
+  "q0469": {
+    "answer": "entailment",
+    "explanation": [
+      "middle-age women is a type of women"
+    ]
+  },
+  "q0470": {
+    "answer": "entailment",
+    "explanation": [
+      "woman in an red tracksuit squeezing lemons in a press is a type of woman squeezing lemons"
+    ]
+  },
+  "q0471": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of lady",
+      "photo album is a type of book"
+    ]
+  },
+  "q0472": {
+    "answer": "entailment",
+    "explanation": [
+      "dollar sign glasses, a dollar bill, and a suitcase overflowing with cash is a type of riches",
+      "woman wearing dollar sign glasses is a type of elaborately dressed woman"
+    ]
+  },
+  "q0473": {
+    "answer": "contradiction",
+    "explanation": [
+      "dribbling down court is not going on the court"
+    ]
+  },
+  "q0474": {
+    "answer": "entailment",
+    "explanation": [
+      "splashing in a pool is a type of activity that makes one wet"
+    ]
+  },
+  "q0475": {
+    "answer": "entailment",
+    "explanation": [
+      "light blue robe-style jacket is a type of jacket",
+      "street corner is a type of street"
+    ]
+  },
+  "q0476": {
+    "answer": "entailment",
+    "explanation": [
+      "trying to block another man from shooting the ball is a type of being near the ball"
+    ]
+  },
+  "q0477": {
+    "answer": "entailment",
+    "explanation": [
+      "doing a trick with his skateboard is a type of rides a skateboard"
+    ]
+  },
+  "q0478": {
+    "answer": "entailment",
+    "explanation": [
+      "A man with a black hat, a pair of glasses, and a long white beard is a type of man"
+    ]
+  },
+  "q0479": {
+    "answer": "entailment",
+    "explanation": [
+      "welds is a type of working"
+    ]
+  },
+  "q0480": {
+    "answer": "entailment",
+    "explanation": [
+      "aqua-colored cake is a type of cake"
+    ]
+  },
+  "q0481": {
+    "answer": "entailment",
+    "explanation": [
+      "walking in the forest is a type of walking"
+    ]
+  },
+  "q0482": {
+    "answer": "entailment",
+    "explanation": [
+      "working on electrical equipment is a type of working"
+    ]
+  },
+  "q0483": {
+    "answer": "entailment",
+    "explanation": [
+      "construction worker is a type of worker",
+      "the word 'hot' is a type of writing"
+    ]
+  },
+  "q0484": {
+    "answer": "entailment",
+    "explanation": [
+      "A poor family is leaving their home with only a few belongings is a type of a family leaves their home"
+    ]
+  },
+  "q0485": {
+    "answer": "contradiction",
+    "explanation": [
+      "black is not light black"
+    ]
+  },
+  "q0486": {
+    "answer": "entailment",
+    "explanation": [
+      "older man is a type of man"
+    ]
+  },
+  "q0487": {
+    "answer": "entailment",
+    "explanation": [
+      "young boy is a type of boy",
+      "blue pajamas is a type of pajamas",
+      "leaping into the air is a type of jumping"
+    ]
+  },
+  "q0488": {
+    "answer": "entailment",
+    "explanation": [
+      "blond woman is a type of person",
+      "blue and pink floral tie-front bikini is a type of bikini"
+    ]
+  },
+  "q0489": {
+    "answer": "entailment",
+    "explanation": [
+      "saxophone is a type of woodwind instrument"
+    ]
+  },
+  "q0490": {
+    "answer": "contradiction",
+    "explanation": [
+      "another girl sits is not standing"
+    ]
+  },
+  "q0491": {
+    "answer": "entailment",
+    "explanation": [
+      "narrow alley is a type of alley"
+    ]
+  },
+  "q0492": {
+    "answer": "entailment",
+    "explanation": [
+      "walking on a pipe that stretches over water is a type of walking outside"
+    ]
+  },
+  "q0493": {
+    "answer": "entailment",
+    "explanation": [
+      "harp is a type of instrument"
+    ]
+  },
+  "q0494": {
+    "answer": "entailment",
+    "explanation": [
+      "grilling is a type of cooking"
+    ]
+  },
+  "q0495": {
+    "answer": "entailment",
+    "explanation": [
+      "looking at something is a type of sees something"
+    ]
+  },
+  "q0496": {
+    "answer": "entailment",
+    "explanation": [
+      "male in a black hat is a type of male in a hat"
+    ]
+  },
+  "q0497": {
+    "answer": "entailment",
+    "explanation": [
+      "rusty yellow car driving down the street is a type of car drives on a street"
+    ]
+  },
+  "q0498": {
+    "answer": "entailment",
+    "explanation": [
+      "apple laptop is a type of computer"
+    ]
+  },
+  "q0499": {
+    "answer": "contradiction",
+    "explanation": [
+      "a woman is not women"
+    ]
+  },
+  "q0500": {
+    "answer": "entailment",
+    "explanation": [
+      "wandering is a type of walking"
+    ]
+  },
+  "q0501": {
+    "answer": "entailment",
+    "explanation": [
+      "Three women is a type of More than one person",
+      "water is a type of liquid",
+      "kicking their feet in the water is a type of touching a liquid"
+    ]
+  },
+  "q0502": {
+    "answer": "entailment",
+    "explanation": [
+      "A single man in a blue t-shirt, jeans, and a baseball cap works on a roof of a house laying shingles is a type of A single man in a blue t-shirt, jeans and a baseball cap wors on a roof of a house laying shingles"
+    ]
+  },
+  "q0503": {
+    "answer": "entailment",
+    "explanation": [
+      "flips his food into the air with his frying pan is a type of using a frying pan"
+    ]
+  },
+  "q0504": {
+    "answer": "entailment",
+    "explanation": [
+      "newspapers is a type of paper"
+    ]
+  },
+  "q0505": {
+    "answer": "entailment",
+    "explanation": [
+      "lowering ballast on a boat is a type of adjusting the boat"
+    ]
+  },
+  "q0506": {
+    "answer": "entailment",
+    "explanation": [
+      "Players from two opposing teams wearing colorful cleats struggle to gain control over a ball on an AstroTurf field is a type of playing a sport"
+    ]
+  },
+  "q0507": {
+    "answer": "contradiction",
+    "explanation": [
+      "grassy field is not her newly cut lawn"
+    ]
+  },
+  "q0508": {
+    "answer": "entailment",
+    "explanation": [
+      "returning a hit with her tennis racket is a type of playing sports"
+    ]
+  },
+  "q0509": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping with a toy in his mouth is a type of playing"
+    ]
+  },
+  "q0510": {
+    "answer": "entailment",
+    "explanation": [
+      "Riot police is a type of police"
+    ]
+  },
+  "q0511": {
+    "answer": "entailment",
+    "explanation": [
+      "A white race dog runs is a type of A dog is running"
+    ]
+  },
+  "q0512": {
+    "answer": "entailment",
+    "explanation": [
+      "skater is a type of skateboarder",
+      "performs a stunt is a type of displaying their skills"
+    ]
+  },
+  "q0513": {
+    "answer": "entailment",
+    "explanation": [
+      "boulder is a type of rock"
+    ]
+  },
+  "q0514": {
+    "answer": "entailment",
+    "explanation": [
+      "cleaning the fallen snow on the roof of his car is a type of cleaning off his car"
+    ]
+  },
+  "q0515": {
+    "answer": "entailment",
+    "explanation": [
+      "Person with umbrella observes flooded streets is a type of person is outside"
+    ]
+  },
+  "q0516": {
+    "answer": "entailment",
+    "explanation": [
+      "standing on green grass is a type of standing outside"
+    ]
+  },
+  "q0517": {
+    "answer": "entailment",
+    "explanation": [
+      "holds onto a rope above the water is a type of being above some water"
+    ]
+  },
+  "q0518": {
+    "answer": "entailment",
+    "explanation": [
+      "nighttime street is a type of street"
+    ]
+  },
+  "q0519": {
+    "answer": "entailment",
+    "explanation": [
+      "cheer is a type of celebrate",
+      "bicyclist is a type of athlete",
+      "rides his bike off a ramp is a type of performs tricks"
+    ]
+  },
+  "q0520": {
+    "answer": "entailment",
+    "explanation": [
+      "A girl wearing a teal shirt smiles while holding a piece of paper is a type of A girl holds a piece of paper"
+    ]
+  },
+  "q0521": {
+    "answer": "entailment",
+    "explanation": [
+      "looking over a bicycle's rear wheel in the maintenance garage is a type of repairs bicycles"
+    ]
+  },
+  "q0522": {
+    "answer": "entailment",
+    "explanation": [
+      "dog is a type of animal"
+    ]
+  },
+  "q0523": {
+    "answer": "entailment",
+    "explanation": [
+      "red makeup is a type of makeup"
+    ]
+  },
+  "q0524": {
+    "answer": "entailment",
+    "explanation": [
+      "subway train is a type of train"
+    ]
+  },
+  "q0525": {
+    "answer": "entailment",
+    "explanation": [
+      "woman is a type of female",
+      "man is a type of male",
+      "talks to is a type of talking to each other"
+    ]
+  },
+  "q0526": {
+    "answer": "entailment",
+    "explanation": [
+      "walking across the street is a type of being outside"
+    ]
+  },
+  "q0527": {
+    "answer": "entailment",
+    "explanation": [
+      "A lady in the kitchen cleaning her feet on a chopping board with a red towel, or red apron, with her husband standing there is a type of A lady in the kitchen cleans her feet"
+    ]
+  },
+  "q0528": {
+    "answer": "entailment",
+    "explanation": [
+      "dirt racetrack is a type of dirt track"
+    ]
+  },
+  "q0529": {
+    "answer": "entailment",
+    "explanation": [
+      "smiles is a type of smiling"
+    ]
+  },
+  "q0530": {
+    "answer": "entailment",
+    "explanation": [
+      "black t-shirt is a type of black shirt"
+    ]
+  },
+  "q0531": {
+    "answer": "entailment",
+    "explanation": [
+      "rollerskaters is a type of people",
+      "skate is a type of rollerskating"
+    ]
+  },
+  "q0532": {
+    "answer": "entailment",
+    "explanation": [
+      "hugs is a type of embraced"
+    ]
+  },
+  "q0533": {
+    "answer": "entailment",
+    "explanation": [
+      "yellow necktie is a type of tie"
+    ]
+  },
+  "q0534": {
+    "answer": "entailment",
+    "explanation": [
+      "Three men is a type of Men",
+      "mountain bikes is a type of bikes"
+    ]
+  },
+  "q0535": {
+    "answer": "entailment",
+    "explanation": [
+      "lying in snow beside a red plastic sled is a type of playing in the snow"
+    ]
+  },
+  "q0536": {
+    "answer": "entailment",
+    "explanation": [
+      "playing in the sandy water is a type of being in the water"
+    ]
+  },
+  "q0537": {
+    "answer": "entailment",
+    "explanation": [
+      "A man in a black coat eats a doughnut while other men look out of frame is a type of A man in a black coat eats a doughnut"
+    ]
+  },
+  "q0538": {
+    "answer": "entailment",
+    "explanation": [
+      "hoodie, pants, and athletic shoes is a type of relaxed clothing",
+      "sitting on a red lounge chair is a type of lounging in a chair",
+      "hi-def tv is a type of tv"
+    ]
+  },
+  "q0539": {
+    "answer": "entailment",
+    "explanation": [
+      "little girls is a type of girls",
+      "ride an inflatable dinghy down a purple water slide is a type of being on a water slide"
+    ]
+  },
+  "q0203": {
+    "answer": "entailment",
+    "explanation": [
+      "attempts to descend a tree is a type of climbing down a tree"
+    ]
+  },
+  "q0204": {
+    "answer": "entailment",
+    "explanation": [
+      "the shallows of a large body of water is a type of water"
+    ]
+  },
+  "q0205": {
+    "answer": "entailment",
+    "explanation": [
+      "running through a flowered field is a type of in the field"
+    ]
+  },
+  "q0206": {
+    "answer": "entailment",
+    "explanation": [
+      "crouching on the banks of a river while washing dishes is a type of washes dishes"
+    ]
+  },
+  "q0207": {
+    "answer": "entailment",
+    "explanation": [
+      "shopper is a type of person",
+      "cat food is a type of pet food",
+      "Walmart is a type of store"
+    ]
+  },
+  "q0208": {
+    "answer": "entailment",
+    "explanation": [
+      "trimming is a type of cuts",
+      "asparagus is a type of vegetables"
+    ]
+  },
+  "q0209": {
+    "answer": "entailment",
+    "explanation": [
+      "baseball cap is a type of hat"
+    ]
+  },
+  "q0210": {
+    "answer": "entailment",
+    "explanation": [
+      "does a jump trick is a type of did a trick"
+    ]
+  },
+  "q0211": {
+    "answer": "entailment",
+    "explanation": [
+      "large piece of white paper is a type of paper"
+    ]
+  },
+  "q0212": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping over a red and white bar is a type of in the air"
+    ]
+  },
+  "q0213": {
+    "answer": "entailment",
+    "explanation": [
+      "making a left turn is a type of making a turn"
+    ]
+  },
+  "q0214": {
+    "answer": "entailment",
+    "explanation": [
+      "jumping over a hurdle is a type of jumping"
+    ]
+  },
+  "q0215": {
+    "answer": "entailment",
+    "explanation": [
+      "older woman is a type of old woman",
+      "in her kitchen is a type of in a kitchen"
+    ]
+  },
+  "q0216": {
+    "answer": "entailment",
+    "explanation": [
+      "grilled food is a type of food"
+    ]
+  },
+  "q0217": {
+    "answer": "entailment",
+    "explanation": [
+      "little girl is a type of child",
+      "posing for a picture is a type of posing for the photographer"
+    ]
+  },
+  "q0218": {
+    "answer": "entailment",
+    "explanation": [
+      "at the foot of the stairs is a type of by some stairs"
+    ]
+  },
+  "q0219": {
+    "answer": "entailment",
+    "explanation": [
+      "a shirtless man in shorts is fishing while standing on some rocks is a type of a man is fishing"
+    ]
+  },
+  "q0220": {
+    "answer": "entailment",
+    "explanation": [
+      "crowd of people is a type of crowd"
+    ]
+  },
+  "q0221": {
+    "answer": "entailment",
+    "explanation": [
+      "balancing an upside down unicycle on his mouth is a type of holding a unicycle in a curious manner"
+    ]
+  },
+  "q0222": {
+    "answer": "entailment",
+    "explanation": [
+      "high jumping over some pillows is a type of jumping over pillows"
+    ]
+  },
+  "q0223": {
+    "answer": "entailment",
+    "explanation": [
+      "female bowler is a type of woman",
+      "bowling is a type of game"
+    ]
+  },
+  "q0224": {
+    "answer": "entailment",
+    "explanation": [
+      "black garment is a type of garment"
+    ]
+  },
+  "q0225": {
+    "answer": "entailment",
+    "explanation": [
+      "demolition crane is a type of demolition vehicle",
+      "tearing down what is left of a building is a type of being operated"
+    ]
+  },
+  "q0226": {
+    "answer": "entailment",
+    "explanation": [
+      "holding a child in a purple shirt is a type of holds a child"
+    ]
+  },
+  "q0323": {
+    "answer": "entailment",
+    "explanation": [
+      "diving to tackle the ball carrier in a rugby context is a type of playing in a match"
+    ]
+  },
+  "q0324": {
+    "answer": "entailment",
+    "explanation": [
+      "A skier goes down a hill with a mountain as a backdrop is a type of A skier going down a hill"
+    ]
+  },
+  "q0325": {
+    "answer": "entailment",
+    "explanation": [
+      "a pond is a type of outside"
+    ]
+  },
+  "q0326": {
+    "answer": "entailment",
+    "explanation": [
+      "little girl is a type of girl",
+      "large boulder is a type of rock formation"
+    ]
+  },
+  "q0327": {
+    "answer": "entailment",
+    "explanation": [
+      "Young boys in green and blue jerseys kicking around a soccer ball is a type of Young boys kicking around a soccer ball"
+    ]
+  },
+  "q0328": {
+    "answer": "contradiction",
+    "explanation": [
+      "pulling itself out of the water onto some rocks is not walking through rocks"
+    ]
+  },
+  "q0329": {
+    "answer": "entailment",
+    "explanation": [
+      "spraying a squirt bottle at a pedestrian is a type of making mischief"
+    ]
+  },
+  "q0330": {
+    "answer": "entailment",
+    "explanation": [
+      "tired is a type of weary"
+    ]
+  },
+  "q0331": {
+    "answer": "entailment",
+    "explanation": [
+      "spectators are standing behind barrier tape is a type of other people around"
+    ]
+  },
+  "q0332": {
+    "answer": "entailment",
+    "explanation": [
+      "Tourists is a type of People",
+      "mother nature is a type of the outdoors"
+    ]
+  },
+  "q0333": {
+    "answer": "entailment",
+    "explanation": [
+      "musical group is a type of group"
+    ]
+  },
+  "q0334": {
+    "answer": "entailment",
+    "explanation": [
+      "A woman lying in the grass in the park wearing a red top and black capri pants and is barefoot is a type of a woman lying in the grass"
+    ]
+  },
+  "q0335": {
+    "answer": "entailment",
+    "explanation": [
+      "small child is a type of child",
+      "looks out over the lake is a type of looking at the lake"
+    ]
+  },
+  "q0336": {
+    "answer": "entailment",
+    "explanation": [
+      "singing on stage is a type of entertaining on stage",
+      "stuffed bear is a type of stuffed animal"
+    ]
+  },
+  "q0337": {
+    "answer": "entailment",
+    "explanation": [
+      "A man... holding his bike up is a type of a man is holding a bike up"
+    ]
+  },
+  "q0338": {
+    "answer": "entailment",
+    "explanation": [
+      "black shirt is a type of shirt"
+    ]
+  },
+  "q0339": {
+    "answer": "entailment",
+    "explanation": [
+      "carrying the ball is a type of holding a ball"
+    ]
+  },
+  "q0340": {
+    "answer": "contradiction",
+    "explanation": [
+      "an umbrella is not necessarily a large umbrella"
+    ]
+  },
+  "q0341": {
+    "answer": "entailment",
+    "explanation": [
+      "man is a type of person",
+      "spider-web face paint is a type of face painting"
+    ]
+  },
+  "q0342": {
+    "answer": "entailment",
+    "explanation": [
+      "young couple is a type of couple",
+      "in the park is a type of at the park"
+    ]
+  },
+  "q0343": {
+    "answer": "entailment",
+    "explanation": [
+      "extreme mountain biker is a type of extreme biker"
+    ]
+  },
+  "q0344": {
+    "answer": "entailment",
+    "explanation": [
+      "medical manuals is a type of book"
+    ]
+  },
+  "q0345": {
+    "answer": "entailment",
+    "explanation": [
+      "staring towards the right is a type of looking at something to her right"
+    ]
+  },
+  "q0346": {
+    "answer": "entailment",
+    "explanation": [
+      "japanese is a type of Asian"
+    ]
+  }
+}

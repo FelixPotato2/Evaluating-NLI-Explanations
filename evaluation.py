@@ -232,22 +232,162 @@ def subset_with_extra_limit(pred_tokens, gold_tokens, max_extra=2):
     extras = len(pred_set - gold_set)
     return extras <= max_extra, extras
 
-def _extract_typeof_relations(explanations):
-    """Return only explanations that contain 'is a type of'."""
+def _extract_relations(explanations, allow_implies=False):
+    """
+    Extract relation strings from raw explanations.
+    If allow_implies=True, also include relations containing 'implies'.
+    """
     if not explanations:
         return []
+
     out = []
     for ex in explanations:
-        if isinstance(ex, str) and "is a type of" in ex.lower():
+        if not isinstance(ex, str):
+            continue
+        low = ex.lower()
+        if "is a type of" in low:
+            out.append(ex)
+        elif allow_implies and "implies" in low:
             out.append(ex)
     return out
 
-def check_LLM_answer(answers, LLM_output, max_extra_total=2):
+# def check_LLM_answer(answers, LLM_output, max_extra_total=2):
+#     """
+#     Adds a new metric (len_ok) where an LLM relation is correct if:
+#       - gold-left ⊆ llm-left AND gold-right ⊆ llm-right
+#       - (extra_left + extra_right) <= max_extra_total
+#     Exact matches override len_ok, which overrides partial.
+#     """
+#     pairs_with_no_typeof = 0
+#     pairs_with_no_output = 0
+
+#     result = {}
+#     for pairID in answers:
+#         if pairID not in LLM_output:
+#             result[pairID] = {
+#                 "exact": 0,
+#                 "partial": 0,
+#                 "len_ok": 0,
+#                 "combined_correct": 0,          # exact + partial 
+#                 "combined_len_ok": 0,           # exact + len_ok 
+#                 "total_answers": len(answers[pairID]),
+#                 "total_LLM_answers": 0,
+#             }
+#             pairs_with_no_output += 1
+#             continue
+
+#         exact_count = 0
+#         partial_count = 0
+#         len_ok_count = 0
+
+
+#         # llm_explanations = LLM_output[pairID].get("explanation", [])
+#         raw_explanations = LLM_output[pairID].get("explanation", [])
+#         llm_explanations = _extract_typeof_relations(raw_explanations)
+
+#         for LLM_answer in llm_explanations:
+#             if len(llm_explanations) == 0:
+#                 pairs_with_no_typeof += 1
+#             LLM_answer = (LLM_answer or "").lower() 
+#             splitted_ans = LLM_answer.split("is a type of")
+#             if len(splitted_ans) < 2:
+#                 continue
+
+#             articles = {"a", "an", "the"}
+#             # spl_str_ans becomes: [left_tokens, right_tokens]
+#             spl_str_ans = [
+#                 [tok.strip(" ,.") for tok in seg.lower().split()
+#                  if tok.strip(" ,.").lower() not in articles]
+#                 for seg in splitted_ans[:2]
+#             ]
+
+#             llm_left = spl_str_ans[0]
+#             llm_right = spl_str_ans[1]
+
+#             found_exact = False
+#             found_len_ok = False
+#             found_partial = False
+
+#             for answer_group_dict in answers[pairID]:
+#                 left_exact = False
+#                 right_exact = False
+#                 left_partial = False
+#                 right_partial = False
+
+#                 # For len_ok we need combined extras across sides.
+#                 # We'll collect extras for all gold lefts that are subsets, and all gold rights that are subsets.
+#                 left_extras_candidates = []
+#                 right_extras_candidates = []
+
+#                 # Left side checks
+#                 for left_answer in answer_group_dict.get("left", []):
+#                     if left_answer == llm_left:
+#                         left_exact = True
+#                     if bool(set(left_answer) & set(llm_left)):
+#                         left_partial = True
+
+#                     okL, extraL = subset_with_extra_limit(llm_left, left_answer, max_extra=max_extra_total)
+#                     if okL:
+#                         left_extras_candidates.append(extraL)
+
+#                 # Right side checks
+#                 for right_answer in answer_group_dict.get("right", []):
+#                     if right_answer == llm_right:
+#                         right_exact = True
+#                     if bool(set(right_answer) & set(llm_right)):
+#                         right_partial = True
+
+#                     okR, extraR = subset_with_extra_limit(llm_right, right_answer, max_extra=max_extra_total)
+#                     if okR:
+#                         right_extras_candidates.append(extraR)
+
+#                 # Decide exact for this group
+#                 if left_exact and right_exact:
+#                     found_exact = True
+#                     break
+
+#                 # Decide len_ok for this group: any pairing with total extras <= max_extra_total
+#                 if left_extras_candidates and right_extras_candidates:
+#                     # smallest possible total extras across any (left,right) pairing
+#                     if (min(left_extras_candidates) + min(right_extras_candidates)) <= max_extra_total:
+#                         found_len_ok = True
+
+#                 # Decide partial for this group
+#                 if left_partial and right_partial:
+#                     found_partial = True
+
+#             # Count at most once per LLM relation (exact > len_ok > partial)
+#             if found_exact:
+#                 exact_count += 1
+#             elif found_len_ok:
+#                 len_ok_count += 1
+#             elif found_partial:
+#                 partial_count += 1
+
+#         result[pairID] = {
+#             "exact": exact_count,
+#             "partial": partial_count,
+#             "len_ok": len_ok_count,
+#             "combined_correct": exact_count + partial_count,
+#             "combined_len_ok": exact_count + len_ok_count,
+#             "total_answers": len(answers[pairID]),
+#             "total_LLM_answers": len(llm_explanations),
+#         }
+
+#     scores_strict = calculate_scores(result, "exact")
+#     scores_loose = calculate_scores(result, "combined_correct")
+#     len_scores = calculate_scores(result, "combined_len_ok")
+#     len_metrics = calculate_counts(result, "combined_len_ok")
+
+#     print('Pairs with no type of: ', pairs_with_no_typeof)
+#     print('Pairs with empty explanation: ', pairs_with_no_output)
+
+#     return result, scores_strict, scores_loose, len_scores, len_metrics
+
+def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False):
     """
-    Adds a new metric (len_ok) where an LLM relation is correct if:
-      - gold-left ⊆ llm-left AND gold-right ⊆ llm-right
-      - (extra_left + extra_right) <= max_extra_total
-    Exact matches override len_ok, which overrides partial.
+    If allow_implies=True, treat 'X implies Y' as a valid relation like 'X is a type of Y'
+    for token extraction + evaluation.
     """
     pairs_with_no_typeof = 0
     pairs_with_no_output = 0
@@ -259,8 +399,8 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2):
                 "exact": 0,
                 "partial": 0,
                 "len_ok": 0,
-                "combined_correct": 0,          # exact + partial 
-                "combined_len_ok": 0,           # exact + len_ok 
+                "combined_correct": 0,
+                "combined_len_ok": 0,
                 "total_answers": len(answers[pairID]),
                 "total_LLM_answers": 0,
             }
@@ -271,29 +411,36 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2):
         partial_count = 0
         len_ok_count = 0
 
-
-        # llm_explanations = LLM_output[pairID].get("explanation", [])
         raw_explanations = LLM_output[pairID].get("explanation", [])
-        llm_explanations = _extract_typeof_relations(raw_explanations)
+        llm_relations = _extract_relations(raw_explanations, allow_implies=allow_implies)
 
-        for LLM_answer in llm_explanations:
-            if len(llm_explanations) == 0:
-                pairs_with_no_typeof += 1
-            LLM_answer = (LLM_answer or "").lower() 
-            splitted_ans = LLM_answer.split("is a type of")
-            if len(splitted_ans) < 2:
+        if len(llm_relations) == 0:
+            pairs_with_no_typeof += 1
+
+        for rel in llm_relations:
+            rel_low = (rel or "").lower()
+
+            # Choose splitter
+            if "is a type of" in rel_low:
+                parts = rel_low.split("is a type of")
+            elif allow_implies and "implies" in rel_low:
+                parts = rel_low.split("implies")
+            else:
+                continue
+
+            if len(parts) < 2:
                 continue
 
             articles = {"a", "an", "the"}
-            # spl_str_ans becomes: [left_tokens, right_tokens]
-            spl_str_ans = [
-                [tok.strip(" ,.") for tok in seg.lower().split()
-                 if tok.strip(" ,.").lower() not in articles]
-                for seg in splitted_ans[:2]
-            ]
+            left_tokens = [tok.strip(" ,.")
+                           for tok in parts[0].split()
+                           if tok.strip(" ,.").lower() not in articles]
+            right_tokens = [tok.strip(" ,.")
+                            for tok in parts[1].split()
+                            if tok.strip(" ,.").lower() not in articles]
 
-            llm_left = spl_str_ans[0]
-            llm_right = spl_str_ans[1]
+            llm_left = left_tokens
+            llm_right = right_tokens
 
             found_exact = False
             found_len_ok = False
@@ -305,12 +452,9 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2):
                 left_partial = False
                 right_partial = False
 
-                # For len_ok we need combined extras across sides.
-                # We'll collect extras for all gold lefts that are subsets, and all gold rights that are subsets.
                 left_extras_candidates = []
                 right_extras_candidates = []
 
-                # Left side checks
                 for left_answer in answer_group_dict.get("left", []):
                     if left_answer == llm_left:
                         left_exact = True
@@ -321,7 +465,6 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2):
                     if okL:
                         left_extras_candidates.append(extraL)
 
-                # Right side checks
                 for right_answer in answer_group_dict.get("right", []):
                     if right_answer == llm_right:
                         right_exact = True
@@ -332,49 +475,77 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2):
                     if okR:
                         right_extras_candidates.append(extraR)
 
-                # Decide exact for this group
                 if left_exact and right_exact:
                     found_exact = True
                     break
 
-                # Decide len_ok for this group: any pairing with total extras <= max_extra_total
                 if left_extras_candidates and right_extras_candidates:
-                    # smallest possible total extras across any (left,right) pairing
                     if (min(left_extras_candidates) + min(right_extras_candidates)) <= max_extra_total:
                         found_len_ok = True
 
-                # Decide partial for this group
                 if left_partial and right_partial:
                     found_partial = True
 
-            # Count at most once per LLM relation (exact > len_ok > partial)
+            # Inclusive counting:
+            # exact ⊆ len_ok ⊆ partial
             if found_exact:
                 exact_count += 1
+                len_ok_count += 1
+                partial_count += 1
             elif found_len_ok:
                 len_ok_count += 1
+                partial_count += 1
             elif found_partial:
                 partial_count += 1
-
-        result[pairID] = {
-            "exact": exact_count,
-            "partial": partial_count,
-            "len_ok": len_ok_count,
-            "combined_correct": exact_count + partial_count,
-            "combined_len_ok": exact_count + len_ok_count,
-            "total_answers": len(answers[pairID]),
-            "total_LLM_answers": len(llm_explanations),
-        }
-
+                
+            result[pairID] = {
+                "exact": exact_count,
+                "partial": partial_count,
+                "len_ok": len_ok_count,
+                # since counts are inclusive now, these should NOT sum
+                "combined_correct": partial_count,   # "loose" == partial-or-better
+                "combined_len_ok": len_ok_count,     # len_ok-or-better
+                "total_answers": len(answers[pairID]),
+                "total_LLM_answers": len(llm_relations),
+            }
     scores_strict = calculate_scores(result, "exact")
     scores_loose = calculate_scores(result, "combined_correct")
     len_scores = calculate_scores(result, "combined_len_ok")
     len_metrics = calculate_counts(result, "combined_len_ok")
 
-    print('Pairs with no type of: ', pairs_with_no_typeof)
-    print('Pairs with empty explanation: ', pairs_with_no_output)
+    return result, scores_strict, scores_loose, len_scores, len_metrics, pairs_with_no_typeof, pairs_with_no_output
 
-    return result, scores_strict, scores_loose, len_scores, len_metrics
+# def checK_LLM(data, answers, id_map):
+#     if not isinstance(data, dict):
+#         raise TypeError("data must be a dictionary")
 
+#     # Restore shortened IDs
+#     restored_data = {}
+#     for sid, value in data.items():
+#         full_id = id_map.get(sid)
+#         if full_id is not None:
+#             restored_data[full_id] = value
+    
+#     # after restoring ids
+#     parsed_ids = set(restored_data.keys())
+
+#     # evaluate only on ids that were successfully parsed
+#     answers = {pid: answers[pid] for pid in answers if pid in parsed_ids}
+    
+#     # Count predicted labels (basic check)
+#     e = 0
+#     c = 0
+#     for _, pred in restored_data.items():
+#         label = (pred.get("answer", "") or "").strip().lower()
+#         if label == "entailment":
+#             e += 1
+#         elif label == "contradiction":
+#             c += 1
+#     perc_entailment = (e / (e + c) * 100) if (e + c) > 0 else 0.0
+
+#     result, strict, loose, len_scores, len_metrics = check_LLM_answer(answers, restored_data)
+
+#     return result, strict, loose, perc_entailment, len_metrics, len_scores
 def checK_LLM(data, answers, id_map):
     if not isinstance(data, dict):
         raise TypeError("data must be a dictionary")
@@ -385,14 +556,11 @@ def checK_LLM(data, answers, id_map):
         full_id = id_map.get(sid)
         if full_id is not None:
             restored_data[full_id] = value
-    
-    # after restoring ids
-    parsed_ids = set(restored_data.keys())
 
-    # evaluate only on ids that were successfully parsed
+    parsed_ids = set(restored_data.keys())
     answers = {pid: answers[pid] for pid in answers if pid in parsed_ids}
-    
-    # Count predicted labels (basic check)
+
+    # Label stats
     e = 0
     c = 0
     for _, pred in restored_data.items():
@@ -403,10 +571,48 @@ def checK_LLM(data, answers, id_map):
             c += 1
     perc_entailment = (e / (e + c) * 100) if (e + c) > 0 else 0.0
 
-    result, strict, loose, len_scores, len_metrics = check_LLM_answer(answers, restored_data)
+    # ---- PASS A: current behavior (type-of only)
+    result_A, strict_A, loose_A, len_scores_A, len_metrics_A, no_rel_A, no_out_A = check_LLM_answer(
+        answers, restored_data, allow_implies=False
+    )
 
-    return result, strict, loose, perc_entailment, len_metrics, len_scores
+    # ---- PASS B: relaxed behavior (type-of + implies)
+    result_B, strict_B, loose_B, len_scores_B, len_metrics_B, no_rel_B, no_out_B = check_LLM_answer(
+        answers, restored_data, allow_implies=True
+    )
 
+    # Count how many relations were "wrong only because implies was excluded"
+    # We interpret this as: pair gets 0 combined_len_ok in A but >0 combined_len_ok in B.
+    implies_only_wrong_pairs = 0
+    for pid in answers.keys():
+        a = result_A.get(pid, {}).get("combined_len_ok", 0)
+        b = result_B.get(pid, {}).get("combined_len_ok", 0)
+        if a == 0 and b > 0:
+            implies_only_wrong_pairs += 1
+
+    print("Pairs with no usable relation (type-of only):", no_rel_A)
+    print("Pairs with no usable relation (type-of + implies):", no_rel_B)
+    print("Pairs improved ONLY by allowing 'implies':", implies_only_wrong_pairs)
+
+    # Return both metric sets
+    return {
+        "type_of_only": {
+            "result": result_A,
+            "strict": strict_A,
+            "loose": loose_A,
+            "len_scores": len_scores_A,
+            "len_metrics": len_metrics_A,
+        },
+        "type_of_plus_implies": {
+            "result": result_B,
+            "strict": strict_B,
+            "loose": loose_B,
+            "len_scores": len_scores_B,
+            "len_metrics": len_metrics_B,
+        },
+        "perc_entailment": perc_entailment,
+        "implies_only_wrong_pairs": implies_only_wrong_pairs,
+    }
 #This is the call used for the gold label checking
 
 def Get_manual_evaluation_problems(print_results = True):

@@ -9,13 +9,13 @@ def construct_prompt(fixed, examples, amount):
     examples = examples[:amount]
     print(f'Number of examples: {len(examples)}\n')
 
-    if amount <= 50:
+    if amount <= 80:
         return [fixed + "\n" + ex for ex in examples]
 
     if amount >= 1000:
         step = 100
     else:
-        print('Number of examples is between 50 and 1000, so we proceed with 10%\n')
+        print('Number of examples is between 80 and 1000, so we proceed with 10%\n')
         step = max(1, math.ceil(len(examples) / 10))
 
     p = []
