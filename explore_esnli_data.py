@@ -36,7 +36,8 @@ def print_example(df, ID = None, rownum = None, ignore_highlights=False ):
 
 
 
-df_glob = pd.read_csv("entailment_probs_or.csv")
+
+#df_glob = pd.read_csv("entailment_probs_or.csv")
 #df = pd.read_csv("processed_esnli_EA.csv")
 #df = pd.read_csv("esnli_dev.csv")
 

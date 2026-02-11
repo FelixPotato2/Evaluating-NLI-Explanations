@@ -183,8 +183,8 @@ def get_overlap(text, highlighted):
     """
     result = []
     
+    #highlighted_lower = [h.lower() for h in ast.literal_eval(highlighted) ]
     highlighted_lower = [h.lower() for h in ast.literal_eval(highlighted) ]
-
     for word in text:
         cleaned_word = word.strip(" ,.").lower()
 
@@ -423,8 +423,13 @@ def calculate_scores(result, key):
 
 #This is the call used for the gold label checking
 
-def Get_manual_evaluation_problems(print_results = True):
+def Get_manual_evaluation_problems(print_results = False):
+
     problems, answers, problems_ex, answers_ex = get_LLM_problems(dev_df, 60, set(), False, seed = 8)
+    pair_ids = list(problems.keys())
+    
+    subset_df = dev_df.loc[df["pairID"].isin(pair_ids)]
+    subset_df.to_csv('60_annotated_problems.csv')
     if print_results: 
         for problem in problems:
             #print(f"{problem}\n")

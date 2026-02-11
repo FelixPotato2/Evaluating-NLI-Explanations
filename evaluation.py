@@ -4,8 +4,9 @@ from explore_esnli_data import print_example
 import json
 import ast
 import math
+import string
 
-df = pd.read_csv("merged_entailment.csv")
+#glob_df = pd.read_csv("merged_entailment.csv")
 def get_overlap(text, highlighted):
     """
     Gets from the text the parts that were highlighted
@@ -22,10 +23,11 @@ def get_overlap(text, highlighted):
     """
     result = []
     
-    highlighted_lower = [h.lower() for h in ast.literal_eval(highlighted) ]
+    highlighted_lower = [h.strip(string.punctuation).lower() for h in ast.literal_eval(highlighted) ]
+    #highlighted_lower = [h.lower() for h in ast.literal_eval(highlighted) ]
 
     for word in text:
-        cleaned_word = word.strip(" ,.").lower()
+        cleaned_word = word.strip(string.punctuation).lower()
 
         if cleaned_word in ["a", "an", "the"]:
             continue
@@ -615,17 +617,35 @@ def checK_LLM(data, answers, id_map):
     }
 #This is the call used for the gold label checking
 
-def Get_manual_evaluation_problems(print_results = True):
-    problems, answers, problems_ex, answers_ex = get_LLM_problems(dev_df, 60, set(), False, seed = 8)
-    if print_results: 
-        for problem in problems:
-            #print(f"{problem}\n")
-            print_example(df, ID = problem, rownum = None, ignore_highlights=True)
-        print(len(problems))
-        #print(f"problems: {problems}\n")
-        print(f"answers{answers}\n")
-        #print(f"problem: {problems_ex} \n answer: {answers_ex}\n")
+def Get_manual_evaluation_problems(print_results = True, print_answers = True):
+    dev_df = pd.read_csv("entailment_probs_or.csv")
+
+    with open("manual.json", "r") as f:
+        manual_data = json.load(f)
+
+    pair_ids_8 = ["5669382831.jpg#3r1e", "4968323199.jpg#1r1e", "3751894413.jpg#1r1e", "5971287030.jpg#4r1e", "4951686898.jpg#0r1e", "7784556054.jpg#1r1e", "506738508.jpg#4r1e", "4201813513.jpg#0r1e"]
+    pair_ids_long = [list(item.keys())[0] for item in manual_data]
+    all_ids = pair_ids_8 + pair_ids_long
+    subset_df = (dev_df.set_index("pairID").loc[all_ids].reset_index())
+    problems, answers, problems_ex, answers_ex = get_LLM_problems(subset_df, 60, set(), False, seed = 8)
+   
+    if print_answers:
+        print("the first 8")
+        for id in pair_ids_8:
+            print(f"{id}\n")
+            print(answers[id])
+            if print_results:
+                print_example(subset_df, ID=id, rownum = None, ignore_highlights=True)
+        print("the other 52")
+        for id in pair_ids_long:
+            print(f"{id}\n")
+            print(answers[id])
+            if print_results:
+                print_example(subset_df, ID=id, rownum = None, ignore_highlights=True)
+            
     return problems, answers
+
+   
 
 def Get_prompts_for_LLM(amount=10):
     problems, answers, problems_ex, answers_ex = get_LLM_problems(df, amount, set(), True)
@@ -678,7 +698,7 @@ def read_json(filename):
 if __name__ == "__main__":
 
     dev_df = pd.read_csv("entailment_probs_or.csv")
-    df = pd.read_csv("merged_entailment.csv")
+    glob_df = pd.read_csv("merged_entailment.csv")
 
     LLM_answers_file = "final_LLM_auto_responses.json"
     LLM_answers = read_json(LLM_answers_file)

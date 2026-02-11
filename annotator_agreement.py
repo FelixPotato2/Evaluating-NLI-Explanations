@@ -1,10 +1,9 @@
 import json
-from evaluate_LLMs import Get_manual_evaluation_problems
-from evaluate_LLMs import get_LLM_problems
+from evaluation import Get_manual_evaluation_problems
+from evaluation import get_LLM_problems
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 with open("gold.json", "r") as f:
     gold_answers = json.load(f)
@@ -67,12 +66,12 @@ def make_len_plot(d1, d2, d3, d4, d5, d6):
 def make_perfection_plot():
 
     N = 2
-    useable = (25, 28)
-    unuseable = (0, 7)
+    useable = (31, 21)
+    unuseable = (0, 8)
     ind = np.arange(N) * 0.6  
     width = 0.35  
 
-    fig = plt.subplots(figsize =(10, 7))
+    fig, ax = plt.subplots(figsize =(10, 7))
     p1 = plt.bar(ind, useable, width, color = '#80b3ff' )
     p2 = plt.bar(ind, unuseable, width, bottom = useable, color = '#0052cc')
 
@@ -81,6 +80,7 @@ def make_perfection_plot():
     plt.xticks(ind, ('Perfect match', 'Non perfect match'))
     #plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0]), ('Minor differences', 'Problematic differences'))
+    ax.set_ylim(0, 35)
 
     plt.show()
 
@@ -114,10 +114,10 @@ def make_boring_plot():
     plt.show()
     
     
-df = pd.read_csv("merged_entailment.csv")
-_, answers_all, _, _= get_LLM_problems(df, 771)
+merged_df = pd.read_csv("merged_entailment.csv")
+_, answers_all, _, _= get_LLM_problems(merged_df, 771)
 left_len_list_all_s, right_len_list_all_s = get_len_lists_script(answers_all)
-_, script_answers = Get_manual_evaluation_problems(print_results = False)
+_, script_answers = Get_manual_evaluation_problems(print_results = False, print_answers= True)
 left_len_list_s, right_len_lists_s = get_len_lists_script(script_answers)
 left_len_list_g, right_len_lists_g = get_len_lists(gold_answers)
 
@@ -130,8 +130,8 @@ print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 
 #uncomment these to create various plots
-make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
-#make_perfection_plot()
+#make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
+make_perfection_plot()
 #make_boring_plot()
 
 
