@@ -6,7 +6,7 @@ import ast
 import math
 import string
 
-#glob_df = pd.read_csv("merged_entailment.csv")
+df = pd.read_csv("merged_entailment.csv")
 def get_overlap(text, highlighted):
     """
     Gets from the text the parts that were highlighted
@@ -698,7 +698,7 @@ def read_json(filename):
 if __name__ == "__main__":
 
     dev_df = pd.read_csv("entailment_probs_or.csv")
-    glob_df = pd.read_csv("merged_entailment.csv")
+    df = pd.read_csv("merged_entailment.csv")
 
     LLM_answers_file = "final_LLM_auto_responses.json"
     LLM_answers = read_json(LLM_answers_file)
