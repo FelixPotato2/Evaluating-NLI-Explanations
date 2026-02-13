@@ -67,12 +67,12 @@
 
 import generation as g
 import evaluation as ev
-
+import pandas as pd
 from google import genai
 
 def main():
-    n = 770  # max is 771
 
+    n = 985
     # Load prompts / gold answers
     alias_to_full, gold_answers, problems = ev.Get_prompts_for_LLM(n)
 
@@ -84,7 +84,7 @@ def main():
 
     # Models to run
     models = [
-        "gemini-2.5-flash",
+        #"gemini-2.5-flash",
         "gemini-2.5-pro",
     ]
 
@@ -130,11 +130,6 @@ def main():
         print("Loose scores:", out["type_of_plus_implies"]["loose"])
         print("Length metrics:", out["type_of_plus_implies"]["len_metrics"])
         print("Length Scores:", out["type_of_plus_implies"]["len_scores"])
-
-
-import generation as g
-import evaluation as ev
-
 
 def evaluate_existing_runs(json_paths, n=770):
     """
@@ -186,10 +181,12 @@ def evaluate_existing_runs(json_paths, n=770):
 # if __name__ == "__main__":
 #     main()
 if __name__ == "__main__":
-
-    existing_runs = {
-        "gemini-2.5-flash": "final_LLM_auto_responses_gemini-2.5-flash.json",
-        "gemini-2.5-pro": "final_LLM_auto_responses_gemini-2.5-pro.json",
-    }
-
-    evaluate_existing_runs(existing_runs, n=770)
+    flag = True
+    if flag:
+        existing_runs = {
+            "gemini-2.5-flash": "final_LLM_auto_responses_gemini-2.5-flash.json",
+            "gemini-2.5-pro": "final_LLM_auto_responses_gemini-2.5-pro.json"
+        }
+        evaluate_existing_runs(existing_runs, n=985)
+    else:
+        main()
