@@ -68,50 +68,58 @@ def make_perfection_plot():
     N = 2
     useable = (31, 21)
     unuseable = (0, 8)
-    ind = np.arange(N) * 0.6  
-    width = 0.35  
+    ind = np.arange(N) * 0.17
+    width = 0.1
 
     fig, ax = plt.subplots(figsize =(10, 7))
     p1 = plt.bar(ind, useable, width, color = '#80b3ff' )
     p2 = plt.bar(ind, unuseable, width, bottom = useable, color = '#0052cc')
 
-    plt.ylabel('Number of answer templates')
+    plt.ylabel('Number of answer templates', fontsize = 20)
     #plt.title('Contribution by the teams')
-    plt.xticks(ind, ('Perfect match', 'Non perfect match'))
+    plt.xticks(ind, ('Perfect match', 'Non perfect match'), fontsize = 20)
     #plt.yticks(np.arange(0, 81, 10))
-    plt.legend((p1[0], p2[0]), ('Minor differences', 'Problematic differences'))
+    plt.legend((p1[0], p2[0]), ('Minor differences', 'Problematic differences'), fontsize = 18)
     ax.set_ylim(0, 35)
+    ax.tick_params(axis='y', labelsize=20)
 
+    plt.tight_layout()
     plt.show()
 
 
 def make_boring_plot():
-     #perfect non perfect plot
+
     N = 2
 
     noun = np.array((36, 10))
     verb = np.array((3, 3))
     mix  = np.array((1, 2))
-    amb = np.array((2, 2))
-    sen = np.array((2, 0))
-    
-    ind = np.arange(N) * 0.6  
-    width = 0.35  
+    amb  = np.array((2, 2))
+    sen  = np.array((2, 0))
 
-    fig = plt.subplots(figsize =(10, 7))
-    p1 = plt.bar(ind, noun, width, color = '#80b3ff' )
-    p2 = plt.bar(ind, verb, width, bottom = noun, color = '#ccb3ff')
-    p3 = plt.bar(ind, mix, width, bottom = noun+verb, color = '#ff99bb')
-    p4 = plt.bar(ind, amb, width, bottom = noun+verb+mix, color = '#ffcc99')
-    p5 = plt.bar(ind, sen, width, bottom = noun+verb+mix+amb, color = "#ffe066")
+    ind = np.arange(N) * 0.9   # space between groups
+    width = 0.15               # width of each bar
 
-    plt.ylabel('Number of answer templates')
-    #plt.title('Contribution by the teams')
-    plt.xticks(ind, ('Simple', 'Complex'))
-    #plt.yticks(np.arange(0, 81, 10))
-    plt.legend((p1[0], p2[0], p3[0], p4[0], p5[0]), ('noun', 'verb', 'mix', 'ambiguous', 'sentence'))
+    fig, ax = plt.subplots(figsize=(10, 7))
 
+    p1 = ax.bar(ind - 2*width, noun, width, color='#80b3ff', label='NP')
+    p2 = ax.bar(ind - width,  verb, width, color='#ccb3ff', label='VP')
+    p3 = ax.bar(ind,          mix,  width, color='#ff99bb', label='Mix')
+    p4 = ax.bar(ind + width,  amb,  width, color='#ffcc99', label='Ambiguous')
+    p5 = ax.bar(ind + 2*width, sen, width, color='#ffe066', label='Sentence')
+
+    for bars in [p1, p2, p3, p4, p5]:
+        ax.bar_label(bars, fontsize=16, padding=3)
+
+    ax.set_ylabel('Number of answer templates', fontsize=20)
+    ax.set_xticks(ind)
+    ax.set_xticklabels(('Simple', 'Complex'), fontsize=20)
+    ax.tick_params(axis='y', labelsize=20)
+
+    ax.legend(fontsize=20)
+    plt.tight_layout()
     plt.show()
+
     
     
 merged_df = pd.read_csv("merged_entailment.csv")
@@ -131,8 +139,8 @@ print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 #uncomment these to create various plots
 #make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
-make_perfection_plot()
-#make_boring_plot()
+#make_perfection_plot()
+make_boring_plot()
 
 
 

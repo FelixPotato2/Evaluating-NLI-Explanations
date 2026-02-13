@@ -15,5 +15,5 @@ print(f"total problems = {df.shape[0]}")
 print(f"usable problems = {df.shape[0]-len(missing_answers)}")
 
 #print_example(df, ID = "7579633346.jpg#4r1e")
-print_example(df, ID = "1229756013.jpg#0r1e")
-print(answers["1229756013.jpg#0r1e"])
+print_example(df, ID = "3183195653.jpg#0r1e")
+#print(answers["4851047049.jpg#3r1e"])
