@@ -76,9 +76,7 @@ def make_perfection_plot():
     p2 = plt.bar(ind, unuseable, width, bottom = useable, color = '#0052cc')
 
     plt.ylabel('Number of answer templates', fontsize = 20)
-    #plt.title('Contribution by the teams')
     plt.xticks(ind, ('Perfect match', 'Non perfect match'), fontsize = 20)
-    #plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0]), ('Minor differences', 'Problematic differences'), fontsize = 18)
     ax.set_ylim(0, 35)
     ax.tick_params(axis='y', labelsize=20)
@@ -97,8 +95,8 @@ def make_boring_plot():
     amb  = np.array((2, 2))
     sen  = np.array((2, 0))
 
-    ind = np.arange(N) * 0.9   # space between groups
-    width = 0.15               # width of each bar
+    ind = np.arange(N) * 0.9   
+    width = 0.15               
 
     fig, ax = plt.subplots(figsize=(10, 7))
 
@@ -125,7 +123,7 @@ def make_boring_plot():
 merged_df = pd.read_csv("merged_entailment.csv")
 _, answers_all, _, _= get_LLM_problems(merged_df, 771)
 left_len_list_all_s, right_len_list_all_s = get_len_lists_script(answers_all)
-_, script_answers = Get_manual_evaluation_problems(print_results = False, print_answers= True)
+_, script_answers = Get_manual_evaluation_problems(print_results = False, print_answers= False) #to print the information of the 60 annotated problems and answer templates, make these both true
 left_len_list_s, right_len_lists_s = get_len_lists_script(script_answers)
 left_len_list_g, right_len_lists_g = get_len_lists(gold_answers)
 
@@ -139,7 +137,7 @@ print_len_info(left_len_list_all_s, right_len_list_all_s)
 
 #uncomment these to create various plots
 #make_len_plot(left_len_list_all_s, right_len_list_all_s, left_len_list_s, right_len_lists_s, left_len_list_g, right_len_lists_g)
-#make_perfection_plot()
+make_perfection_plot()
 make_boring_plot()
 
 
