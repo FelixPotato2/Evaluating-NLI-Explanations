@@ -301,7 +301,7 @@ def parse_llm_txt_to_qid_json(text, expected_total=None):
     """
     merged = {}
 
-    # A) safe ingest of actual qid->payload dicts
+    # 1. safe ingest of actual qid->payload dicts
     top = _ingest_top_level_json_if_present(text)
     merged.update(top)
 
@@ -310,7 +310,7 @@ def parse_llm_txt_to_qid_json(text, expected_total=None):
     if expected_total is not None:
         wanted = [f"q{i:04d}" for i in range(1, int(expected_total) + 1)]
 
-    # B) recover missing via scanning
+    # 2. recover missing via scanning
     if wanted is None:
         recovered, bad = _recover_qids(text)
         for qid, payload in recovered.items():
@@ -405,7 +405,7 @@ def generate(fixed_prompt, examples, amount, client, generated_file, model,
 
             time.sleep(delay)
 
-        # final pass: parse whole file to recover anything missed incrementally
+        # final pass: parse whole file to recover anything missed 
         with open(out_txt, "r", encoding=encoding) as f:
             full_text = f.read()
 

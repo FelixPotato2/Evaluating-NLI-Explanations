@@ -1,0 +1,6 @@
+google-genai==1.60.0
+matplotlib==3.10.7
+matplotlib-inline==0.1.7
+numpy==2.3.3
+pandas==2.2.3
+pandas_flavor==0.7.0
