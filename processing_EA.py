@@ -94,7 +94,11 @@ def process_original(in_name, out_name):
 
 def find_pattern(sentence, patterns):
     """
-    given a sentence and a list of patterns return whether the sentence 
+    Check whether any pattern occurs in a sentence.
+
+    param: sentence (str): Input sentence.
+    param: patterns (list): List of substrings to search for.
+    returns: bool: True if any pattern is found, otherwise False.
     """
     for pattern in patterns:
         if pattern in sentence:

@@ -2,6 +2,9 @@ import pandas as pd
 from evaluation import get_correct_answers
 from explore_esnli_data import print_example
 
+"""
+Check for how many problems the answer could not be extracted and subtract this to the total number of available problems
+"""
 #df = pd.read_csv("entailment_probs_or.csv")
 #df = pd.read_csv("entailment_probs_test_or.csv")
 df = pd.read_csv("merged_entailment.csv")

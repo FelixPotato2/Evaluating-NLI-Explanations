@@ -9,6 +9,13 @@ with open("gold.json", "r") as f:
     gold_answers = json.load(f)
 
 def get_len_lists(file):
+    """
+    Compute token lengths of left and right gold relations.
+
+    param: file (any): Placeholder argument (not used).
+    returns: left_len_list (list): Token lengths of left-side relations.
+    returns: right_len_list (list): Token lengths of right-side relations.
+    """
     left_len_list =[]
     right_len_list =[]
     for dict in gold_answers:
@@ -22,7 +29,13 @@ def get_len_lists(file):
     return left_len_list, right_len_list
 
 def get_len_lists_script(script_answers):
-    
+    """
+    Compute token lengths of left and right relations from script answers.
+
+    param: script_answers (dict): Dictionary mapping pairIDs to answer groups.
+    returns: left_len_list (list): Lengths of left-side token lists.
+    returns: right_len_list (list): Lengths of right-side token lists.
+    """
     left_len_list =[]
     right_len_list =[]
     for answers in script_answers.values(): #this is only one
@@ -34,8 +47,14 @@ def get_len_lists_script(script_answers):
     return left_len_list, right_len_list
 
     
-
 def print_len_info(left_len_list, right_len_list):
+    """
+    Print max and average lengths for left and right relations.
+
+    param: left_len_list (list): Lengths of left-side relations.
+    param: right_len_list (list): Lengths of right-side relations.
+    returns: None
+    """
     avg_len_left = sum(left_len_list) / len(left_len_list)
     avg_len_right = sum(right_len_list)/len(right_len_list)
     print(f"max left: {max(left_len_list)}")
@@ -45,6 +64,17 @@ def print_len_info(left_len_list, right_len_list):
 
 
 def make_len_plot(d1, d2, d3, d4, d5, d6):
+    """
+    Create length comparison plot for multiple distributions.
+
+    param: d1 (list): First length distribution.
+    param: d2 (list): Second length distribution.
+    param: d3 (list): Third length distribution.
+    param: d4 (list): Fourth length distribution.
+    param: d5 (list): Fifth length distribution.
+    param: d6 (list): Sixth length distribution.
+    returns: None
+    """
 
     d = [d1, d2, d3, d4, d5, d6]
 
@@ -64,6 +94,12 @@ def make_len_plot(d1, d2, d3, d4, d5, d6):
 
    
 def make_perfection_plot():
+    """
+    Create a stacked bar plot showing perfect vs. non-perfect template matches.
+
+    param: None
+    returns: None
+    """
 
     N = 2
     useable = (31, 21)
@@ -86,6 +122,12 @@ def make_perfection_plot():
 
 
 def make_boring_plot():
+    """
+    Create and display the complexity and phrase-type distribution plot.
+
+    param: None
+    returns: None
+    """
 
     N = 2
 

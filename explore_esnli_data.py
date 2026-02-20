@@ -13,7 +13,16 @@ This script will print the first 10 rows of that dataset in a somewhat readable 
 #print(df.columns[0])
 #print(df["pairID"])
 
-def print_example(df, ID = None, rownum = None, ignore_highlights=False ):
+def print_example(df, ID=None, rownum=None, ignore_highlights=False):
+    """
+    Print all column values for a selected row in the DataFrame.
+
+    param: df (pandas.DataFrame): DataFrame containing e-SNLI data.
+    param: ID (str or None): pairID of the row to print.
+    param: rownum (int or None): Row index to print.
+    param: ignore_highlights (bool): If True, skip highlight-related columns.
+    returns: None
+    """
     print("----------------------------------------------------")
     if ID is not None: 
         row = df.loc[df["pairID"] == ID]
@@ -34,14 +43,13 @@ def print_example(df, ID = None, rownum = None, ignore_highlights=False ):
         print(row[col])
         #print()
 
-
-
-
+## Uncomment to choose the df
 #df_glob = pd.read_csv("entailment_probs_or.csv")
 #df = pd.read_csv("processed_esnli_EA.csv")
 #df = pd.read_csv("esnli_dev.csv")
 
 
+## Uncomment to generate 10 examples
 # print(f"amount of rows:{df_glob.shape[0]}")        
 # for i in range(0,10):
 #     print(f"----------------EXAMPLE {i} ----------------\n")

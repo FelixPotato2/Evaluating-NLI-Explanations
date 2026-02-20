@@ -4,10 +4,10 @@ Your goal is to define the relation between the premise and hypothesis, which ca
 2. contradiction: when the premise is true the hypothesis is false 
 The format that you will receive is: 
  
-{pairID: {"premise": string containing the premise, "hypothesis": string containing the hypothesis}} 
+{'pairID': {"premise": string containing the premise, "hypothesis": string containing the hypothesis}} 
  
 To give your answer, you should provide both the type of relation and the explanation for such assignment. 
-If the problem is entailment, explain it by identifying which part(s) of the premise is a subset of some part of the hypothesis, and express it as "x is a type of y". Here is an example for the entailment relation: 
+If the problem is entailment, explain it by identifying which part(s) of the premise (x) is a subset of some part of the hypothesis (y), and express it as "x is a type of y". Here is an example for the entailment relation: 
  
 for the problem: 
 {"q000x": {"premise": "Man in  
@@ -17,7 +17,7 @@ a correct answer would be:
  {"q000x": { "answer": "entailment",  
 "explanation": ["man is a type of person", "black suit is a type of suit"]} 
  
-For contradiction, explain it by identifying which part(s) of the premise is in a logic conflict with the hypothesis. Here is an example for the contradiction relation: 
+For contradiction, explain it by identifying which part(s) of the premise (x) is in a logic conflict with the hypothesis (y). Here is an example for the contradiction relation: 
  
 for the problem: 
 {"q000x": {"premise": "Five  
