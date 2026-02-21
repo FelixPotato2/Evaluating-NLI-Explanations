@@ -23,8 +23,31 @@ The full pipeline consists of:
 
 Below is an overview of the main files in the repository:
 
+
+- `esnli_dev.csv`
+  The development split of the e-SNLI dataset.
+
+- `esnli_test.csv`
+  The test split of the e-SNLI dataset.
+
+- `entailment_probs_&.csv`
+  Contains all problems from the developement split where all three annotators used "type of" "form of" or "kind of".
+
+- `entailment_probs_2.csv`
+  Contains all problems from the developement split where at least two annotators used "type of" "form of" or "kind of".
+
+- `entailment_probs_or.csv`
+  Contains all problems from the developement split where any of the three annotators used "type of" "form of" or "kind of"
+
+- `entailment_probs_test_or.csv`
+  Contains all problems from the test split where any of the three annotators used "type of" "form of" or "kind of"
+
+- `merged_entailment.csv`
+  Contains all problems from the developement and test splits where any of the three annotators used "type of" "form of" or "kind of".
+
 - `60_annotated_problems.csv`  
   Contains the 60 manually annotated problems used for template validation.
+
 
 - `annotator_agreement.py`  
   Generates plots used in the paper.  
