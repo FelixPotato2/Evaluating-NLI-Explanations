@@ -120,8 +120,6 @@ git clone <your-repository-url>
 cd <repository-folder>
 ```
 
----
-
 ### 2. Create Environment
 
 ```bash
@@ -129,8 +127,6 @@ conda create -n NLI python=3.11
 conda activate NLI
 pip install -r requirements.txt
 ```
-
----
 
 ## Gemini API Setup (Only for Generation)
 
@@ -155,7 +151,6 @@ setx GEMINI_API_KEY "your-api-key"
 
 > Note: You must repeat this command each time you open a new terminal session.
 
----
 
 ## Running the Evaluation
 
@@ -168,7 +163,6 @@ flag = True
 - `flag = True` → Evaluate existing JSON files (reproduces paper results)
 - `flag = False` → Generate new LLM explanations and evaluate them
 
----
 
 ### Run the Script
 
