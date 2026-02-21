@@ -1,6 +1,4 @@
-# ReLATE  
-**Relation-Level Automated Template Evaluation for NLI Explanations**
-
+# Automising structured explanation evaluation for NLI
 ---
 
 ## Overview
