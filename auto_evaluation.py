@@ -1,7 +1,9 @@
 import generation as g
-import evaluation as ev
 import pandas as pd
 from google import genai
+import importlib
+import evaluation as ev
+importlib.reload(ev)
 
 def main():
     """
@@ -72,8 +74,8 @@ def evaluate_existing_runs(json_paths, n=770):
     param: json_paths (dict): {model_name: path_to_json}
     param: n (int): Number of examples used when prompts were generated (must match the original run so id_map aligns)
     """
-
-    alias_to_full, gold_answers, _ = ev.Get_prompts_for_LLM(n)
+    alias_to_full = ev.read_json("id_map.json")
+    gold_answers = ev.read_json("annotators_answers.json")
 
     for model_name, json_path in json_paths.items():
 
@@ -82,7 +84,7 @@ def evaluate_existing_runs(json_paths, n=770):
         out = ev.checK_LLM(
             llm_answers,
             answers=gold_answers,
-            id_map=alias_to_full,
+            id_map=alias_to_full
         )
 
         print("\n===================================")

@@ -301,16 +301,14 @@ def parse_llm_txt_to_qid_json(text, expected_total=None):
     """
     merged = {}
 
-    # 1. safe ingest of actual qid->payload dicts
     top = _ingest_top_level_json_if_present(text)
     merged.update(top)
 
-    # Expected qids list if provided
     wanted = None
     if expected_total is not None:
         wanted = [f"q{i:04d}" for i in range(1, int(expected_total) + 1)]
 
-    # 2. recover missing via scanning
+    # Recover missing qids by scanning the ones that were ignored
     if wanted is None:
         recovered, bad = _recover_qids(text)
         for qid, payload in recovered.items():
@@ -322,7 +320,6 @@ def parse_llm_txt_to_qid_json(text, expected_total=None):
         for qid, payload in recovered.items():
             merged[qid] = payload
 
-    # Build diagnostics
     all_found_qids = set(extract_qids_from_text(text))
     parsed_qids = set(merged.keys())
 
@@ -387,7 +384,6 @@ def generate(fixed_prompt, examples, amount, client, generated_file, model,
                 time.sleep(10)
                 continue
 
-            # write raw text always
             with open(out_txt, "a", encoding=encoding) as resp:
                 resp.write(chunk)
 
@@ -397,7 +393,7 @@ def generate(fixed_prompt, examples, amount, client, generated_file, model,
                 if _is_qid_key(qid):
                     merged[qid] = payload
 
-            # periodic checkpoint
+            # checkpoitn
             if (i % save_every) == 0:
                 with open(out_partial, "w", encoding="utf-8") as f:
                     json.dump(merged, f, ensure_ascii=False, indent=2)
@@ -405,7 +401,7 @@ def generate(fixed_prompt, examples, amount, client, generated_file, model,
 
             time.sleep(delay)
 
-        # final pass: parse whole file to recover anything missed 
+        # parse hwole file to recover everything that is missing
         with open(out_txt, "r", encoding=encoding) as f:
             full_text = f.read()
 
@@ -418,7 +414,6 @@ def generate(fixed_prompt, examples, amount, client, generated_file, model,
         with open(out_json, "w", encoding="utf-8") as f:
             json.dump(final_merged, f, ensure_ascii=False, indent=2)
 
-        # diagnostics
         print(f"[{model_name}] wrote {out_json} with {len(final_merged)}/{amount} qids")
         if stats["missing"]:
             print(f"[{model_name}] missing {len(stats['missing'])}. First 30: {stats['missing'][:30]}")

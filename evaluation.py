@@ -7,6 +7,7 @@ import math
 import string
 
 df = pd.read_csv("merged_entailment.csv")
+
 def get_overlap(text, highlighted):
     """
     Gets from the text the parts that were highlighted
@@ -273,7 +274,7 @@ def _extract_relations(explanations, allow_implies=False):
             out.append(ex)
     return out
 
-def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False):
+def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False, verbose=False):
     """
     Evaluate LLM relations against gold answer templates.
     param: answers (dict): gold relation per pairID
@@ -296,8 +297,16 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False
     all_gold_lens = []
 
     result = {}
+    global_gold_avg_len = 0.0
+
     for pairID in answers:
+        if verbose:
+            print("\n" + "=" * 80)
+            print("PAIR:", pairID)
+
         if pairID not in LLM_output:
+            if verbose:
+                print("-> No LLM output for this pairID")
             result[pairID] = {
                 "exact": 0,
                 "partial": 0,
@@ -318,9 +327,16 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False
         raw_explanations = LLM_output[pairID].get("explanation", [])
         llm_relations = _extract_relations(raw_explanations, allow_implies=allow_implies)
 
+        if verbose:
+            print("Raw explanations:", raw_explanations)
+            print("Filtered relations:", llm_relations)
+
         if len(llm_relations) == 0:
             pairs_with_no_typeof += 1
-        pred_label = (LLM_output[pairID].get("answer","") or "").strip().lower()
+
+        pred_label = (LLM_output[pairID].get("answer", "") or "").strip().lower()
+        if verbose:
+            print("Predicted label:", pred_label)
 
         gold_lens = []
         for group in answers[pairID]:
@@ -329,14 +345,20 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False
                     gold_lens.append(len(L) + len(R))
 
         all_gold_lens.extend(gold_lens)
+        global_gold_avg_len = (sum(all_gold_lens) / len(all_gold_lens)) if all_gold_lens else 0.0
 
         if pred_label != "entailment":
-            continue #we ignore problems that were prdicted as contradiciton for the evaluation
+            if verbose:
+                print("-> Skipping evaluation for this pair (label != entailment)")
+            continue
 
-        for rel in llm_relations:
+        for idx, rel in enumerate(llm_relations, start=1):
             rel_low = (rel or "").lower()
 
-            # Choose splitter
+            if verbose:
+                print("\n--- LLM relation", idx, "---")
+                print("Relation:", rel)
+
             if "is a type of" in rel_low:
                 parts = rel_low.split("is a type of")
             elif "are a type of" in rel_low:
@@ -346,31 +368,44 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False
             elif allow_implies and "entails" in rel_low:
                 parts = rel_low.split("entails")
             else:
+                if verbose:
+                    print("-> skipped (no supported splitter)")
                 continue
 
             if len(parts) < 2:
+                if verbose:
+                    print("-> skipped (split did not produce 2 parts)")
                 continue
 
             articles = {"a", "an", "the"}
-            left_tokens = [tok.strip(" ,.")
-                           for tok in parts[0].split()
-                           if tok.strip(" ,.").lower() not in articles]
-            right_tokens = [tok.strip(" ,.")
-                            for tok in parts[1].split()
-                            if tok.strip(" ,.").lower() not in articles]
-
-            llm_left = left_tokens
-            llm_right = right_tokens
+            llm_left = [
+                tok.strip(" ,.")
+                for tok in parts[0].split()
+                if tok.strip(" ,.").lower() not in articles
+            ]
+            llm_right = [
+                tok.strip(" ,.")
+                for tok in parts[1].split()
+                if tok.strip(" ,.").lower() not in articles
+            ]
 
             pred_len = len(llm_left) + len(llm_right)
             pred_lens.append(pred_len)
             all_pred_lens.append(pred_len)
 
+            if verbose:
+                print("Tokenized llm_left :", llm_left)
+                print("Tokenized llm_right:", llm_right)
+                print("Pred length:", pred_len)
+
             found_exact = False
             found_len_ok = False
             found_partial = False
 
-            for answer_group_dict in answers[pairID]:
+            for g_i, answer_group_dict in enumerate(answers[pairID], start=1):
+                if verbose:
+                    print(f"\n  Gold group {g_i}: {answer_group_dict}")
+
                 left_exact = False
                 right_exact = False
                 left_partial = False
@@ -399,50 +434,86 @@ def check_LLM_answer(answers, LLM_output, max_extra_total=2, allow_implies=False
                     if okR:
                         right_extras_candidates.append(extraR)
 
+                if verbose:
+                    print("    left_exact/right_exact:", left_exact, right_exact)
+                    print("    left_partial/right_partial:", left_partial, right_partial)
+                    print("    left_extras_candidates:", left_extras_candidates)
+                    print("    right_extras_candidates:", right_extras_candidates)
+
                 if left_exact and right_exact:
                     found_exact = True
+                    if verbose:
+                        print("    -> FOUND EXACT in this group")
                     break
 
                 if left_extras_candidates and right_extras_candidates:
-                    if (min(left_extras_candidates) + min(right_extras_candidates)) <= max_extra_total:
+                    best_total = min(left_extras_candidates) + min(right_extras_candidates)
+                    if verbose:
+                        print("    best_total_extras:", best_total)
+                    if best_total <= max_extra_total:
                         found_len_ok = True
+                        if verbose:
+                            print("    -> FOUND LEN_OK in this group")
 
                 if left_partial and right_partial:
                     found_partial = True
+                    if verbose:
+                        print("    -> FOUND PARTIAL in this group")
 
-            # Inclusive counting:
-            # exact ⊆ len_ok ⊆ partial
             if found_exact:
                 exact_count += 1
                 len_ok_count += 1
                 partial_count += 1
+                if verbose:
+                    print("=> counts: exact +1, len_ok +1, partial +1")
             elif found_len_ok:
                 len_ok_count += 1
                 partial_count += 1
+                if verbose:
+                    print("=> counts: len_ok +1, partial +1")
             elif found_partial:
                 partial_count += 1
-            
+                if verbose:
+                    print("=> counts: partial +1")
+            else:
+                if verbose:
+                    print("=> counts: no match")
+
         avg_len = (sum(pred_lens) / len(pred_lens)) if pred_lens else 0.0
         global_gold_avg_len = (sum(all_gold_lens) / len(all_gold_lens)) if all_gold_lens else 0.0
-                
+
         result[pairID] = {
             "exact": exact_count,
             "partial": partial_count,
             "len_ok": len_ok_count,
-            "combined_correct": partial_count,  
-            "combined_len_ok": len_ok_count,   
+            "combined_correct": partial_count,
+            "combined_len_ok": len_ok_count,
             "total_answers": len(answers[pairID]),
             "total_LLM_answers": len(llm_relations),
             "avg_len": avg_len,
             "gold_avg_len": global_gold_avg_len,
             "len_ratio": (avg_len / global_gold_avg_len) if global_gold_avg_len else None,
         }
-    
+
+        if verbose:
+            print("\nPAIR RESULT:", result[pairID])
+
     global_avg_len = (sum(all_pred_lens) / len(all_pred_lens)) if all_pred_lens else 0.0
     scores_strict = calculate_scores(result, "exact")
     scores_loose = calculate_scores(result, "combined_correct")
     len_scores = calculate_scores(result, "combined_len_ok")
     len_metrics = calculate_counts(result, "combined_len_ok")
+
+    if verbose:
+        global_gold_avg_len = (sum(all_gold_lens) / len(all_gold_lens)) if all_gold_lens else 0.0
+        print("\n" + "=" * 80)
+        print("Pairs with no usable relation:", pairs_with_no_typeof)
+        print("Pairs with empty/no output:", pairs_with_no_output)
+        print("STRICT:", scores_strict)
+        print("LOOSE :", scores_loose)
+        print("LEN_OK:", len_scores, "counts:", len_metrics)
+        print("Global avg pred length:", global_avg_len)
+        print("Global avg gold length:", global_gold_avg_len)
 
     return result, scores_strict, scores_loose, len_scores, len_metrics, pairs_with_no_typeof, pairs_with_no_output, global_avg_len, global_gold_avg_len
 
@@ -483,12 +554,12 @@ def checK_LLM(data, answers, id_map):
 
     # This code applies if one only check exactly type-of only relations, we decided to avoid doing this at the end
     result_A, strict_A, loose_A, len_scores_A, len_metrics_A, no_rel_A, no_out_A, avg_len_A, gold_avg_len_A = check_LLM_answer(
-        answers, restored_data, allow_implies=False
+        answers, restored_data, allow_implies=False, verbose=False
     )
 
     # Take into account also implies and entails responses
     result_B, strict_B, loose_B, len_scores_B, len_metrics_B, no_rel_B, no_out_B, avg_len_B, gold_avg_len_B = check_LLM_answer(
-        answers, restored_data, allow_implies=True
+        answers, restored_data, allow_implies=True, verbose=False
     )
 
     # Count how many relations were "wrong only because implies was excluded"
