@@ -21,6 +21,27 @@ The full pipeline consists of:
 
 Below is an overview of the main files in the repository:
 
+### Main Pipeline
+
+- `auto_evaluation.py`  
+  End-to-end evaluation pipeline.  
+  Can:
+  - Generate new LLM predictions via the Gemini API  
+  - Evaluate existing JSON outputs without regenerating  
+
+  Computes:
+  - Strict and loose relation-level precision, recall, F1  
+  - Length-based scores  
+  - Entailment rates  
+  - Diagnostic statistics  
+
+- `evaluation.py`  
+  Contains all evaluation and scoring functions.
+
+- `generation.py`  
+  Handles LLM generation and output parsing.
+
+### Data Files
 
 - `esnli_dev.csv`
   The development split of the e-SNLI dataset.
@@ -46,28 +67,14 @@ Below is an overview of the main files in the repository:
 - `60_annotated_problems.csv`  
   Contains the 60 manually annotated problems used for template validation.
 
+- `fixed.txt`  
+  Fixed part of the LLM prompt.
+
+### Utility files
 
 - `annotator_agreement.py`  
   Generates plots used in the paper.  
   If `Get_manual_evaluation_problems(True, True)` is used, it prints full details of the 60 manually annotated problems.
-
-- `auto_evaluation.py`  
-  End-to-end evaluation pipeline.  
-  Can:
-  - Generate new LLM predictions via the Gemini API  
-  - Evaluate existing JSON outputs without regenerating  
-
-  Computes:
-  - Strict and loose relation-level precision, recall, F1  
-  - Length-based scores  
-  - Entailment rates  
-  - Diagnostic statistics  
-
-- `evaluation.py`  
-  Contains all evaluation and scoring functions.
-
-- `generation.py`  
-  Handles LLM generation and output parsing.
 
 - `processing_EA.py`  
   Preprocesses e-SNLI and extracts the subset used in the experiments.
@@ -81,8 +88,13 @@ Below is an overview of the main files in the repository:
 - `test_max_problems.py`  
   Prints problems where no answer template could be extracted and reports exclusion statistics.
 
-- `fixed.txt`  
-  Fixed part of the LLM prompt.
+- `requirements.txt` 
+  Python dependencies.
+
+- `Extraction_Notebook.ipynb`
+  Notebook showcasing how the templates are extracted for one example, as well as how metrics are computed for that example.
+
+### Output files
 
 - `LLM_file.txt`  
   Contains formatted problems fed to the LLM.
@@ -95,9 +107,6 @@ Below is an overview of the main files in the repository:
 
 - `final_LLM_auto_responses_*.json`  
   Parsed LLM outputs for Gemini models.
-
-- `requirements.txt`  
-  Python dependencies.
 
 ---
 
@@ -123,8 +132,9 @@ cd <repository-folder>
 ```bash
 conda create -n NLI python=3.11
 conda activate NLI
-pip install -r requirements.txt
+pip install -r requirements.txt -y
 ```
+> Note: python, pip and conda have to be installed to follow this installation
 
 ## Gemini API Setup (Only for Generation)
 
