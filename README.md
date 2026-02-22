@@ -1,4 +1,4 @@
-# Automising structured explanation evaluation for NLI
+# Automating Structured Explanation Evaluation for NLI
 ---
 
 ## Overview
