@@ -171,6 +171,7 @@ flag = True
 - `flag = True` → Evaluate existing JSON files (reproduces paper results)
 - `flag = False` → Generate new LLM explanations and evaluate them
 
+> Note: make sure that the `auto_evaluation.py` file is in the same folder as the `merged_entailment.csv` file
 
 ### Run the Script
 
