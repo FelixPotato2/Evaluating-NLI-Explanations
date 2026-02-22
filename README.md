@@ -70,7 +70,7 @@ Below is an overview of the main files in the repository:
 - `fixed.txt`  
   Fixed part of the LLM prompt.
 
-### Utility files
+### Utility Files
 
 - `annotator_agreement.py`  
   Generates plots used in the paper.  
@@ -94,7 +94,7 @@ Below is an overview of the main files in the repository:
 - `Extraction_Notebook.ipynb`
   Notebook showcasing how the templates are extracted for one example, as well as how metrics are computed for that example.
 
-### Output files
+### Output Files
 
 - `LLM_file.txt`  
   Contains formatted problems fed to the LLM.
@@ -123,7 +123,7 @@ Below is an overview of the main files in the repository:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/FelixPotato2/Evaluating-NLI-Explanations
 cd <repository-folder>
 ```
 
