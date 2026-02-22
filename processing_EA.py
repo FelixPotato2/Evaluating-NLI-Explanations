@@ -37,7 +37,6 @@ def extract_ordered_highlighted_phrases(text, ordered = False):
                 # Remove punctuation from the highlighted portion
                 highlighted_text = highlighted_text.translate(translator).strip()
                 if not highlighted_text:
-                    # If it's empty after stripping, skip
                     continue
 
                 if i == 0:

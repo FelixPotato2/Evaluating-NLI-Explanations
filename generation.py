@@ -277,7 +277,6 @@ def _ingest_top_level_json_if_present(text):
         keys = [str(k).lower() for k in obj.keys()]
         qid_keys = [k for k in keys if _is_qid_key(k)]
 
-        # must look like a real qid map, not a random inner dict
         if len(qid_keys) < 5:
             continue
 
